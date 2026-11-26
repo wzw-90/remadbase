@@ -3318,37 +3318,27 @@
       const sp = item.sellPrice || {};
       const priceText = sp.currency1 ? `${sp.currency1.toLocaleString()} монет` : 'Не продается';
 
-      // Find boss sources
-      const bossSources = [];
+      // Find boss sources (deduplicated & combined per boss)
+      const bossSourcesMap = {};
       (data.bosses || []).forEach(b => {
-        const loc = (data.locations || []).find(l => l.id === b.locationId);
-        const locTitle = loc ? `Корпус ${loc.title}` : `#${b.locationId}`;
+        const isQuest = !!(b.artifactTitle && b.artifactTitle.trim().toLowerCase() === item.title.trim().toLowerCase());
+        const drop = (b.drops || []).find(d => d.type === 'inventory' && d.id === item.id);
 
-        // Check if quest item
-        if (b.artifactTitle && b.artifactTitle.trim().toLowerCase() === item.title.trim().toLowerCase()) {
-          bossSources.push({
+        if (isQuest || drop) {
+          const loc = (data.locations || []).find(l => l.id === b.locationId);
+          const locTitle = loc ? `Корпус ${loc.title}` : `#${b.locationId}`;
+          const dropProb = drop ? (drop.probability || 100) : null;
+
+          bossSourcesMap[b.id] = {
             bossId: b.id,
             bossTitle: b.title,
             locTitle: locTitle,
-            isQuest: true,
-            prob: 100
-          });
+            isQuest: isQuest,
+            dropProb: dropProb
+          };
         }
-
-        // Check regular drops
-        (b.drops || []).forEach(d => {
-          if (d.type === 'inventory' && d.id === item.id) {
-            bossSources.push({
-              bossId: b.id,
-              bossTitle: b.title,
-              locTitle: locTitle,
-              isQuest: false,
-              prob: d.probability || 100,
-              count: d.count || 1
-            });
-          }
-        });
       });
+      const bossSources = Object.values(bossSourcesMap);
 
       // Find businesses where this item is used
       const bizUses = [];
@@ -3382,18 +3372,33 @@
               🏥 Где добыть (Падает с пациентов/боссов):
             </div>
             <div style="display:flex;flex-direction:column;gap:0.35rem;">
-              ${bossSources.map(bs => `
-                <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
-                  <div>
-                    <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${bs.bossId});" title="Открыть досье босса">
-                      ${bs.isQuest ? '📦' : '💀'} #${bs.bossId} ${bs.bossTitle} &rarr;
-                    </button>
-                    <span style="color:var(--accent-blue);font-size:0.73rem;margin-left:0.4rem;">(${bs.locTitle})</span>
-                    ${bs.isQuest ? '<span style="color:#a855f7;font-size:0.7rem;margin-left:0.35rem;font-weight:600;">[Квестовый итем]</span>' : ''}
+              ${bossSources.map(bs => {
+                let badge = '';
+                let probText = '';
+
+                if (bs.isQuest && bs.dropProb && bs.dropProb !== 100) {
+                  badge = '<span style="color:#a855f7;font-size:0.7rem;margin-left:0.35rem;font-weight:600;">[Квестовый итем]</span>';
+                  probText = `<span style="color:#10b981;font-weight:700;">100%</span> <span style="color:var(--text-muted);font-size:0.72rem;font-weight:400;">(квест)</span> • <span style="color:var(--accent-gold);font-weight:700;">${bs.dropProb}%</span> <span style="color:var(--text-muted);font-size:0.72rem;font-weight:400;">(дроп)</span>`;
+                } else if (bs.isQuest) {
+                  badge = '<span style="color:#a855f7;font-size:0.7rem;margin-left:0.35rem;font-weight:600;">[Квестовый итем]</span>';
+                  probText = '<span style="color:#10b981;font-weight:700;">100%</span>';
+                } else {
+                  probText = `<span style="color:var(--accent-gold);font-weight:700;">${bs.dropProb}%</span>`;
+                }
+
+                return `
+                  <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                    <div>
+                      <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${bs.bossId});" title="Открыть досье босса">
+                        ${bs.isQuest ? '📦' : '💀'} #${bs.bossId} ${bs.bossTitle} &rarr;
+                      </button>
+                      <span style="color:var(--accent-blue);font-size:0.73rem;margin-left:0.4rem;">(${bs.locTitle})</span>
+                      ${badge}
+                    </div>
+                    <div style="font-family:var(--font-mono);font-size:0.78rem;">${probText}</div>
                   </div>
-                  <span style="color:${bs.prob === 100 ? '#10b981' : 'var(--accent-gold)'};font-weight:700;font-family:var(--font-mono);">${bs.prob}%</span>
-                </div>
-              `).join('')}
+                `;
+              }).join('')}
             </div>
           </div>
         `;
