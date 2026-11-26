@@ -833,6 +833,20 @@
       font-weight: 600;
     }
 
+    .biz-item-link {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: color 0.15s ease, text-shadow 0.15s ease;
+    }
+
+    .biz-item-link:hover {
+      color: #7dd3fc;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+    }
+
     .biz-toggle-table-btn {
       background: #0c0f16;
       border: 1px solid #263145;
@@ -1789,7 +1803,7 @@
     <div class="nav-inner" id="navTabs">
       <button class="nav-tab active" data-tab="floors">🏥 Корпуса и этажи</button>
       <button class="nav-tab" data-tab="weapons">🔪 Арсенал оружия (100)</button>
-      <button class="nav-tab" data-tab="inventory">📦 Склад инвентаря (178)</button>
+      <button class="nav-tab" data-tab="inventory">🗃️ Заначки</button>
     </div>
   </nav>
 
@@ -2147,7 +2161,13 @@
                               ${b.artifactTitle ? `
                                 <div class="boss-quest-item">
                                   ${b.artifactImage ? `<img src="${b.artifactImage}" width="18" height="18" style="border-radius:2px;"/>` : ''}
-                                  <span>📦 Квестовый предмет: <strong>${b.artifactTitle} (100%)</strong></span>
+                                  <span>📦 Квестовый предмет: <strong>${(() => {
+                                    const artItem = (data.inventory || []).find(i => i.title.trim().toLowerCase() === b.artifactTitle.trim().toLowerCase());
+                                    if (artItem) {
+                                      return `<a href="javascript:void(0)" class="drop-link" onclick="openEventItemDetails(${artItem.id})" title="Посмотреть предмет: ${b.artifactTitle}">${b.artifactTitle}</a> (100%)`;
+                                    }
+                                    return `${b.artifactTitle} (100%)`;
+                                  })()}</strong></span>
                                 </div>
                               ` : ''}
 
@@ -2159,12 +2179,18 @@
 
                                 return `
                                   <div class="boss-drops-wrap">
-                                    ${mainDrops.map(d => `
-                                      <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
-                                        <span>${d.title}</span>
-                                        <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
-                                      </span>
-                                    `).join('')}
+                                    ${mainDrops.map(d => {
+                                      let innerHtml = `<span>${d.title}</span>`;
+                                      if (d.type === 'inventory') {
+                                        innerHtml = `<span onclick="openEventItemDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть предмет: ${d.title}">${d.title}</span>`;
+                                      }
+                                      return `
+                                        <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
+                                          ${innerHtml}
+                                          <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                                        </span>
+                                      `;
+                                    }).join('')}
 
                                     ${mutagenDrops.length > 0 ? `
                                       <button class="boss-mutagens-toggle-btn ${isMutOpen ? 'open' : ''}" id="mut_btn_${b.id}" data-count="${mutagenDrops.length}" onclick="toggleBossMutagens(${b.id}, this)">
@@ -2203,11 +2229,15 @@
                             const totals = {};
                             bz.upgrades.forEach(up => {
                               (up.price.items || []).forEach(it => {
-                                const name = invMap[it.id] || `Предмет #${it.id}`;
-                                totals[name] = (totals[name] || 0) + it.count;
+                                if (!totals[it.id]) {
+                                  totals[it.id] = { id: it.id, name: invMap[it.id] || `Предмет #${it.id}`, count: 0 };
+                                }
+                                totals[it.id].count += it.count;
                               });
                             });
-                            const totalStr = Object.entries(totals).map(([k, v]) => `${k} x${v}`).join(', ') || 'Без предметов';
+                            const totalStr = Object.values(totals).map(it => 
+                              `<a href="javascript:void(0)" class="biz-item-link" onclick="openEventItemDetails(${it.id})" title="Посмотреть информацию: ${it.name}">${it.name}</a> x${it.count}`
+                            ).join(', ') || 'Без предметов';
                             const topUp = bz.upgrades[bz.upgrades.length - 1] || {};
                             const topReward = topUp.drops && topUp.drops.currency1 ? topUp.drops.currency1.value : (topUp.drops && topUp.drops.currency3 ? topUp.drops.currency3.value : 0);
 
@@ -2238,7 +2268,10 @@
                                   </thead>
                                   <tbody>
                                     ${bz.upgrades.map(up => {
-                                      const reqItems = (up.price.items || []).map(it => `${invMap[it.id] || it.id} ${it.count}`).join(', ') || 'Бесплатно';
+                                      const reqItems = (up.price.items || []).map(it => {
+                                        const name = invMap[it.id] || it.id;
+                                        return `<a href="javascript:void(0)" class="biz-item-link" onclick="openEventItemDetails(${it.id})" title="Посмотреть информацию: ${name}">${name}</a> x${it.count}`;
+                                      }).join(', ') || 'Бесплатно';
                                       const c1 = up.drops && up.drops.currency1 ? up.drops.currency1.value : '—';
                                       const c2 = up.drops && up.drops.currency2 ? up.drops.currency2.value : '—';
                                       const c3 = up.drops && up.drops.currency3 ? up.drops.currency3.value : '—';
@@ -2351,8 +2384,12 @@
       );
       const matchedBiz = data.businesses.filter(b => b.title.toLowerCase().includes(q));
       const matchedLocs = data.locations.filter(l => l.title.toLowerCase().includes(q) || (l.name && l.name.toLowerCase().includes(q)));
+      const matchedItems = (data.inventory || []).filter(i => 
+        (i.title && i.title.toLowerCase().includes(q)) ||
+        i.id.toString() === q
+      );
 
-      if (matchedBosses.length === 0 && matchedBiz.length === 0 && matchedLocs.length === 0 && matchedWeapons.length === 0 && matchedMutagens.length === 0) {
+      if (matchedBosses.length === 0 && matchedBiz.length === 0 && matchedLocs.length === 0 && matchedWeapons.length === 0 && matchedMutagens.length === 0 && matchedItems.length === 0) {
         UI.content.innerHTML = `<div style="padding:2rem;text-align:center;color:var(--text-dim);">Ничего не найдено по запросу «${q}».</div>`;
         return;
       }
@@ -2545,6 +2582,28 @@
         html += `</div>`;
       }
 
+      if (matchedItems.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:#38bdf8;margin-bottom:0.4rem;">📦 Предметы ивентов и улучшений (${matchedItems.length})</div>`;
+        html += `<div class="event-items-grid" style="margin-bottom:1.2rem;">`;
+        matchedItems.slice(0, 30).forEach(i => {
+          const sp = i.sellPrice || {};
+          const priceText = sp.currency1 ? `${sp.currency1} мон.` : 'Не продается';
+          html += `
+            <div class="event-item-card" style="cursor:pointer;" onclick="openEventItemDetails(${i.id})" title="Открыть информацию о предмете">
+              <div class="event-item-img">
+                <img src="${i.image || ''}" alt="${i.title}" onerror="this.src='images/ui/unknown.png'"/>
+              </div>
+              <div style="min-width:0;flex:1;">
+                <div style="font-size:0.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${i.title}</div>
+                <div style="font-size:0.68rem;color:var(--accent-gold);margin-top:0.1rem;">${priceText}</div>
+                <div style="font-size:0.64rem;color:#38bdf8;margin-top:0.1rem;">Нажмите для карточки &rarr;</div>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
       UI.content.innerHTML = html;
     }
 
@@ -2670,30 +2729,9 @@
     }
 
     function renderInventory(data, q) {
-      if (!state.inventoryCategory) state.inventoryCategory = 'stashes';
-
+      UI.controls.innerHTML = '';
       const collections = data.collections || [];
-      const elemIds = new Set();
-      collections.forEach(c => (c.elements || []).forEach(e => elemIds.add(e.id)));
-      const stashIds = new Set(collections.map(c => c.stashId));
-      const eventItems = (data.inventory || []).filter(i => !elemIds.has(i.id) && !stashIds.has(i.id));
-
-      UI.controls.innerHTML = `
-        <div class="weapon-filter-ribbon">
-          <button class="weapon-filter-btn ${state.inventoryCategory === 'stashes' ? 'active' : ''}" onclick="state.inventoryCategory='stashes'; renderContent();">
-            🗃️ Заначки (${collections.length})
-          </button>
-          <button class="weapon-filter-btn ${state.inventoryCategory === 'events' ? 'active' : ''}" onclick="state.inventoryCategory='events'; renderContent();">
-            🎁 Ивентовые предметы (${eventItems.length})
-          </button>
-        </div>
-      `;
-
-      if (state.inventoryCategory === 'stashes') {
-        renderStashesView(collections, q);
-      } else {
-        renderEventItemsView(eventItems, data, q);
-      }
+      renderStashesView(collections, q);
     }
 
     function renderStashesView(collections, q) {
@@ -2924,7 +2962,13 @@
           <tr><th>Время боя</th><td>${b.durationMinutes} мин</td></tr>
           <tr><th>Опыт</th><td style="color:var(--accent-purple);font-weight:600;">+${b.xp.toLocaleString()} XP</td></tr>
           <tr><th>Условия</th><td>${b.needsText || 'Нет'}</td></tr>
-          ${b.artifactTitle ? `<tr><th>Квестовый итем</th><td><strong>${b.artifactTitle} (100%)</strong></td></tr>` : ''}
+          ${b.artifactTitle ? `<tr><th>Квестовый итем</th><td><strong>${(() => {
+            const artItem = (data.inventory || []).find(i => i.title.trim().toLowerCase() === b.artifactTitle.trim().toLowerCase());
+            if (artItem) {
+              return `<a href="javascript:void(0)" class="drop-link" onclick="openEventItemDetails(${artItem.id}, ${b.id})" title="Открыть карточку предмета: ${b.artifactTitle}">${b.artifactTitle}</a> (100%)`;
+            }
+            return `${b.artifactTitle} (100%)`;
+          })()}</strong></td></tr>` : ''}
         </table>
 
         <div>
@@ -2949,6 +2993,8 @@
                 } else if (d.collectionTitle || (d.title && d.title.startsWith('Заначка '))) {
                   const cTitle = d.collectionTitle || (d.title.match(/«([^»]+)»/) ? d.title.match(/«([^»]+)»/)[1] : '');
                   itemHtml = `📦 <a href="javascript:void(0)" class="drop-link" onclick="openStashByTitle('${cTitle.replace(/'/g, "\\'")}')" title="Открыть заначку «${cTitle}» в инвентаре">${d.title}</a>`;
+                } else if (d.type === 'inventory') {
+                  itemHtml = `<a href="javascript:void(0)" class="drop-link" onclick="openEventItemDetails(${d.id}, ${b.id})" title="Открыть информацию о предмете">${d.title}</a>`;
                 }
                 return `
                   <tr>
@@ -3255,6 +3301,163 @@
         </table>
 
         ${sourcesHtml}
+      `;
+
+      UI.modalBody.innerHTML = bodyHtml;
+      UI.modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openEventItemDetails(itemId, fromBossId = null) {
+      const data = window.GAME_DATA;
+      const item = (data.inventory || []).find(i => i.id === itemId);
+      if (!item) return;
+
+      UI.modalTitle.textContent = `${item.title} (#${item.id})`;
+
+      const sp = item.sellPrice || {};
+      const priceText = sp.currency1 ? `${sp.currency1.toLocaleString()} монет` : 'Не продается';
+
+      // Find boss sources
+      const bossSources = [];
+      (data.bosses || []).forEach(b => {
+        const loc = (data.locations || []).find(l => l.id === b.locationId);
+        const locTitle = loc ? `Корпус ${loc.title}` : `#${b.locationId}`;
+
+        // Check if quest item
+        if (b.artifactTitle && b.artifactTitle.trim().toLowerCase() === item.title.trim().toLowerCase()) {
+          bossSources.push({
+            bossId: b.id,
+            bossTitle: b.title,
+            locTitle: locTitle,
+            isQuest: true,
+            prob: 100
+          });
+        }
+
+        // Check regular drops
+        (b.drops || []).forEach(d => {
+          if (d.type === 'inventory' && d.id === item.id) {
+            bossSources.push({
+              bossId: b.id,
+              bossTitle: b.title,
+              locTitle: locTitle,
+              isQuest: false,
+              prob: d.probability || 100,
+              count: d.count || 1
+            });
+          }
+        });
+      });
+
+      // Find businesses where this item is used
+      const bizUses = [];
+      (data.businesses || []).forEach(bz => {
+        let totalCount = 0;
+        (bz.upgrades || []).forEach(up => {
+          (up.price.items || []).forEach(it => {
+            if (it.id === item.id) {
+              totalCount += it.count;
+            }
+          });
+        });
+        if (totalCount > 0) {
+          const loc = (data.locations || []).find(l => l.id === bz.locationId);
+          const locTitle = loc ? `Корпус ${loc.title}` : '';
+          bizUses.push({
+            bizId: bz.id,
+            bizTitle: bz.title,
+            locId: bz.locationId,
+            locTitle: locTitle,
+            totalCount: totalCount
+          });
+        }
+      });
+
+      let sourcesHtml = '';
+      if (bossSources.length > 0) {
+        sourcesHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:#f87171;margin-bottom:0.45rem;">
+              🏥 Где добыть (Падает с пациентов/боссов):
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;">
+              ${bossSources.map(bs => `
+                <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                  <div>
+                    <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${bs.bossId});" title="Открыть досье босса">
+                      ${bs.isQuest ? '📦' : '💀'} #${bs.bossId} ${bs.bossTitle} &rarr;
+                    </button>
+                    <span style="color:var(--accent-blue);font-size:0.73rem;margin-left:0.4rem;">(${bs.locTitle})</span>
+                    ${bs.isQuest ? '<span style="color:#a855f7;font-size:0.7rem;margin-left:0.35rem;font-weight:600;">[Квестовый итем]</span>' : ''}
+                  </div>
+                  <span style="color:${bs.prob === 100 ? '#10b981' : 'var(--accent-gold)'};font-weight:700;font-family:var(--font-mono);">${bs.prob}%</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      } else {
+        sourcesHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.02);border:1px solid #1e293b;border-radius:4px;padding:0.6rem;font-size:0.78rem;color:var(--text-muted);">
+            ℹ️ Особый предмет больничного архива.
+          </div>
+        `;
+      }
+
+      let usageHtml = '';
+      if (bizUses.length > 0) {
+        usageHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:var(--accent-gold);margin-bottom:0.45rem;">
+              🏢 Требуется для объектов больницы:
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;">
+              ${bizUses.map(bu => `
+                <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                  <div>
+                    <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openFloorDetails(${bu.locId});" title="Перейти к объекту в корпус">
+                      🏥 ${bu.bizTitle} &rarr;
+                    </button>
+                    ${bu.locTitle ? `<span style="color:var(--accent-blue);font-size:0.73rem;margin-left:0.4rem;">(${bu.locTitle})</span>` : ''}
+                  </div>
+                  <span style="color:#ffd166;font-weight:700;font-family:var(--font-mono);">x${bu.totalCount} шт.</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      const boss = fromBossId ? data.bosses.find(x => x.id === fromBossId) : null;
+      const backBtnHtml = boss ? `
+        <div style="margin-bottom:0.75rem;">
+          <button class="weapon-filter-btn" style="padding:0.32rem 0.75rem;font-size:0.76rem;" onclick="openBossDetails(${boss.id})">
+            &larr; Назад к боссу #${boss.id} (${boss.title})
+          </button>
+        </div>
+      ` : '';
+
+      let bodyHtml = `
+        ${backBtnHtml}
+        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:0.85rem;background:#090d16;border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+          <div style="width:68px;height:68px;background:#06080e;border:1px solid #334155;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <img src="${item.image || ''}" alt="${item.title}" style="max-width:54px;max-height:54px;object-fit:contain;" onerror="this.src='images/ui/unknown.png'"/>
+          </div>
+          <div>
+            <div style="font-size:1.15rem;font-weight:700;color:#fff;font-family:var(--font-header);">${item.title}</div>
+            <div style="font-size:0.82rem;color:var(--accent-gold);margin-top:2px;">💰 Цена продажи: <strong>${priceText}</strong></div>
+            <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">Идентификатор в базе: #${item.id}</div>
+          </div>
+        </div>
+
+        <table class="modal-table">
+          <tr><th>Тип предмета</th><td><span style="color:#38bdf8;font-weight:600;">Материал для улучшения объектов / Ивент</span></td></tr>
+          <tr><th>Стоимость продажи</th><td style="color:var(--accent-gold);font-weight:600;">${priceText}</td></tr>
+        </table>
+
+        ${sourcesHtml}
+        ${usageHtml}
       `;
 
       UI.modalBody.innerHTML = bodyHtml;
