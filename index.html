@@ -2891,6 +2891,17 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    function toggleModalMutagens(btn) {
+      const container = document.getElementById('modal_mutagens_container');
+      if (!container) return;
+      const isHidden = container.style.display === 'none';
+      container.style.display = isHidden ? 'block' : 'none';
+      const arrow = btn.querySelector('.modal-mut-arrow');
+      if (arrow) arrow.textContent = isHidden ? 'Свернуть ▲' : 'Развернуть ▼';
+      btn.style.borderColor = isHidden ? '#38bdf8' : '#233145';
+      btn.style.background = isHidden ? '#1b2434' : '#141b27';
+    }
+
     /* Modal */
     function openBossDetails(bossId) {
       const data = window.GAME_DATA;
@@ -2918,37 +2929,83 @@
 
         <div>
           <div style="font-size:0.8rem;font-weight:700;margin-bottom:0.35rem;color:#fff;">Шансы дропа:</div>
-          <table class="modal-table">
-            <thead><tr><th>Предмет</th><th>Кол-во</th><th>Шанс</th></tr></thead>
-            <tbody>
-              ${(() => {
-                const artLower = (b.artifactTitle || '').trim().toLowerCase();
-                const filteredDrops = b.drops.filter(d => !artLower || d.title.trim().toLowerCase() !== artLower);
-                return filteredDrops.map(d => {
-                  let itemHtml = d.title;
-                  if (d.type === 'access_weapon') {
-                    const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
-                    itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openWeaponDetails(${d.id}, ${b.id})" title="Открыть характеристики и улучшение оружия">${cleanTitle}</a>`;
-                  } else if (d.type === 'access_cloth') {
-                    const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
-                    itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openClothDetails(${d.id}, ${b.id})" title="Открыть информацию об одежде">${cleanTitle}</a>`;
-                  } else if (d.type && d.type.startsWith('access_')) {
-                    itemHtml = '🔑 ' + d.title;
-                  } else if (d.collectionTitle || (d.title && d.title.startsWith('Заначка '))) {
-                    const cTitle = d.collectionTitle || (d.title.match(/«([^»]+)»/) ? d.title.match(/«([^»]+)»/)[1] : '');
-                    itemHtml = `📦 <a href="javascript:void(0)" class="drop-link" onclick="openStashByTitle('${cTitle.replace(/'/g, "\\'")}')" title="Открыть заначку «${cTitle}» в инвентаре">${d.title}</a>`;
-                  }
-                  return `
-                    <tr>
-                      <td>${itemHtml}</td>
-                      <td>${d.count != null ? d.count : 1}</td>
-                      <td style="color:var(--accent-gold);font-weight:700;">${d.probability}%</td>
-                    </tr>
-                  `;
-                }).join('');
-              })()}
-            </tbody>
-          </table>
+          ${(() => {
+            const artLower = (b.artifactTitle || '').trim().toLowerCase();
+            const validDrops = (b.drops || []).filter(d => !artLower || d.title.trim().toLowerCase() !== artLower);
+            const mainDrops = validDrops.filter(d => !d.title.includes('Мутаген'));
+            const mutagenDrops = validDrops.filter(d => d.title.includes('Мутаген'));
+
+            function renderRows(list) {
+              return list.map(d => {
+                let itemHtml = d.title;
+                if (d.type === 'access_weapon') {
+                  const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                  itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openWeaponDetails(${d.id}, ${b.id})" title="Открыть характеристики и улучшение оружия">${cleanTitle}</a>`;
+                } else if (d.type === 'access_cloth') {
+                  const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                  itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openClothDetails(${d.id}, ${b.id})" title="Открыть информацию об одежде">${cleanTitle}</a>`;
+                } else if (d.type && d.type.startsWith('access_')) {
+                  itemHtml = '🔑 ' + d.title;
+                } else if (d.collectionTitle || (d.title && d.title.startsWith('Заначка '))) {
+                  const cTitle = d.collectionTitle || (d.title.match(/«([^»]+)»/) ? d.title.match(/«([^»]+)»/)[1] : '');
+                  itemHtml = `📦 <a href="javascript:void(0)" class="drop-link" onclick="openStashByTitle('${cTitle.replace(/'/g, "\\'")}')" title="Открыть заначку «${cTitle}» в инвентаре">${d.title}</a>`;
+                }
+                return `
+                  <tr>
+                    <td>${itemHtml}</td>
+                    <td>${d.count != null ? d.count : 1}</td>
+                    <td style="color:var(--accent-gold);font-weight:700;">${d.probability}%</td>
+                  </tr>
+                `;
+              }).join('');
+            }
+
+            let out = '';
+            if (mainDrops.length > 0) {
+              out += `
+                <table class="modal-table">
+                  <thead><tr><th>Предмет</th><th>Кол-во</th><th>Шанс</th></tr></thead>
+                  <tbody>${renderRows(mainDrops)}</tbody>
+                </table>
+              `;
+            } else {
+              out += `<div style="font-size:0.75rem;color:var(--text-muted);padding:0.4rem 0;">Нет постоянного дропа экипировки</div>`;
+            }
+
+            if (mutagenDrops.length > 0) {
+              out += `
+                <div style="margin-top:0.75rem;">
+                  <button type="button" class="modal-mutagens-btn" onclick="toggleModalMutagens(this)" style="
+                    background: #141b27;
+                    border: 1px solid #233145;
+                    color: #38bdf8;
+                    padding: 0.45rem 0.75rem;
+                    border-radius: var(--radius-sm);
+                    font-size: 0.76rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    box-sizing: border-box;
+                    transition: all 0.15s ease;
+                  ">
+                    <span>🧪 Мутагены (${mutagenDrops.length})</span>
+                    <span class="modal-mut-arrow">Развернуть ▼</span>
+                  </button>
+                  <div id="modal_mutagens_container" style="display:none;margin-top:0.35rem;">
+                    <table class="modal-table">
+                      <thead><tr><th>Мутаген</th><th>Кол-во</th><th>Шанс</th></tr></thead>
+                      <tbody>${renderRows(mutagenDrops)}</tbody>
+                    </table>
+                  </div>
+                </div>
+              `;
+            }
+
+            return out;
+          })()}
         </div>
       `;
 
