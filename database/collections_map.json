@@ -1,0 +1,1467 @@
+{
+  "100": {
+    "collection_id": 14,
+    "collection_name": "Железная Маска",
+    "element_index": 1
+  },
+  "101": {
+    "collection_id": 14,
+    "collection_name": "Железная Маска",
+    "element_index": 2
+  },
+  "102": {
+    "collection_id": 14,
+    "collection_name": "Железная Маска",
+    "element_index": 3
+  },
+  "103": {
+    "collection_id": 14,
+    "collection_name": "Железная Маска",
+    "element_index": 4
+  },
+  "104": {
+    "collection_id": 14,
+    "collection_name": "Железная Маска",
+    "element_index": 5
+  },
+  "105": {
+    "collection_id": 15,
+    "collection_name": "Кибер Череп",
+    "element_index": 1
+  },
+  "106": {
+    "collection_id": 15,
+    "collection_name": "Кибер Череп",
+    "element_index": 2
+  },
+  "107": {
+    "collection_id": 15,
+    "collection_name": "Кибер Череп",
+    "element_index": 3
+  },
+  "108": {
+    "collection_id": 15,
+    "collection_name": "Кибер Череп",
+    "element_index": 4
+  },
+  "109": {
+    "collection_id": 15,
+    "collection_name": "Кибер Череп",
+    "element_index": 5
+  },
+  "110": {
+    "collection_id": 16,
+    "collection_name": "Некрономикон",
+    "element_index": 1
+  },
+  "111": {
+    "collection_id": 16,
+    "collection_name": "Некрономикон",
+    "element_index": 2
+  },
+  "112": {
+    "collection_id": 16,
+    "collection_name": "Некрономикон",
+    "element_index": 3
+  },
+  "113": {
+    "collection_id": 16,
+    "collection_name": "Некрономикон",
+    "element_index": 4
+  },
+  "114": {
+    "collection_id": 16,
+    "collection_name": "Некрономикон",
+    "element_index": 5
+  },
+  "115": {
+    "collection_id": 17,
+    "collection_name": "Набор сатаниста",
+    "element_index": 1
+  },
+  "116": {
+    "collection_id": 17,
+    "collection_name": "Набор сатаниста",
+    "element_index": 2
+  },
+  "117": {
+    "collection_id": 17,
+    "collection_name": "Набор сатаниста",
+    "element_index": 3
+  },
+  "118": {
+    "collection_id": 17,
+    "collection_name": "Набор сатаниста",
+    "element_index": 4
+  },
+  "119": {
+    "collection_id": 17,
+    "collection_name": "Набор сатаниста",
+    "element_index": 5
+  },
+  "120": {
+    "collection_id": 18,
+    "collection_name": "Подсвечник",
+    "element_index": 1
+  },
+  "121": {
+    "collection_id": 18,
+    "collection_name": "Подсвечник",
+    "element_index": 2
+  },
+  "122": {
+    "collection_id": 18,
+    "collection_name": "Подсвечник",
+    "element_index": 3
+  },
+  "123": {
+    "collection_id": 18,
+    "collection_name": "Подсвечник",
+    "element_index": 4
+  },
+  "124": {
+    "collection_id": 18,
+    "collection_name": "Подсвечник",
+    "element_index": 5
+  },
+  "125": {
+    "collection_id": 19,
+    "collection_name": "Дозиметр",
+    "element_index": 1
+  },
+  "126": {
+    "collection_id": 19,
+    "collection_name": "Дозиметр",
+    "element_index": 2
+  },
+  "127": {
+    "collection_id": 19,
+    "collection_name": "Дозиметр",
+    "element_index": 3
+  },
+  "128": {
+    "collection_id": 19,
+    "collection_name": "Дозиметр",
+    "element_index": 4
+  },
+  "129": {
+    "collection_id": 19,
+    "collection_name": "Дозиметр",
+    "element_index": 5
+  },
+  "130": {
+    "collection_id": 20,
+    "collection_name": "Бомба",
+    "element_index": 1
+  },
+  "131": {
+    "collection_id": 20,
+    "collection_name": "Бомба",
+    "element_index": 2
+  },
+  "132": {
+    "collection_id": 20,
+    "collection_name": "Бомба",
+    "element_index": 3
+  },
+  "133": {
+    "collection_id": 20,
+    "collection_name": "Бомба",
+    "element_index": 4
+  },
+  "134": {
+    "collection_id": 20,
+    "collection_name": "Бомба",
+    "element_index": 5
+  },
+  "135": {
+    "collection_id": 21,
+    "collection_name": "Золотой замок",
+    "element_index": 1
+  },
+  "136": {
+    "collection_id": 21,
+    "collection_name": "Золотой замок",
+    "element_index": 2
+  },
+  "137": {
+    "collection_id": 21,
+    "collection_name": "Золотой замок",
+    "element_index": 3
+  },
+  "138": {
+    "collection_id": 21,
+    "collection_name": "Золотой замок",
+    "element_index": 4
+  },
+  "139": {
+    "collection_id": 21,
+    "collection_name": "Золотой замок",
+    "element_index": 5
+  },
+  "140": {
+    "collection_id": 22,
+    "collection_name": "Ящик Пандоры",
+    "element_index": 1
+  },
+  "141": {
+    "collection_id": 22,
+    "collection_name": "Ящик Пандоры",
+    "element_index": 2
+  },
+  "142": {
+    "collection_id": 22,
+    "collection_name": "Ящик Пандоры",
+    "element_index": 3
+  },
+  "143": {
+    "collection_id": 22,
+    "collection_name": "Ящик Пандоры",
+    "element_index": 4
+  },
+  "144": {
+    "collection_id": 22,
+    "collection_name": "Ящик Пандоры",
+    "element_index": 5
+  },
+  "145": {
+    "collection_id": 25,
+    "collection_name": "Набор для фотосъёмки",
+    "element_index": 1
+  },
+  "146": {
+    "collection_id": 25,
+    "collection_name": "Набор для фотосъёмки",
+    "element_index": 2
+  },
+  "147": {
+    "collection_id": 25,
+    "collection_name": "Набор для фотосъёмки",
+    "element_index": 3
+  },
+  "148": {
+    "collection_id": 25,
+    "collection_name": "Набор для фотосъёмки",
+    "element_index": 4
+  },
+  "149": {
+    "collection_id": 25,
+    "collection_name": "Набор для фотосъёмки",
+    "element_index": 5
+  },
+  "150": {
+    "collection_id": 26,
+    "collection_name": "Видеокамера",
+    "element_index": 1
+  },
+  "161": {
+    "collection_id": 26,
+    "collection_name": "Видеокамера",
+    "element_index": 2
+  },
+  "162": {
+    "collection_id": 26,
+    "collection_name": "Видеокамера",
+    "element_index": 3
+  },
+  "163": {
+    "collection_id": 26,
+    "collection_name": "Видеокамера",
+    "element_index": 4
+  },
+  "164": {
+    "collection_id": 26,
+    "collection_name": "Видеокамера",
+    "element_index": 5
+  },
+  "151": {
+    "collection_id": 24,
+    "collection_name": "Походный набор садиста",
+    "element_index": 1
+  },
+  "152": {
+    "collection_id": 24,
+    "collection_name": "Походный набор садиста",
+    "element_index": 2
+  },
+  "153": {
+    "collection_id": 24,
+    "collection_name": "Походный набор садиста",
+    "element_index": 3
+  },
+  "154": {
+    "collection_id": 24,
+    "collection_name": "Походный набор садиста",
+    "element_index": 4
+  },
+  "155": {
+    "collection_id": 24,
+    "collection_name": "Походный набор садиста",
+    "element_index": 5
+  },
+  "156": {
+    "collection_id": 23,
+    "collection_name": "Коктейль Молотова",
+    "element_index": 1
+  },
+  "157": {
+    "collection_id": 23,
+    "collection_name": "Коктейль Молотова",
+    "element_index": 2
+  },
+  "158": {
+    "collection_id": 23,
+    "collection_name": "Коктейль Молотова",
+    "element_index": 3
+  },
+  "159": {
+    "collection_id": 23,
+    "collection_name": "Коктейль Молотова",
+    "element_index": 4
+  },
+  "160": {
+    "collection_id": 23,
+    "collection_name": "Коктейль Молотова",
+    "element_index": 5
+  },
+  "165": {
+    "collection_id": 27,
+    "collection_name": "Модель корабля",
+    "element_index": 1
+  },
+  "166": {
+    "collection_id": 27,
+    "collection_name": "Модель корабля",
+    "element_index": 2
+  },
+  "167": {
+    "collection_id": 27,
+    "collection_name": "Модель корабля",
+    "element_index": 3
+  },
+  "168": {
+    "collection_id": 27,
+    "collection_name": "Модель корабля",
+    "element_index": 4
+  },
+  "169": {
+    "collection_id": 27,
+    "collection_name": "Модель корабля",
+    "element_index": 5
+  },
+  "170": {
+    "collection_id": 28,
+    "collection_name": "Бас-гитара",
+    "element_index": 1
+  },
+  "171": {
+    "collection_id": 28,
+    "collection_name": "Бас-гитара",
+    "element_index": 2
+  },
+  "172": {
+    "collection_id": 28,
+    "collection_name": "Бас-гитара",
+    "element_index": 3
+  },
+  "173": {
+    "collection_id": 28,
+    "collection_name": "Бас-гитара",
+    "element_index": 4
+  },
+  "174": {
+    "collection_id": 28,
+    "collection_name": "Бас-гитара",
+    "element_index": 5
+  },
+  "175": {
+    "collection_id": 29,
+    "collection_name": "Набор провидца",
+    "element_index": 1
+  },
+  "176": {
+    "collection_id": 29,
+    "collection_name": "Набор провидца",
+    "element_index": 2
+  },
+  "177": {
+    "collection_id": 29,
+    "collection_name": "Набор провидца",
+    "element_index": 3
+  },
+  "178": {
+    "collection_id": 29,
+    "collection_name": "Набор провидца",
+    "element_index": 4
+  },
+  "179": {
+    "collection_id": 29,
+    "collection_name": "Набор провидца",
+    "element_index": 5
+  },
+  "180": {
+    "collection_id": 30,
+    "collection_name": "Гильотина",
+    "element_index": 1
+  },
+  "181": {
+    "collection_id": 30,
+    "collection_name": "Гильотина",
+    "element_index": 2
+  },
+  "182": {
+    "collection_id": 30,
+    "collection_name": "Гильотина",
+    "element_index": 3
+  },
+  "183": {
+    "collection_id": 30,
+    "collection_name": "Гильотина",
+    "element_index": 4
+  },
+  "184": {
+    "collection_id": 30,
+    "collection_name": "Гильотина",
+    "element_index": 5
+  },
+  "185": {
+    "collection_id": 31,
+    "collection_name": "Гиперболойд",
+    "element_index": 1
+  },
+  "186": {
+    "collection_id": 31,
+    "collection_name": "Гиперболойд",
+    "element_index": 2
+  },
+  "187": {
+    "collection_id": 31,
+    "collection_name": "Гиперболойд",
+    "element_index": 3
+  },
+  "188": {
+    "collection_id": 31,
+    "collection_name": "Гиперболойд",
+    "element_index": 4
+  },
+  "189": {
+    "collection_id": 31,
+    "collection_name": "Гиперболойд",
+    "element_index": 5
+  },
+  "190": {
+    "collection_id": 32,
+    "collection_name": "ПНВ",
+    "element_index": 1
+  },
+  "191": {
+    "collection_id": 32,
+    "collection_name": "ПНВ",
+    "element_index": 2
+  },
+  "192": {
+    "collection_id": 32,
+    "collection_name": "ПНВ",
+    "element_index": 3
+  },
+  "193": {
+    "collection_id": 32,
+    "collection_name": "ПНВ",
+    "element_index": 4
+  },
+  "194": {
+    "collection_id": 32,
+    "collection_name": "ПНВ",
+    "element_index": 5
+  },
+  "195": {
+    "collection_id": 33,
+    "collection_name": "ЭВМ",
+    "element_index": 1
+  },
+  "196": {
+    "collection_id": 33,
+    "collection_name": "ЭВМ",
+    "element_index": 2
+  },
+  "197": {
+    "collection_id": 33,
+    "collection_name": "ЭВМ",
+    "element_index": 3
+  },
+  "198": {
+    "collection_id": 33,
+    "collection_name": "ЭВМ",
+    "element_index": 4
+  },
+  "199": {
+    "collection_id": 33,
+    "collection_name": "ЭВМ",
+    "element_index": 5
+  },
+  "200": {
+    "collection_id": 34,
+    "collection_name": "Медведь",
+    "element_index": 1
+  },
+  "201": {
+    "collection_id": 34,
+    "collection_name": "Медведь",
+    "element_index": 2
+  },
+  "202": {
+    "collection_id": 34,
+    "collection_name": "Медведь",
+    "element_index": 3
+  },
+  "203": {
+    "collection_id": 34,
+    "collection_name": "Медведь",
+    "element_index": 4
+  },
+  "204": {
+    "collection_id": 34,
+    "collection_name": "Медведь",
+    "element_index": 5
+  },
+  "292": {
+    "collection_id": 35,
+    "collection_name": "Коллекция #35",
+    "element_index": 1
+  },
+  "293": {
+    "collection_id": 35,
+    "collection_name": "Коллекция #35",
+    "element_index": 2
+  },
+  "294": {
+    "collection_id": 35,
+    "collection_name": "Коллекция #35",
+    "element_index": 3
+  },
+  "295": {
+    "collection_id": 35,
+    "collection_name": "Коллекция #35",
+    "element_index": 4
+  },
+  "296": {
+    "collection_id": 35,
+    "collection_name": "Коллекция #35",
+    "element_index": 5
+  },
+  "297": {
+    "collection_id": 36,
+    "collection_name": "Коллекция #36",
+    "element_index": 1
+  },
+  "298": {
+    "collection_id": 36,
+    "collection_name": "Коллекция #36",
+    "element_index": 2
+  },
+  "299": {
+    "collection_id": 36,
+    "collection_name": "Коллекция #36",
+    "element_index": 3
+  },
+  "300": {
+    "collection_id": 36,
+    "collection_name": "Коллекция #36",
+    "element_index": 4
+  },
+  "301": {
+    "collection_id": 36,
+    "collection_name": "Коллекция #36",
+    "element_index": 5
+  },
+  "303": {
+    "collection_id": 37,
+    "collection_name": "Коллекция #37",
+    "element_index": 4
+  },
+  "304": {
+    "collection_id": 37,
+    "collection_name": "Коллекция #37",
+    "element_index": 3
+  },
+  "305": {
+    "collection_id": 37,
+    "collection_name": "Коллекция #37",
+    "element_index": 2
+  },
+  "306": {
+    "collection_id": 37,
+    "collection_name": "Коллекция #37",
+    "element_index": 1
+  },
+  "317": {
+    "collection_id": 37,
+    "collection_name": "Коллекция #37",
+    "element_index": 5
+  },
+  "307": {
+    "collection_id": 38,
+    "collection_name": "Коллекция #38",
+    "element_index": 1
+  },
+  "308": {
+    "collection_id": 38,
+    "collection_name": "Коллекция #38",
+    "element_index": 2
+  },
+  "309": {
+    "collection_id": 38,
+    "collection_name": "Коллекция #38",
+    "element_index": 3
+  },
+  "310": {
+    "collection_id": 38,
+    "collection_name": "Коллекция #38",
+    "element_index": 4
+  },
+  "311": {
+    "collection_id": 38,
+    "collection_name": "Коллекция #38",
+    "element_index": 5
+  },
+  "312": {
+    "collection_id": 39,
+    "collection_name": "Коллекция #39",
+    "element_index": 1
+  },
+  "313": {
+    "collection_id": 39,
+    "collection_name": "Коллекция #39",
+    "element_index": 2
+  },
+  "314": {
+    "collection_id": 39,
+    "collection_name": "Коллекция #39",
+    "element_index": 3
+  },
+  "315": {
+    "collection_id": 39,
+    "collection_name": "Коллекция #39",
+    "element_index": 4
+  },
+  "316": {
+    "collection_id": 39,
+    "collection_name": "Коллекция #39",
+    "element_index": 5
+  },
+  "327": {
+    "collection_id": 40,
+    "collection_name": "Коллекция #40",
+    "element_index": 1
+  },
+  "328": {
+    "collection_id": 40,
+    "collection_name": "Коллекция #40",
+    "element_index": 2
+  },
+  "329": {
+    "collection_id": 40,
+    "collection_name": "Коллекция #40",
+    "element_index": 3
+  },
+  "330": {
+    "collection_id": 40,
+    "collection_name": "Коллекция #40",
+    "element_index": 4
+  },
+  "331": {
+    "collection_id": 40,
+    "collection_name": "Коллекция #40",
+    "element_index": 5
+  },
+  "35": {
+    "collection_id": 1,
+    "collection_name": "Набор Окулиста",
+    "element_index": 1
+  },
+  "36": {
+    "collection_id": 1,
+    "collection_name": "Набор Окулиста",
+    "element_index": 2
+  },
+  "37": {
+    "collection_id": 1,
+    "collection_name": "Набор Окулиста",
+    "element_index": 3
+  },
+  "38": {
+    "collection_id": 1,
+    "collection_name": "Набор Окулиста",
+    "element_index": 4
+  },
+  "39": {
+    "collection_id": 1,
+    "collection_name": "Набор Окулиста",
+    "element_index": 5
+  },
+  "374": {
+    "collection_id": 41,
+    "collection_name": "Коллекция #41",
+    "element_index": 1
+  },
+  "408": {
+    "collection_id": 41,
+    "collection_name": "Коллекция #41",
+    "element_index": 2
+  },
+  "409": {
+    "collection_id": 41,
+    "collection_name": "Коллекция #41",
+    "element_index": 3
+  },
+  "410": {
+    "collection_id": 41,
+    "collection_name": "Коллекция #41",
+    "element_index": 4
+  },
+  "411": {
+    "collection_id": 41,
+    "collection_name": "Коллекция #41",
+    "element_index": 5
+  },
+  "40": {
+    "collection_id": 2,
+    "collection_name": "Аптечка",
+    "element_index": 1
+  },
+  "41": {
+    "collection_id": 2,
+    "collection_name": "Аптечка",
+    "element_index": 2
+  },
+  "42": {
+    "collection_id": 2,
+    "collection_name": "Аптечка",
+    "element_index": 3
+  },
+  "43": {
+    "collection_id": 2,
+    "collection_name": "Аптечка",
+    "element_index": 4
+  },
+  "44": {
+    "collection_id": 2,
+    "collection_name": "Аптечка",
+    "element_index": 5
+  },
+  "412": {
+    "collection_id": 42,
+    "collection_name": "Коллекция #42",
+    "element_index": 1
+  },
+  "413": {
+    "collection_id": 42,
+    "collection_name": "Коллекция #42",
+    "element_index": 2
+  },
+  "414": {
+    "collection_id": 42,
+    "collection_name": "Коллекция #42",
+    "element_index": 3
+  },
+  "415": {
+    "collection_id": 42,
+    "collection_name": "Коллекция #42",
+    "element_index": 4
+  },
+  "416": {
+    "collection_id": 42,
+    "collection_name": "Коллекция #42",
+    "element_index": 5
+  },
+  "418": {
+    "collection_id": 43,
+    "collection_name": "Коллекция #43",
+    "element_index": 1
+  },
+  "419": {
+    "collection_id": 43,
+    "collection_name": "Коллекция #43",
+    "element_index": 2
+  },
+  "420": {
+    "collection_id": 43,
+    "collection_name": "Коллекция #43",
+    "element_index": 3
+  },
+  "421": {
+    "collection_id": 43,
+    "collection_name": "Коллекция #43",
+    "element_index": 4
+  },
+  "422": {
+    "collection_id": 43,
+    "collection_name": "Коллекция #43",
+    "element_index": 5
+  },
+  "431": {
+    "collection_id": 44,
+    "collection_name": "Коллекция #44",
+    "element_index": 1
+  },
+  "433": {
+    "collection_id": 45,
+    "collection_name": "Коллекция #45",
+    "element_index": 1
+  },
+  "434": {
+    "collection_id": 46,
+    "collection_name": "Коллекция #46",
+    "element_index": 1
+  },
+  "45": {
+    "collection_id": 3,
+    "collection_name": "Тряпичная кукла",
+    "element_index": 1
+  },
+  "46": {
+    "collection_id": 3,
+    "collection_name": "Тряпичная кукла",
+    "element_index": 2
+  },
+  "47": {
+    "collection_id": 3,
+    "collection_name": "Тряпичная кукла",
+    "element_index": 3
+  },
+  "48": {
+    "collection_id": 3,
+    "collection_name": "Тряпичная кукла",
+    "element_index": 4
+  },
+  "49": {
+    "collection_id": 3,
+    "collection_name": "Тряпичная кукла",
+    "element_index": 5
+  },
+  "454": {
+    "collection_id": 50,
+    "collection_name": "Коллекция #50",
+    "element_index": 1
+  },
+  "455": {
+    "collection_id": 50,
+    "collection_name": "Коллекция #50",
+    "element_index": 2
+  },
+  "456": {
+    "collection_id": 50,
+    "collection_name": "Коллекция #50",
+    "element_index": 3
+  },
+  "457": {
+    "collection_id": 50,
+    "collection_name": "Коллекция #50",
+    "element_index": 4
+  },
+  "458": {
+    "collection_id": 50,
+    "collection_name": "Коллекция #50",
+    "element_index": 5
+  },
+  "459": {
+    "collection_id": 51,
+    "collection_name": "Коллекция #51",
+    "element_index": 1
+  },
+  "460": {
+    "collection_id": 51,
+    "collection_name": "Коллекция #51",
+    "element_index": 2
+  },
+  "461": {
+    "collection_id": 51,
+    "collection_name": "Коллекция #51",
+    "element_index": 3
+  },
+  "462": {
+    "collection_id": 51,
+    "collection_name": "Коллекция #51",
+    "element_index": 4
+  },
+  "463": {
+    "collection_id": 51,
+    "collection_name": "Коллекция #51",
+    "element_index": 5
+  },
+  "464": {
+    "collection_id": 52,
+    "collection_name": "Коллекция #52",
+    "element_index": 1
+  },
+  "465": {
+    "collection_id": 52,
+    "collection_name": "Коллекция #52",
+    "element_index": 2
+  },
+  "466": {
+    "collection_id": 52,
+    "collection_name": "Коллекция #52",
+    "element_index": 3
+  },
+  "467": {
+    "collection_id": 52,
+    "collection_name": "Коллекция #52",
+    "element_index": 4
+  },
+  "468": {
+    "collection_id": 52,
+    "collection_name": "Коллекция #52",
+    "element_index": 5
+  },
+  "469": {
+    "collection_id": 53,
+    "collection_name": "Коллекция #53",
+    "element_index": 1
+  },
+  "470": {
+    "collection_id": 53,
+    "collection_name": "Коллекция #53",
+    "element_index": 2
+  },
+  "471": {
+    "collection_id": 53,
+    "collection_name": "Коллекция #53",
+    "element_index": 3
+  },
+  "472": {
+    "collection_id": 53,
+    "collection_name": "Коллекция #53",
+    "element_index": 4
+  },
+  "473": {
+    "collection_id": 53,
+    "collection_name": "Коллекция #53",
+    "element_index": 5
+  },
+  "474": {
+    "collection_id": 54,
+    "collection_name": "Коллекция #54",
+    "element_index": 1
+  },
+  "475": {
+    "collection_id": 54,
+    "collection_name": "Коллекция #54",
+    "element_index": 2
+  },
+  "476": {
+    "collection_id": 54,
+    "collection_name": "Коллекция #54",
+    "element_index": 3
+  },
+  "477": {
+    "collection_id": 54,
+    "collection_name": "Коллекция #54",
+    "element_index": 4
+  },
+  "478": {
+    "collection_id": 54,
+    "collection_name": "Коллекция #54",
+    "element_index": 5
+  },
+  "479": {
+    "collection_id": 55,
+    "collection_name": "Коллекция #55",
+    "element_index": 1
+  },
+  "480": {
+    "collection_id": 55,
+    "collection_name": "Коллекция #55",
+    "element_index": 2
+  },
+  "481": {
+    "collection_id": 55,
+    "collection_name": "Коллекция #55",
+    "element_index": 3
+  },
+  "482": {
+    "collection_id": 55,
+    "collection_name": "Коллекция #55",
+    "element_index": 4
+  },
+  "483": {
+    "collection_id": 55,
+    "collection_name": "Коллекция #55",
+    "element_index": 5
+  },
+  "490": {
+    "collection_id": 47,
+    "collection_name": "Коллекция #47",
+    "element_index": 1
+  },
+  "491": {
+    "collection_id": 47,
+    "collection_name": "Коллекция #47",
+    "element_index": 2
+  },
+  "492": {
+    "collection_id": 47,
+    "collection_name": "Коллекция #47",
+    "element_index": 3
+  },
+  "493": {
+    "collection_id": 47,
+    "collection_name": "Коллекция #47",
+    "element_index": 4
+  },
+  "494": {
+    "collection_id": 47,
+    "collection_name": "Коллекция #47",
+    "element_index": 5
+  },
+  "495": {
+    "collection_id": 48,
+    "collection_name": "Коллекция #48",
+    "element_index": 1
+  },
+  "496": {
+    "collection_id": 48,
+    "collection_name": "Коллекция #48",
+    "element_index": 2
+  },
+  "497": {
+    "collection_id": 48,
+    "collection_name": "Коллекция #48",
+    "element_index": 3
+  },
+  "498": {
+    "collection_id": 48,
+    "collection_name": "Коллекция #48",
+    "element_index": 4
+  },
+  "499": {
+    "collection_id": 48,
+    "collection_name": "Коллекция #48",
+    "element_index": 5
+  },
+  "50": {
+    "collection_id": 4,
+    "collection_name": "Безумец",
+    "element_index": 1
+  },
+  "51": {
+    "collection_id": 4,
+    "collection_name": "Безумец",
+    "element_index": 2
+  },
+  "52": {
+    "collection_id": 4,
+    "collection_name": "Безумец",
+    "element_index": 3
+  },
+  "53": {
+    "collection_id": 4,
+    "collection_name": "Безумец",
+    "element_index": 4
+  },
+  "54": {
+    "collection_id": 4,
+    "collection_name": "Безумец",
+    "element_index": 5
+  },
+  "500": {
+    "collection_id": 49,
+    "collection_name": "Коллекция #49",
+    "element_index": 1
+  },
+  "501": {
+    "collection_id": 49,
+    "collection_name": "Коллекция #49",
+    "element_index": 2
+  },
+  "502": {
+    "collection_id": 49,
+    "collection_name": "Коллекция #49",
+    "element_index": 3
+  },
+  "503": {
+    "collection_id": 49,
+    "collection_name": "Коллекция #49",
+    "element_index": 4
+  },
+  "504": {
+    "collection_id": 49,
+    "collection_name": "Коллекция #49",
+    "element_index": 5
+  },
+  "55": {
+    "collection_id": 5,
+    "collection_name": "Спиртованные органы",
+    "element_index": 1
+  },
+  "56": {
+    "collection_id": 5,
+    "collection_name": "Спиртованные органы",
+    "element_index": 2
+  },
+  "57": {
+    "collection_id": 5,
+    "collection_name": "Спиртованные органы",
+    "element_index": 3
+  },
+  "58": {
+    "collection_id": 5,
+    "collection_name": "Спиртованные органы",
+    "element_index": 4
+  },
+  "59": {
+    "collection_id": 5,
+    "collection_name": "Спиртованные органы",
+    "element_index": 5
+  },
+  "594": {
+    "collection_id": 56,
+    "collection_name": "Коллекция #56",
+    "element_index": 1
+  },
+  "595": {
+    "collection_id": 56,
+    "collection_name": "Коллекция #56",
+    "element_index": 2
+  },
+  "596": {
+    "collection_id": 56,
+    "collection_name": "Коллекция #56",
+    "element_index": 3
+  },
+  "597": {
+    "collection_id": 56,
+    "collection_name": "Коллекция #56",
+    "element_index": 4
+  },
+  "598": {
+    "collection_id": 56,
+    "collection_name": "Коллекция #56",
+    "element_index": 5
+  },
+  "60": {
+    "collection_id": 6,
+    "collection_name": "Игрушки",
+    "element_index": 1
+  },
+  "61": {
+    "collection_id": 6,
+    "collection_name": "Игрушки",
+    "element_index": 2
+  },
+  "62": {
+    "collection_id": 6,
+    "collection_name": "Игрушки",
+    "element_index": 3
+  },
+  "63": {
+    "collection_id": 6,
+    "collection_name": "Игрушки",
+    "element_index": 4
+  },
+  "64": {
+    "collection_id": 6,
+    "collection_name": "Игрушки",
+    "element_index": 5
+  },
+  "600": {
+    "collection_id": 57,
+    "collection_name": "Коллекция #57",
+    "element_index": 1
+  },
+  "601": {
+    "collection_id": 57,
+    "collection_name": "Коллекция #57",
+    "element_index": 2
+  },
+  "602": {
+    "collection_id": 57,
+    "collection_name": "Коллекция #57",
+    "element_index": 3
+  },
+  "603": {
+    "collection_id": 57,
+    "collection_name": "Коллекция #57",
+    "element_index": 4
+  },
+  "604": {
+    "collection_id": 57,
+    "collection_name": "Коллекция #57",
+    "element_index": 5
+  },
+  "606": {
+    "collection_id": 58,
+    "collection_name": "Коллекция #58",
+    "element_index": 1
+  },
+  "607": {
+    "collection_id": 58,
+    "collection_name": "Коллекция #58",
+    "element_index": 2
+  },
+  "608": {
+    "collection_id": 58,
+    "collection_name": "Коллекция #58",
+    "element_index": 3
+  },
+  "609": {
+    "collection_id": 58,
+    "collection_name": "Коллекция #58",
+    "element_index": 4
+  },
+  "610": {
+    "collection_id": 58,
+    "collection_name": "Коллекция #58",
+    "element_index": 5
+  },
+  "612": {
+    "collection_id": 59,
+    "collection_name": "Коллекция #59",
+    "element_index": 1
+  },
+  "613": {
+    "collection_id": 59,
+    "collection_name": "Коллекция #59",
+    "element_index": 2
+  },
+  "614": {
+    "collection_id": 59,
+    "collection_name": "Коллекция #59",
+    "element_index": 3
+  },
+  "615": {
+    "collection_id": 59,
+    "collection_name": "Коллекция #59",
+    "element_index": 4
+  },
+  "616": {
+    "collection_id": 59,
+    "collection_name": "Коллекция #59",
+    "element_index": 5
+  },
+  "618": {
+    "collection_id": 60,
+    "collection_name": "Коллекция #60",
+    "element_index": 1
+  },
+  "619": {
+    "collection_id": 60,
+    "collection_name": "Коллекция #60",
+    "element_index": 2
+  },
+  "620": {
+    "collection_id": 60,
+    "collection_name": "Коллекция #60",
+    "element_index": 3
+  },
+  "621": {
+    "collection_id": 60,
+    "collection_name": "Коллекция #60",
+    "element_index": 4
+  },
+  "622": {
+    "collection_id": 60,
+    "collection_name": "Коллекция #60",
+    "element_index": 5
+  },
+  "624": {
+    "collection_id": 61,
+    "collection_name": "Коллекция #61",
+    "element_index": 1
+  },
+  "625": {
+    "collection_id": 61,
+    "collection_name": "Коллекция #61",
+    "element_index": 2
+  },
+  "626": {
+    "collection_id": 61,
+    "collection_name": "Коллекция #61",
+    "element_index": 3
+  },
+  "627": {
+    "collection_id": 61,
+    "collection_name": "Коллекция #61",
+    "element_index": 4
+  },
+  "628": {
+    "collection_id": 61,
+    "collection_name": "Коллекция #61",
+    "element_index": 5
+  },
+  "65": {
+    "collection_id": 7,
+    "collection_name": "Ножи Мясника",
+    "element_index": 1
+  },
+  "66": {
+    "collection_id": 7,
+    "collection_name": "Ножи Мясника",
+    "element_index": 2
+  },
+  "67": {
+    "collection_id": 7,
+    "collection_name": "Ножи Мясника",
+    "element_index": 3
+  },
+  "68": {
+    "collection_id": 7,
+    "collection_name": "Ножи Мясника",
+    "element_index": 4
+  },
+  "69": {
+    "collection_id": 7,
+    "collection_name": "Ножи Мясника",
+    "element_index": 5
+  },
+  "70": {
+    "collection_id": 8,
+    "collection_name": "Набор Химика",
+    "element_index": 1
+  },
+  "71": {
+    "collection_id": 8,
+    "collection_name": "Набор Химика",
+    "element_index": 2
+  },
+  "72": {
+    "collection_id": 8,
+    "collection_name": "Набор Химика",
+    "element_index": 3
+  },
+  "73": {
+    "collection_id": 8,
+    "collection_name": "Набор Химика",
+    "element_index": 4
+  },
+  "74": {
+    "collection_id": 8,
+    "collection_name": "Набор Химика",
+    "element_index": 5
+  },
+  "75": {
+    "collection_id": 9,
+    "collection_name": "Рисунок",
+    "element_index": 1
+  },
+  "76": {
+    "collection_id": 9,
+    "collection_name": "Рисунок",
+    "element_index": 2
+  },
+  "77": {
+    "collection_id": 9,
+    "collection_name": "Рисунок",
+    "element_index": 3
+  },
+  "78": {
+    "collection_id": 9,
+    "collection_name": "Рисунок",
+    "element_index": 4
+  },
+  "79": {
+    "collection_id": 9,
+    "collection_name": "Рисунок",
+    "element_index": 5
+  },
+  "80": {
+    "collection_id": 10,
+    "collection_name": "Коллаж",
+    "element_index": 1
+  },
+  "81": {
+    "collection_id": 10,
+    "collection_name": "Коллаж",
+    "element_index": 2
+  },
+  "82": {
+    "collection_id": 10,
+    "collection_name": "Коллаж",
+    "element_index": 3
+  },
+  "83": {
+    "collection_id": 10,
+    "collection_name": "Коллаж",
+    "element_index": 4
+  },
+  "84": {
+    "collection_id": 10,
+    "collection_name": "Коллаж",
+    "element_index": 5
+  },
+  "85": {
+    "collection_id": 11,
+    "collection_name": "Карточный дом",
+    "element_index": 1
+  },
+  "86": {
+    "collection_id": 11,
+    "collection_name": "Карточный дом",
+    "element_index": 2
+  },
+  "87": {
+    "collection_id": 11,
+    "collection_name": "Карточный дом",
+    "element_index": 3
+  },
+  "88": {
+    "collection_id": 11,
+    "collection_name": "Карточный дом",
+    "element_index": 4
+  },
+  "89": {
+    "collection_id": 11,
+    "collection_name": "Карточный дом",
+    "element_index": 5
+  },
+  "90": {
+    "collection_id": 12,
+    "collection_name": "Динозавр",
+    "element_index": 1
+  },
+  "91": {
+    "collection_id": 12,
+    "collection_name": "Динозавр",
+    "element_index": 2
+  },
+  "92": {
+    "collection_id": 12,
+    "collection_name": "Динозавр",
+    "element_index": 3
+  },
+  "93": {
+    "collection_id": 12,
+    "collection_name": "Динозавр",
+    "element_index": 4
+  },
+  "94": {
+    "collection_id": 12,
+    "collection_name": "Динозавр",
+    "element_index": 5
+  },
+  "95": {
+    "collection_id": 13,
+    "collection_name": "Железная Дева",
+    "element_index": 1
+  },
+  "96": {
+    "collection_id": 13,
+    "collection_name": "Железная Дева",
+    "element_index": 2
+  },
+  "97": {
+    "collection_id": 13,
+    "collection_name": "Железная Дева",
+    "element_index": 3
+  },
+  "98": {
+    "collection_id": 13,
+    "collection_name": "Железная Дева",
+    "element_index": 4
+  },
+  "99": {
+    "collection_id": 13,
+    "collection_name": "Железная Дева",
+    "element_index": 5
+  }
+}

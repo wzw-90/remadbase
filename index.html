@@ -1,0 +1,3216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знаний «Безумие» (Remad.me)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <script src="database/bundle.js?v=1.1"></script>
+  <style>
+    @font-face {
+      font-family: 'B52';
+      src: url('fonts/b52_regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'StencilGame';
+      src: url('fonts/stencil_regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    :root {
+      --bg-main: #0c0e14;
+      --bg-card: #131722;
+      --bg-card-hover: #192030;
+      --bg-elevated: #1e2638;
+      --border: #263145;
+      --border-subtle: #18202e;
+      --border-blood: #8b1e1e;
+      --text-main: #e2e8f0;
+      --text-muted: #8c97aa;
+      --text-dim: #556275;
+      --primary: #b72628;
+      --primary-hover: #e53935;
+      --accent-blue: #38bdf8;
+      --accent-gold: #f59e0b;
+      --accent-green: #10b981;
+      --accent-purple: #c084fc;
+      --accent-pills: #60a5fa;
+      --radius: 6px;
+      --radius-sm: 4px;
+      --font-header: 'Oswald', 'Russo One', -apple-system, sans-serif;
+      --font-stencil: 'Oswald', 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scrollbar-width: thin;
+      scrollbar-color: #253043 #090c13;
+    }
+
+    /* Custom Dark Gothic Hospital Scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #090c13;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #253043;
+      border-radius: 4px;
+      border: 1px solid #141a26;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #394760;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background: #c0292b;
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: #090c13;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(139, 30, 30, 0.16) 0%, rgba(12, 14, 20, 0) 65%),
+        linear-gradient(180deg, #10141c 0%, #0a0c12 50%, #06070a 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.45;
+    }
+
+    /* Header Authentic Asylum */
+    /* Header Authentic Asylum Panoramic Banner */
+    header {
+      background: #080a10;
+      border-bottom: 2px solid #283347;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 126px;
+      width: 100%;
+    }
+
+    .header-banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: drop-shadow(0 0 16px rgba(220, 38, 38, 0.4));
+    }
+
+    .brand-badge {
+      font-family: var(--font-header);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      background: linear-gradient(180deg, rgba(192, 41, 43, 0.3) 0%, rgba(139, 30, 30, 0.5) 100%);
+      color: #ff8b8b;
+      border: 1px solid #c0292b;
+      padding: 0.15rem 0.55rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(192, 41, 43, 0.35);
+    }
+
+    .quick-stats {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      background: rgba(10, 12, 18, 0.85);
+      border: 1px solid #222b3a;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      letter-spacing: 0.02em;
+    }
+
+    .stat-chip strong {
+      color: #fff;
+      font-family: var(--font-header);
+    }
+
+    /* Top Navigation Tabs (Distressed Hospital Tabs) */
+    nav {
+      background: #0f131c;
+      border-bottom: 1px solid #222b3a;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    }
+
+    .nav-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.3rem;
+      padding: 0.35rem 1.5rem;
+      overflow-x: auto;
+    }
+
+    .nav-tab {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 0.45rem 0.85rem;
+      border-radius: 3px;
+      font-family: var(--font-header);
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      transition: all 0.12s;
+    }
+
+    .nav-tab:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+      border-color: #2b3648;
+    }
+
+    .nav-tab.active {
+      color: #fff;
+      background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+      border-color: #e53935;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 8px rgba(139, 30, 30, 0.5);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+    }
+
+    /* Toolbar & Search Terminal */
+    .toolbar {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 240px;
+      max-width: 380px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: #090c12;
+      border: 1px solid var(--border);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.84rem;
+      padding: 0.45rem 2rem 0.45rem 0.75rem;
+      border-radius: var(--radius-sm);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-input:focus {
+      border-color: #c0292b;
+      box-shadow: 0 0 8px rgba(192, 41, 43, 0.3);
+    }
+
+    .search-clear {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: none;
+    }
+
+    /* Weapon / Toolbar Filter Ribbon in site style */
+    .weapon-filter-ribbon {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .weapon-filter-btn {
+      background: #0d111a;
+      border: 1px solid #263145;
+      border-radius: var(--radius-sm);
+      padding: 0.36rem 0.75rem;
+      font-family: var(--font-header);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .weapon-filter-btn:hover {
+      color: #fff;
+      background: #171f2e;
+      border-color: #3b82f6;
+    }
+
+    .weapon-filter-btn.active {
+      background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+      color: #fff;
+      border-color: #e53935;
+      box-shadow: 0 0 10px rgba(192, 41, 43, 0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    /* Interactive Drop Links in Boss Modal */
+    .drop-link {
+      color: #38bdf8;
+      text-decoration: underline;
+      text-decoration-color: rgba(56, 189, 248, 0.4);
+      text-underline-offset: 3px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.15s ease;
+    }
+
+    .drop-link:hover {
+      color: #7dd3fc;
+      text-decoration-color: #38bdf8;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+    }
+
+    /* Themed Control Select in site aesthetic */
+    .control-select {
+      background: #0d111a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.65rem center;
+      background-size: 12px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: #e2e8f0;
+      border: 1px solid #263145;
+      border-radius: var(--radius-sm);
+      padding: 0.38rem 2rem 0.38rem 0.75rem;
+      font-family: var(--font-header);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: all 0.15s ease;
+    }
+
+    .control-select:hover {
+      border-color: #3b82f6;
+      background-color: #131926;
+      color: #fff;
+    }
+
+    .control-select:focus {
+      border-color: #c0292b;
+      box-shadow: 0 0 0 2px rgba(192, 41, 43, 0.25);
+    }
+
+    .control-select option {
+      background: #0d111a;
+      color: #e2e8f0;
+      padding: 0.5rem;
+    }
+
+    /* LEVEL 1: Authentic Elevator Block Ribbon */
+    .blocks-ribbon-wrap {
+      margin-bottom: 0.75rem;
+    }
+
+    .blocks-ribbon {
+      display: flex;
+      gap: 0.45rem;
+      overflow-x: auto;
+      padding-bottom: 0.4rem;
+      scrollbar-width: thin;
+    }
+
+    .block-pill-btn {
+      background: #141720;
+      border: 1px solid #283142;
+      border-radius: 20px;
+      padding: 2px 10px 2px 3px;
+      color: #222;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .block-pill-code {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #2a3242 0%, #10141c 70%);
+      border: 1px solid #38455a;
+      color: #ff6b6b;
+      font-family: var(--font-header);
+      font-size: 0.78rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 2px 3px rgba(0,0,0,0.8), 0 1px 1px rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    .block-pill-title {
+      background: linear-gradient(180deg, #ded8c8 0%, #c8c2b0 50%, #b5af9d 100%);
+      color: #161616;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 0.16rem 0.55rem;
+      border-radius: 12px;
+      border: 1px solid #948e7f;
+      letter-spacing: -0.01em;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .block-pill-btn:hover {
+      border-color: #4f5f7a;
+      transform: translateY(-1px);
+    }
+
+    .block-pill-btn:hover .block-pill-title {
+      background: linear-gradient(180deg, #f0ebd9 0%, #ded7c4 50%, #c7c0ad 100%);
+    }
+
+    .block-pill-btn.active {
+      border-color: #c0292b;
+      box-shadow: 0 0 12px rgba(192, 41, 43, 0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+      background: #1c151a;
+    }
+
+    .block-pill-btn.active .block-pill-code {
+      background: radial-gradient(circle at 35% 35%, #e53935 0%, #8b1e1e 75%);
+      border-color: #ff8a80;
+      color: #ffffff;
+      box-shadow: 0 0 8px rgba(229, 57, 53, 0.7), inset 0 1px 2px rgba(255,255,255,0.4);
+    }
+
+    .block-pill-btn.active .block-pill-title {
+      background: linear-gradient(180deg, #fff3e0 0%, #ffe0b2 50%, #ffd180 100%);
+      border-color: #d35400;
+      color: #000;
+      box-shadow: 0 0 6px rgba(255, 179, 0, 0.35);
+    }
+
+    /* LEVEL 2: Compact Corps Bar (B-1, B-2, B-3) + Meta */
+    .corps-control-bar {
+      background: linear-gradient(180deg, #161b26 0%, #11151f 100%);
+      border: 1px solid #263145;
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.75rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+    }
+
+    .corps-tabs-group {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .corps-tab-btn {
+      background: #0c0f16;
+      border: 1px solid #263145;
+      border-radius: 3px;
+      padding: 0.35rem 0.75rem;
+      font-family: var(--font-header);
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.12s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .corps-tab-btn:hover {
+      color: #fff;
+      border-color: #4a5d7c;
+      background: #161d2a;
+    }
+
+    .corps-tab-btn.active {
+      background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+      color: #fff;
+      border-color: #e53935;
+      box-shadow: 0 0 10px rgba(192, 41, 43, 0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+
+    .corps-badge-bosses {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 0.08rem 0.35rem;
+      border-radius: 2px;
+      background: rgba(0,0,0,0.4);
+      color: #ffcdd2;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .corps-subnav-group {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+    }
+
+    .corps-sub-btn {
+      background: #0c0f16;
+      border: 1px solid #263145;
+      border-radius: 3px;
+      padding: 0.3rem 0.65rem;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+
+    .corps-sub-btn:hover {
+      color: #fff;
+      background: #1a2233;
+      border-color: #4a5d7c;
+    }
+
+    .corps-sub-btn.active {
+      background: linear-gradient(180deg, #ded8c8 0%, #b8b29e 100%);
+      color: #141414;
+      border-color: #948c77;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    /* Unlock Condition Inline Ribbon */
+    .corps-unlock-inline {
+      background: linear-gradient(90deg, rgba(139, 30, 30, 0.25) 0%, rgba(20, 24, 34, 0.8) 100%);
+      border: 1px solid #8b1e1e;
+      border-left: 4px solid #e53935;
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.85rem;
+      margin-bottom: 0.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .corps-unlock-inline strong {
+      color: #ff6b6b;
+      font-family: var(--font-header);
+      letter-spacing: 0.03em;
+    }
+
+    /* Common Card Grids */
+    .corps-grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 0.75rem;
+    }
+
+    /* Boss Card Authentic Clinical Dossier */
+    .boss-card-compact {
+      background: linear-gradient(180deg, #141824 0%, #0f121b 100%);
+      border: 1px solid #252f42;
+      border-radius: var(--radius);
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: all 0.15s;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+      position: relative;
+    }
+
+    .boss-card-compact:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.7), 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+
+    .boss-head-row {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .boss-avatar-sm {
+      width: 48px;
+      height: 48px;
+      border-radius: 3px;
+      object-fit: cover;
+      background: #000;
+      border: 1px solid #4a5870;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+
+    .boss-avatar-sm:hover { transform: scale(1.05); }
+
+    .boss-info-sm {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .boss-title-sm {
+      font-family: var(--font-header);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color 0.12s;
+    }
+
+    .boss-title-sm:hover { color: #ff8b8b; }
+
+    .boss-badges-sm {
+      display: flex;
+      gap: 0.35rem;
+      margin-top: 0.2rem;
+    }
+
+    .badge-hp {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: fit-content;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #ff4757;
+      background: rgba(255, 71, 87, 0.12);
+      border: 1px solid rgba(255, 71, 87, 0.3);
+      padding: 0.05rem 0.4rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .badge-dmg {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      max-width: fit-content;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.05rem 0.35rem;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    /* 3-Stat Strip */
+    .boss-stats-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #090c12;
+      border: 1px solid #1c2331;
+      border-radius: 3px;
+      padding: 0.35rem 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .boss-stats-strip span { color: var(--text-muted); }
+    .boss-stats-strip strong { color: #fff; }
+
+    /* Quest item line */
+    .boss-quest-item {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #232c3d;
+      border-left: 3px solid var(--accent-gold);
+      border-radius: 3px;
+      padding: 0.25rem 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    /* Drops Tags Clean */
+    .boss-drops-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .drop-tag {
+      background: #0c0f16;
+      border: 1px solid #222b3a;
+      border-radius: 4px;
+      padding: 0.22rem 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #e2e8f0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+      line-height: 1.3;
+    }
+
+    .drop-prob {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: #f59e0b;
+      font-size: 0.72rem;
+    }
+
+    .drop-prob.guaranteed {
+      color: #10b981;
+    }
+
+    /* Collapsible Mutagens Section */
+    .boss-mutagens-toggle-btn {
+      background: rgba(168, 85, 247, 0.12);
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      color: #d8b4fe;
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.22rem 0.55rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+      line-height: 1.3;
+    }
+
+    .boss-mutagens-toggle-btn:hover {
+      background: rgba(168, 85, 247, 0.22);
+      border-color: #c084fc;
+      color: #fff;
+    }
+
+    .boss-mutagens-toggle-btn.open {
+      background: rgba(168, 85, 247, 0.25);
+      border-color: #a855f7;
+      color: #fff;
+    }
+
+    .boss-mutagens-wrap {
+      display: none;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.4rem;
+      padding: 0.45rem 0.6rem;
+      background: rgba(8, 10, 16, 0.75);
+      border: 1px dashed rgba(168, 85, 247, 0.3);
+      border-radius: 4px;
+    }
+
+    .boss-mutagens-wrap.open {
+      display: flex;
+    }
+
+    .drop-tag-mutagen {
+      background: rgba(46, 16, 101, 0.35);
+      border-color: rgba(168, 85, 247, 0.25);
+      font-size: 0.74rem;
+    }
+
+    .drop-tag.is-access {
+      border-color: #2f3e58;
+      background: linear-gradient(180deg, #101524 0%, #090c14 100%);
+      color: #cbd5e1;
+    }
+
+    .drop-tag.is-access::before {
+      content: '🔑';
+      font-size: 0.68rem;
+      opacity: 0.9;
+    }
+
+    /* Business Compact Card */
+    .biz-card-compact {
+      background: linear-gradient(180deg, #141824 0%, #0f121b 100%);
+      border: 1px solid #252f42;
+      border-radius: var(--radius);
+      padding: 0.75rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .biz-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .biz-title-sm {
+      font-family: var(--font-header);
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+
+    .biz-summary-line {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: #ffd166;
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 3px;
+      padding: 0.35rem 0.6rem;
+      font-weight: 600;
+    }
+
+    .biz-toggle-table-btn {
+      background: #0c0f16;
+      border: 1px solid #263145;
+      color: var(--accent-blue);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 3px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: all 0.12s;
+    }
+
+    .biz-toggle-table-btn:hover {
+      background: #172030;
+      border-color: #3b82f6;
+      color: #fff;
+    }
+
+    .biz-table-compact {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.74rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .biz-table-compact.open { display: table; }
+
+    .biz-table-compact th {
+      color: #8c97aa;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      padding: 0.25rem 0.4rem;
+      border-bottom: 1px solid #222b3a;
+      text-align: left;
+    }
+
+    .biz-table-compact td {
+      padding: 0.25rem 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    /* Jobs Compact */
+    .job-card-compact {
+      background: linear-gradient(180deg, #141824 0%, #0f121b 100%);
+      border: 1px solid #252f42;
+      border-radius: var(--radius-sm);
+      padding: 0.6rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    .job-title-sm {
+      font-family: var(--font-header);
+      font-size: 0.88rem;
+      letter-spacing: 0.02em;
+      color: #fff;
+    }
+
+    /* Common Card Grids for Weapons/Mutagens/Inventory */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #141824 0%, #0f121b 100%);
+      border: 1px solid #252f42;
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    }
+
+    .inline-icon {
+      height: 16px;
+      width: 16px;
+      object-fit: contain;
+      vertical-align: -2.5px;
+      margin-right: 4px;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.9));
+      display: inline-block;
+    }
+
+    /* Modal - Clinical Case Dossier */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 1.5rem;
+    }
+
+    .modal-backdrop.open { display: flex; }
+
+    .modal-card {
+      background: linear-gradient(180deg, #161b26 0%, #10131d 100%);
+      border: 2px solid #2b374c;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 600px;
+      max-height: 85vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.8), 0 0 20px rgba(139, 30, 30, 0.3);
+    }
+
+    .modal-head {
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid #232c3d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: #141824;
+      z-index: 10;
+    }
+
+    .modal-head h3 {
+      font-family: var(--font-header);
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      color: #fff;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.12s;
+    }
+
+    .modal-close:hover { color: #ff6b6b; }
+
+    .modal-body {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      font-family: var(--font-mono);
+    }
+
+    .modal-preview-img {
+      max-width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+      background: #000;
+      border-radius: var(--radius-sm);
+      margin: 0 auto;
+      display: block;
+      border: 1px solid var(--border);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+    }
+
+    .modal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .modal-table th, .modal-table td {
+      padding: 0.35rem 0.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .modal-table th {
+      color: var(--text-dim);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      background: #181f2c;
+      border: 1px solid #2e3a4e;
+      color: var(--text-main);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      z-index: 40;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #0c0f16;
+      padding: 0.85rem 1.5rem;
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Corps Jump Bar */
+    .corps-jump-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.85rem;
+      padding: 0.35rem 0.75rem;
+      background: rgba(14, 18, 26, 0.85);
+      border: 1px solid #232c3d;
+      border-radius: 4px;
+      flex-wrap: wrap;
+    }
+
+    .corps-jump-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .jump-bar-label {
+      font-family: var(--font-header);
+      font-size: 0.74rem;
+      color: #ff8b8b;
+      letter-spacing: 0.05em;
+    }
+
+    .jump-links {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .jump-link-chip {
+      background: #11151f;
+      border: 1px solid #2a3548;
+      border-radius: 3px;
+      padding: 0.15rem 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.12s;
+    }
+
+    .jump-link-chip:hover {
+      background: #1b2333;
+      border-color: #3b82f6;
+      color: #fff;
+    }
+
+    .jump-bar-toggle-all-btn {
+      background: #151c28;
+      border: 1px solid #2e3c52;
+      border-radius: 3px;
+      padding: 0.2rem 0.65rem;
+      font-family: var(--font-header);
+      font-size: 0.74rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: all 0.12s;
+      letter-spacing: 0.02em;
+    }
+
+    .jump-bar-toggle-all-btn:hover {
+      background: #1f2a3c;
+      border-color: #60a5fa;
+      color: #fff;
+    }
+
+    /* Ward Block Container */
+    .ward-block-container {
+      margin-bottom: 1.25rem;
+      background: linear-gradient(180deg, rgba(20, 25, 36, 0.95) 0%, rgba(13, 16, 24, 0.95) 100%);
+      border: 1px solid #283447;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      transition: border-color 0.15s ease;
+    }
+
+    .ward-header-plaque {
+      background: linear-gradient(90deg, #1e2638 0%, #141924 100%);
+      border-bottom: 2px solid #2a364a;
+      padding: 0.55rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .ward-header-plaque:hover {
+      background: linear-gradient(90deg, #253147 0%, #1a2232 100%);
+      border-bottom-color: #3b82f6;
+    }
+
+    .ward-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .ward-badge {
+      font-family: var(--font-header);
+      font-size: 0.88rem;
+      background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+      color: #ffffff;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      box-shadow: 0 0 8px rgba(183, 38, 40, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+
+    .ward-name {
+      font-family: var(--font-header);
+      font-size: 1.02rem;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* CENTERED NEEDS STAMP */
+    .ward-needs-wrapper {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ward-needs-stamp {
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      background: rgba(139, 30, 30, 0.22);
+      border: 1px solid #8b1e1e;
+      border-left: 3px solid #e53935;
+      padding: 0.22rem 0.7rem;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .needs-stamp-label {
+      color: #ff8b8b;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .needs-stamp-val {
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    /* RIGHT EXPAND / COLLAPSE TOGGLE */
+    .ward-toggle-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .ward-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-header);
+      font-size: 0.76rem;
+      color: #cbd5e1;
+      background: rgba(10, 14, 22, 0.75);
+      border: 1px solid #334155;
+      padding: 0.22rem 0.65rem;
+      border-radius: 4px;
+      transition: all 0.15s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .ward-header-plaque:hover .ward-toggle-btn {
+      color: #fff;
+      border-color: #60a5fa;
+      background: rgba(26, 36, 52, 0.9);
+      box-shadow: 0 0 8px rgba(96, 165, 250, 0.25);
+    }
+
+    .ward-toggle-chevron {
+      color: #ff6b6b;
+      font-size: 0.72rem;
+      transition: transform 0.2s ease;
+    }
+
+    /* Collapsed corps hides body */
+    .ward-block-container.collapsed .ward-content-body {
+      display: none;
+    }
+
+    .ward-block-container.collapsed .ward-header-plaque {
+      border-bottom: none;
+      background: linear-gradient(90deg, #151a24 0%, #0e121a 100%);
+    }
+
+    .ward-block-container.collapsed .ward-header-plaque:hover {
+      background: linear-gradient(90deg, #1f2736 0%, #151b26 100%);
+      border-bottom: none;
+    }
+
+    .ward-content-body {
+      padding: 0.85rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .ward-sub-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .ward-sub-title {
+      font-family: var(--font-header);
+      font-size: 0.84rem;
+      color: #8c97aa;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .boss-avatar-wrapper {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .avatar-clip {
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      width: 12px;
+      height: 18px;
+      border: 2px solid #8892a0;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      transform: rotate(15deg);
+      box-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      pointer-events: none;
+    }
+
+
+    /* 2-Column Layout: Left Elevator Panel + Right Wards Content */
+    .floors-container-layout {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+
+    .elevator-sidebar {
+      width: 114px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 3.5rem;
+      background: linear-gradient(180deg, #181d28 0%, #10141e 50%, #0c0e15 100%);
+      border: 1.5px solid #283447;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      user-select: none;
+    }
+
+    /* Elevator Vintage Header / Floor Display */
+    .elevator-display {
+      background: radial-gradient(circle at 50% 20%, #1e2638 0%, #0a0d14 100%);
+      border-bottom: 2px solid #283447;
+      padding: 0.45rem 0.35rem;
+      text-align: center;
+      border-top-left-radius: var(--radius);
+      border-top-right-radius: var(--radius);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+      position: relative;
+    }
+
+    .elevator-display-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .elevator-signal-lamp {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ff3838;
+      box-shadow: 0 0 6px #ff3838;
+      animation: elevatorLampBlink 2.5s infinite alternate;
+    }
+
+    @keyframes elevatorLampBlink {
+      0% { opacity: 0.6; box-shadow: 0 0 4px #ff3838; }
+      100% { opacity: 1; box-shadow: 0 0 8px #ff3838; }
+    }
+
+    .elevator-display-label {
+      font-family: var(--font-header);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: #8c97aa;
+      text-transform: uppercase;
+    }
+
+    .elevator-current-badge {
+      font-family: var(--font-header);
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #ffcc00;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 0.6), 0 1px 2px #000;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+    }
+
+    .elevator-current-title {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: #a0aec0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 0.15rem;
+      padding: 0 0.2rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* 2-Column Keypad Matrix */
+    .elevator-keypad {
+      padding: 0.4rem 0.35rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.35rem;
+      background: #0d1017;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+
+    /* Round/Squircle Elevator Key Button */
+    .elevator-key {
+      height: 34px;
+      background: radial-gradient(circle at 40% 35%, #232c3d 0%, #121620 85%);
+      border: 1.5px solid #36445c;
+      border-radius: 5px;
+      color: #e2e8f0;
+      font-family: var(--font-header);
+      font-size: 0.88rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transition: all 0.12s ease;
+      position: relative;
+      outline: none;
+    }
+
+    .elevator-key:hover {
+      border-color: #60a5fa;
+      color: #93c5fd;
+      background: radial-gradient(circle at 40% 35%, #2e3a50 0%, #171d2a 85%);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7), 0 0 6px rgba(96, 165, 250, 0.4);
+    }
+
+    .elevator-key.active {
+      background: radial-gradient(circle at 40% 35%, #ff3b3e 0%, #8b0000 85%);
+      border-color: #ff8585;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 59, 62, 0.85), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+      transform: scale(1.02);
+      z-index: 2;
+    }
+
+    /* Main Right Column */
+    .floors-main-column {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 980px) {
+      .floors-container-layout {
+        flex-direction: column;
+      }
+      .elevator-sidebar {
+        width: 100%;
+        position: static;
+      }
+      .elevator-keypad {
+        grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+      }
+    }
+
+    /* Inventory & Stashes (Заначки как в игре) */
+    .stashes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .stash-row {
+      background: #0f141d;
+      border: 1px solid #1e2838;
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+      transition: border-color 0.15s ease, background 0.15s ease;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .stash-row:hover {
+      border-color: #2e3e56;
+      background: #121824;
+    }
+
+    /* Left side: The completed Stash */
+    .stash-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      width: 320px;
+      flex-shrink: 0;
+      border-right: 1px solid #1e2838;
+      padding-right: 1.25rem;
+    }
+
+    .stash-icon-frame {
+      width: 62px;
+      height: 62px;
+      background: radial-gradient(circle, #1a2333 0%, #090c12 100%);
+      border: 2px solid #ca8a04;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(202, 138, 4, 0.25), inset 0 0 6px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .stash-icon-frame img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+    }
+
+    .stash-meta {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .stash-title {
+      font-family: var(--font-header);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #f8fafc;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    .stash-tag {
+      font-size: 0.68rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .stash-price {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Assembly arrow / divider */
+    .stash-arrow {
+      color: #3b82f6;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* Right side: 5 elements row filling full width */
+    .stash-elements-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: stretch;
+      gap: 0.65rem;
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.25rem 0;
+    }
+
+    .stash-elements-row.single-element {
+      grid-template-columns: minmax(140px, 220px);
+    }
+
+    .element-slot {
+      background: #0a0d13;
+      border: 1px solid #1e2838;
+      border-radius: var(--radius-sm);
+      padding: 0.55rem 0.65rem;
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: all 0.15s ease;
+      cursor: default;
+    }
+
+    .element-slot:hover {
+      border-color: #3b82f6;
+      background: #0f1521;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .element-num-badge {
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-family: var(--font-header);
+    }
+
+    .element-img-frame {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .element-img-frame img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .element-name {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .element-source {
+      font-size: 0.64rem;
+      color: #94a3b8;
+      margin-top: 0.2rem;
+      line-height: 1.15;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .element-source-link {
+      color: #38bdf8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .element-source-link:hover {
+      color: #7dd3fc;
+    }
+
+    /* Event items grid */
+    .event-items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.65rem;
+    }
+
+    .event-item-card {
+      background: #0f141d;
+      border: 1px solid #1e2838;
+      border-radius: var(--radius-md);
+      padding: 0.6rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+      transition: all 0.15s ease;
+    }
+
+    .event-item-card:hover {
+      border-color: #3b82f6;
+      background: #121824;
+      transform: translateY(-1px);
+    }
+
+    .event-item-img {
+      width: 46px;
+      height: 46px;
+      background: #07090e;
+      border: 1px solid #1f2937;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .event-item-img img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+      .stash-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+      .stash-left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1e2838;
+        padding-right: 0;
+        padding-bottom: 0.75rem;
+      }
+      .stash-arrow {
+        display: none;
+      }
+      .stash-elements-row {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.4rem;
+        box-sizing: border-box;
+      }
+      .element-slot {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        padding: 0.35rem 0.2rem;
+        box-sizing: border-box;
+      }
+      .element-img-frame {
+        width: 36px;
+        height: 36px;
+      }
+      .element-img-frame img {
+        width: 32px;
+        height: 32px;
+      }
+      .element-name {
+        font-size: 0.66rem;
+      }
+      .element-source {
+        font-size: 0.6rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .stash-elements-row {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.35rem;
+      }
+      .stash-left {
+        gap: 0.65rem;
+      }
+      .stash-icon-frame {
+        width: 52px;
+        height: 52px;
+      }
+      .stash-icon-frame img {
+        width: 40px;
+        height: 40px;
+      }
+      .stash-title {
+        font-size: 0.85rem;
+      }
+      .event-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/ui/header_fullbleed_1920.webp?v=fresh45" alt="База Безумия Клана DD" class="header-banner-img"/>
+  </header>
+
+  <nav>
+    <div class="nav-inner" id="navTabs">
+      <button class="nav-tab active" data-tab="floors">🏥 Корпуса и этажи</button>
+      <button class="nav-tab" data-tab="weapons">🔪 Арсенал оружия (100)</button>
+      <button class="nav-tab" data-tab="inventory">📦 Склад инвентаря (178)</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="toolbar">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Поиск по архиву больницы (босс, корпус, предмет, оружие)...">
+        <button id="searchClear" class="search-clear">&times;</button>
+      </div>
+      <div id="toolbarControls"></div>
+    </div>
+
+    <!-- Main Dynamic View -->
+    <div id="contentView"></div>
+  </main>
+
+  <!-- Modal details -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle">Детали</h3>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Наверх">&uarr;</button>
+
+  <footer>
+    <div>Оффлайн-база знаний по игре «Безумие» (Remad.me)</div>
+    <div>Все корпуса, боссы, характеристики, шансы дропа, бизнесы и работы</div>
+  </footer>
+
+  <script>
+    const state = {
+      tab: 'floors',
+      search: '',
+      activeZoneCode: '-A-',
+      activeLocationId: 1,
+      corpsSection: 'all', // 'all', 'bosses', 'biz', 'jobs'
+      openedBizTables: {},
+      openedCorps: {},
+      openedMutagens: {},
+      weaponCurrency: 'all',
+      inventoryCategory: 'stashes'
+    };
+
+    const UI = {
+      content: document.getElementById('contentView'),
+      search: document.getElementById('searchInput'),
+      searchClear: document.getElementById('searchClear'),
+      controls: document.getElementById('toolbarControls'),
+      modal: document.getElementById('modalBackdrop'),
+      modalTitle: document.getElementById('modalTitle'),
+      modalBody: document.getElementById('modalBody'),
+      scrollTop: document.getElementById('scrollTopBtn')
+    };
+
+    function init() {
+      if (!window.GAME_DATA) {
+        UI.content.innerHTML = '<div style="color:red;padding:2rem;">Файл bundle.js не найден.</div>';
+        return;
+      }
+      setupEvents();
+      const params = new URLSearchParams(window.location.search);
+      const q = params.get('q');
+      if (q) {
+        state.search = q.toLowerCase().trim();
+        UI.search.value = q;
+        UI.searchClear.style.display = 'block';
+      }
+      renderContent();
+    }
+
+    function setupEvents() {
+      document.getElementById('navTabs').addEventListener('click', (e) => {
+        const btn = e.target.closest('.nav-tab');
+        if (!btn) return;
+        state.tab = btn.dataset.tab;
+        document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b === btn));
+        renderContent();
+      });
+
+      let timeout;
+      UI.search.addEventListener('input', (e) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          state.search = e.target.value.toLowerCase().trim();
+          UI.searchClear.style.display = state.search ? 'block' : 'none';
+          renderContent();
+        }, 120);
+      });
+
+      UI.searchClear.addEventListener('click', () => {
+        UI.search.value = '';
+        state.search = '';
+        UI.searchClear.style.display = 'none';
+        renderContent();
+      });
+
+      document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+      UI.modal.addEventListener('click', (e) => {
+        if (e.target === UI.modal) closeModal();
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      window.addEventListener('scroll', () => {
+        UI.scrollTop.style.display = window.scrollY > 300 ? 'flex' : 'none';
+      });
+      UI.scrollTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    function selectBlock(zoneCode) {
+      state.activeZoneCode = zoneCode;
+      state.openedCorps = {};
+      const data = window.GAME_DATA;
+      const zone = data.zones.find(z => z.code === zoneCode);
+      if (zone && zone.locationIds && zone.locationIds.length > 0) {
+        state.activeLocationId = zone.locationIds[0];
+      }
+      renderContent();
+    }
+
+    function selectLocation(locId) {
+      state.activeLocationId = locId;
+      state.openedCorps[locId] = true;
+      renderContent();
+    }
+
+    function setCorpsSection(sec) {
+      state.corpsSection = sec;
+      renderContent();
+    }
+
+
+    function toggleBizTable(bizId, btn) {
+      const willOpen = !state.openedBizTables[bizId];
+      const clickedBtn = btn || document.getElementById(`biz_btn_${bizId}`);
+      const container = clickedBtn ? (clickedBtn.closest('.ward-sub-section') || clickedBtn.closest('.ward-block-container') || document) : document;
+      const allTables = container.querySelectorAll('.biz-table-compact');
+      const allBtns = container.querySelectorAll('.biz-toggle-table-btn');
+
+      allTables.forEach(t => {
+        t.classList.toggle('open', willOpen);
+        const id = t.id.replace('biz_table_', '');
+        if (id) state.openedBizTables[id] = willOpen;
+      });
+
+      allBtns.forEach(b => {
+        b.textContent = willOpen ? 'Свернуть таблицу ▲' : 'Таблица уровней 1..6 ▼';
+      });
+    }
+
+    function toggleBossMutagens(bossId, btn) {
+      state.openedMutagens = state.openedMutagens || {};
+      const willOpen = !state.openedMutagens[bossId];
+      state.openedMutagens[bossId] = willOpen;
+      const wrap = document.getElementById(`mut_wrap_${bossId}`);
+      const btnElem = btn || document.getElementById(`mut_btn_${bossId}`);
+      if (wrap) wrap.classList.toggle('open', willOpen);
+      if (btnElem) {
+        const count = btnElem.getAttribute('data-count') || '';
+        btnElem.innerHTML = `🧪 Мутагены (${count}) ${willOpen ? '▲' : '▼'}`;
+        btnElem.classList.toggle('open', willOpen);
+      }
+    }
+
+    function toggleCorps(locId) {
+      const container = document.getElementById(`ward_${locId}`);
+      if (!container) return;
+      const isCollapsed = container.classList.contains('collapsed');
+      const willOpen = isCollapsed;
+      state.openedCorps[locId] = willOpen;
+      container.classList.toggle('collapsed', !willOpen);
+      const label = container.querySelector('.ward-toggle-label');
+      const chevron = container.querySelector('.ward-toggle-chevron');
+      if (label) label.textContent = willOpen ? 'Свернуть' : 'Развернуть';
+      if (chevron) chevron.textContent = willOpen ? '▲' : '▼';
+    }
+
+    function expandAndScrollToCorps(locId, e) {
+      if (e) e.preventDefault();
+      const container = document.getElementById(`ward_${locId}`);
+      if (container) {
+        if (container.classList.contains('collapsed')) {
+          toggleCorps(locId);
+        }
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function toggleAllCorps() {
+      const containers = document.querySelectorAll('.ward-block-container');
+      if (!containers.length) return;
+      const anyCollapsed = Array.from(containers).some(c => c.classList.contains('collapsed'));
+      containers.forEach(c => {
+        const locId = c.id.replace('ward_', '');
+        if (anyCollapsed) {
+          c.classList.remove('collapsed');
+          state.openedCorps[locId] = true;
+          const label = c.querySelector('.ward-toggle-label');
+          const chevron = c.querySelector('.ward-toggle-chevron');
+          if (label) label.textContent = 'Свернуть';
+          if (chevron) chevron.textContent = '▲';
+        } else {
+          c.classList.add('collapsed');
+          state.openedCorps[locId] = false;
+          const label = c.querySelector('.ward-toggle-label');
+          const chevron = c.querySelector('.ward-toggle-chevron');
+          if (label) label.textContent = 'Развернуть';
+          if (chevron) chevron.textContent = '▼';
+        }
+      });
+      const toggleAllBtn = document.querySelector('.jump-bar-toggle-all-btn');
+      if (toggleAllBtn) {
+        toggleAllBtn.textContent = anyCollapsed ? 'Свернуть все' : 'Развернуть все';
+      }
+    }
+
+    function renderContent() {
+      const data = window.GAME_DATA;
+      const q = state.search;
+      UI.controls.innerHTML = '';
+
+      if (state.tab === 'floors') {
+        renderFloorsCompact(data, q);
+      } else if (state.tab === 'bosses') {
+        renderAllBosses(data, q);
+      } else if (state.tab === 'weapons') {
+        renderWeapons(data, q);
+      } else if (state.tab === 'mutagens') {
+        renderMutagens(data, q);
+      } else if (state.tab === 'inventory') {
+        renderInventory(data, q);
+      }
+    }
+
+    /* =========================================================================
+       1. ULTRA-COMPACT FLOORS VIEW
+       ========================================================================= */
+            function renderFloorsCompact(data, q) {
+      if (q) {
+        renderSearch(data, q);
+        return;
+      }
+
+      let currentZone = data.zones.find(z => z.code === state.activeZoneCode) || data.zones[0];
+      const currentLocs = data.locations.filter(l => currentZone.locationIds.includes(l.id));
+
+      const invMap = {};
+      data.inventory.forEach(i => { invMap[i.id] = i.title; });
+
+      const shortCurrentTitle = (currentZone.description || currentZone.title.replace(/^(Корпус|Блок)\s*-[A-Z\$\-]+:\s*/i, '')).trim();
+
+      let html = `
+        <div class="floors-container-layout">
+          <!-- LEFT SIDEBAR: THE AUTHENTIC 2-COLUMN ELEVATOR KEYPAD -->
+          <aside class="elevator-sidebar" aria-label="Пульт вызова лифта">
+            <div class="elevator-display">
+              <div class="elevator-display-top">
+                <span class="elevator-signal-lamp"></span>
+                <span class="elevator-display-label">ЛИФТ</span>
+              </div>
+              <div class="elevator-current-badge">${currentZone.code}</div>
+              <div class="elevator-current-title" title="${currentZone.title}">${shortCurrentTitle}</div>
+            </div>
+            
+            <div class="elevator-keypad">
+              ${data.zones.map(z => {
+                const isActive = z.code === state.activeZoneCode;
+                const zoneTitle = z.title || ('Блок ' + z.code);
+                return `
+                  <button class="elevator-key ${isActive ? 'active' : ''}" onclick="selectBlock('${z.code}')" title="${zoneTitle}">
+                    ${z.code}
+                  </button>
+                `;
+              }).join('')}
+            </div>
+          </aside>
+
+          <!-- RIGHT COLUMN: THE SELECTED FLOOR'S 3 WARDS -->
+          <div class="floors-main-column">
+            <!-- The 3 Ward Cards -->
+            ${currentLocs.map((loc, idx) => {
+              const bList = data.bosses.filter(b => b.locationId === loc.id);
+              const bizList = data.businesses.filter(b => b.locationId === loc.id);
+              const jobsList = data.jobs.filter(j => j.locationId === loc.id);
+
+              let wardName = loc.name || (loc.description || '').split('\n')[0].replace(/^(Корпус|Блок|[A-Z\$\-0-9]+)\s*[:-]?\s*/i, '').trim();
+              if (!wardName) wardName = loc.title;
+
+              const isOpen = !!state.openedCorps[loc.id];
+
+              return `
+                <div class="ward-block-container ${isOpen ? '' : 'collapsed'}" id="ward_${loc.id}">
+                  <!-- Ward Header Plaque (Centered Access Info & Click to Expand/Collapse) -->
+                  <div class="ward-header-plaque" onclick="toggleCorps('${loc.id}')" title="Нажмите, чтобы свернуть или развернуть корпус">
+                    <div class="ward-title-group">
+                      <span class="ward-badge">КОРПУС ${loc.title}</span>
+                      <span class="ward-name">${wardName}</span>
+                    </div>
+
+                    <div class="ward-needs-wrapper">
+                      <div class="ward-needs-stamp">
+                        <span class="needs-stamp-label">ДОПУСК КОРПУСА:</span>
+                        <span class="needs-stamp-val">${loc.needsText || 'Нет условий (доступно сразу)'}</span>
+                      </div>
+                    </div>
+
+                    <div class="ward-toggle-wrapper">
+                      <div class="ward-toggle-btn">
+                        <span class="ward-toggle-label">${isOpen ? 'Свернуть' : 'Развернуть'}</span>
+                        <span class="ward-toggle-chevron">${isOpen ? '▲' : '▼'}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Content of this Corps -->
+                  <div class="ward-content-body">
+                    <!-- 1. Bosses of this Corps -->
+                    ${bList.length > 0 ? `
+                      <div class="ward-sub-section">
+                        <div class="ward-sub-title">
+                          <span>🩸 БУЙНЫЕ БОЛЬНЫЕ (${bList.length})</span>
+                        </div>
+                        <div class="corps-grid-2col">
+                          ${bList.map(b => `
+                            <div class="boss-card-compact">
+                              <div class="boss-head-row">
+                                <div class="boss-avatar-wrapper" onclick="openBossDetails(${b.id})">
+                                  <img class="boss-avatar-sm" src="${b.portraitImage || b.previewImage || ''}" onerror="if(this.src!=='${b.previewImage||''}')this.src='${b.previewImage||''}';" alt="${b.title}"/>
+                                  <span class="avatar-clip"></span>
+                                </div>
+                                <div class="boss-info-sm">
+                                  <div class="boss-title-sm" onclick="openBossDetails(${b.id})">${b.title}</div>
+                                  <div class="boss-badges-sm">
+                                    <span class="badge-hp">🩸 ${b.health >= 1000 ? (b.health / 1000) + 'k' : b.health} HP</span>
+                                    <span class="badge-dmg">⚔️ ${b.damageMin}–${b.damageMax}</span>
+                                    <span class="badge-dmg" style="color:var(--accent-pills);">${b.needs && b.needs.min_level ? b.needs.min_level : 1}–${b.maxLevelDrops || 50} ур.</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="boss-stats-strip">
+                                <div><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> <span>Опыт:</span> <strong style="color:var(--accent-purple);">+${b.xp.toLocaleString()}</strong></div>
+                                <div><span>⏱️ Время:</span> <strong>${b.durationMinutes} мин</strong></div>
+                                <div><span>👥 Лимит:</span> <strong>${b.maxUserCount} чел</strong></div>
+                              </div>
+
+                              ${b.artifactTitle ? `
+                                <div class="boss-quest-item">
+                                  ${b.artifactImage ? `<img src="${b.artifactImage}" width="18" height="18" style="border-radius:2px;"/>` : ''}
+                                  <span>📦 Квестовый предмет: <strong>${b.artifactTitle} (100%)</strong></span>
+                                </div>
+                              ` : ''}
+
+                              ${(() => {
+                                const artTitleLower = (b.artifactTitle || '').trim().toLowerCase();
+                                const mainDrops = b.drops.filter(d => !d.title.includes('Мутаген') && (!artTitleLower || d.title.trim().toLowerCase() !== artTitleLower));
+                                const mutagenDrops = b.drops.filter(d => d.title.includes('Мутаген'));
+                                const isMutOpen = !!(state.openedMutagens && state.openedMutagens[b.id]);
+
+                                return `
+                                  <div class="boss-drops-wrap">
+                                    ${mainDrops.map(d => `
+                                      <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
+                                        <span>${d.title}</span>
+                                        <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                                      </span>
+                                    `).join('')}
+
+                                    ${mutagenDrops.length > 0 ? `
+                                      <button class="boss-mutagens-toggle-btn ${isMutOpen ? 'open' : ''}" id="mut_btn_${b.id}" data-count="${mutagenDrops.length}" onclick="toggleBossMutagens(${b.id}, this)">
+                                        🧪 Мутагены (${mutagenDrops.length}) ${isMutOpen ? '▲' : '▼'}
+                                      </button>
+                                    ` : ''}
+                                  </div>
+
+                                  ${mutagenDrops.length > 0 ? `
+                                    <div class="boss-mutagens-wrap ${isMutOpen ? 'open' : ''}" id="mut_wrap_${b.id}">
+                                      ${mutagenDrops.map(d => `
+                                        <span class="drop-tag drop-tag-mutagen" title="${d.hint || d.title}">
+                                          <span>${d.title}</span>
+                                          <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                                        </span>
+                                      `).join('')}
+                                    </div>
+                                  ` : ''}
+                                `;
+                              })()}
+                            </div>
+                          `).join('')}
+                        </div>
+                      </div>
+                    ` : ''}
+
+                    <!-- 2. Businesses of this Corps -->
+                    ${bizList.length > 0 ? `
+                      <div class="ward-sub-section">
+                        <div class="ward-sub-title">
+                          <span>🏢 ОБЪЕКТЫ БОЛЬНИЦЫ (${bizList.length})</span>
+                        </div>
+                        <div class="corps-grid-2col">
+                          ${bizList.map(bz => {
+                            const isOpen = !!state.openedBizTables[bz.id];
+                            const totals = {};
+                            bz.upgrades.forEach(up => {
+                              (up.price.items || []).forEach(it => {
+                                const name = invMap[it.id] || `Предмет #${it.id}`;
+                                totals[name] = (totals[name] || 0) + it.count;
+                              });
+                            });
+                            const totalStr = Object.entries(totals).map(([k, v]) => `${k} x${v}`).join(', ') || 'Без предметов';
+                            const topUp = bz.upgrades[bz.upgrades.length - 1] || {};
+                            const topReward = topUp.drops && topUp.drops.currency1 ? topUp.drops.currency1.value : (topUp.drops && topUp.drops.currency3 ? topUp.drops.currency3.value : 0);
+
+                            return `
+                              <div class="biz-card-compact">
+                                <div class="biz-card-head">
+                                  <div class="biz-title-sm">🏥 ${bz.title}</div>
+                                  <span class="corps-badge-bosses">${bz.upgrades.length} ур.</span>
+                                </div>
+
+                                <div class="biz-summary-line">
+                                  Макс. ур: ${bz.upgrades.length} &bull; Доход: +${topReward} &bull; Нужно: ${totalStr}
+                                </div>
+
+                                <button class="biz-toggle-table-btn" id="biz_btn_${bz.id}" onclick="toggleBizTable(${bz.id}, this)">
+                                  ${isOpen ? 'Свернуть таблицу ▲' : 'Таблица уровней 1..6 ▼'}
+                                </button>
+
+                                <table class="biz-table-compact ${isOpen ? 'open' : ''}" id="biz_table_${bz.id}">
+                                  <thead>
+                                    <tr>
+                                      <th>Ур.</th>
+                                      <th>Требуется</th>
+                                      <th><img src="images/ui/icon_coin.png?v=2" class="inline-icon" alt="Монеты"/> Золото</th>
+                                      <th><img src="images/ui/icon_pill.png?v=2" class="inline-icon" alt="Пилюли"/> Пилюли</th>
+                                      <th><img src="images/ui/icon_real.png?v=2" class="inline-icon" alt="Купюры"/> Купюры</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    ${bz.upgrades.map(up => {
+                                      const reqItems = (up.price.items || []).map(it => `${invMap[it.id] || it.id} ${it.count}`).join(', ') || 'Бесплатно';
+                                      const c1 = up.drops && up.drops.currency1 ? up.drops.currency1.value : '—';
+                                      const c2 = up.drops && up.drops.currency2 ? up.drops.currency2.value : '—';
+                                      const c3 = up.drops && up.drops.currency3 ? up.drops.currency3.value : '—';
+                                      return `
+                                        <tr>
+                                          <td style="font-weight:700;color:#fff;">${up.level}</td>
+                                          <td style="color:#f1f5f9;">${reqItems}</td>
+                                          <td style="color:var(--accent-gold);font-weight:600;">${c1}</td>
+                                          <td style="color:var(--accent-pills);font-weight:600;">${c3}</td>
+                                          <td style="color:var(--accent-green);font-weight:600;">${c2}</td>
+                                        </tr>
+                                      `;
+                                    }).join('')}
+                                  </tbody>
+                                </table>
+                              </div>
+                            `;
+                          }).join('')}
+                        </div>
+                      </div>
+                    ` : ''}
+
+                    <!-- 3. Jobs of this Corps -->
+                    ${jobsList.length > 0 ? (() => {
+                      const jobZoneName = (jobsList[0] && jobsList[0].jobZoneTitle) ? jobsList[0].jobZoneTitle.trim() : 'Работа';
+                      return `
+                        <div class="ward-sub-section">
+                          <div class="ward-sub-title">
+                            <span>💼 РАБОТА: ${jobZoneName.toUpperCase()} (${jobsList.length})</span>
+                          </div>
+                          <div class="corps-grid-2col">
+                            ${jobsList.map(j => {
+                              const p = j.price || {};
+                              const d = j.drops || {};
+                              const energy = p.work_energy || p.workEnergy || 0;
+                              const objects = d.objects || [];
+                              return `
+                                <div class="job-card-compact">
+                                  <div class="job-title-sm">${j.title}</div>
+                                  <div style="display:flex;justify-content:space-between;color:var(--text-muted);font-size:0.75rem;margin-top:0.25rem;">
+                                    <span style="color:#ff6b6b;"><img src="images/ui/icon_energy.png?v=2" class="inline-icon" alt="Энергия"/> Энергия: <strong>${energy}</strong></span>
+                                    <span style="color:var(--accent-gold);"><img src="images/ui/icon_coin.png?v=2" class="inline-icon" alt="Монеты"/> +${d.currency1 ? d.currency1.value : 0} монет</span>
+                                    <span style="color:var(--accent-purple);"><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> +${d.xp ? d.xp.value : 0} XP</span>
+                                  </div>
+                                  ${objects.length > 0 ? (() => {
+                                    const cMap = data.collectionsMap || {};
+                                    const firstInfo = cMap[objects[0].id];
+                                    const collName = firstInfo ? firstInfo.collection_name : null;
+                                    
+                                    if (collName) {
+                                      const itemsStr = objects.map(o => {
+                                        const info = cMap[o.id];
+                                        const idx = info ? info.element_index : o.id;
+                                        const isGuaranteed = o.probability === 100;
+                                        return `<span style="color:#cbd5e1;">Эл. #${idx}</span> <strong style="color:${isGuaranteed ? '#4ade80' : 'var(--accent-gold)'};">(${o.probability}%)</strong>`;
+                                      }).join(' • ');
+                                      return `
+                                        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.35rem;border-top:1px solid rgba(255,255,255,0.06);padding-top:0.25rem;">
+                                          <span style="color:var(--accent-blue);">📦 Заначка «${collName}»:</span> ${itemsStr}
+                                        </div>
+                                      `;
+                                    } else {
+                                      const itemsStr = objects.map(o => {
+                                        const name = invMap[o.id] || ('#' + o.id);
+                                        const isGuaranteed = o.probability === 100;
+                                        return `<span style="color:#cbd5e1;">${name}</span> <strong style="color:${isGuaranteed ? '#4ade80' : 'var(--accent-gold)'};">(${o.probability}%)</strong>`;
+                                      }).join(' • ');
+                                      return `
+                                        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.35rem;border-top:1px solid rgba(255,255,255,0.06);padding-top:0.25rem;">
+                                          <span style="color:var(--accent-blue);">📦 Заначка:</span> ${itemsStr}
+                                        </div>
+                                      `;
+                                    }
+                                  })() : ''}
+                                </div>
+                              `;
+                            }).join('')}
+                          </div>
+                        </div>
+                      `;
+                    })() : ''}
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      UI.content.innerHTML = html;
+    }
+
+    /* Fast Universal Search Handler */
+    function renderSearch(data, q) {
+      let html = `<div style="margin-bottom:0.6rem;color:var(--text-muted);font-size:0.82rem;">Результаты поиска «<strong>${q}</strong>»:</div>`;
+      
+      const matchedBosses = data.bosses.filter(b => 
+        b.title.toLowerCase().includes(q) ||
+        b.id.toString() === q ||
+        b.drops.some(d => (d.title && d.title.toLowerCase().includes(q)) || (d.originalTitle && d.originalTitle.toLowerCase().includes(q))) ||
+        (b.artifactTitle && b.artifactTitle.toLowerCase().includes(q))
+      );
+      const matchedWeapons = (data.weapons || []).filter(w => 
+        (w.title && w.title.toLowerCase().includes(q)) ||
+        w.id.toString() === q
+      );
+      const matchedMutagens = ((data.mutagens && data.mutagens.enchants) || []).filter(e => 
+        (e.title && e.title.toLowerCase().includes(q)) ||
+        e.id.toString() === q
+      );
+      const matchedBiz = data.businesses.filter(b => b.title.toLowerCase().includes(q));
+      const matchedLocs = data.locations.filter(l => l.title.toLowerCase().includes(q) || (l.name && l.name.toLowerCase().includes(q)));
+
+      if (matchedBosses.length === 0 && matchedBiz.length === 0 && matchedLocs.length === 0 && matchedWeapons.length === 0 && matchedMutagens.length === 0) {
+        UI.content.innerHTML = `<div style="padding:2rem;text-align:center;color:var(--text-dim);">Ничего не найдено по запросу «${q}».</div>`;
+        return;
+      }
+
+      if (matchedLocs.length > 0) {
+        html += `<div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;">`;
+        matchedLocs.forEach(l => {
+          const z = data.zones.find(zone => zone.id === l.zoneId);
+          html += `
+            <button class="block-pill-btn" onclick="state.search=''; UI.search.value=''; selectBlock('${z.code}'); selectLocation(${l.id});">
+              <span class="block-pill-code">${l.title}</span>
+              <span>${l.name || z.title} &rarr;</span>
+            </button>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedBosses.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:#f87171;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;"><span>🗂️ Буйные больницы (${matchedBosses.length})</span></div>`;
+        html += `<div class="corps-grid-2col" style="margin-bottom:1.2rem;">`;
+        matchedBosses.forEach(b => {
+          const loc = data.locations.find(l => l.id === b.locationId);
+          const zone = loc ? data.zones.find(z => z.id === loc.zoneId) : null;
+          const artTitleLower = (b.artifactTitle || '').trim().toLowerCase();
+          const mainDrops = (b.drops || []).filter(d => !d.title.includes('Мутаген') && (!artTitleLower || d.title.trim().toLowerCase() !== artTitleLower));
+          const mutagenDrops = (b.drops || []).filter(d => d.title.includes('Мутаген'));
+          const isMutOpen = !!(state.openedMutagens && state.openedMutagens['s_' + b.id]);
+
+          html += `
+            <div class="boss-card-compact">
+              <div class="boss-head-row">
+                <img class="boss-avatar-sm" src="${b.portraitImage || b.previewImage || ''}" onerror="if(this.src!=='${b.previewImage||''}')this.src='${b.previewImage||''}';" onclick="openBossDetails(${b.id})" title="Подробнее о буйном" alt="${b.title}"/>
+                <div class="boss-info-sm">
+                  <div class="boss-title-sm" onclick="openBossDetails(${b.id})" title="Подробнее о буйном">${b.title}</div>
+                  <div class="boss-badges-sm">
+                    <span class="badge-hp">🩸 ${b.health.toLocaleString()} HP</span>
+                    <span class="badge-dmg">⚔️ ${b.damageMin}–${b.damageMax}</span>
+                    <span class="badge-dmg" style="color:var(--accent-pills);">${b.needs && b.needs.min_level ? b.needs.min_level : 1}–${b.maxLevelDrops || 50} ур.</span>
+                  </div>
+                  ${zone ? `
+                    <div style="margin-top:0.35rem;">
+                      <button style="background:none;border:none;color:var(--accent-blue);font-size:0.75rem;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="state.search=''; UI.search.value=''; selectBlock('${zone.code}'); selectLocation(${loc.id});">
+                        🏥 Корпус ${loc.title}${loc.name ? ' (' + loc.name + ')' : ''} &rarr;
+                      </button>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+
+              <div class="boss-stats-strip">
+                <div><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> <span>Опыт:</span> <strong style="color:var(--accent-purple);">+${b.xp.toLocaleString()}</strong></div>
+                <div><span>⏱️ Время:</span> <strong>${b.durationMinutes} мин</strong></div>
+                <div><span>👥 Лимит:</span> <strong>${b.maxUserCount} чел</strong></div>
+              </div>
+
+              ${b.artifactTitle ? `
+                <div class="boss-quest-item">
+                  ${b.artifactImage ? `<img src="${b.artifactImage}" width="18" height="18" style="border-radius:2px;flex-shrink:0;" alt="Квест"/>` : ''}
+                  <span>📦 Квестовый предмет: <strong>${b.artifactTitle} (100%)</strong></span>
+                </div>
+              ` : ''}
+
+              ${(mainDrops.length > 0 || mutagenDrops.length > 0) ? `
+                <div class="boss-drops-wrap">
+                  ${mainDrops.map(d => `
+                    <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
+                      <span>${d.title}</span>
+                      <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                    </span>
+                  `).join('')}
+
+                  ${mutagenDrops.length > 0 ? `
+                    <button class="boss-mutagens-toggle-btn ${isMutOpen ? 'open' : ''}" id="mut_btn_s_${b.id}" data-count="${mutagenDrops.length}" onclick="toggleBossMutagens('s_' + ${b.id}, this)">
+                      🧪 Мутагены (${mutagenDrops.length}) ${isMutOpen ? '▲' : '▼'}
+                    </button>
+                  ` : ''}
+                </div>
+
+                ${mutagenDrops.length > 0 ? `
+                  <div class="boss-mutagens-wrap ${isMutOpen ? 'open' : ''}" id="mut_wrap_s_${b.id}">
+                    ${mutagenDrops.map(d => `
+                      <span class="drop-tag drop-tag-mutagen" title="${d.hint || d.title}">
+                        <span>${d.title}</span>
+                        <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                      </span>
+                    `).join('')}
+                  </div>
+                ` : ''}
+              ` : ''}
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedWeapons.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-gold);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;"><span>🔪 Оружие арсенала (${matchedWeapons.length})</span></div>`;
+        html += `<div class="grid" style="margin-bottom:1.2rem;">`;
+        matchedWeapons.forEach(w => {
+          const p = w.price || {};
+          const priceStr = [
+            p.currency1 ? `${p.currency1.toLocaleString()} мон.` : '',
+            p.currency2 ? `${p.currency2} куп.` : '',
+            p.currency3 ? `${p.currency3.toLocaleString()} табл.` : ''
+          ].filter(Boolean).join(', ') || 'Бесплатно';
+
+          const bosses = (w.sources && w.sources.bosses) || [];
+          const inFortune = w.sources && w.sources.inFortune;
+          let badgeSource = '';
+          if (bosses.length > 0) {
+            badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с босса: ${bosses[0].bossTitle}">🏥 Босс</span>`;
+          } else if (inFortune) {
+            badgeSource = `<span style="font-size:0.68rem;color:var(--accent-gold);background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:1px 5px;border-radius:2px;" title="Падает в костях (Fortune)">🎲 Кости</span>`;
+          }
+
+          html += `
+            <div class="card" style="cursor:pointer;" onclick="openWeaponDetails(${w.id})" title="Подробнее об оружии, улучшении и источниках">
+              <div style="display:flex;gap:0.65rem;align-items:center;">
+                <img src="${w.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;" alt="${w.title}"/>
+                <div style="min-width:0;flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                    <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${w.title}">${w.title}</span>
+                    ${badgeSource}
+                  </div>
+                  <div style="font-size:0.75rem;color:#f87171;font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                    <span>⚔️ +${w.damage.toLocaleString()}</span>
+                    <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;">#${w.id}</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                <span>${w.maxUseCount > 0 ? w.maxUseCount + ' уд.' : 'Бесконечно'}</span>
+                <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedBiz.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-gold);margin-bottom:0.4rem;">🏢 Объекты больницы (${matchedBiz.length})</div>`;
+        html += `<div class="corps-grid-2col">`;
+        matchedBiz.forEach(bz => {
+          const loc = data.locations.find(l => l.id === bz.locationId);
+          const zone = loc ? data.zones.find(z => z.id === loc.zoneId) : null;
+          html += `
+            <div class="biz-card-compact">
+              <div class="biz-head-row">
+                <img class="biz-avatar-sm" src="${bz.image || ''}" alt="${bz.title}"/>
+                <div class="biz-info-sm">
+                  <div class="biz-title-sm">${bz.title}</div>
+                  <div class="biz-badges-sm">
+                    <span class="badge-biz-cost">💰 ${(bz.priceCoins || 0).toLocaleString()} монет</span>
+                  </div>
+                  ${zone ? `
+                    <div style="margin-top:0.35rem;">
+                      <button style="background:none;border:none;color:var(--accent-blue);font-size:0.75rem;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="state.search=''; UI.search.value=''; selectBlock('${zone.code}'); selectLocation(${loc.id});">
+                        🏥 Корпус ${loc.title}${loc.name ? ' (' + loc.name + ')' : ''} &rarr;
+                      </button>
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedMutagens.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-green);margin-bottom:0.4rem;">🧪 Мутагены лаборатории (${matchedMutagens.length})</div>`;
+        html += `<div class="grid" style="margin-bottom:1.2rem;">`;
+        matchedMutagens.forEach(e => {
+          const buff = (e.buffs && e.buffs[0] && e.buffs[0].stats && e.buffs[0].stats[0]) || {};
+          const statMap = { skill1: 'Ярость / Урон', skill2: 'Защита', skill3: 'Здоровье' };
+          html += `
+            <div class="card">
+              <div style="display:flex;gap:0.6rem;align-items:center;">
+                <img src="${e.image || ''}" width="38" height="38" style="background:#000;border-radius:4px;border:1px solid var(--border);" alt="${e.title}"/>
+                <div>
+                  <div style="font-weight:700;color:#fff;font-size:0.84rem;">${e.title}</div>
+                  <div style="font-size:0.74rem;color:var(--accent-green);font-weight:600;">+${buff.count || 0} ${statMap[buff.name] || buff.name || ''}</div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      UI.content.innerHTML = html;
+    }
+
+    /* =========================================================================
+       OTHER VIEWS (Weapons, All Bosses, Mutagens, Inventory)
+       ========================================================================= */
+    function renderWeapons(data, q) {
+      let filtered = data.weapons.filter(w => {
+        const p = w.price || {};
+        if (state.weaponCurrency === 'currency1' && !p.currency1) return false;
+        if (state.weaponCurrency === 'currency2' && !p.currency2) return false;
+        if (state.weaponCurrency === 'currency3' && !p.currency3) return false;
+        if (state.weaponCurrency === 'free' && (p.currency1 || p.currency2 || p.currency3)) return false;
+        if (!q) return true;
+        const titleMatch = w.title && w.title.toLowerCase().includes(q);
+        return w.id.toString() === q || w.damage.toString() === q || titleMatch;
+      });
+      filtered.sort((a, b) => b.damage - a.damage);
+
+      UI.controls.innerHTML = `
+        <div class="weapon-filter-ribbon">
+          <button class="weapon-filter-btn ${state.weaponCurrency === 'all' ? 'active' : ''}" onclick="state.weaponCurrency='all'; renderContent();">Все валюты</button>
+          <button class="weapon-filter-btn ${state.weaponCurrency === 'currency1' ? 'active' : ''}" onclick="state.weaponCurrency='currency1'; renderContent();">🪙 Монеты</button>
+          <button class="weapon-filter-btn ${state.weaponCurrency === 'currency3' ? 'active' : ''}" onclick="state.weaponCurrency='currency3'; renderContent();">💊 Таблетки</button>
+          <button class="weapon-filter-btn ${state.weaponCurrency === 'currency2' ? 'active' : ''}" onclick="state.weaponCurrency='currency2'; renderContent();">💵 Купюры</button>
+          <button class="weapon-filter-btn ${state.weaponCurrency === 'free' ? 'active' : ''}" onclick="state.weaponCurrency='free'; renderContent();">🎁 Бесплатное</button>
+        </div>
+      `;
+
+      let html = `<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">Оружия: ${filtered.length} (по урону) • Нажмите на оружие для характеристик и прокачки</div><div class="grid">`;
+      filtered.forEach(w => {
+        const p = w.price || {};
+        const priceStr = [
+          p.currency1 ? `${p.currency1.toLocaleString()} мон.` : '',
+          p.currency2 ? `${p.currency2} куп.` : '',
+          p.currency3 ? `${p.currency3.toLocaleString()} табл.` : ''
+        ].filter(Boolean).join(', ') || 'Бесплатно';
+
+        const bosses = (w.sources && w.sources.bosses) || [];
+        const inFortune = w.sources && w.sources.inFortune;
+        let badgeSource = '';
+        if (bosses.length > 0) {
+          badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с босса: ${bosses[0].bossTitle}">🏥 Босс</span>`;
+        } else if (inFortune) {
+          badgeSource = `<span style="font-size:0.68rem;color:var(--accent-gold);background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:1px 5px;border-radius:2px;" title="Падает в костях (Fortune)">🎲 Кости</span>`;
+        }
+
+        html += `
+          <div class="card" style="cursor:pointer;" onclick="openWeaponDetails(${w.id})" title="Подробнее об оружии, улучшении и источниках">
+            <div style="display:flex;gap:0.65rem;align-items:center;">
+              <img src="${w.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;" alt="${w.title}"/>
+              <div style="min-width:0;flex:1;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                  <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${w.title}">${w.title}</span>
+                  ${badgeSource}
+                </div>
+                <div style="font-size:0.75rem;color:#f87171;font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                  <span>Урон: +${w.damage.toLocaleString()}</span>
+                  <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;">#${w.id}</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+              <span>${w.maxUseCount > 0 ? w.maxUseCount + ' уд.' : 'Бесконечно'}</span>
+              <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+            </div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+      UI.content.innerHTML = html;
+    }
+
+    function renderAllBosses(data, q) {
+      let filtered = data.bosses.filter(b => !q || b.title.toLowerCase().includes(q) || b.id.toString() === q);
+      filtered.sort((a, b) => a.id - b.id);
+
+      let html = `<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">Всего боссов: ${filtered.length}</div><div class="grid">`;
+      filtered.forEach(b => {
+        const loc = data.locations.find(l => l.id === b.locationId);
+        html += `
+          <div class="card" style="cursor:pointer;" onclick="openBossDetails(${b.id})">
+            <div style="display:flex;gap:0.6rem;align-items:center;">
+              <img src="${b.portraitImage || b.previewImage || ''}" onerror="if(this.src!=='${b.previewImage||''}')this.src='${b.previewImage||''}';" width="40" height="40" style="border-radius:4px;object-fit:cover;background:#000;border:1px solid var(--border);"/>
+              <div>
+                <div style="font-weight:700;color:#fff;font-size:0.86rem;">#${b.id} ${b.title}</div>
+                <div style="font-size:0.72rem;color:var(--accent-blue);">Корпус ${loc ? (loc.title + (loc.name ? ' — ' + loc.name : '')) : '#' + b.locationId}</div>
+              </div>
+            </div>
+            <div style="font-size:0.76rem;display:flex;justify-content:space-between;">
+              <span style="color:#f87171;font-weight:700;">${b.health.toLocaleString()} HP</span>
+              <span style="color:var(--accent-purple);font-weight:600;">+${b.xp.toLocaleString()} XP</span>
+            </div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+      UI.content.innerHTML = html;
+    }
+
+    function renderMutagens(data, q) {
+      const enchants = data.mutagens.enchants || [];
+      let filtered = enchants.filter(e => !q || e.title.toLowerCase().includes(q) || e.id.toString() === q);
+
+      let html = `<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">Мутагены: ${filtered.length}</div><div class="grid">`;
+      filtered.forEach(e => {
+        const buff = (e.buffs && e.buffs[0] && e.buffs[0].stats && e.buffs[0].stats[0]) || {};
+        const statMap = { skill1: 'Ярость / Урон', skill2: 'Защита', skill3: 'Здоровье' };
+        html += `
+          <div class="card">
+            <div style="display:flex;gap:0.6rem;align-items:center;">
+              <img src="${e.image || ''}" width="38" height="38" style="background:#000;border-radius:4px;border:1px solid var(--border);"/>
+              <div>
+                <div style="font-weight:700;color:#fff;font-size:0.84rem;">${e.title}</div>
+                <div style="font-size:0.74rem;color:var(--accent-green);font-weight:600;">+${buff.count || 0} ${statMap[buff.name] || buff.name || ''}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+      html += `</div>`;
+      UI.content.innerHTML = html;
+    }
+
+    function renderInventory(data, q) {
+      if (!state.inventoryCategory) state.inventoryCategory = 'stashes';
+
+      const collections = data.collections || [];
+      const elemIds = new Set();
+      collections.forEach(c => (c.elements || []).forEach(e => elemIds.add(e.id)));
+      const stashIds = new Set(collections.map(c => c.stashId));
+      const eventItems = (data.inventory || []).filter(i => !elemIds.has(i.id) && !stashIds.has(i.id));
+
+      UI.controls.innerHTML = `
+        <div class="weapon-filter-ribbon">
+          <button class="weapon-filter-btn ${state.inventoryCategory === 'stashes' ? 'active' : ''}" onclick="state.inventoryCategory='stashes'; renderContent();">
+            🗃️ Заначки (${collections.length})
+          </button>
+          <button class="weapon-filter-btn ${state.inventoryCategory === 'events' ? 'active' : ''}" onclick="state.inventoryCategory='events'; renderContent();">
+            🎁 Ивентовые предметы (${eventItems.length})
+          </button>
+        </div>
+      `;
+
+      if (state.inventoryCategory === 'stashes') {
+        renderStashesView(collections, q);
+      } else {
+        renderEventItemsView(eventItems, data, q);
+      }
+    }
+
+    function renderStashesView(collections, q) {
+      let filtered = collections;
+      if (q) {
+        filtered = collections.filter(c => {
+          const matchTitle = c.title && c.title.toLowerCase().includes(q);
+          const matchId = c.id.toString() === q || c.stashId.toString() === q;
+          const matchElem = (c.elements || []).some(e => e.title && e.title.toLowerCase().includes(q));
+          return matchTitle || matchId || matchElem;
+        });
+      }
+
+      let html = `
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.65rem;">
+          Показано заначек: ${filtered.length} из ${collections.length} • Слева заначка, справа необходимые элементы для её сбора
+        </div>
+        <div class="stashes-list">
+      `;
+
+      if (filtered.length === 0) {
+        html += `<div style="text-align:center;padding:2rem;color:var(--text-muted);background:#0f141d;border:1px solid #1e2838;border-radius:var(--radius-md);">Заначки не найдены</div>`;
+      } else {
+        filtered.forEach(c => {
+          const sp = c.sellPrice || {};
+          const priceBadge = sp.currency1 ? `
+            <div class="stash-price">💰 ${sp.currency1.toLocaleString()} мон.</div>` : '';
+
+          const floorBadge = c.floor ? `
+            <div style="font-size:0.72rem;color:#38bdf8;margin-top:0.2rem;">
+              📍 <a href="javascript:void(0)" class="element-source-link" onclick="openFloorDetails(${c.floor.locId})" title="Дежурства: этаж ${c.floor.title} (${c.floor.name})">Этаж ${c.floor.title}</a>
+            </div>` : `
+            <div style="font-size:0.72rem;color:#c084fc;margin-top:0.2rem;">
+              💀 Крафт / Дроп с боссов
+            </div>`;
+
+          let rewardLabel = '';
+          if (c.reward) {
+            if (c.reward.startsWith('Крафт') || c.reward.startsWith('Комплект') || c.reward.startsWith('Предмет')) {
+              rewardLabel = `✨ ${c.reward}`;
+            } else if (c.reward.startsWith('+')) {
+              rewardLabel = `✨ Награда: ${c.reward}`;
+            } else {
+              rewardLabel = `✨ Эффект: ${c.reward}`;
+            }
+          }
+
+          const rewardBadge = rewardLabel ? `
+            <div style="font-size:0.72rem;color:var(--accent-green);margin-top:0.25rem;font-weight:600;line-height:1.35;">
+              ${rewardLabel}
+            </div>` : '';
+
+          html += `
+            <div class="stash-row">
+              <div class="stash-left">
+                <div class="stash-icon-frame">
+                  <img src="${c.image}" alt="${c.title}" onerror="this.src='images/ui/unknown.png'"/>
+                </div>
+                <div class="stash-meta">
+                  <div class="stash-title">${c.title}</div>
+                  ${priceBadge}
+                  ${floorBadge}
+                  ${rewardBadge}
+                </div>
+              </div>
+
+              <div class="stash-arrow">➔</div>
+
+              <div class="stash-elements-row ${(c.elements || []).length === 1 ? 'single-element' : ''}">
+                ${(c.elements || []).map(e => {
+                  let sourceHtml = '—';
+                  if (e.source && e.source.type === 'floor') {
+                    sourceHtml = `🏥 <a href="javascript:void(0)" class="element-source-link" onclick="openFloorDetails(${e.source.locId})" title="Дежурства: этаж ${e.source.locTitle} (${e.source.locName})">Этаж ${e.source.locTitle}</a>`;
+                  } else if (e.source && e.source.type === 'boss') {
+                    sourceHtml = `💀 <a href="javascript:void(0)" class="element-source-link" onclick="openBossDetails(${e.source.bossId})" title="Босс: ${e.source.bossTitle}">${e.source.bossTitle}</a>`;
+                  } else if (e.sourceLabel) {
+                    sourceHtml = e.sourceLabel;
+                  }
+
+                  const totalCount = (c.elements || []).length || 1;
+
+                  return `
+                    <div class="element-slot" title="${e.title}">
+                      <div class="element-num-badge">${e.index}/${totalCount}</div>
+                      <div class="element-img-frame">
+                        <img src="${e.image}" alt="${e.title}" onerror="this.src='images/ui/unknown.png'"/>
+                      </div>
+                      <div class="element-name">${e.title}</div>
+                      <div class="element-source">${sourceHtml}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      html += `</div>`;
+      UI.content.innerHTML = html;
+    }
+
+    function renderEventItemsView(eventItems, data, q) {
+      let filtered = eventItems;
+      if (q) {
+        filtered = eventItems.filter(i => {
+          return (i.title && i.title.toLowerCase().includes(q)) || i.id.toString() === q;
+        });
+      }
+
+      // Map boss drop sources
+      const bossDropsMap = {};
+      (data.bosses || []).forEach(b => {
+        (b.drops || []).forEach(d => {
+          if (d.type === 'inventory') {
+            if (!bossDropsMap[d.id]) bossDropsMap[d.id] = [];
+            bossDropsMap[d.id].push({ id: b.id, title: b.title, prob: d.probability || d.prob || 100 });
+          }
+        });
+      });
+
+      let html = `
+        <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.65rem;">
+          Показано ивентовых и квестовых предметов: ${filtered.length} из ${eventItems.length}
+        </div>
+        <div class="event-items-grid">
+      `;
+
+      if (filtered.length === 0) {
+        html += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-muted);background:#0f141d;border:1px solid #1e2838;border-radius:var(--radius-md);">Предметы не найдены</div>`;
+      } else {
+        filtered.forEach(i => {
+          const sp = i.sellPrice || {};
+          const priceText = sp.currency1 ? `${sp.currency1} мон.` : 'Не продается';
+          const bossSources = bossDropsMap[i.id] || [];
+
+          let dropBadge = '';
+          if (bossSources.length > 0) {
+            const first = bossSources[0];
+            const extra = bossSources.length > 1 ? ` +${bossSources.length - 1}` : '';
+            dropBadge = `<div style="font-size:0.68rem;color:#38bdf8;margin-top:0.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
+              💀 <a href="javascript:void(0)" class="drop-link" onclick="openBossDetails(${first.id})" title="${first.title}">${first.title} (${first.prob}%)${extra}</a>
+            </div>`;
+          }
+
+          html += `
+            <div class="event-item-card">
+              <div class="event-item-img">
+                <img src="${i.image || ''}" alt="${i.title}" onerror="this.src='images/ui/unknown.png'"/>
+              </div>
+              <div style="min-width:0;flex:1;">
+                <div style="font-size:0.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${i.title}">
+                  ${i.title}
+                </div>
+                <div style="font-size:0.68rem;color:var(--accent-gold);margin-top:0.1rem;">
+                  ${priceText}
+                </div>
+                ${dropBadge}
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      html += `</div>`;
+      UI.content.innerHTML = html;
+    }
+
+    function openFloorDetails(locId) {
+      const data = window.GAME_DATA;
+      const loc = (data.locations || []).find(l => l.id === locId);
+      if (!loc) return;
+      const zone = (data.zones || []).find(z => z.id === loc.zoneId);
+      if (zone) state.activeZoneCode = zone.code;
+      state.activeLocationId = locId;
+      state.openedCorps[locId] = true;
+      state.tab = 'floors';
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      const ft = document.querySelector('.nav-tab[data-tab="floors"]');
+      if (ft) ft.classList.add('active');
+      renderContent();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openStashByTitle(stashTitle) {
+      closeModal();
+      state.tab = 'inventory';
+      state.inventoryCategory = 'stashes';
+      state.search = stashTitle;
+      UI.search.value = stashTitle;
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      const it = document.querySelector('.nav-tab[data-tab="inventory"]');
+      if (it) it.classList.add('active');
+      renderContent();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* Modal */
+    function openBossDetails(bossId) {
+      const data = window.GAME_DATA;
+      const b = data.bosses.find(x => x.id === bossId);
+      if (!b) return;
+
+      const loc = data.locations.find(l => l.id === b.locationId);
+      const zone = loc ? data.zones.find(z => z.id === loc.zoneId) : null;
+
+      UI.modalTitle.textContent = `#${b.id} ${b.title}`;
+
+      let bodyHtml = `
+        ${b.previewImage ? `<img src="${b.previewImage}" class="modal-preview-img" alt="${b.title}" onerror="this.style.display='none'"/>` : ''}
+        ${b.description ? `<p style="color:var(--text-muted);font-size:0.84rem;line-height:1.4;">${b.description}</p>` : ''}
+        
+        <table class="modal-table">
+          <tr><th>Корпус</th><td>${loc ? (loc.title + (loc.name ? ' — ' + loc.name : '')) : '#' + b.locationId} ${zone ? `(${zone.title})` : ''}</td></tr>
+          <tr><th>Здоровье</th><td style="color:#f87171;font-weight:700;">${b.health.toLocaleString()} HP</td></tr>
+          <tr><th>Урон</th><td>${b.damageMin} – ${b.damageMax}</td></tr>
+          <tr><th>Время боя</th><td>${b.durationMinutes} мин</td></tr>
+          <tr><th>Опыт</th><td style="color:var(--accent-purple);font-weight:600;">+${b.xp.toLocaleString()} XP</td></tr>
+          <tr><th>Условия</th><td>${b.needsText || 'Нет'}</td></tr>
+          ${b.artifactTitle ? `<tr><th>Квестовый итем</th><td><strong>${b.artifactTitle} (100%)</strong></td></tr>` : ''}
+        </table>
+
+        <div>
+          <div style="font-size:0.8rem;font-weight:700;margin-bottom:0.35rem;color:#fff;">Шансы дропа:</div>
+          <table class="modal-table">
+            <thead><tr><th>Предмет</th><th>Кол-во</th><th>Шанс</th></tr></thead>
+            <tbody>
+              ${(() => {
+                const artLower = (b.artifactTitle || '').trim().toLowerCase();
+                const filteredDrops = b.drops.filter(d => !artLower || d.title.trim().toLowerCase() !== artLower);
+                return filteredDrops.map(d => {
+                  let itemHtml = d.title;
+                  if (d.type === 'access_weapon') {
+                    const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                    itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openWeaponDetails(${d.id}, ${b.id})" title="Открыть характеристики и улучшение оружия">${cleanTitle}</a>`;
+                  } else if (d.type === 'access_cloth') {
+                    const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                    itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openClothDetails(${d.id}, ${b.id})" title="Открыть информацию об одежде">${cleanTitle}</a>`;
+                  } else if (d.type && d.type.startsWith('access_')) {
+                    itemHtml = '🔑 ' + d.title;
+                  } else if (d.collectionTitle || (d.title && d.title.startsWith('Заначка '))) {
+                    const cTitle = d.collectionTitle || (d.title.match(/«([^»]+)»/) ? d.title.match(/«([^»]+)»/)[1] : '');
+                    itemHtml = `📦 <a href="javascript:void(0)" class="drop-link" onclick="openStashByTitle('${cTitle.replace(/'/g, "\\'")}')" title="Открыть заначку «${cTitle}» в инвентаре">${d.title}</a>`;
+                  }
+                  return `
+                    <tr>
+                      <td>${itemHtml}</td>
+                      <td>${d.count != null ? d.count : 1}</td>
+                      <td style="color:var(--accent-gold);font-weight:700;">${d.probability}%</td>
+                    </tr>
+                  `;
+                }).join('');
+              })()}
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      UI.modalBody.innerHTML = bodyHtml;
+      UI.modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openWeaponDetails(weaponId, fromBossId = null) {
+      const data = window.GAME_DATA;
+      const w = data.weapons.find(x => x.id === weaponId);
+      if (!w) return;
+
+      UI.modalTitle.textContent = `${w.title} (#${w.id})`;
+
+      function plural(n, one, few, many) {
+        if (!n) return '';
+        const mod10 = n % 10;
+        const mod100 = n % 100;
+        if (mod100 >= 11 && mod100 <= 14) return `${n.toLocaleString()} ${many}`;
+        if (mod10 === 1) return `${n.toLocaleString()} ${one}`;
+        if (mod10 >= 2 && mod10 <= 4) return `${n.toLocaleString()} ${few}`;
+        return `${n.toLocaleString()} ${many}`;
+      }
+
+      function formatHits(n) {
+        if (!n || n <= 0) return 'Бесконечно (не ломается)';
+        return plural(n, 'удар', 'удара', 'ударов');
+      }
+
+      const p = w.price || {};
+      const priceStr = [
+        p.currency1 ? plural(p.currency1, 'монета', 'монеты', 'монет') : '',
+        p.currency2 ? plural(p.currency2, 'купюра', 'купюры', 'купюр') : '',
+        p.currency3 ? plural(p.currency3, 'таблетка', 'таблетки', 'таблеток') : ''
+      ].filter(Boolean).join(', ') || 'Бесплатно';
+
+      const rp = w.rechargePrice || {};
+      const rechargeStr = [
+        rp.currency1 ? plural(rp.currency1, 'монета', 'монеты', 'монет') : '',
+        rp.currency2 ? plural(rp.currency2, 'купюра', 'купюры', 'купюр') : '',
+        rp.currency3 ? plural(rp.currency3, 'таблетка', 'таблетки', 'таблеток') : ''
+      ].filter(Boolean).join(', ') || 'Бесплатно / Не требует';
+
+      // Upgrade section
+      const upg = w.upgrade || {};
+      let upgradeHtml = '';
+      if (upg.canUpgrade) {
+        const statsStr = (upg.perLevelStats || []).map(s => `<span style="color:#38bdf8;font-weight:700;">+${s.count} ${s.name}</span>`).join(', ');
+        const totalMaxStr = (upg.perLevelStats || []).map(s => `<span style="color:#10b981;font-weight:700;">+${(s.count * upg.maxLevel).toLocaleString()} ${s.name}</span>`).join(', ');
+
+        upgradeHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:var(--accent-gold);margin-bottom:0.45rem;display:flex;align-items:center;gap:0.4rem;">
+              <span>🔨 Прокачка и улучшение оружия</span>
+            </div>
+            <div style="font-size:0.8rem;color:#cbd5e1;line-height:1.5;">
+              <div>• <strong>Максимальный уровень прокачки:</strong> <span style="color:#f87171;font-weight:700;">до ${upg.maxLevel} ур.</span></div>
+              <div>• <strong>Бонус за 1 уровень:</strong> ${statsStr}</div>
+              ${upg.maxLevel > 1 ? `<div>• <strong>Суммарный бонус на ${upg.maxLevel} ур.:</strong> ${totalMaxStr}</div>` : ''}
+            </div>
+
+            <div style="margin-top:0.6rem;font-size:0.78rem;font-weight:700;color:#fff;">Чем и с каким шансом улучшать:</div>
+            <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:0.4rem;margin-top:0.4rem;">
+              <div style="background:#090d16;border:1px solid #334155;border-radius:4px;padding:0.45rem 0.35rem;text-align:center;">
+                <div style="font-size:0.72rem;color:var(--accent-gold);font-weight:600;">🪙 За монеты</div>
+                <div style="font-size:1rem;font-weight:700;color:#cbd5e1;margin:2px 0;font-family:var(--font-mono);">~11%</div>
+                <div style="font-size:0.67rem;color:var(--text-muted);">Низкий шанс</div>
+              </div>
+              <div style="background:#090d16;border:1px solid #334155;border-radius:4px;padding:0.45rem 0.35rem;text-align:center;">
+                <div style="font-size:0.72rem;color:var(--accent-pills);font-weight:600;">💊 За таблетки</div>
+                <div style="font-size:1rem;font-weight:700;color:#38bdf8;margin:2px 0;font-family:var(--font-mono);">~55%</div>
+                <div style="font-size:0.67rem;color:var(--text-muted);">Средний шанс</div>
+              </div>
+              <div style="background:#090d16;border:1px solid rgba(16,185,129,0.4);border-radius:4px;padding:0.45rem 0.35rem;text-align:center;">
+                <div style="font-size:0.72rem;color:var(--accent-green);font-weight:600;">💵 За купюры</div>
+                <div style="font-size:1rem;font-weight:700;color:#34d399;margin:2px 0;font-family:var(--font-mono);">100%</div>
+                <div style="font-size:0.67rem;color:#10b981;">Без риска</div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        upgradeHtml = `
+          <div style="margin-top:0.8rem;background:rgba(255,255,255,0.02);border:1px solid #1e293b;border-radius:4px;padding:0.6rem;font-size:0.8rem;color:var(--text-muted);">
+            ℹ️ Данное оружие не имеет уровней улучшения в мастерской.
+          </div>
+        `;
+      }
+
+      // Sources section
+      let sourcesHtml = '';
+      const bosses = (w.sources && w.sources.bosses) || [];
+      const inFortune = w.sources && w.sources.inFortune;
+
+      if (bosses.length > 0 || inFortune) {
+        sourcesHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:#38bdf8;margin-bottom:0.45rem;">
+              📍 Источники получения:
+            </div>
+            ${bosses.length > 0 ? `
+              <div style="margin-bottom:${inFortune ? '0.6rem' : '0'};">
+                <div style="font-size:0.78rem;font-weight:600;color:#f87171;margin-bottom:0.35rem;">🏥 Выбивается с буйных пациентов (боссов):</div>
+                <div style="display:flex;flex-direction:column;gap:0.35rem;">
+                  ${bosses.map(b => `
+                    <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                      <div>
+                        <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${b.bossId});" title="Открыть досье босса">
+                          ${b.bossTitle} &rarr;
+                        </button>
+                        <span style="color:var(--accent-blue);font-size:0.73rem;margin-left:0.4rem;">(Корпус ${b.locationTitle}${b.locationName ? ' — ' + b.locationName : ''})</span>
+                      </div>
+                      <span style="color:var(--accent-gold);font-weight:700;font-family:var(--font-mono);">${b.probability}%</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${inFortune ? `
+              <div style="display:flex;align-items:center;gap:0.6rem;background:#090d16;border:1px solid rgba(234,179,8,0.3);border-radius:3px;padding:0.5rem 0.65rem;font-size:0.8rem;color:#facc15;">
+                <span style="font-size:1.25rem;">🎲</span>
+                <div>
+                  <div style="font-weight:700;color:#fff;">Падает в костях (Fortune)</div>
+                  <div style="font-size:0.72rem;color:var(--text-muted);margin-top:1px;">Выпадает в мини-игре «Кости» при сборе счастливых комбинаций кубиков</div>
+                </div>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      const boss = fromBossId ? data.bosses.find(x => x.id === fromBossId) : null;
+      const backBtnHtml = boss ? `
+        <div style="margin-bottom:0.75rem;">
+          <button class="weapon-filter-btn" style="padding:0.32rem 0.75rem;font-size:0.76rem;" onclick="openBossDetails(${boss.id})">
+            &larr; Назад к боссу #${boss.id} (${boss.title})
+          </button>
+        </div>
+      ` : '';
+
+      let bodyHtml = `
+        ${backBtnHtml}
+        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:0.8rem;">
+          <img src="${w.image || ''}" width="80" height="80" style="background:#000;border:1px solid #4a5870;border-radius:4px;object-fit:contain;padding:4px;box-shadow:0 3px 10px rgba(0,0,0,0.7);" alt="${w.title}"/>
+          <div>
+            <div style="font-size:1.15rem;font-weight:700;color:#fff;font-family:var(--font-header);">${w.title}</div>
+            <div style="font-size:0.85rem;color:#f87171;font-weight:700;margin-top:3px;">Урон оружия: +${w.damage.toLocaleString()}</div>
+            <div style="font-size:0.74rem;color:var(--text-muted);margin-top:2px;">Идентификатор в базе: #${w.id}</div>
+          </div>
+        </div>
+
+        <table class="modal-table">
+          <tr><th>Урон</th><td style="color:#f87171;font-weight:700;">+${w.damage.toLocaleString()}</td></tr>
+          <tr><th>Количество ударов</th><td>${formatHits(w.maxUseCount)}</td></tr>
+          <tr><th>Цена покупки</th><td style="color:var(--accent-gold);font-weight:600;">${priceStr}</td></tr>
+          <tr><th>Цена перезарядки</th><td>${rechargeStr}</td></tr>
+          <tr><th>Условия / Доступ</th><td>${w.needsFormatted || 'Доступно сразу'}</td></tr>
+        </table>
+
+        ${upgradeHtml}
+        ${sourcesHtml}
+      `;
+
+      UI.modalBody.innerHTML = bodyHtml;
+      UI.modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openClothDetails(clothId, fromBossId = null) {
+      const data = window.GAME_DATA;
+      const c = (data.clothes || []).find(x => x.id === clothId);
+      if (!c) return;
+
+      UI.modalTitle.textContent = `${c.title} — ${c.category || 'Одежда'} (#${c.id})`;
+
+      function plural(n, one, few, many) {
+        if (!n) return '';
+        const mod10 = n % 10;
+        const mod100 = n % 100;
+        if (mod100 >= 11 && mod100 <= 14) return `${n.toLocaleString()} ${many}`;
+        if (mod10 === 1) return `${n.toLocaleString()} ${one}`;
+        if (mod10 >= 2 && mod10 <= 4) return `${n.toLocaleString()} ${few}`;
+        return `${n.toLocaleString()} ${many}`;
+      }
+
+      const p = c.price || {};
+      const priceStr = [
+        p.currency1 ? plural(p.currency1, 'монета', 'монеты', 'монет') : '',
+        p.currency2 ? plural(p.currency2, 'купюра', 'купюры', 'купюр') : '',
+        p.currency3 ? plural(p.currency3, 'таблетка', 'таблетки', 'таблеток') : ''
+      ].filter(Boolean).join(', ') || 'Не продается (выбивается с боссов)';
+
+      const statMap = { skill1: 'Ярость / Урон', skill2: 'Защита', skill3: 'Здоровье' };
+      const stats = (c.baseStats || []).map(s => {
+        return `<span style="color:var(--accent-green);font-weight:700;">+${s.count} ${statMap[s.name] || s.name}</span>`;
+      }).join(', ') || '<span style="color:var(--text-muted);">Декоративный предмет гардероба</span>';
+
+      const boss = fromBossId ? data.bosses.find(x => x.id === fromBossId) : null;
+      const backBtnHtml = boss ? `
+        <div style="margin-bottom:0.75rem;">
+          <button class="weapon-filter-btn" style="padding:0.32rem 0.75rem;font-size:0.76rem;" onclick="openBossDetails(${boss.id})">
+            &larr; Назад к боссу #${boss.id} (${boss.title})
+          </button>
+        </div>
+      ` : '';
+
+      const bosses = (c.sources && c.sources.bosses) || [];
+      let sourcesHtml = '';
+      if (bosses.length > 0) {
+        sourcesHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:#f87171;margin-bottom:0.45rem;">
+              🏥 Выбивается с буйных пациентов (боссов):
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;">
+              ${bosses.map(b => `
+                <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                  <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${b.bossId});" title="Открыть досье босса">
+                    #${b.bossId} ${b.bossTitle} &rarr;
+                  </button>
+                  <span style="color:var(--accent-gold);font-weight:700;font-family:var(--font-mono);">${b.probability}%</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      let bodyHtml = `
+        ${backBtnHtml}
+        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:0.8rem;">
+          <img src="${c.image || c.remoteImage || ''}" onerror="if(this.src!=='${c.remoteImage||''}')this.src='${c.remoteImage||''}';" width="72" height="72" style="background:#000;border:1px solid #4a5870;border-radius:4px;object-fit:contain;padding:4px;box-shadow:0 3px 10px rgba(0,0,0,0.7);" alt="${c.title}"/>
+          <div>
+            <div style="font-size:1.15rem;font-weight:700;color:#fff;font-family:var(--font-header);">${c.title}</div>
+            <div style="font-size:0.85rem;color:var(--accent-blue);font-weight:700;margin-top:3px;">${c.category || 'Предмет гардероба'}</div>
+            <div style="font-size:0.74rem;color:var(--text-muted);margin-top:2px;">Идентификатор в базе: #${c.id}</div>
+          </div>
+        </div>
+
+        <table class="modal-table">
+          <tr><th>Слот / Категория</th><td><strong>${c.category || 'Гардероб'}</strong></td></tr>
+          <tr><th>Бонусы предмета</th><td>${stats}</td></tr>
+          <tr><th>Требуемый уровень</th><td>${c.minLevel > 0 ? c.minLevel + ' ур.' : 'С 0 уровня (без ограничений)'}</td></tr>
+          <tr><th>Цена в магазине</th><td style="color:var(--accent-gold);font-weight:600;">${priceStr}</td></tr>
+        </table>
+
+        ${sourcesHtml}
+      `;
+
+      UI.modalBody.innerHTML = bodyHtml;
+      UI.modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      UI.modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

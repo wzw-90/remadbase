@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "order": 1,
+    "code": "-A-",
+    "title": "Корпус -A-: Блок Общей Психиатрии",
+    "description": "Блок Общей Психиатрии",
+    "locationIds": [
+      1,
+      2,
+      3
+    ],
+    "bgImage": "images/zones/zone_1_bg.png"
+  },
+  {
+    "id": 2,
+    "order": 2,
+    "code": "-B-",
+    "title": "Корпус -B-: Лечебное отделение",
+    "description": "Лечебное отделение",
+    "locationIds": [
+      4,
+      5,
+      6
+    ],
+    "bgImage": "images/zones/zone_2_bg.png"
+  },
+  {
+    "id": 3,
+    "order": 3,
+    "code": "-C-",
+    "title": "Корпус -C-: Подвальные помещения",
+    "description": "Подвальные помещения",
+    "locationIds": [
+      7,
+      8,
+      9
+    ],
+    "bgImage": "images/zones/zone_3_bg.png"
+  },
+  {
+    "id": 4,
+    "order": 4,
+    "code": "-D-",
+    "title": "Корпус -D-: Тех.корпус психиатрии",
+    "description": "Тех.корпус психиатрии",
+    "locationIds": [
+      10,
+      11,
+      12
+    ],
+    "bgImage": "images/zones/zone_4_bg.png"
+  },
+  {
+    "id": 5,
+    "order": 5,
+    "code": "-E-",
+    "title": "Корпус -E-: Институт психиатрии",
+    "description": "Институт психиатрии",
+    "locationIds": [
+      13,
+      14,
+      15
+    ],
+    "bgImage": "images/zones/zone_5_bg.png"
+  },
+  {
+    "id": 6,
+    "order": 6,
+    "code": "-F-",
+    "title": "Корпус -F-: Подземные лабиринты",
+    "description": "Подземные лабиринты",
+    "locationIds": [
+      16,
+      17,
+      18
+    ],
+    "bgImage": "images/zones/zone_6_bg.png"
+  },
+  {
+    "id": 8,
+    "order": 7,
+    "code": "-G-",
+    "title": "Корпус -G-: Главный выход псих.больницы",
+    "description": "Главный выход псих.больницы",
+    "locationIds": [
+      22,
+      23,
+      24
+    ],
+    "bgImage": "images/zones/zone_8_bg.png"
+  },
+  {
+    "id": 9,
+    "order": 8,
+    "code": "-H-",
+    "title": "Корпус -H-: Закрытая мансарда",
+    "description": "Закрытая мансарда",
+    "locationIds": [
+      25,
+      26,
+      27
+    ],
+    "bgImage": "images/zones/zone_9_bg.png"
+  },
+  {
+    "id": 10,
+    "order": 9,
+    "code": "-I-",
+    "title": "Корпус -I-: Спуск в катакомбы",
+    "description": "Спуск в катакомбы",
+    "locationIds": [
+      28,
+      30,
+      29
+    ],
+    "bgImage": "images/zones/zone_10_bg.png"
+  },
+  {
+    "id": 11,
+    "order": 10,
+    "code": "-J-",
+    "title": "Корпус -J-: Мутагенная абстиненция",
+    "description": "Мутагенная абстиненция",
+    "locationIds": [
+      31,
+      32,
+      33
+    ],
+    "bgImage": "images/zones/zone_11_bg.png"
+  },
+  {
+    "id": 12,
+    "order": 11,
+    "code": "-K-",
+    "title": "Корпус -K-: Недра обители профессора Г.Б",
+    "description": "Недра обители профессора Г.Б",
+    "locationIds": [
+      34,
+      35,
+      36
+    ],
+    "bgImage": "images/zones/zone_12_bg.png"
+  },
+  {
+    "id": 13,
+    "order": 12,
+    "code": "-L-",
+    "title": "Корпус -L-: Промышленный корпус",
+    "description": "Промышленный корпус",
+    "locationIds": [
+      37,
+      38,
+      39
+    ],
+    "bgImage": "images/zones/zone_13_bg.png"
+  },
+  {
+    "id": 14,
+    "order": 13,
+    "code": "-M-",
+    "title": "Корпус -M-: Форт Боярд",
+    "description": "Форт Боярд",
+    "locationIds": [
+      40,
+      41,
+      42
+    ],
+    "bgImage": "images/zones/zone_14_bg.png"
+  },
+  {
+    "id": 15,
+    "order": 14,
+    "code": "-N-",
+    "title": "Корпус -N-: Другие закоулки нашей больницы",
+    "description": "Другие закоулки нашей больницы",
+    "locationIds": [
+      43,
+      44,
+      45
+    ],
+    "bgImage": "images/zones/zone_15_bg.png"
+  },
+  {
+    "id": 7,
+    "order": 15,
+    "code": "-$-",
+    "title": "Корпус -$-: Искажённые сны тяжелобольных ",
+    "description": "Искажённые сны тяжелобольных ",
+    "locationIds": [
+      19,
+      20,
+      21
+    ],
+    "bgImage": "images/zones/zone_7_bg.png"
+  },
+  {
+    "id": 16,
+    "order": 16,
+    "code": "-O-",
+    "title": "Корпус -O-: Подземелье чистой ярости",
+    "description": "Подземелье чистой ярости",
+    "locationIds": [
+      46,
+      47,
+      48
+    ],
+    "bgImage": "images/zones/zone_16_bg.png"
+  }
+]

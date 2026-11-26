@@ -1,0 +1,8050 @@
+[
+  {
+    "id": 3,
+    "damage": 5,
+    "maxUseCount": 0,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {},
+    "needsText": "Нет условий (доступно сразу)",
+    "image": "images/weapons/weapon_3.webp",
+    "title": "Бинты",
+    "needsFormatted": "Доступно сразу",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 53,
+    "damage": 10,
+    "maxUseCount": 27,
+    "price": {
+      "currency1": 1300,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 5,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 125,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 8
+    },
+    "needsText": "Уровень игрока: 8+",
+    "image": "images/weapons/weapon_53.webp",
+    "title": "Дубинка с гвоздями",
+    "needsFormatted": "Уровень игрока 8+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 54,
+    "damage": 150,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 3777,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 10,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50
+    },
+    "needs": {
+      "min_level": 13
+    },
+    "needsText": "Уровень игрока: 13+",
+    "image": "images/weapons/weapon_54.webp",
+    "title": "Труба",
+    "needsFormatted": "Уровень игрока 13+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 55,
+    "damage": 25,
+    "maxUseCount": 32,
+    "price": {
+      "currency1": 0,
+      "currency2": 25,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 386,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 19
+    },
+    "needsText": "Уровень игрока: 19+",
+    "image": "images/weapons/weapon_55.webp",
+    "title": "Скальпель",
+    "needsFormatted": "Уровень игрока 19+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 56,
+    "damage": 26,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 12500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 38,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 657,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 41
+    },
+    "needsText": "Уровень игрока: 41+",
+    "image": "images/weapons/weapon_56.webp",
+    "title": "Молот",
+    "needsFormatted": "Уровень игрока 41+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 57,
+    "damage": 17,
+    "maxUseCount": 35,
+    "price": {
+      "currency1": 0,
+      "currency2": 17,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 250,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 8
+    },
+    "needsText": "Уровень игрока: 8+",
+    "image": "images/weapons/weapon_57.webp",
+    "title": "Нож",
+    "needsFormatted": "Уровень игрока 8+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 104,
+    "damage": 45,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 13333,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 750,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 104,
+          "place": 1,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 104, 'place': 1, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_104.webp",
+    "title": "Когти",
+    "needsFormatted": "Падает в костях (Fortune)",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": true,
+      "fortuneCombos": [
+        {
+          "comboId": 13,
+          "cells": [
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "comboId": 13,
+          "cells": [
+            6,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    "sex": "male"
+  },
+  {
+    "id": 105,
+    "damage": 43,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 43,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 657,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 33
+    },
+    "needsText": "Уровень игрока: 33+",
+    "image": "images/weapons/weapon_105.webp",
+    "title": "Табурет",
+    "needsFormatted": "Уровень игрока 33+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 106,
+    "damage": 52,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 60,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 45
+    },
+    "needsText": "Уровень игрока: 45+",
+    "image": "images/weapons/weapon_106.webp",
+    "title": "Лом",
+    "needsFormatted": "Уровень игрока 45+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 107,
+    "damage": 37,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 25000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 100,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 900,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "battle_rank": 10000,
+      "min_level": 50
+    },
+    "needsText": "Уровень игрока: 50+; Боевой ранг: 10000",
+    "image": "images/weapons/weapon_107.webp",
+    "title": "Опасная бритва",
+    "needsFormatted": "Уровень игрока 50+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 108,
+    "damage": 31,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 25000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 900,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 108,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 108, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_108.webp",
+    "title": "Кухонный нож",
+    "needsFormatted": "Выбивается с босса: Ален Грант",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 25,
+          "bossTitle": "Ален Грант",
+          "locationId": 9,
+          "zoneCode": "-C-",
+          "locationTitle": "C-3",
+          "locationName": "Крематорий",
+          "probability": 100,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 109,
+    "damage": 38,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 42500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 109,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 109, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_109.webp",
+    "title": "Тесак мясника",
+    "needsFormatted": "Выбивается с босса: Стефан и Ганс Крейг, Вальтер Шпинне",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 21,
+          "bossTitle": "Стефан и Ганс Крейг",
+          "locationId": 10,
+          "zoneCode": "-D-",
+          "locationTitle": "D-1",
+          "locationName": "Блок обеспечения",
+          "probability": 1,
+          "once": true
+        },
+        {
+          "bossId": 22,
+          "bossTitle": "Вальтер Шпинне",
+          "locationId": 10,
+          "zoneCode": "-D-",
+          "locationTitle": "D-1",
+          "locationName": "Блок обеспечения",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 110,
+    "damage": 42,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 54500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 110,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 110, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_110.webp",
+    "title": "Пожарный топор",
+    "needsFormatted": "Выбивается с босса: Аделаида Шальца, Хуго Ван Дер Вейден",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 30,
+          "bossTitle": "Аделаида Шальца",
+          "locationId": 12,
+          "zoneCode": "-D-",
+          "locationTitle": "D-3",
+          "locationName": "Отопительный блок",
+          "probability": 1,
+          "once": true
+        },
+        {
+          "bossId": 31,
+          "bossTitle": "Хуго Ван Дер Вейден",
+          "locationId": 12,
+          "zoneCode": "-D-",
+          "locationTitle": "D-3",
+          "locationName": "Отопительный блок",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 111,
+    "damage": 37,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 3600
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 35,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 657,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 38
+    },
+    "needsText": "Уровень игрока: 38+",
+    "image": "images/weapons/weapon_111.webp",
+    "title": "Арматура",
+    "needsFormatted": "Уровень игрока 38+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 451,
+    "damage": 31,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 48000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 57,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 60
+    },
+    "needsText": "Уровень игрока: 60+",
+    "image": "images/weapons/weapon_451.webp",
+    "title": "Кувалда",
+    "needsFormatted": "Уровень игрока 60+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 452,
+    "damage": 40,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 59000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 65,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 68
+    },
+    "needsText": "Уровень игрока: 68+",
+    "image": "images/weapons/weapon_452.webp",
+    "title": "Фредди Крюгер",
+    "needsFormatted": "Уровень игрока 68+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 453,
+    "damage": 48,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 8700
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 47,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 50
+    },
+    "needsText": "Уровень игрока: 50+",
+    "image": "images/weapons/weapon_453.webp",
+    "title": "Цепь",
+    "needsFormatted": "Уровень игрока 50+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 454,
+    "damage": 48,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 45000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 137,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1200,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "battle_rank": 13700
+    },
+    "needsText": "Боевой ранг: 13700",
+    "image": "images/weapons/weapon_454.webp",
+    "title": "Хоккейная клюшка",
+    "needsFormatted": "Доступно сразу",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 10,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 455,
+    "damage": 85,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 35000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1300,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 455,
+          "place": 1,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 455, 'place': 1, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_455.webp",
+    "title": "Палаш",
+    "needsFormatted": "Падает в костях (Fortune)",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": true,
+      "fortuneCombos": [
+        {
+          "comboId": 13,
+          "cells": [
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "comboId": 13,
+          "cells": [
+            6,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    "sex": "male"
+  },
+  {
+    "id": 532,
+    "damage": 45,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 71000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 75,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 3500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 78
+    },
+    "needsText": "Уровень игрока: 78+",
+    "image": "images/weapons/weapon_532.webp",
+    "title": "Лопата",
+    "needsFormatted": "Уровень игрока 78+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 535,
+    "damage": 60,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 70000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 535,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 535, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_535.webp",
+    "title": "Коса",
+    "needsFormatted": "Выбивается с босса: Отто Магнус Иверман",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 15,
+          "bossTitle": "Отто Магнус Иверман",
+          "locationId": 14,
+          "zoneCode": "-E-",
+          "locationTitle": "E-2",
+          "locationName": "Цокольный этаж",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 537,
+    "damage": 57,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 63750,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 537,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 537, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_537.webp",
+    "title": "Копьё",
+    "needsFormatted": "Выбивается с босса: Карл Магнус Иверман",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 16,
+          "bossTitle": "Карл Магнус Иверман",
+          "locationId": 14,
+          "zoneCode": "-E-",
+          "locationTitle": "E-2",
+          "locationName": "Цокольный этаж",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 539,
+    "damage": 74,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 89,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 65
+    },
+    "needsText": "Уровень игрока: 65+",
+    "image": "images/weapons/weapon_539.webp",
+    "title": "Цепная пила",
+    "needsFormatted": "Уровень игрока 65+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 541,
+    "damage": 65,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 75,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 55
+    },
+    "needsText": "Уровень игрока: 55+",
+    "image": "images/weapons/weapon_541.webp",
+    "title": "Болгарка",
+    "needsFormatted": "Уровень игрока 55+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 543,
+    "damage": 60,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 9990
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 60,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 63
+    },
+    "needsText": "Уровень игрока: 63+",
+    "image": "images/weapons/weapon_543.webp",
+    "title": "Шокер",
+    "needsFormatted": "Уровень игрока 63+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 777,
+    "damage": 70,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 23230
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 72,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 75
+    },
+    "needsText": "Уровень игрока: 75+",
+    "image": "images/weapons/weapon_777.webp",
+    "title": "Колотушка",
+    "needsFormatted": "Уровень игрока 75+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 779,
+    "damage": 500,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 77000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 82,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50
+    },
+    "needs": {
+      "min_level": 85
+    },
+    "needsText": "Уровень игрока: 85+",
+    "image": "images/weapons/weapon_779.webp",
+    "title": "Капельница",
+    "needsFormatted": "Уровень игрока 85+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 781,
+    "damage": 83,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 123,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 80
+    },
+    "needsText": "Уровень игрока: 80+",
+    "image": "images/weapons/weapon_781.webp",
+    "title": "Кукла Вуду",
+    "needsFormatted": "Уровень игрока 80+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 783,
+    "damage": 78,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 99,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 75
+    },
+    "needsText": "Уровень игрока: 75+",
+    "image": "images/weapons/weapon_783.webp",
+    "title": "Пило-кулак",
+    "needsFormatted": "Уровень игрока 75+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 785,
+    "damage": 64,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 85000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 785,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 785, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_785.webp",
+    "title": "Катана",
+    "needsFormatted": "Выбивается с босса: Директориус",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 34,
+          "bossTitle": "Директориус",
+          "locationId": 16,
+          "zoneCode": "-F-",
+          "locationTitle": "F-1",
+          "locationName": "Помещения для пыток",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 787,
+    "damage": 69,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 97500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 787,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 787, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_787.webp",
+    "title": "Костыль",
+    "needsFormatted": "Выбивается с босса: Бабушка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 36,
+          "bossTitle": "Бабушка",
+          "locationId": 17,
+          "zoneCode": "-F-",
+          "locationTitle": "F-2",
+          "locationName": "Капище фанатика",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 789,
+    "damage": 75,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 123000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 789,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 789, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_789.webp",
+    "title": "Гарпун",
+    "needsFormatted": "Выбивается с босса: Оно",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 38,
+          "bossTitle": "Оно",
+          "locationId": 18,
+          "zoneCode": "-F-",
+          "locationTitle": "F-3",
+          "locationName": "Канализация",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 813,
+    "damage": 100,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 134,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 88,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 81
+    },
+    "needsText": "Уровень игрока: 81+",
+    "image": "images/weapons/weapon_813.webp",
+    "title": "Деревянный молоток",
+    "needsFormatted": "Уровень игрока 81+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 815,
+    "damage": 115,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 137,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 85,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 88
+    },
+    "needsText": "Уровень игрока: 88+",
+    "image": "images/weapons/weapon_815.webp",
+    "title": "Новогодняя ёлка",
+    "needsFormatted": "Уровень игрока 88+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 957,
+    "damage": 28,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 54150,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 28,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 28
+    },
+    "needsText": "Уровень игрока: 28+",
+    "image": "images/weapons/weapon_957.webp",
+    "title": "Мотыга",
+    "needsFormatted": "Уровень игрока 28+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 959,
+    "damage": 38,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 40,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 47,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 29
+    },
+    "needsText": "Уровень игрока: 29+",
+    "image": "images/weapons/weapon_959.webp",
+    "title": "Вилы",
+    "needsFormatted": "Уровень игрока 29+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 961,
+    "damage": 39,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 59050,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 961,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 961, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_961.webp",
+    "title": "Секатор",
+    "needsFormatted": "Выбивается с босса: Привратник",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 48,
+          "bossTitle": "Привратник",
+          "locationId": 24,
+          "zoneCode": "-G-",
+          "locationTitle": "G-3",
+          "locationName": "Парадная",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 963,
+    "damage": 61,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 70345,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 963,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 963, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_963.webp",
+    "title": "Отбойный молоток",
+    "needsFormatted": "Выбивается с босса: Кровожадный Али",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 54,
+          "bossTitle": "Кровожадный Али",
+          "locationId": 27,
+          "zoneCode": "-H-",
+          "locationTitle": "H-3",
+          "locationName": "Крыша больницы",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 965,
+    "damage": 40,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 45,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 1,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 30
+    },
+    "needsText": "Уровень игрока: 30+",
+    "image": "images/weapons/weapon_965.webp",
+    "title": "Пистолет",
+    "needsFormatted": "Уровень игрока 30+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 967,
+    "damage": 38,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 3350
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 33,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 1000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 28
+    },
+    "needsText": "Уровень игрока: 28+",
+    "image": "images/weapons/weapon_967.webp",
+    "title": "Пила \"Дружба\"",
+    "needsFormatted": "Уровень игрока 28+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 977,
+    "damage": 81,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 148600,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 977,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 977, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_977.webp",
+    "title": "Деревянный крест",
+    "needsFormatted": "Выбивается с босса: Носферату",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 55,
+          "bossTitle": "Носферату",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 999,
+    "damage": 198,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 35035,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 999,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 999, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_999.webp",
+    "title": "Нога манекена",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1001,
+    "damage": 236,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 20130,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1001,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1001, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1001.webp",
+    "title": "Посох",
+    "needsFormatted": "Выбивается с босса: Озверевший Генри, Дикая Агнет",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 39,
+          "bossTitle": "Озверевший Генри",
+          "locationId": 21,
+          "zoneCode": "-$-",
+          "locationTitle": "$-3",
+          "locationName": "Кошмар",
+          "probability": 5,
+          "once": true
+        },
+        {
+          "bossId": 40,
+          "bossTitle": "Дикая Агнет",
+          "locationId": 21,
+          "zoneCode": "-$-",
+          "locationTitle": "$-3",
+          "locationName": "Кошмар",
+          "probability": 5,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1003,
+    "damage": 197,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 34125,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1003,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1003, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1003.webp",
+    "title": "Гроза вампиров",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1103,
+    "damage": 235,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 87555,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 168,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "battle_rank": 22565
+    },
+    "needsText": "Боевой ранг: 22565",
+    "image": "images/weapons/weapon_1103.webp",
+    "title": "Складной стул",
+    "needsFormatted": "Доступно сразу",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1104,
+    "damage": 235,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 88545,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1104,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1104, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1104.webp",
+    "title": "Рука мертвеца",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1124,
+    "damage": 115,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 20130,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1124,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1124, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1124.webp",
+    "title": "Рукоять",
+    "needsFormatted": "Выбивается с босса: Серый программист",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 58,
+          "bossTitle": "Серый программист",
+          "locationId": 19,
+          "zoneCode": "-$-",
+          "locationTitle": "$-1",
+          "locationName": "Бред",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1126,
+    "damage": 155,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 20130,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1126,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1126, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1126.webp",
+    "title": "Трость",
+    "needsFormatted": "Выбивается с босса: Охранник-мутант",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 15,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 56,
+          "bossTitle": "Охранник-мутант",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 25,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1128,
+    "damage": 236,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 20130,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {},
+    "needsText": "Нет условий (доступно сразу)",
+    "image": "images/weapons/weapon_1128.webp",
+    "title": "Посох Майя",
+    "needsFormatted": "Доступно сразу",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1130,
+    "damage": 199,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 101011,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1130,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1130, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1130.webp",
+    "title": "Телефон",
+    "needsFormatted": "Выбивается с босса: Леди Бенедикт",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 57,
+          "bossTitle": "Леди Бенедикт",
+          "locationId": 19,
+          "zoneCode": "-$-",
+          "locationTitle": "$-1",
+          "locationName": "Бред",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1134,
+    "damage": 214,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 102555,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1134,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1134, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1134.webp",
+    "title": "Спинной хребет",
+    "needsFormatted": "Выбивается с босса: Маньяк Бруно",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 2
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 59,
+          "bossTitle": "Маньяк Бруно",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 25,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1141,
+    "damage": 198,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 0,
+      "currency2": 68,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 85,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 88
+    },
+    "needsText": "Уровень игрока: 88+",
+    "image": "images/weapons/weapon_1141.webp",
+    "title": "Позвоночник",
+    "needsFormatted": "Уровень игрока 88+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1142,
+    "damage": 171,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 101427,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1142,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1142, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1142.webp",
+    "title": "Акустика",
+    "needsFormatted": "Выбивается с босса: Уборщик",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 2
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 65,
+          "bossTitle": "Уборщик",
+          "locationId": 28,
+          "zoneCode": "-I-",
+          "locationTitle": "I-1",
+          "locationName": "Переходы",
+          "probability": 10,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1143,
+    "damage": 154,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 78543,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1143,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1143, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1143.webp",
+    "title": "Батарея",
+    "needsFormatted": "Выбивается с босса: Ультиматум",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 61,
+          "bossTitle": "Ультиматум",
+          "locationId": 29,
+          "zoneCode": "-I-",
+          "locationTitle": "I-3",
+          "locationName": "Катакомбы",
+          "probability": 10,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1144,
+    "damage": 200,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 46755,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1144,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1144, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1144.webp",
+    "title": "Люминесцентная лампа",
+    "needsFormatted": "Выбивается с босса: Санта Буркхардт",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 92,
+          "bossTitle": "Санта Буркхардт",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1149,
+    "damage": 182,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 112555,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1149,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1149, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1149.webp",
+    "title": "Басуха",
+    "needsFormatted": "Выбивается с босса: Гамбит",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 60,
+          "bossTitle": "Гамбит",
+          "locationId": 29,
+          "zoneCode": "-I-",
+          "locationTitle": "I-3",
+          "locationName": "Катакомбы",
+          "probability": 10,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1151,
+    "damage": 299,
+    "maxUseCount": 25,
+    "price": {
+      "currency1": 10500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 3000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1151,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1151, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1151.webp",
+    "title": "Метла дворника",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 2
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1153,
+    "damage": 312,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 34125,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1153,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1153, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1153.webp",
+    "title": "Штопор",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1155,
+    "damage": 237,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 27845
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 97,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1155.webp",
+    "title": "Зонтик",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1157,
+    "damage": 258,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 178,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 94,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 97
+    },
+    "needsText": "Уровень игрока: 97+",
+    "image": "images/weapons/weapon_1157.webp",
+    "title": "Английская трость",
+    "needsFormatted": "Уровень игрока 97+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1159,
+    "damage": 240,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 29365
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 102,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 105
+    },
+    "needsText": "Уровень игрока: 105+",
+    "image": "images/weapons/weapon_1159.webp",
+    "title": "Лещ",
+    "needsFormatted": "Уровень игрока 105+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 25,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1161,
+    "damage": 263,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 186,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 97,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1161.webp",
+    "title": "Жало",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1163,
+    "damage": 230,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 135695,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1163,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1163, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1163.webp",
+    "title": "Матумба",
+    "needsFormatted": "Выбивается с босса: Тлатоани",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 20,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 72,
+          "bossTitle": "Тлатоани",
+          "locationId": 33,
+          "zoneCode": "-J-",
+          "locationTitle": "J-3",
+          "locationName": "Мертвецкая долина",
+          "probability": 3,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1165,
+    "damage": 358,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 32965
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 118,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 130
+    },
+    "needsText": "Уровень игрока: 130+",
+    "image": "images/weapons/weapon_1165.webp",
+    "title": "Кирка",
+    "needsFormatted": "Уровень игрока 130+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1167,
+    "damage": 341,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 161045,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1167,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1167, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1167.webp",
+    "title": "Шприц",
+    "needsFormatted": "Выбивается с босса: Ланзо Краузе",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 2
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 74,
+          "bossTitle": "Ланзо Краузе",
+          "locationId": 34,
+          "zoneCode": "-K-",
+          "locationTitle": "K-1",
+          "locationName": "Запечатанное хранилище",
+          "probability": 3,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1169,
+    "damage": 379,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 201,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 125,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 130
+    },
+    "needsText": "Уровень игрока: 130+",
+    "image": "images/weapons/weapon_1169.webp",
+    "title": "Ржавое Мачете",
+    "needsFormatted": "Уровень игрока 130+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 3
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1171,
+    "damage": 322,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 155423,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1171,
+          "place": 3,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1171, 'place': 3, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1171.webp",
+    "title": "Гронд",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 3
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1173,
+    "damage": 364,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 31475
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 115,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 130
+    },
+    "needsText": "Уровень игрока: 130+",
+    "image": "images/weapons/weapon_1173.webp",
+    "title": "Горелка",
+    "needsFormatted": "Уровень игрока 130+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 2
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1175,
+    "damage": 335,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 156807,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1175,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1175, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1175.webp",
+    "title": "Газовый баллон",
+    "needsFormatted": "Выбивается с босса: Руперт Мюлленгейм Готтлос",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 2
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 78,
+          "bossTitle": "Руперт Мюлленгейм Готтлос",
+          "locationId": 36,
+          "zoneCode": "-K-",
+          "locationTitle": "K-3",
+          "locationName": "Камера доктора",
+          "probability": 3,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1177,
+    "damage": 350,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 215,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 150,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1177.webp",
+    "title": "Багор",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1179,
+    "damage": 357,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 221,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 150,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1179.webp",
+    "title": "Серп",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1181,
+    "damage": 345,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 33575
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 150,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1181.webp",
+    "title": "Гаечный ключ",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1183,
+    "damage": 337,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 34875
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 150,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 100
+    },
+    "needsText": "Уровень игрока: 100+",
+    "image": "images/weapons/weapon_1183.webp",
+    "title": "Клюшка для гольфа",
+    "needsFormatted": "Уровень игрока 100+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1185,
+    "damage": 322,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 150365,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1185,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1185, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1185.webp",
+    "title": "Плеть",
+    "needsFormatted": "Выбивается с босса: Вильгельм Гольц, Госпожа Де Вит",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 87,
+          "bossTitle": "Вильгельм Гольц",
+          "locationId": 38,
+          "zoneCode": "-L-",
+          "locationTitle": "L-2",
+          "locationName": "Секретные застенки",
+          "probability": 1,
+          "once": true
+        },
+        {
+          "bossId": 88,
+          "bossTitle": "Госпожа Де Вит",
+          "locationId": 38,
+          "zoneCode": "-L-",
+          "locationTitle": "L-2",
+          "locationName": "Секретные застенки",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1187,
+    "damage": 319,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 165475,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 2500,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1187,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1187, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1187.webp",
+    "title": "Коловорот",
+    "needsFormatted": "Выбивается с босса: Маркус Рауш, Вольфганг Мясник",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 89,
+          "bossTitle": "Маркус Рауш",
+          "locationId": 39,
+          "zoneCode": "-L-",
+          "locationTitle": "L-3",
+          "locationName": "Покои хирурга",
+          "probability": 1,
+          "once": true
+        },
+        {
+          "bossId": 90,
+          "bossTitle": "Вольфганг Мясник",
+          "locationId": 39,
+          "zoneCode": "-L-",
+          "locationTitle": "L-3",
+          "locationName": "Покои хирурга",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1189,
+    "damage": 3200,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 1000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1189,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1189, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1189.webp",
+    "title": "Клинок",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1191,
+    "damage": 3200,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 1000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1191,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1191, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1191.webp",
+    "title": "Палица",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1193,
+    "damage": 3200,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 1000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1193,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1193, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1193.webp",
+    "title": "Череподробитель",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1195,
+    "damage": 33300,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 500,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1195,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1195, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1195.webp",
+    "title": "Моргенштерн Greenlight Edition",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 150,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1197,
+    "damage": 3330,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 1000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1197,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1197, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1197.webp",
+    "title": "Алебарда",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1199,
+    "damage": 3400,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 1000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1199,
+          "place": 6,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1199, 'place': 6, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1199.webp",
+    "title": "Лансер",
+    "needsFormatted": "Требуется разблокировка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1201,
+    "damage": 1000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 10,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 100
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1201,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1201, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1201.webp",
+    "title": "Конфета",
+    "needsFormatted": "Выбивается с босса: Санта Буркхардт",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 100,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 92,
+          "bossTitle": "Санта Буркхардт",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1203,
+    "damage": 356,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 326347,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1203,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1203, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1203.webp",
+    "title": "Череп",
+    "needsFormatted": "Выбивается с босса: Шива",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 100,
+          "bossTitle": "Шива",
+          "locationId": 44,
+          "zoneCode": "-N-",
+          "locationTitle": "N-2",
+          "locationName": "Вентиляция",
+          "probability": 0.1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1205,
+    "damage": 368,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 348945,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1205,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1205, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1205.webp",
+    "title": "Трезубец",
+    "needsFormatted": "Выбивается с босса: Кукловод, Эксперимент",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 94,
+          "bossTitle": "Кукловод",
+          "locationId": 45,
+          "zoneCode": "-N-",
+          "locationTitle": "N-3",
+          "locationName": "Тайный архив",
+          "probability": 0.1,
+          "once": true
+        },
+        {
+          "bossId": 99,
+          "bossTitle": "Эксперимент",
+          "locationId": 45,
+          "zoneCode": "-N-",
+          "locationTitle": "N-3",
+          "locationName": "Тайный архив",
+          "probability": 0.1,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1207,
+    "damage": 50000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 15000000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 5,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1207,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1207, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1207.webp",
+    "title": "Световой меч",
+    "needsFormatted": "Выбивается с босса: Ронин",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 300,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 10
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 10
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 10
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 98,
+          "bossTitle": "Ронин",
+          "locationId": 45,
+          "zoneCode": "-N-",
+          "locationTitle": "N-3",
+          "locationName": "Тайный архив",
+          "probability": 0.001,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1209,
+    "damage": 452,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 255,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 110,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 150
+    },
+    "needsText": "Уровень игрока: 150+",
+    "image": "images/weapons/weapon_1209.webp",
+    "title": "Крикетная бита",
+    "needsFormatted": "Уровень игрока 150+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1211,
+    "damage": 457,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 265,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 110,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 150
+    },
+    "needsText": "Уровень игрока: 150+",
+    "image": "images/weapons/weapon_1211.webp",
+    "title": "Нунчаки",
+    "needsFormatted": "Уровень игрока 150+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1213,
+    "damage": 464,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 275,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 110,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 150
+    },
+    "needsText": "Уровень игрока: 150+",
+    "image": "images/weapons/weapon_1213.webp",
+    "title": "Бита",
+    "needsFormatted": "Уровень игрока 150+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1215,
+    "damage": 400,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 65287
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 110,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 150
+    },
+    "needsText": "Уровень игрока: 150+",
+    "image": "images/weapons/weapon_1215.webp",
+    "title": "Скребок",
+    "needsFormatted": "Уровень игрока 150+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1219,
+    "damage": 432,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 69853
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 110,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "min_level": 150
+    },
+    "needsText": "Уровень игрока: 150+",
+    "image": "images/weapons/weapon_1219.webp",
+    "title": "Сай",
+    "needsFormatted": "Уровень игрока 150+",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 30,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 1
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 1
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 1
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1221,
+    "damage": 500,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 1759999,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1221,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1221, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1221.webp",
+    "title": "Хирургическая пила",
+    "needsFormatted": "Выбивается с босса: Хипстер Артёмка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 16
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 16
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 16
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 93,
+          "bossTitle": "Хипстер Артёмка",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1.5,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1223,
+    "damage": 500,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 1759999,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1223,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1223, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1223.webp",
+    "title": "Вилка",
+    "needsFormatted": "Выбивается с босса: Хипстер Артёмка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 16
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 16
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 16
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 93,
+          "bossTitle": "Хипстер Артёмка",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1.5,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1225,
+    "damage": 500,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 1759999,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1225,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1225, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1225.webp",
+    "title": "Ручная пила",
+    "needsFormatted": "Выбивается с босса: Хипстер Артёмка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 16
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 16
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 16
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 93,
+          "bossTitle": "Хипстер Артёмка",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1.5,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1227,
+    "damage": 500,
+    "maxUseCount": 50,
+    "price": {
+      "currency1": 1759999,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 5000,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1227,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1227, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1227.webp",
+    "title": "Серп",
+    "needsFormatted": "Выбивается с босса: Хипстер Артёмка",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 16
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 16
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 16
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 93,
+          "bossTitle": "Хипстер Артёмка",
+          "locationId": 20,
+          "zoneCode": "-$-",
+          "locationTitle": "$-2",
+          "locationName": "Ужас",
+          "probability": 1.5,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1229,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1229,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1229, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1229.webp",
+    "title": "Убийственная курица",
+    "needsFormatted": "Выбивается с босса: Великий инквизитор",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 104,
+          "bossTitle": "Великий инквизитор",
+          "locationId": 47,
+          "zoneCode": "-O-",
+          "locationTitle": "O-2",
+          "locationName": "Зал инквизиции",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1231,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1231,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1231, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1231.webp",
+    "title": "Утка всевластия",
+    "needsFormatted": "Выбивается с босса: Набожный праведник",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 105,
+          "bossTitle": "Набожный праведник",
+          "locationId": 47,
+          "zoneCode": "-O-",
+          "locationTitle": "O-2",
+          "locationName": "Зал инквизиции",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1233,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1233,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1233, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1233.webp",
+    "title": "Колючий друг",
+    "needsFormatted": "Выбивается с босса: Хозяин боли",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 109,
+          "bossTitle": "Хозяин боли",
+          "locationId": 48,
+          "zoneCode": "-O-",
+          "locationTitle": "O-3",
+          "locationName": "Обитель боли",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1235,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1235,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1235, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1235.webp",
+    "title": "Колесо любви",
+    "needsFormatted": "Выбивается с босса: Хозяин боли",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 109,
+          "bossTitle": "Хозяин боли",
+          "locationId": 48,
+          "zoneCode": "-O-",
+          "locationTitle": "O-3",
+          "locationName": "Обитель боли",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1237,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1237,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1237, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1237.webp",
+    "title": "Успокоительное",
+    "needsFormatted": "Выбивается с босса: Хозяин боли",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 109,
+          "bossTitle": "Хозяин боли",
+          "locationId": 48,
+          "zoneCode": "-O-",
+          "locationTitle": "O-3",
+          "locationName": "Обитель боли",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  },
+  {
+    "id": 1239,
+    "damage": 35000,
+    "maxUseCount": 1,
+    "price": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 50000
+    },
+    "unlockPrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 0
+    },
+    "rechargePrice": {
+      "currency1": 0,
+      "currency2": 0,
+      "currency3": 2500
+    },
+    "needs": {
+      "accesses": [
+        {
+          "id": 1239,
+          "place": 2,
+          "type": "weapon"
+        }
+      ]
+    },
+    "needsText": "{'accesses': [{'id': 1239, 'place': 2, 'type': 'weapon'}]}",
+    "image": "images/weapons/weapon_1239.webp",
+    "title": "Лошадка",
+    "needsFormatted": "Выбивается с босса: Хозяин боли",
+    "upgrade": {
+      "canUpgrade": true,
+      "maxLevel": 50,
+      "perLevelStats": [
+        {
+          "name": "Урон",
+          "code": "skill1",
+          "count": 100
+        },
+        {
+          "name": "Защита",
+          "code": "skill2",
+          "count": 100
+        },
+        {
+          "name": "Здоровье",
+          "code": "skill3",
+          "count": 100
+        }
+      ],
+      "options": [
+        {
+          "currency": "currency1",
+          "name": "Монеты",
+          "chance": "11%",
+          "label": "🪙 За монеты",
+          "desc": "Шанс ~11% (Базовый)"
+        },
+        {
+          "currency": "currency3",
+          "name": "Таблетки",
+          "chance": "55%",
+          "label": "💊 За таблетки",
+          "desc": "Шанс ~55% (Повышенный)"
+        },
+        {
+          "currency": "currency2",
+          "name": "Купюры",
+          "chance": "100%",
+          "label": "💵 За купюры",
+          "desc": "Шанс 100% (Гарантированно)"
+        }
+      ]
+    },
+    "sources": {
+      "bosses": [
+        {
+          "bossId": 109,
+          "bossTitle": "Хозяин боли",
+          "locationId": 48,
+          "zoneCode": "-O-",
+          "locationTitle": "O-3",
+          "locationName": "Обитель боли",
+          "probability": 0.01,
+          "once": true
+        }
+      ],
+      "inFortune": false,
+      "fortuneCombos": []
+    },
+    "sex": "male"
+  }
+]

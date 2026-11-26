@@ -1,0 +1,864 @@
+[
+  {
+    "locationId": 1,
+    "locationTitle": "A-1",
+    "zoneId": 1,
+    "conditions": "",
+    "conditionsDescription": "Нет условий (доступно сразу)",
+    "unlocksBosses": [
+      "Амалия Банши",
+      "Генри Литен"
+    ]
+  },
+  {
+    "locationId": 2,
+    "locationTitle": "A-2",
+    "zoneId": 1,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 1,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #1: 1 раз",
+    "unlocksBosses": [
+      "\"Малыш\" Джон",
+      "Крошка \"Сью\""
+    ]
+  },
+  {
+    "locationId": 3,
+    "locationTitle": "A-3",
+    "zoneId": 1,
+    "conditions": {
+      "boss": [
+        {
+          "id": 6,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Крошка \"Сью\"': 5 раз",
+    "unlocksBosses": [
+      "Охранник Манфред",
+      "Руди \"Аналитик\""
+    ]
+  },
+  {
+    "locationId": 4,
+    "locationTitle": "B-1",
+    "zoneId": 2,
+    "conditions": {
+      "npc": [
+        {
+          "id": 5,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Проходная': ур. 1",
+    "unlocksBosses": [
+      "Аксель Шварценштайн",
+      "Агнет \"Балерина\""
+    ]
+  },
+  {
+    "locationId": 5,
+    "locationTitle": "B-2",
+    "zoneId": 2,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 5,
+          "value": 3
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #5: 3 раз",
+    "unlocksBosses": [
+      "Дорин Гамбринто",
+      "Бруно Цугенкноф"
+    ]
+  },
+  {
+    "locationId": 6,
+    "locationTitle": "B-3",
+    "zoneId": 2,
+    "conditions": {
+      "boss": [
+        {
+          "id": 10,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Бруно Цугенкноф': 5 раз",
+    "unlocksBosses": [
+      "Олаф Слатер",
+      "Сестра Каролайн"
+    ]
+  },
+  {
+    "locationId": 7,
+    "locationTitle": "C-1",
+    "zoneId": 3,
+    "conditions": {
+      "npc": [
+        {
+          "id": 11,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Исследовательская': ур. 1",
+    "unlocksBosses": [
+      "Гордон Кирбероуз",
+      "Дуглас Макфадден"
+    ]
+  },
+  {
+    "locationId": 8,
+    "locationTitle": "C-2",
+    "zoneId": 3,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 8,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #8: 5 раз",
+    "unlocksBosses": [
+      "Броуди Кавальери",
+      "Франческа Де ла Пизани"
+    ]
+  },
+  {
+    "locationId": 9,
+    "locationTitle": "C-3",
+    "zoneId": 3,
+    "conditions": {
+      "boss": [
+        {
+          "id": 19,
+          "value": 10
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Броуди Кавальери': 10 раз",
+    "unlocksBosses": [
+      "Ален Грант",
+      "Элайза Картер"
+    ]
+  },
+  {
+    "locationId": 10,
+    "locationTitle": "D-1",
+    "zoneId": 4,
+    "conditions": {
+      "npc": [
+        {
+          "id": 17,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Траурная': ур. 1",
+    "unlocksBosses": [
+      "Стефан и Ганс Крейг",
+      "Вальтер Шпинне"
+    ]
+  },
+  {
+    "locationId": 11,
+    "locationTitle": "D-2",
+    "zoneId": 4,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 11,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #11: 5 раз",
+    "unlocksBosses": [
+      "Зузанна и Анита Болеславски",
+      "Геррод и Герда"
+    ]
+  },
+  {
+    "locationId": 12,
+    "locationTitle": "D-3",
+    "zoneId": 4,
+    "conditions": {
+      "boss": [
+        {
+          "id": 14,
+          "value": 15
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Геррод и Герда': 15 раз",
+    "unlocksBosses": [
+      "Аделаида Шальца",
+      "Хуго Ван Дер Вейден"
+    ]
+  },
+  {
+    "locationId": 13,
+    "locationTitle": "E-1",
+    "zoneId": 5,
+    "conditions": {
+      "npc": [
+        {
+          "id": 23,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Трансформатор': ур. 5",
+    "unlocksBosses": [
+      "Иероним Георг фон Риттер",
+      "Фрау Анжелина Буркхардт"
+    ]
+  },
+  {
+    "locationId": 14,
+    "locationTitle": "E-2",
+    "zoneId": 5,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 17,
+          "value": 10
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #17: 10 раз",
+    "unlocksBosses": [
+      "Отто Магнус Иверман",
+      "Карл Магнус Иверман"
+    ]
+  },
+  {
+    "locationId": 15,
+    "locationTitle": "E-3",
+    "zoneId": 5,
+    "conditions": {
+      "boss": [
+        {
+          "id": 16,
+          "value": 25
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Карл Магнус Иверман': 25 раз",
+    "unlocksBosses": [
+      "Кибер-адъюнкт v.3.5",
+      "Профессор Г. Буркхардт"
+    ]
+  },
+  {
+    "locationId": 16,
+    "locationTitle": "F-1",
+    "zoneId": 6,
+    "conditions": {
+      "npc": [
+        {
+          "id": 29,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Рентгенологическая служба': ур. 5",
+    "unlocksBosses": [
+      "Вий",
+      "Директориус"
+    ]
+  },
+  {
+    "locationId": 17,
+    "locationTitle": "F-2",
+    "zoneId": 6,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 23,
+          "value": 20
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #23: 20 раз",
+    "unlocksBosses": [
+      "Экзекутор ",
+      "Бабушка"
+    ]
+  },
+  {
+    "locationId": 18,
+    "locationTitle": "F-3",
+    "zoneId": 6,
+    "conditions": {
+      "boss": [
+        {
+          "id": 36,
+          "value": 35
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Бабушка': 35 раз",
+    "unlocksBosses": [
+      "Нерожденные",
+      "Оно"
+    ]
+  },
+  {
+    "locationId": 19,
+    "locationTitle": "$-1",
+    "zoneId": 7,
+    "conditions": "",
+    "conditionsDescription": "Нет условий (доступно сразу)",
+    "unlocksBosses": [
+      "Cнежище",
+      "Делириум",
+      "Леди Бенедикт",
+      "Серый программист"
+    ]
+  },
+  {
+    "locationId": 20,
+    "locationTitle": "$-2",
+    "zoneId": 7,
+    "conditions": "",
+    "conditionsDescription": "Нет условий (доступно сразу)",
+    "unlocksBosses": [
+      "Шайтан",
+      "Древний",
+      "Носферату",
+      "Санта Буркхардт",
+      "Охранник-мутант",
+      "Маньяк Бруно",
+      "Хипстер Артёмка"
+    ]
+  },
+  {
+    "locationId": 21,
+    "locationTitle": "$-3",
+    "zoneId": 7,
+    "conditions": "",
+    "conditionsDescription": "Нет условий (доступно сразу)",
+    "unlocksBosses": [
+      "Падший",
+      "Беовульф",
+      "Озверевший Генри",
+      "Дикая Агнет",
+      "Кридокс - Разрушитель разума"
+    ]
+  },
+  {
+    "locationId": 22,
+    "locationTitle": "G-1",
+    "zoneId": 8,
+    "conditions": {
+      "npc": [
+        {
+          "id": 17,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Траурная': ур. 5",
+    "unlocksBosses": [
+      "Курильщица",
+      "Кентавр"
+    ]
+  },
+  {
+    "locationId": 23,
+    "locationTitle": "G-2",
+    "zoneId": 8,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 31,
+          "value": 15
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #31: 15 раз",
+    "unlocksBosses": [
+      "Утопленный",
+      "Лоботом"
+    ]
+  },
+  {
+    "locationId": 24,
+    "locationTitle": "G-3",
+    "zoneId": 8,
+    "conditions": {
+      "boss": [
+        {
+          "id": 46,
+          "value": 25
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Лоботом': 25 раз",
+    "unlocksBosses": [
+      "Упырь",
+      "Привратник"
+    ]
+  },
+  {
+    "locationId": 25,
+    "locationTitle": "H-1",
+    "zoneId": 9,
+    "conditions": {
+      "npc": [
+        {
+          "id": 35,
+          "value": 5
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Притон': ур. 5",
+    "unlocksBosses": [
+      "Матка",
+      "Шаман"
+    ]
+  },
+  {
+    "locationId": 26,
+    "locationTitle": "H-2",
+    "zoneId": 9,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 27,
+          "value": 20
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #27: 20 раз",
+    "unlocksBosses": [
+      "Вектор",
+      "Самсон"
+    ]
+  },
+  {
+    "locationId": 27,
+    "locationTitle": "H-3",
+    "zoneId": 9,
+    "conditions": {
+      "boss": [
+        {
+          "id": 52,
+          "value": 45
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Самсон': 45 раз",
+    "unlocksBosses": [
+      "Безликая",
+      "Кровожадный Али"
+    ]
+  },
+  {
+    "locationId": 28,
+    "locationTitle": "I-1",
+    "zoneId": 10,
+    "conditions": {
+      "npc": [
+        {
+          "id": 48,
+          "value": 3
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Место для молитв': ур. 3",
+    "unlocksBosses": [
+      "Толстяк",
+      "Уборщик"
+    ]
+  },
+  {
+    "locationId": 29,
+    "locationTitle": "I-3",
+    "zoneId": 10,
+    "conditions": {
+      "boss": [
+        {
+          "id": 63,
+          "value": 55
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Весельчаки': 55 раз",
+    "unlocksBosses": [
+      "Гамбит",
+      "Ультиматум"
+    ]
+  },
+  {
+    "locationId": 30,
+    "locationTitle": "I-2",
+    "zoneId": 10,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 33,
+          "value": 25
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #33: 25 раз",
+    "unlocksBosses": [
+      "Глаз",
+      "Весельчаки"
+    ]
+  },
+  {
+    "locationId": 31,
+    "locationTitle": "J-1",
+    "zoneId": 11,
+    "conditions": {
+      "npc": [
+        {
+          "id": 51,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Черная дыра': ур. 6",
+    "unlocksBosses": [
+      "Фройлен Моргенштерн",
+      "Мейнхард Рёхингер"
+    ]
+  },
+  {
+    "locationId": 32,
+    "locationTitle": "J-2",
+    "zoneId": 11,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 36,
+          "value": 25
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #36: 25 раз",
+    "unlocksBosses": [
+      "Уна Мортана",
+      "Эо Арахнон"
+    ]
+  },
+  {
+    "locationId": 33,
+    "locationTitle": "J-3",
+    "zoneId": 11,
+    "conditions": {
+      "boss": [
+        {
+          "id": 70,
+          "value": 65
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Эо Арахнон': 65 раз",
+    "unlocksBosses": [
+      "Морриган",
+      "Тлатоани"
+    ]
+  },
+  {
+    "locationId": 34,
+    "locationTitle": "K-1",
+    "zoneId": 12,
+    "conditions": {
+      "npc": [
+        {
+          "id": 60,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Тотем некроманта': ур. 6",
+    "unlocksBosses": [
+      "Хелмудт Берг",
+      "Ланзо Краузе"
+    ]
+  },
+  {
+    "locationId": 35,
+    "locationTitle": "K-2",
+    "zoneId": 12,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 20,
+          "value": 30
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #20: 30 раз",
+    "unlocksBosses": [
+      "Джереон Кант",
+      "Колосс"
+    ]
+  },
+  {
+    "locationId": 36,
+    "locationTitle": "K-3",
+    "zoneId": 12,
+    "conditions": {
+      "boss": [
+        {
+          "id": 76,
+          "value": 75
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Колосс': 75 раз",
+    "unlocksBosses": [
+      "Сид Бишоф",
+      "Руперт Мюлленгейм Готтлос"
+    ]
+  },
+  {
+    "locationId": 37,
+    "locationTitle": "L-1",
+    "zoneId": 13,
+    "conditions": {
+      "npc": [
+        {
+          "id": 67,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Мутагенные капсулы': ур. 6",
+    "unlocksBosses": [
+      "Румпельштильцхен",
+      "Арнольд Мецгер"
+    ]
+  },
+  {
+    "locationId": 38,
+    "locationTitle": "L-2",
+    "zoneId": 13,
+    "conditions": {
+      "job_zone": [
+        {
+          "id": 42,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Выполнить работы в зоне #42: 6 раз",
+    "unlocksBosses": [
+      "Вильгельм Гольц",
+      "Госпожа Де Вит"
+    ]
+  },
+  {
+    "locationId": 39,
+    "locationTitle": "L-3",
+    "zoneId": 13,
+    "conditions": {
+      "boss": [
+        {
+          "id": 88,
+          "value": 85
+        }
+      ]
+    },
+    "conditionsDescription": "Победить босса 'Госпожа Де Вит': 85 раз",
+    "unlocksBosses": [
+      "Маркус Рауш",
+      "Вольфганг Мясник"
+    ]
+  },
+  {
+    "locationId": 40,
+    "locationTitle": "M-1",
+    "zoneId": 14,
+    "conditions": {
+      "npc": [
+        {
+          "id": 70,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Алтарь ненависти': ур. 1",
+    "unlocksBosses": [
+      "Страж",
+      "Старец"
+    ]
+  },
+  {
+    "locationId": 41,
+    "locationTitle": "M-2",
+    "zoneId": 14,
+    "conditions": {
+      "npc": [
+        {
+          "id": 72,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Алтарь ярости': ур. 6",
+    "unlocksBosses": [
+      "Госпожа",
+      "Амбал"
+    ]
+  },
+  {
+    "locationId": 42,
+    "locationTitle": "M-3",
+    "zoneId": 14,
+    "conditions": {
+      "npc": [
+        {
+          "id": 74,
+          "value": 6
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Алтарь страха': ур. 6",
+    "unlocksBosses": [
+      "Фурия",
+      "Зверь"
+    ]
+  },
+  {
+    "locationId": 43,
+    "locationTitle": "N-1",
+    "zoneId": 15,
+    "conditions": {
+      "collection": [
+        {
+          "id": 629,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Собрать коллекцию #629: 1 раз",
+    "unlocksBosses": [
+      "Снорк",
+      "Гарпия"
+    ]
+  },
+  {
+    "locationId": 44,
+    "locationTitle": "N-2",
+    "zoneId": 15,
+    "conditions": {
+      "npc": [
+        {
+          "id": 86,
+          "value": 1
+        },
+        {
+          "id": 87,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Оранжерея': ур. 1; Бизнес/NPC 'Балкон': ур. 1",
+    "unlocksBosses": [
+      "Шива",
+      "Пироман"
+    ]
+  },
+  {
+    "locationId": 45,
+    "locationTitle": "N-3",
+    "zoneId": 15,
+    "conditions": {
+      "npc": [
+        {
+          "id": 88,
+          "value": 1
+        },
+        {
+          "id": 89,
+          "value": 1
+        }
+      ]
+    },
+    "conditionsDescription": "Бизнес/NPC 'Останки': ур. 1; Бизнес/NPC 'Фонари': ур. 1",
+    "unlocksBosses": [
+      "Кукловод",
+      "Чёрная Бетти",
+      "Ронин",
+      "Эксперимент"
+    ]
+  },
+  {
+    "locationId": 46,
+    "locationTitle": "O-1",
+    "zoneId": 16,
+    "conditions": {
+      "battle_rank": 200000,
+      "fortune_level": 71,
+      "stat": [
+        {
+          "count": 50000,
+          "name": "skill3"
+        }
+      ]
+    },
+    "conditionsDescription": "Характеристика skill3: 50000+; Боевой ранг: 200000; Уровень в костях: 71",
+    "unlocksBosses": [
+      "Слепой паломник",
+      "Демогоргон"
+    ]
+  },
+  {
+    "locationId": 47,
+    "locationTitle": "O-2",
+    "zoneId": 16,
+    "conditions": {
+      "battle_rank": 300000,
+      "fortune_level": 71,
+      "stat": [
+        {
+          "count": 60000,
+          "name": "skill3"
+        }
+      ]
+    },
+    "conditionsDescription": "Характеристика skill3: 60000+; Боевой ранг: 300000; Уровень в костях: 71",
+    "unlocksBosses": [
+      "Великий инквизитор",
+      "Набожный праведник"
+    ]
+  },
+  {
+    "locationId": 48,
+    "locationTitle": "O-3",
+    "zoneId": 16,
+    "conditions": {
+      "battle_rank": 1000000,
+      "fortune_level": 72,
+      "stat": [
+        {
+          "count": 70000,
+          "name": "skill3"
+        }
+      ]
+    },
+    "conditionsDescription": "Характеристика skill3: 70000+; Боевой ранг: 1000000; Уровень в костях: 72",
+    "unlocksBosses": [
+      "Тряпичная Энни",
+      "Хозяин боли"
+    ]
+  }
+]

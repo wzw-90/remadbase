@@ -1,0 +1,4598 @@
+[
+  {
+    "id": 1,
+    "collectionId": 1,
+    "stashId": 1,
+    "title": "Набор Окулиста",
+    "image": "images/inventory/item_1.webp",
+    "reward": "Безумие +25%, Агрессия +50%, Ярость +25% на 30 мин.",
+    "floor": {
+      "locId": 1,
+      "title": "A-1",
+      "name": "Ночной стационар"
+    },
+    "elements": [
+      {
+        "id": 35,
+        "index": 1,
+        "title": "Элемент 1-1",
+        "image": "images/inventory/item_35.webp",
+        "sourceLabel": "Этаж A-1",
+        "source": {
+          "type": "floor",
+          "locId": 1,
+          "locTitle": "A-1",
+          "locName": "Ночной стационар"
+        }
+      },
+      {
+        "id": 36,
+        "index": 2,
+        "title": "Элемент 1-2",
+        "image": "images/inventory/item_36.webp",
+        "sourceLabel": "Этаж A-1",
+        "source": {
+          "type": "floor",
+          "locId": 1,
+          "locTitle": "A-1",
+          "locName": "Ночной стационар"
+        }
+      },
+      {
+        "id": 37,
+        "index": 3,
+        "title": "Элемент 1-3 ",
+        "image": "images/inventory/item_37.webp",
+        "sourceLabel": "Этаж A-1",
+        "source": {
+          "type": "floor",
+          "locId": 1,
+          "locTitle": "A-1",
+          "locName": "Ночной стационар"
+        }
+      },
+      {
+        "id": 38,
+        "index": 4,
+        "title": "Элемент 1-4",
+        "image": "images/inventory/item_38.webp",
+        "sourceLabel": "Этаж A-1",
+        "source": {
+          "type": "floor",
+          "locId": 1,
+          "locTitle": "A-1",
+          "locName": "Ночной стационар"
+        }
+      },
+      {
+        "id": 39,
+        "index": 5,
+        "title": "Элемент 1-5",
+        "image": "images/inventory/item_39.webp",
+        "sourceLabel": "Этаж A-1",
+        "source": {
+          "type": "floor",
+          "locId": 1,
+          "locTitle": "A-1",
+          "locName": "Ночной стационар"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "collectionId": 2,
+    "stashId": 2,
+    "title": "Аптечка",
+    "image": "images/inventory/item_2.webp",
+    "reward": "Безумие +75%, Агрессия +75% на 5 мин.",
+    "floor": {
+      "locId": 2,
+      "title": "A-2",
+      "name": "Отдел острых подростковых расстройств"
+    },
+    "elements": [
+      {
+        "id": 50,
+        "index": 1,
+        "title": "Элемент 4-1",
+        "image": "images/inventory/item_50.webp",
+        "sourceLabel": "Этаж A-2",
+        "source": {
+          "type": "floor",
+          "locId": 2,
+          "locTitle": "A-2",
+          "locName": "Отдел острых подростковых расстройств"
+        }
+      },
+      {
+        "id": 51,
+        "index": 2,
+        "title": "Элемент 4-2",
+        "image": "images/inventory/item_51.webp",
+        "sourceLabel": "Этаж A-2",
+        "source": {
+          "type": "floor",
+          "locId": 2,
+          "locTitle": "A-2",
+          "locName": "Отдел острых подростковых расстройств"
+        }
+      },
+      {
+        "id": 52,
+        "index": 3,
+        "title": "Элемент 4-3",
+        "image": "images/inventory/item_52.webp",
+        "sourceLabel": "Этаж A-2",
+        "source": {
+          "type": "floor",
+          "locId": 2,
+          "locTitle": "A-2",
+          "locName": "Отдел острых подростковых расстройств"
+        }
+      },
+      {
+        "id": 53,
+        "index": 4,
+        "title": "Элемент 4-4",
+        "image": "images/inventory/item_53.webp",
+        "sourceLabel": "Этаж A-2",
+        "source": {
+          "type": "floor",
+          "locId": 2,
+          "locTitle": "A-2",
+          "locName": "Отдел острых подростковых расстройств"
+        }
+      },
+      {
+        "id": 54,
+        "index": 5,
+        "title": "Элемент 4-5",
+        "image": "images/inventory/item_54.webp",
+        "sourceLabel": "Этаж A-2",
+        "source": {
+          "type": "floor",
+          "locId": 2,
+          "locTitle": "A-2",
+          "locName": "Отдел острых подростковых расстройств"
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "collectionId": 3,
+    "stashId": 3,
+    "title": "Тряпичная кукла",
+    "image": "images/inventory/item_3.webp",
+    "reward": "Агрессия +5% на 3 дня",
+    "floor": {
+      "locId": 3,
+      "title": "A-3",
+      "name": "Лечебно-реабилитационное отделение"
+    },
+    "elements": [
+      {
+        "id": 45,
+        "index": 1,
+        "title": "Элемент 3-1",
+        "image": "images/inventory/item_45.webp",
+        "sourceLabel": "Этаж A-3",
+        "source": {
+          "type": "floor",
+          "locId": 3,
+          "locTitle": "A-3",
+          "locName": "Лечебно-реабилитационное отделение"
+        }
+      },
+      {
+        "id": 46,
+        "index": 2,
+        "title": "Элемент 3-2",
+        "image": "images/inventory/item_46.webp",
+        "sourceLabel": "Этаж A-3",
+        "source": {
+          "type": "floor",
+          "locId": 3,
+          "locTitle": "A-3",
+          "locName": "Лечебно-реабилитационное отделение"
+        }
+      },
+      {
+        "id": 47,
+        "index": 3,
+        "title": "Элемент 3-3",
+        "image": "images/inventory/item_47.webp",
+        "sourceLabel": "Этаж A-3",
+        "source": {
+          "type": "floor",
+          "locId": 3,
+          "locTitle": "A-3",
+          "locName": "Лечебно-реабилитационное отделение"
+        }
+      },
+      {
+        "id": 48,
+        "index": 4,
+        "title": "Элемент 3-4",
+        "image": "images/inventory/item_48.webp",
+        "sourceLabel": "Этаж A-3",
+        "source": {
+          "type": "floor",
+          "locId": 3,
+          "locTitle": "A-3",
+          "locName": "Лечебно-реабилитационное отделение"
+        }
+      },
+      {
+        "id": 49,
+        "index": 5,
+        "title": "Элемент 3-5",
+        "image": "images/inventory/item_49.webp",
+        "sourceLabel": "Этаж A-3",
+        "source": {
+          "type": "floor",
+          "locId": 3,
+          "locTitle": "A-3",
+          "locName": "Лечебно-реабилитационное отделение"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "collectionId": 4,
+    "stashId": 4,
+    "title": "Безумец",
+    "image": "images/inventory/item_4.webp",
+    "reward": "Безумие +10% на 3 дня",
+    "floor": {
+      "locId": 5,
+      "title": "B-2",
+      "name": "Биохимическое отделение"
+    },
+    "elements": [
+      {
+        "id": 40,
+        "index": 1,
+        "title": "Элемент 2-1",
+        "image": "images/inventory/item_40.webp",
+        "sourceLabel": "Этаж B-2",
+        "source": {
+          "type": "floor",
+          "locId": 5,
+          "locTitle": "B-2",
+          "locName": "Биохимическое отделение"
+        }
+      },
+      {
+        "id": 41,
+        "index": 2,
+        "title": "Элемент 2-2",
+        "image": "images/inventory/item_41.webp",
+        "sourceLabel": "Этаж B-2",
+        "source": {
+          "type": "floor",
+          "locId": 5,
+          "locTitle": "B-2",
+          "locName": "Биохимическое отделение"
+        }
+      },
+      {
+        "id": 42,
+        "index": 3,
+        "title": "Элемент 2-3",
+        "image": "images/inventory/item_42.webp",
+        "sourceLabel": "Этаж B-2",
+        "source": {
+          "type": "floor",
+          "locId": 5,
+          "locTitle": "B-2",
+          "locName": "Биохимическое отделение"
+        }
+      },
+      {
+        "id": 43,
+        "index": 4,
+        "title": "Элемент 2-4",
+        "image": "images/inventory/item_43.webp",
+        "sourceLabel": "Этаж B-2",
+        "source": {
+          "type": "floor",
+          "locId": 5,
+          "locTitle": "B-2",
+          "locName": "Биохимическое отделение"
+        }
+      },
+      {
+        "id": 44,
+        "index": 5,
+        "title": "Элемент 2-5",
+        "image": "images/inventory/item_44.webp",
+        "sourceLabel": "Этаж B-2",
+        "source": {
+          "type": "floor",
+          "locId": 5,
+          "locTitle": "B-2",
+          "locName": "Биохимическое отделение"
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "collectionId": 5,
+    "stashId": 5,
+    "title": "Спиртованные органы",
+    "image": "images/inventory/item_5.webp",
+    "reward": "Энергия работ +20 на 2 дня",
+    "floor": {
+      "locId": 4,
+      "title": "B-1",
+      "name": "Административное отделение"
+    },
+    "elements": [
+      {
+        "id": 55,
+        "index": 1,
+        "title": "Элемент 5-1",
+        "image": "images/inventory/item_55.webp",
+        "sourceLabel": "Этаж B-1",
+        "source": {
+          "type": "floor",
+          "locId": 4,
+          "locTitle": "B-1",
+          "locName": "Административное отделение"
+        }
+      },
+      {
+        "id": 56,
+        "index": 2,
+        "title": "Элемент 5-2",
+        "image": "images/inventory/item_56.webp",
+        "sourceLabel": "Этаж B-1",
+        "source": {
+          "type": "floor",
+          "locId": 4,
+          "locTitle": "B-1",
+          "locName": "Административное отделение"
+        }
+      },
+      {
+        "id": 57,
+        "index": 3,
+        "title": "Элемент 5-3",
+        "image": "images/inventory/item_57.webp",
+        "sourceLabel": "Этаж B-1",
+        "source": {
+          "type": "floor",
+          "locId": 4,
+          "locTitle": "B-1",
+          "locName": "Административное отделение"
+        }
+      },
+      {
+        "id": 58,
+        "index": 4,
+        "title": "Элемент 5-4",
+        "image": "images/inventory/item_58.webp",
+        "sourceLabel": "Этаж B-1",
+        "source": {
+          "type": "floor",
+          "locId": 4,
+          "locTitle": "B-1",
+          "locName": "Административное отделение"
+        }
+      },
+      {
+        "id": 59,
+        "index": 5,
+        "title": "Элемент 5-5",
+        "image": "images/inventory/item_59.webp",
+        "sourceLabel": "Этаж B-1",
+        "source": {
+          "type": "floor",
+          "locId": 4,
+          "locTitle": "B-1",
+          "locName": "Административное отделение"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "collectionId": 6,
+    "stashId": 6,
+    "title": "Игрушки",
+    "image": "images/inventory/item_6.webp",
+    "reward": "Энергия работ +25 на 2 дня",
+    "floor": {
+      "locId": 7,
+      "title": "C-1",
+      "name": "Архив"
+    },
+    "elements": [
+      {
+        "id": 60,
+        "index": 1,
+        "title": "Элемент 6-1",
+        "image": "images/inventory/item_60.webp",
+        "sourceLabel": "Этаж C-1",
+        "source": {
+          "type": "floor",
+          "locId": 7,
+          "locTitle": "C-1",
+          "locName": "Архив"
+        }
+      },
+      {
+        "id": 61,
+        "index": 2,
+        "title": "Элемент 6-2",
+        "image": "images/inventory/item_61.webp",
+        "sourceLabel": "Этаж C-1",
+        "source": {
+          "type": "floor",
+          "locId": 7,
+          "locTitle": "C-1",
+          "locName": "Архив"
+        }
+      },
+      {
+        "id": 62,
+        "index": 3,
+        "title": "Элемент 6-3",
+        "image": "images/inventory/item_62.webp",
+        "sourceLabel": "Этаж C-1",
+        "source": {
+          "type": "floor",
+          "locId": 7,
+          "locTitle": "C-1",
+          "locName": "Архив"
+        }
+      },
+      {
+        "id": 63,
+        "index": 4,
+        "title": "Элемент 6-4",
+        "image": "images/inventory/item_63.webp",
+        "sourceLabel": "Этаж C-1",
+        "source": {
+          "type": "floor",
+          "locId": 7,
+          "locTitle": "C-1",
+          "locName": "Архив"
+        }
+      },
+      {
+        "id": 64,
+        "index": 5,
+        "title": "Элемент 6-5",
+        "image": "images/inventory/item_64.webp",
+        "sourceLabel": "Этаж C-1",
+        "source": {
+          "type": "floor",
+          "locId": 7,
+          "locTitle": "C-1",
+          "locName": "Архив"
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "collectionId": 7,
+    "stashId": 7,
+    "title": "Ножи Мясника",
+    "image": "images/inventory/item_7.webp",
+    "reward": "Агрессия +5% на 3 дня",
+    "floor": {
+      "locId": 6,
+      "title": "B-3",
+      "name": "Электрофизиологическая лаборатория"
+    },
+    "elements": [
+      {
+        "id": 65,
+        "index": 1,
+        "title": "Элемент 7-1",
+        "image": "images/inventory/item_65.webp",
+        "sourceLabel": "Этаж B-3",
+        "source": {
+          "type": "floor",
+          "locId": 6,
+          "locTitle": "B-3",
+          "locName": "Электрофизиологическая лаборатория"
+        }
+      },
+      {
+        "id": 66,
+        "index": 2,
+        "title": "Элемент 7-2",
+        "image": "images/inventory/item_66.webp",
+        "sourceLabel": "Этаж B-3",
+        "source": {
+          "type": "floor",
+          "locId": 6,
+          "locTitle": "B-3",
+          "locName": "Электрофизиологическая лаборатория"
+        }
+      },
+      {
+        "id": 67,
+        "index": 3,
+        "title": "Элемент 7-3",
+        "image": "images/inventory/item_67.webp",
+        "sourceLabel": "Этаж B-3",
+        "source": {
+          "type": "floor",
+          "locId": 6,
+          "locTitle": "B-3",
+          "locName": "Электрофизиологическая лаборатория"
+        }
+      },
+      {
+        "id": 68,
+        "index": 4,
+        "title": "Элемент 7-4",
+        "image": "images/inventory/item_68.webp",
+        "sourceLabel": "Этаж B-3",
+        "source": {
+          "type": "floor",
+          "locId": 6,
+          "locTitle": "B-3",
+          "locName": "Электрофизиологическая лаборатория"
+        }
+      },
+      {
+        "id": 69,
+        "index": 5,
+        "title": "Элемент 7-5",
+        "image": "images/inventory/item_69.webp",
+        "sourceLabel": "Этаж B-3",
+        "source": {
+          "type": "floor",
+          "locId": 6,
+          "locTitle": "B-3",
+          "locName": "Электрофизиологическая лаборатория"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "collectionId": 8,
+    "stashId": 8,
+    "title": "Набор Химика",
+    "image": "images/inventory/item_8.webp",
+    "reward": "Безумие +15% на 3 дня",
+    "floor": {
+      "locId": 11,
+      "title": "D-2",
+      "name": "Складские помещения"
+    },
+    "elements": [
+      {
+        "id": 70,
+        "index": 1,
+        "title": "Элемент 8-1",
+        "image": "images/inventory/item_70.webp",
+        "sourceLabel": "Этаж D-2",
+        "source": {
+          "type": "floor",
+          "locId": 11,
+          "locTitle": "D-2",
+          "locName": "Складские помещения"
+        }
+      },
+      {
+        "id": 71,
+        "index": 2,
+        "title": "Элемент 8-2",
+        "image": "images/inventory/item_71.webp",
+        "sourceLabel": "Этаж D-2",
+        "source": {
+          "type": "floor",
+          "locId": 11,
+          "locTitle": "D-2",
+          "locName": "Складские помещения"
+        }
+      },
+      {
+        "id": 72,
+        "index": 3,
+        "title": "Элемент 8-3",
+        "image": "images/inventory/item_72.webp",
+        "sourceLabel": "Этаж D-2",
+        "source": {
+          "type": "floor",
+          "locId": 11,
+          "locTitle": "D-2",
+          "locName": "Складские помещения"
+        }
+      },
+      {
+        "id": 73,
+        "index": 4,
+        "title": "Элемент 8-4",
+        "image": "images/inventory/item_73.webp",
+        "sourceLabel": "Этаж D-2",
+        "source": {
+          "type": "floor",
+          "locId": 11,
+          "locTitle": "D-2",
+          "locName": "Складские помещения"
+        }
+      },
+      {
+        "id": 74,
+        "index": 5,
+        "title": "Элемент 8-5",
+        "image": "images/inventory/item_74.webp",
+        "sourceLabel": "Этаж D-2",
+        "source": {
+          "type": "floor",
+          "locId": 11,
+          "locTitle": "D-2",
+          "locName": "Складские помещения"
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "collectionId": 9,
+    "stashId": 9,
+    "title": "Рисунок",
+    "image": "images/inventory/item_9.webp",
+    "reward": "Безумие +10% на 3 дня",
+    "floor": {
+      "locId": 9,
+      "title": "C-3",
+      "name": "Крематорий"
+    },
+    "elements": [
+      {
+        "id": 75,
+        "index": 1,
+        "title": "Элемент 9-1",
+        "image": "images/inventory/item_75.webp",
+        "sourceLabel": "Этаж C-3",
+        "source": {
+          "type": "floor",
+          "locId": 9,
+          "locTitle": "C-3",
+          "locName": "Крематорий"
+        }
+      },
+      {
+        "id": 76,
+        "index": 2,
+        "title": "Элемент 9-2",
+        "image": "images/inventory/item_76.webp",
+        "sourceLabel": "Этаж C-3",
+        "source": {
+          "type": "floor",
+          "locId": 9,
+          "locTitle": "C-3",
+          "locName": "Крематорий"
+        }
+      },
+      {
+        "id": 77,
+        "index": 3,
+        "title": "Элемент 9-3",
+        "image": "images/inventory/item_77.webp",
+        "sourceLabel": "Этаж C-3",
+        "source": {
+          "type": "floor",
+          "locId": 9,
+          "locTitle": "C-3",
+          "locName": "Крематорий"
+        }
+      },
+      {
+        "id": 78,
+        "index": 4,
+        "title": "Элемент 9-4",
+        "image": "images/inventory/item_78.webp",
+        "sourceLabel": "Этаж C-3",
+        "source": {
+          "type": "floor",
+          "locId": 9,
+          "locTitle": "C-3",
+          "locName": "Крематорий"
+        }
+      },
+      {
+        "id": 79,
+        "index": 5,
+        "title": "Элемент 9-5",
+        "image": "images/inventory/item_79.webp",
+        "sourceLabel": "Этаж C-3",
+        "source": {
+          "type": "floor",
+          "locId": 9,
+          "locTitle": "C-3",
+          "locName": "Крематорий"
+        }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "collectionId": 10,
+    "stashId": 10,
+    "title": "Коллаж",
+    "image": "images/inventory/item_10.webp",
+    "reward": "Энергия работ +50, Энергия боя +1 на 2 дня",
+    "floor": {
+      "locId": 12,
+      "title": "D-3",
+      "name": "Отопительный блок"
+    },
+    "elements": [
+      {
+        "id": 80,
+        "index": 1,
+        "title": "Элемент 10-1",
+        "image": "images/inventory/item_80.webp",
+        "sourceLabel": "Этаж D-3",
+        "source": {
+          "type": "floor",
+          "locId": 12,
+          "locTitle": "D-3",
+          "locName": "Отопительный блок"
+        }
+      },
+      {
+        "id": 81,
+        "index": 2,
+        "title": "Элемент 10-2",
+        "image": "images/inventory/item_81.webp",
+        "sourceLabel": "Этаж D-3",
+        "source": {
+          "type": "floor",
+          "locId": 12,
+          "locTitle": "D-3",
+          "locName": "Отопительный блок"
+        }
+      },
+      {
+        "id": 82,
+        "index": 3,
+        "title": "Элемент 10-3",
+        "image": "images/inventory/item_82.webp",
+        "sourceLabel": "Этаж D-3",
+        "source": {
+          "type": "floor",
+          "locId": 12,
+          "locTitle": "D-3",
+          "locName": "Отопительный блок"
+        }
+      },
+      {
+        "id": 83,
+        "index": 4,
+        "title": "Элемент 10-4",
+        "image": "images/inventory/item_83.webp",
+        "sourceLabel": "Этаж D-3",
+        "source": {
+          "type": "floor",
+          "locId": 12,
+          "locTitle": "D-3",
+          "locName": "Отопительный блок"
+        }
+      },
+      {
+        "id": 84,
+        "index": 5,
+        "title": "Элемент 10-5",
+        "image": "images/inventory/item_84.webp",
+        "sourceLabel": "Этаж D-3",
+        "source": {
+          "type": "floor",
+          "locId": 12,
+          "locTitle": "D-3",
+          "locName": "Отопительный блок"
+        }
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "collectionId": 11,
+    "stashId": 11,
+    "title": "Карточный дом",
+    "image": "images/inventory/item_11.webp",
+    "reward": "Агрессия +5% на 3 дня",
+    "floor": {
+      "locId": 10,
+      "title": "D-1",
+      "name": "Блок обеспечения"
+    },
+    "elements": [
+      {
+        "id": 85,
+        "index": 1,
+        "title": "Элемент 11-1",
+        "image": "images/inventory/item_85.webp",
+        "sourceLabel": "Этаж D-1",
+        "source": {
+          "type": "floor",
+          "locId": 10,
+          "locTitle": "D-1",
+          "locName": "Блок обеспечения"
+        }
+      },
+      {
+        "id": 86,
+        "index": 2,
+        "title": "Элемент 11-2",
+        "image": "images/inventory/item_86.webp",
+        "sourceLabel": "Этаж D-1",
+        "source": {
+          "type": "floor",
+          "locId": 10,
+          "locTitle": "D-1",
+          "locName": "Блок обеспечения"
+        }
+      },
+      {
+        "id": 87,
+        "index": 3,
+        "title": "Элемент 11-3",
+        "image": "images/inventory/item_87.webp",
+        "sourceLabel": "Этаж D-1",
+        "source": {
+          "type": "floor",
+          "locId": 10,
+          "locTitle": "D-1",
+          "locName": "Блок обеспечения"
+        }
+      },
+      {
+        "id": 88,
+        "index": 4,
+        "title": "Элемент 11-4",
+        "image": "images/inventory/item_88.webp",
+        "sourceLabel": "Этаж D-1",
+        "source": {
+          "type": "floor",
+          "locId": 10,
+          "locTitle": "D-1",
+          "locName": "Блок обеспечения"
+        }
+      },
+      {
+        "id": 89,
+        "index": 5,
+        "title": "Элемент 11-5",
+        "image": "images/inventory/item_89.webp",
+        "sourceLabel": "Этаж D-1",
+        "source": {
+          "type": "floor",
+          "locId": 10,
+          "locTitle": "D-1",
+          "locName": "Блок обеспечения"
+        }
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "collectionId": 12,
+    "stashId": 12,
+    "title": "Динозавр",
+    "image": "images/inventory/item_12.webp",
+    "reward": "Агрессия +5% на 3 дня",
+    "floor": {
+      "locId": 8,
+      "title": "C-2",
+      "name": "Морг"
+    },
+    "elements": [
+      {
+        "id": 90,
+        "index": 1,
+        "title": "Элемент 12-1",
+        "image": "images/inventory/item_90.webp",
+        "sourceLabel": "Этаж C-2",
+        "source": {
+          "type": "floor",
+          "locId": 8,
+          "locTitle": "C-2",
+          "locName": "Морг"
+        }
+      },
+      {
+        "id": 91,
+        "index": 2,
+        "title": "Элемент 12-2",
+        "image": "images/inventory/item_91.webp",
+        "sourceLabel": "Этаж C-2",
+        "source": {
+          "type": "floor",
+          "locId": 8,
+          "locTitle": "C-2",
+          "locName": "Морг"
+        }
+      },
+      {
+        "id": 92,
+        "index": 3,
+        "title": "Элемент 12-3",
+        "image": "images/inventory/item_92.webp",
+        "sourceLabel": "Этаж C-2",
+        "source": {
+          "type": "floor",
+          "locId": 8,
+          "locTitle": "C-2",
+          "locName": "Морг"
+        }
+      },
+      {
+        "id": 93,
+        "index": 4,
+        "title": "Элемент 12-4",
+        "image": "images/inventory/item_93.webp",
+        "sourceLabel": "Этаж C-2",
+        "source": {
+          "type": "floor",
+          "locId": 8,
+          "locTitle": "C-2",
+          "locName": "Морг"
+        }
+      },
+      {
+        "id": 94,
+        "index": 5,
+        "title": "Элемент 12-5",
+        "image": "images/inventory/item_94.webp",
+        "sourceLabel": "Этаж C-2",
+        "source": {
+          "type": "floor",
+          "locId": 8,
+          "locTitle": "C-2",
+          "locName": "Морг"
+        }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "collectionId": 13,
+    "stashId": 13,
+    "title": "Железная Дева",
+    "image": "images/inventory/item_13.webp",
+    "reward": "Агрессия +10% на 3 дня",
+    "floor": {
+      "locId": 13,
+      "title": "E-1",
+      "name": "Диспансерное отделение"
+    },
+    "elements": [
+      {
+        "id": 95,
+        "index": 1,
+        "title": "Элемент 13-1",
+        "image": "images/inventory/item_95.webp",
+        "sourceLabel": "Этаж E-1",
+        "source": {
+          "type": "floor",
+          "locId": 13,
+          "locTitle": "E-1",
+          "locName": "Диспансерное отделение"
+        }
+      },
+      {
+        "id": 96,
+        "index": 2,
+        "title": "Элемент 13-2",
+        "image": "images/inventory/item_96.webp",
+        "sourceLabel": "Этаж E-1",
+        "source": {
+          "type": "floor",
+          "locId": 13,
+          "locTitle": "E-1",
+          "locName": "Диспансерное отделение"
+        }
+      },
+      {
+        "id": 97,
+        "index": 3,
+        "title": "Элемент 13-3",
+        "image": "images/inventory/item_97.webp",
+        "sourceLabel": "Этаж E-1",
+        "source": {
+          "type": "floor",
+          "locId": 13,
+          "locTitle": "E-1",
+          "locName": "Диспансерное отделение"
+        }
+      },
+      {
+        "id": 98,
+        "index": 4,
+        "title": "Элемент 13-4",
+        "image": "images/inventory/item_98.webp",
+        "sourceLabel": "Этаж E-1",
+        "source": {
+          "type": "floor",
+          "locId": 13,
+          "locTitle": "E-1",
+          "locName": "Диспансерное отделение"
+        }
+      },
+      {
+        "id": 99,
+        "index": 5,
+        "title": "Элемент 13-5",
+        "image": "images/inventory/item_99.webp",
+        "sourceLabel": "Этаж E-1",
+        "source": {
+          "type": "floor",
+          "locId": 13,
+          "locTitle": "E-1",
+          "locName": "Диспансерное отделение"
+        }
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "collectionId": 14,
+    "stashId": 14,
+    "title": "Железная Маска",
+    "image": "images/inventory/item_14.webp",
+    "reward": "Энергия работ +65, Энергия боя +1 на 2 дня",
+    "floor": {
+      "locId": 14,
+      "title": "E-2",
+      "name": "Цокольный этаж"
+    },
+    "elements": [
+      {
+        "id": 100,
+        "index": 1,
+        "title": "Элемент 14-1",
+        "image": "images/inventory/item_100.webp",
+        "sourceLabel": "Этаж E-2",
+        "source": {
+          "type": "floor",
+          "locId": 14,
+          "locTitle": "E-2",
+          "locName": "Цокольный этаж"
+        }
+      },
+      {
+        "id": 101,
+        "index": 2,
+        "title": "Элемент 14-2",
+        "image": "images/inventory/item_101.webp",
+        "sourceLabel": "Этаж E-2",
+        "source": {
+          "type": "floor",
+          "locId": 14,
+          "locTitle": "E-2",
+          "locName": "Цокольный этаж"
+        }
+      },
+      {
+        "id": 102,
+        "index": 3,
+        "title": "Элемент 14-3",
+        "image": "images/inventory/item_102.webp",
+        "sourceLabel": "Этаж E-2",
+        "source": {
+          "type": "floor",
+          "locId": 14,
+          "locTitle": "E-2",
+          "locName": "Цокольный этаж"
+        }
+      },
+      {
+        "id": 103,
+        "index": 4,
+        "title": "Элемент 14-4",
+        "image": "images/inventory/item_103.webp",
+        "sourceLabel": "Этаж E-2",
+        "source": {
+          "type": "floor",
+          "locId": 14,
+          "locTitle": "E-2",
+          "locName": "Цокольный этаж"
+        }
+      },
+      {
+        "id": 104,
+        "index": 5,
+        "title": "Элемент 14-5",
+        "image": "images/inventory/item_104.webp",
+        "sourceLabel": "Этаж E-2",
+        "source": {
+          "type": "floor",
+          "locId": 14,
+          "locTitle": "E-2",
+          "locName": "Цокольный этаж"
+        }
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "collectionId": 15,
+    "stashId": 15,
+    "title": "Кибер Череп",
+    "image": "images/inventory/item_15.webp",
+    "reward": "Безумие +15% на 3 дня",
+    "floor": {
+      "locId": 15,
+      "title": "E-3",
+      "name": "Центр психиатрии"
+    },
+    "elements": [
+      {
+        "id": 105,
+        "index": 1,
+        "title": "Элемент 15-1",
+        "image": "images/inventory/item_105.webp",
+        "sourceLabel": "Этаж E-3",
+        "source": {
+          "type": "floor",
+          "locId": 15,
+          "locTitle": "E-3",
+          "locName": "Центр психиатрии"
+        }
+      },
+      {
+        "id": 106,
+        "index": 2,
+        "title": "Элемент 15-2",
+        "image": "images/inventory/item_106.webp",
+        "sourceLabel": "Этаж E-3",
+        "source": {
+          "type": "floor",
+          "locId": 15,
+          "locTitle": "E-3",
+          "locName": "Центр психиатрии"
+        }
+      },
+      {
+        "id": 107,
+        "index": 3,
+        "title": "Элемент 15-3",
+        "image": "images/inventory/item_107.webp",
+        "sourceLabel": "Этаж E-3",
+        "source": {
+          "type": "floor",
+          "locId": 15,
+          "locTitle": "E-3",
+          "locName": "Центр психиатрии"
+        }
+      },
+      {
+        "id": 108,
+        "index": 4,
+        "title": "Элемент 15-4",
+        "image": "images/inventory/item_108.webp",
+        "sourceLabel": "Этаж E-3",
+        "source": {
+          "type": "floor",
+          "locId": 15,
+          "locTitle": "E-3",
+          "locName": "Центр психиатрии"
+        }
+      },
+      {
+        "id": 109,
+        "index": 5,
+        "title": "Элемент 15-5",
+        "image": "images/inventory/item_109.webp",
+        "sourceLabel": "Этаж E-3",
+        "source": {
+          "type": "floor",
+          "locId": 15,
+          "locTitle": "E-3",
+          "locName": "Центр психиатрии"
+        }
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "collectionId": 16,
+    "stashId": 16,
+    "title": "Некрономикон",
+    "image": "images/inventory/item_16.webp",
+    "reward": "Агрессия +15% на 3 дня",
+    "floor": {
+      "locId": 17,
+      "title": "F-2",
+      "name": "Капище фанатика"
+    },
+    "elements": [
+      {
+        "id": 110,
+        "index": 1,
+        "title": "Элемент 16-1",
+        "image": "images/inventory/item_110.webp",
+        "sourceLabel": "Этаж F-2",
+        "source": {
+          "type": "floor",
+          "locId": 17,
+          "locTitle": "F-2",
+          "locName": "Капище фанатика"
+        }
+      },
+      {
+        "id": 111,
+        "index": 2,
+        "title": "Элемент 16-2",
+        "image": "images/inventory/item_111.webp",
+        "sourceLabel": "Этаж F-2",
+        "source": {
+          "type": "floor",
+          "locId": 17,
+          "locTitle": "F-2",
+          "locName": "Капище фанатика"
+        }
+      },
+      {
+        "id": 112,
+        "index": 3,
+        "title": "Элемент 16-3",
+        "image": "images/inventory/item_112.webp",
+        "sourceLabel": "Этаж F-2",
+        "source": {
+          "type": "floor",
+          "locId": 17,
+          "locTitle": "F-2",
+          "locName": "Капище фанатика"
+        }
+      },
+      {
+        "id": 113,
+        "index": 4,
+        "title": "Элемент 16-4",
+        "image": "images/inventory/item_113.webp",
+        "sourceLabel": "Этаж F-2",
+        "source": {
+          "type": "floor",
+          "locId": 17,
+          "locTitle": "F-2",
+          "locName": "Капище фанатика"
+        }
+      },
+      {
+        "id": 114,
+        "index": 5,
+        "title": "Элемент 16-5",
+        "image": "images/inventory/item_114.webp",
+        "sourceLabel": "Этаж F-2",
+        "source": {
+          "type": "floor",
+          "locId": 17,
+          "locTitle": "F-2",
+          "locName": "Капище фанатика"
+        }
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "collectionId": 17,
+    "stashId": 17,
+    "title": "Набор сатаниста",
+    "image": "images/inventory/item_17.webp",
+    "reward": "Безумие +20% на 3 дня",
+    "floor": {
+      "locId": 16,
+      "title": "F-1",
+      "name": "Помещения для пыток"
+    },
+    "elements": [
+      {
+        "id": 115,
+        "index": 1,
+        "title": "Элемент 17-1",
+        "image": "images/inventory/item_115.webp",
+        "sourceLabel": "Этаж F-1",
+        "source": {
+          "type": "floor",
+          "locId": 16,
+          "locTitle": "F-1",
+          "locName": "Помещения для пыток"
+        }
+      },
+      {
+        "id": 116,
+        "index": 2,
+        "title": "Элемент 17-2",
+        "image": "images/inventory/item_116.webp",
+        "sourceLabel": "Этаж F-1",
+        "source": {
+          "type": "floor",
+          "locId": 16,
+          "locTitle": "F-1",
+          "locName": "Помещения для пыток"
+        }
+      },
+      {
+        "id": 117,
+        "index": 3,
+        "title": "Элемент 17-3",
+        "image": "images/inventory/item_117.webp",
+        "sourceLabel": "Этаж F-1",
+        "source": {
+          "type": "floor",
+          "locId": 16,
+          "locTitle": "F-1",
+          "locName": "Помещения для пыток"
+        }
+      },
+      {
+        "id": 118,
+        "index": 4,
+        "title": "Элемент 17-4",
+        "image": "images/inventory/item_118.webp",
+        "sourceLabel": "Этаж F-1",
+        "source": {
+          "type": "floor",
+          "locId": 16,
+          "locTitle": "F-1",
+          "locName": "Помещения для пыток"
+        }
+      },
+      {
+        "id": 119,
+        "index": 5,
+        "title": "Элемент 17-5",
+        "image": "images/inventory/item_119.webp",
+        "sourceLabel": "Этаж F-1",
+        "source": {
+          "type": "floor",
+          "locId": 16,
+          "locTitle": "F-1",
+          "locName": "Помещения для пыток"
+        }
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "collectionId": 18,
+    "stashId": 18,
+    "title": "Подсвечник",
+    "image": "images/inventory/item_18.webp",
+    "reward": "Энергия работ +90, Энергия боя +1 на 2 дня",
+    "floor": {
+      "locId": 18,
+      "title": "F-3",
+      "name": "Канализация"
+    },
+    "elements": [
+      {
+        "id": 120,
+        "index": 1,
+        "title": "Элемент 18-1",
+        "image": "images/inventory/item_120.webp",
+        "sourceLabel": "Этаж F-3",
+        "source": {
+          "type": "floor",
+          "locId": 18,
+          "locTitle": "F-3",
+          "locName": "Канализация"
+        }
+      },
+      {
+        "id": 121,
+        "index": 2,
+        "title": "Элемент 18-2",
+        "image": "images/inventory/item_121.webp",
+        "sourceLabel": "Этаж F-3",
+        "source": {
+          "type": "floor",
+          "locId": 18,
+          "locTitle": "F-3",
+          "locName": "Канализация"
+        }
+      },
+      {
+        "id": 122,
+        "index": 3,
+        "title": "Элемент 18-3",
+        "image": "images/inventory/item_122.webp",
+        "sourceLabel": "Этаж F-3",
+        "source": {
+          "type": "floor",
+          "locId": 18,
+          "locTitle": "F-3",
+          "locName": "Канализация"
+        }
+      },
+      {
+        "id": 123,
+        "index": 4,
+        "title": "Элемент 18-4",
+        "image": "images/inventory/item_123.webp",
+        "sourceLabel": "Этаж F-3",
+        "source": {
+          "type": "floor",
+          "locId": 18,
+          "locTitle": "F-3",
+          "locName": "Канализация"
+        }
+      },
+      {
+        "id": 124,
+        "index": 5,
+        "title": "Элемент 18-5",
+        "image": "images/inventory/item_124.webp",
+        "sourceLabel": "Этаж F-3",
+        "source": {
+          "type": "floor",
+          "locId": 18,
+          "locTitle": "F-3",
+          "locName": "Канализация"
+        }
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "collectionId": 19,
+    "stashId": 19,
+    "title": "Дозиметр",
+    "image": "images/inventory/item_19.webp",
+    "reward": "Агрессия +10% на 3 дня",
+    "floor": {
+      "locId": 37,
+      "title": "L-1",
+      "name": "Фабрика мутагенов"
+    },
+    "elements": [
+      {
+        "id": 125,
+        "index": 1,
+        "title": "Элемент 19-1",
+        "image": "images/inventory/item_125.webp",
+        "sourceLabel": "Этаж L-1",
+        "source": {
+          "type": "floor",
+          "locId": 37,
+          "locTitle": "L-1",
+          "locName": "Фабрика мутагенов"
+        }
+      },
+      {
+        "id": 126,
+        "index": 2,
+        "title": "Элемент 19-2",
+        "image": "images/inventory/item_126.webp",
+        "sourceLabel": "Этаж L-1",
+        "source": {
+          "type": "floor",
+          "locId": 37,
+          "locTitle": "L-1",
+          "locName": "Фабрика мутагенов"
+        }
+      },
+      {
+        "id": 127,
+        "index": 3,
+        "title": "Элемент 19-3",
+        "image": "images/inventory/item_127.webp",
+        "sourceLabel": "Этаж L-1",
+        "source": {
+          "type": "floor",
+          "locId": 37,
+          "locTitle": "L-1",
+          "locName": "Фабрика мутагенов"
+        }
+      },
+      {
+        "id": 128,
+        "index": 4,
+        "title": "Элемент 19-4",
+        "image": "images/inventory/item_128.webp",
+        "sourceLabel": "Этаж L-1",
+        "source": {
+          "type": "floor",
+          "locId": 37,
+          "locTitle": "L-1",
+          "locName": "Фабрика мутагенов"
+        }
+      },
+      {
+        "id": 129,
+        "index": 5,
+        "title": "Элемент 19-5",
+        "image": "images/inventory/item_129.webp",
+        "sourceLabel": "Этаж L-1",
+        "source": {
+          "type": "floor",
+          "locId": 37,
+          "locTitle": "L-1",
+          "locName": "Фабрика мутагенов"
+        }
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "collectionId": 20,
+    "stashId": 20,
+    "title": "Бомба",
+    "image": "images/inventory/item_20.webp",
+    "reward": "Безумие +20%, Ярость +40%, Энергия боя +1 на 3 дня",
+    "floor": {
+      "locId": 40,
+      "title": "M-1",
+      "name": "Сокровищница"
+    },
+    "elements": [
+      {
+        "id": 130,
+        "index": 1,
+        "title": "Элемент 20-1",
+        "image": "images/inventory/item_130.webp",
+        "sourceLabel": "Этаж M-1",
+        "source": {
+          "type": "floor",
+          "locId": 40,
+          "locTitle": "M-1",
+          "locName": "Сокровищница"
+        }
+      },
+      {
+        "id": 131,
+        "index": 2,
+        "title": "Элемент 20-2",
+        "image": "images/inventory/item_131.webp",
+        "sourceLabel": "Этаж M-1",
+        "source": {
+          "type": "floor",
+          "locId": 40,
+          "locTitle": "M-1",
+          "locName": "Сокровищница"
+        }
+      },
+      {
+        "id": 132,
+        "index": 3,
+        "title": "Элемент 20-3",
+        "image": "images/inventory/item_132.webp",
+        "sourceLabel": "Этаж M-1",
+        "source": {
+          "type": "floor",
+          "locId": 40,
+          "locTitle": "M-1",
+          "locName": "Сокровищница"
+        }
+      },
+      {
+        "id": 133,
+        "index": 4,
+        "title": "Элемент 20-4",
+        "image": "images/inventory/item_133.webp",
+        "sourceLabel": "Этаж M-1",
+        "source": {
+          "type": "floor",
+          "locId": 40,
+          "locTitle": "M-1",
+          "locName": "Сокровищница"
+        }
+      },
+      {
+        "id": 134,
+        "index": 5,
+        "title": "Элемент 20-5",
+        "image": "images/inventory/item_134.webp",
+        "sourceLabel": "Этаж M-1",
+        "source": {
+          "type": "floor",
+          "locId": 40,
+          "locTitle": "M-1",
+          "locName": "Сокровищница"
+        }
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "collectionId": 21,
+    "stashId": 21,
+    "title": "Золотой замок",
+    "image": "images/inventory/item_21.webp",
+    "reward": "Агрессия +20%, Ярость +40%, Энергия боя +1 на 3 дня",
+    "floor": {
+      "locId": 41,
+      "title": "M-2",
+      "name": "Кладовая"
+    },
+    "elements": [
+      {
+        "id": 135,
+        "index": 1,
+        "title": "Элемент 21-1",
+        "image": "images/inventory/item_135.webp",
+        "sourceLabel": "Этаж M-2",
+        "source": {
+          "type": "floor",
+          "locId": 41,
+          "locTitle": "M-2",
+          "locName": "Кладовая"
+        }
+      },
+      {
+        "id": 136,
+        "index": 2,
+        "title": "Элемент 21-2",
+        "image": "images/inventory/item_136.webp",
+        "sourceLabel": "Этаж M-2",
+        "source": {
+          "type": "floor",
+          "locId": 41,
+          "locTitle": "M-2",
+          "locName": "Кладовая"
+        }
+      },
+      {
+        "id": 137,
+        "index": 3,
+        "title": "Элемент 21-3",
+        "image": "images/inventory/item_137.webp",
+        "sourceLabel": "Этаж M-2",
+        "source": {
+          "type": "floor",
+          "locId": 41,
+          "locTitle": "M-2",
+          "locName": "Кладовая"
+        }
+      },
+      {
+        "id": 138,
+        "index": 4,
+        "title": "Элемент 21-4",
+        "image": "images/inventory/item_138.webp",
+        "sourceLabel": "Этаж M-2",
+        "source": {
+          "type": "floor",
+          "locId": 41,
+          "locTitle": "M-2",
+          "locName": "Кладовая"
+        }
+      },
+      {
+        "id": 139,
+        "index": 5,
+        "title": "Элемент 21-5",
+        "image": "images/inventory/item_139.webp",
+        "sourceLabel": "Этаж M-2",
+        "source": {
+          "type": "floor",
+          "locId": 41,
+          "locTitle": "M-2",
+          "locName": "Кладовая"
+        }
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "collectionId": 22,
+    "stashId": 22,
+    "title": "Ящик Пандоры",
+    "image": "images/inventory/item_22.webp",
+    "reward": "Безумие +50%, Агрессия +50%, Ярость +50% на 3 ч.",
+    "floor": {
+      "locId": 42,
+      "title": "M-3",
+      "name": "Помост"
+    },
+    "elements": [
+      {
+        "id": 140,
+        "index": 1,
+        "title": "Элемент 22-1",
+        "image": "images/inventory/item_140.webp",
+        "sourceLabel": "Этаж M-3",
+        "source": {
+          "type": "floor",
+          "locId": 42,
+          "locTitle": "M-3",
+          "locName": "Помост"
+        }
+      },
+      {
+        "id": 141,
+        "index": 2,
+        "title": "Элемент 22-2",
+        "image": "images/inventory/item_141.webp",
+        "sourceLabel": "Этаж M-3",
+        "source": {
+          "type": "floor",
+          "locId": 42,
+          "locTitle": "M-3",
+          "locName": "Помост"
+        }
+      },
+      {
+        "id": 142,
+        "index": 3,
+        "title": "Элемент 22-3",
+        "image": "images/inventory/item_142.webp",
+        "sourceLabel": "Этаж M-3",
+        "source": {
+          "type": "floor",
+          "locId": 42,
+          "locTitle": "M-3",
+          "locName": "Помост"
+        }
+      },
+      {
+        "id": 143,
+        "index": 4,
+        "title": "Элемент 22-4",
+        "image": "images/inventory/item_143.webp",
+        "sourceLabel": "Этаж M-3",
+        "source": {
+          "type": "floor",
+          "locId": 42,
+          "locTitle": "M-3",
+          "locName": "Помост"
+        }
+      },
+      {
+        "id": 144,
+        "index": 5,
+        "title": "Элемент 22-5",
+        "image": "images/inventory/item_144.webp",
+        "sourceLabel": "Этаж M-3",
+        "source": {
+          "type": "floor",
+          "locId": 42,
+          "locTitle": "M-3",
+          "locName": "Помост"
+        }
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "collectionId": 23,
+    "stashId": 23,
+    "title": "Коктейль Молотова",
+    "image": "images/inventory/item_23.webp",
+    "reward": "Безумие +10% на 3 дня",
+    "floor": {
+      "locId": 25,
+      "title": "H-1",
+      "name": "Паучьи угодья"
+    },
+    "elements": [
+      {
+        "id": 145,
+        "index": 1,
+        "title": "Элемент 25-1",
+        "image": "images/inventory/item_145.webp",
+        "sourceLabel": "Этаж H-1",
+        "source": {
+          "type": "floor",
+          "locId": 25,
+          "locTitle": "H-1",
+          "locName": "Паучьи угодья"
+        }
+      },
+      {
+        "id": 146,
+        "index": 2,
+        "title": "Элемент 25-2",
+        "image": "images/inventory/item_146.webp",
+        "sourceLabel": "Этаж H-1",
+        "source": {
+          "type": "floor",
+          "locId": 25,
+          "locTitle": "H-1",
+          "locName": "Паучьи угодья"
+        }
+      },
+      {
+        "id": 147,
+        "index": 3,
+        "title": "Элемент 25-3",
+        "image": "images/inventory/item_147.webp",
+        "sourceLabel": "Этаж H-1",
+        "source": {
+          "type": "floor",
+          "locId": 25,
+          "locTitle": "H-1",
+          "locName": "Паучьи угодья"
+        }
+      },
+      {
+        "id": 148,
+        "index": 4,
+        "title": "Элемент 25-4",
+        "image": "images/inventory/item_148.webp",
+        "sourceLabel": "Этаж H-1",
+        "source": {
+          "type": "floor",
+          "locId": 25,
+          "locTitle": "H-1",
+          "locName": "Паучьи угодья"
+        }
+      },
+      {
+        "id": 149,
+        "index": 5,
+        "title": "Элемент 25-5",
+        "image": "images/inventory/item_149.webp",
+        "sourceLabel": "Этаж H-1",
+        "source": {
+          "type": "floor",
+          "locId": 25,
+          "locTitle": "H-1",
+          "locName": "Паучьи угодья"
+        }
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "collectionId": 24,
+    "stashId": 24,
+    "title": "Походный набор садиста",
+    "image": "images/inventory/item_24.webp",
+    "reward": "Безумие +10% на 3 дня",
+    "floor": {
+      "locId": 26,
+      "title": "H-2",
+      "name": "Площадка для самоубийств"
+    },
+    "elements": [
+      {
+        "id": 150,
+        "index": 1,
+        "title": "Элемент 26-1",
+        "image": "images/inventory/item_150.webp",
+        "sourceLabel": "Этаж H-2",
+        "source": {
+          "type": "floor",
+          "locId": 26,
+          "locTitle": "H-2",
+          "locName": "Площадка для самоубийств"
+        }
+      },
+      {
+        "id": 161,
+        "index": 2,
+        "title": "Элемент 26-2",
+        "image": "images/inventory/item_161.webp",
+        "sourceLabel": "Этаж H-2",
+        "source": {
+          "type": "floor",
+          "locId": 26,
+          "locTitle": "H-2",
+          "locName": "Площадка для самоубийств"
+        }
+      },
+      {
+        "id": 162,
+        "index": 3,
+        "title": "Элемент 26-3",
+        "image": "images/inventory/item_162.webp",
+        "sourceLabel": "Этаж H-2",
+        "source": {
+          "type": "floor",
+          "locId": 26,
+          "locTitle": "H-2",
+          "locName": "Площадка для самоубийств"
+        }
+      },
+      {
+        "id": 163,
+        "index": 4,
+        "title": "Элемент 26-4",
+        "image": "images/inventory/item_163.webp",
+        "sourceLabel": "Этаж H-2",
+        "source": {
+          "type": "floor",
+          "locId": 26,
+          "locTitle": "H-2",
+          "locName": "Площадка для самоубийств"
+        }
+      },
+      {
+        "id": 164,
+        "index": 5,
+        "title": "Элемент 26-5",
+        "image": "images/inventory/item_164.webp",
+        "sourceLabel": "Этаж H-2",
+        "source": {
+          "type": "floor",
+          "locId": 26,
+          "locTitle": "H-2",
+          "locName": "Площадка для самоубийств"
+        }
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "collectionId": 25,
+    "stashId": 25,
+    "title": "Набор для фотосъёмки",
+    "image": "images/inventory/item_25.webp",
+    "reward": "Агрессия +10%, Энергия работ +120 на 3 дня",
+    "floor": {
+      "locId": 38,
+      "title": "L-2",
+      "name": "Секретные застенки"
+    },
+    "elements": [
+      {
+        "id": 151,
+        "index": 1,
+        "title": "Элемент 24-1",
+        "image": "images/inventory/item_151.webp",
+        "sourceLabel": "Этаж L-2",
+        "source": {
+          "type": "floor",
+          "locId": 38,
+          "locTitle": "L-2",
+          "locName": "Секретные застенки"
+        }
+      },
+      {
+        "id": 152,
+        "index": 2,
+        "title": "Элемент 24-2",
+        "image": "images/inventory/item_152.webp",
+        "sourceLabel": "Этаж L-2",
+        "source": {
+          "type": "floor",
+          "locId": 38,
+          "locTitle": "L-2",
+          "locName": "Секретные застенки"
+        }
+      },
+      {
+        "id": 153,
+        "index": 3,
+        "title": "Элемент 24-3",
+        "image": "images/inventory/item_153.webp",
+        "sourceLabel": "Этаж L-2",
+        "source": {
+          "type": "floor",
+          "locId": 38,
+          "locTitle": "L-2",
+          "locName": "Секретные застенки"
+        }
+      },
+      {
+        "id": 154,
+        "index": 4,
+        "title": "Элемент 24-4",
+        "image": "images/inventory/item_154.webp",
+        "sourceLabel": "Этаж L-2",
+        "source": {
+          "type": "floor",
+          "locId": 38,
+          "locTitle": "L-2",
+          "locName": "Секретные застенки"
+        }
+      },
+      {
+        "id": 155,
+        "index": 5,
+        "title": "Элемент 24-5",
+        "image": "images/inventory/item_155.webp",
+        "sourceLabel": "Этаж L-2",
+        "source": {
+          "type": "floor",
+          "locId": 38,
+          "locTitle": "L-2",
+          "locName": "Секретные застенки"
+        }
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "collectionId": 26,
+    "stashId": 26,
+    "title": "Видеокамера",
+    "image": "images/inventory/item_26.webp",
+    "reward": "Безумие +30%, Агрессия +30%, Ярость +30%, Энергия работ +120, Энергия боя +2 на 3 дня",
+    "floor": {
+      "locId": 39,
+      "title": "L-3",
+      "name": "Покои хирурга"
+    },
+    "elements": [
+      {
+        "id": 156,
+        "index": 1,
+        "title": "Элемент 23-1",
+        "image": "images/inventory/item_156.webp",
+        "sourceLabel": "Этаж L-3",
+        "source": {
+          "type": "floor",
+          "locId": 39,
+          "locTitle": "L-3",
+          "locName": "Покои хирурга"
+        }
+      },
+      {
+        "id": 157,
+        "index": 2,
+        "title": "Элемент 23-2",
+        "image": "images/inventory/item_157.webp",
+        "sourceLabel": "Этаж L-3",
+        "source": {
+          "type": "floor",
+          "locId": 39,
+          "locTitle": "L-3",
+          "locName": "Покои хирурга"
+        }
+      },
+      {
+        "id": 158,
+        "index": 3,
+        "title": "Элемент 23-3",
+        "image": "images/inventory/item_158.webp",
+        "sourceLabel": "Этаж L-3",
+        "source": {
+          "type": "floor",
+          "locId": 39,
+          "locTitle": "L-3",
+          "locName": "Покои хирурга"
+        }
+      },
+      {
+        "id": 159,
+        "index": 4,
+        "title": "Элемент 23-4",
+        "image": "images/inventory/item_159.webp",
+        "sourceLabel": "Этаж L-3",
+        "source": {
+          "type": "floor",
+          "locId": 39,
+          "locTitle": "L-3",
+          "locName": "Покои хирурга"
+        }
+      },
+      {
+        "id": 160,
+        "index": 5,
+        "title": "Элемент 23-5",
+        "image": "images/inventory/item_160.webp",
+        "sourceLabel": "Этаж L-3",
+        "source": {
+          "type": "floor",
+          "locId": 39,
+          "locTitle": "L-3",
+          "locName": "Покои хирурга"
+        }
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "collectionId": 27,
+    "stashId": 27,
+    "title": "Модель корабля",
+    "image": "images/inventory/item_27.webp",
+    "reward": "Агрессия +10% на 3 дня",
+    "floor": {
+      "locId": 27,
+      "title": "H-3",
+      "name": "Крыша больницы"
+    },
+    "elements": [
+      {
+        "id": 165,
+        "index": 1,
+        "title": "Элемент 27-1",
+        "image": "images/inventory/item_165.webp",
+        "sourceLabel": "Этаж H-3",
+        "source": {
+          "type": "floor",
+          "locId": 27,
+          "locTitle": "H-3",
+          "locName": "Крыша больницы"
+        }
+      },
+      {
+        "id": 166,
+        "index": 2,
+        "title": "Элемент 27-2",
+        "image": "images/inventory/item_166.webp",
+        "sourceLabel": "Этаж H-3",
+        "source": {
+          "type": "floor",
+          "locId": 27,
+          "locTitle": "H-3",
+          "locName": "Крыша больницы"
+        }
+      },
+      {
+        "id": 167,
+        "index": 3,
+        "title": "Элемент 27-3",
+        "image": "images/inventory/item_167.webp",
+        "sourceLabel": "Этаж H-3",
+        "source": {
+          "type": "floor",
+          "locId": 27,
+          "locTitle": "H-3",
+          "locName": "Крыша больницы"
+        }
+      },
+      {
+        "id": 168,
+        "index": 4,
+        "title": "Элемент 27-4",
+        "image": "images/inventory/item_168.webp",
+        "sourceLabel": "Этаж H-3",
+        "source": {
+          "type": "floor",
+          "locId": 27,
+          "locTitle": "H-3",
+          "locName": "Крыша больницы"
+        }
+      },
+      {
+        "id": 169,
+        "index": 5,
+        "title": "Элемент 27-5",
+        "image": "images/inventory/item_169.webp",
+        "sourceLabel": "Этаж H-3",
+        "source": {
+          "type": "floor",
+          "locId": 27,
+          "locTitle": "H-3",
+          "locName": "Крыша больницы"
+        }
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "collectionId": 28,
+    "stashId": 28,
+    "title": "Бас-гитара",
+    "image": "images/inventory/item_28.webp",
+    "reward": "Агрессия +10% на 3 дня",
+    "floor": {
+      "locId": 22,
+      "title": "G-1",
+      "name": "Подвал с тайным крематорием"
+    },
+    "elements": [
+      {
+        "id": 170,
+        "index": 1,
+        "title": "Элемент 28-1",
+        "image": "images/inventory/item_170.webp",
+        "sourceLabel": "Этаж G-1",
+        "source": {
+          "type": "floor",
+          "locId": 22,
+          "locTitle": "G-1",
+          "locName": "Подвал с тайным крематорием"
+        }
+      },
+      {
+        "id": 171,
+        "index": 2,
+        "title": "Элемент 28-2",
+        "image": "images/inventory/item_171.webp",
+        "sourceLabel": "Этаж G-1",
+        "source": {
+          "type": "floor",
+          "locId": 22,
+          "locTitle": "G-1",
+          "locName": "Подвал с тайным крематорием"
+        }
+      },
+      {
+        "id": 172,
+        "index": 3,
+        "title": "Элемент 28-3",
+        "image": "images/inventory/item_172.webp",
+        "sourceLabel": "Этаж G-1",
+        "source": {
+          "type": "floor",
+          "locId": 22,
+          "locTitle": "G-1",
+          "locName": "Подвал с тайным крематорием"
+        }
+      },
+      {
+        "id": 173,
+        "index": 4,
+        "title": "Элемент 28-4",
+        "image": "images/inventory/item_173.webp",
+        "sourceLabel": "Этаж G-1",
+        "source": {
+          "type": "floor",
+          "locId": 22,
+          "locTitle": "G-1",
+          "locName": "Подвал с тайным крематорием"
+        }
+      },
+      {
+        "id": 174,
+        "index": 5,
+        "title": "Элемент 28-5",
+        "image": "images/inventory/item_174.webp",
+        "sourceLabel": "Этаж G-1",
+        "source": {
+          "type": "floor",
+          "locId": 22,
+          "locTitle": "G-1",
+          "locName": "Подвал с тайным крематорием"
+        }
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "collectionId": 29,
+    "stashId": 29,
+    "title": "Набор провидца",
+    "image": "images/inventory/item_29.webp",
+    "reward": "Энергия работ +30 на 2 дня",
+    "floor": {
+      "locId": 23,
+      "title": "G-2",
+      "name": "Тёмные аллеи"
+    },
+    "elements": [
+      {
+        "id": 175,
+        "index": 1,
+        "title": "Элемент 29-1",
+        "image": "images/inventory/item_175.webp",
+        "sourceLabel": "Этаж G-2",
+        "source": {
+          "type": "floor",
+          "locId": 23,
+          "locTitle": "G-2",
+          "locName": "Тёмные аллеи"
+        }
+      },
+      {
+        "id": 176,
+        "index": 2,
+        "title": "Элемент 29-2",
+        "image": "images/inventory/item_176.webp",
+        "sourceLabel": "Этаж G-2",
+        "source": {
+          "type": "floor",
+          "locId": 23,
+          "locTitle": "G-2",
+          "locName": "Тёмные аллеи"
+        }
+      },
+      {
+        "id": 177,
+        "index": 3,
+        "title": "Элемент 29-3",
+        "image": "images/inventory/item_177.webp",
+        "sourceLabel": "Этаж G-2",
+        "source": {
+          "type": "floor",
+          "locId": 23,
+          "locTitle": "G-2",
+          "locName": "Тёмные аллеи"
+        }
+      },
+      {
+        "id": 178,
+        "index": 4,
+        "title": "Элемент 29-4",
+        "image": "images/inventory/item_178.webp",
+        "sourceLabel": "Этаж G-2",
+        "source": {
+          "type": "floor",
+          "locId": 23,
+          "locTitle": "G-2",
+          "locName": "Тёмные аллеи"
+        }
+      },
+      {
+        "id": 179,
+        "index": 5,
+        "title": "Элемент 29-5",
+        "image": "images/inventory/item_179.webp",
+        "sourceLabel": "Этаж G-2",
+        "source": {
+          "type": "floor",
+          "locId": 23,
+          "locTitle": "G-2",
+          "locName": "Тёмные аллеи"
+        }
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "collectionId": 30,
+    "stashId": 30,
+    "title": "Гильотина",
+    "image": "images/inventory/item_30.webp",
+    "reward": "Энергия работ +30, Энергия боя +1 на 2 дня",
+    "floor": {
+      "locId": 24,
+      "title": "G-3",
+      "name": "Парадная"
+    },
+    "elements": [
+      {
+        "id": 180,
+        "index": 1,
+        "title": "Элемент 30-1",
+        "image": "images/inventory/item_180.webp",
+        "sourceLabel": "Этаж G-3",
+        "source": {
+          "type": "floor",
+          "locId": 24,
+          "locTitle": "G-3",
+          "locName": "Парадная"
+        }
+      },
+      {
+        "id": 181,
+        "index": 2,
+        "title": "Элемент 30-2",
+        "image": "images/inventory/item_181.webp",
+        "sourceLabel": "Этаж G-3",
+        "source": {
+          "type": "floor",
+          "locId": 24,
+          "locTitle": "G-3",
+          "locName": "Парадная"
+        }
+      },
+      {
+        "id": 182,
+        "index": 3,
+        "title": "Элемент 30-3",
+        "image": "images/inventory/item_182.webp",
+        "sourceLabel": "Этаж G-3",
+        "source": {
+          "type": "floor",
+          "locId": 24,
+          "locTitle": "G-3",
+          "locName": "Парадная"
+        }
+      },
+      {
+        "id": 183,
+        "index": 4,
+        "title": "Элемент 30-4",
+        "image": "images/inventory/item_183.webp",
+        "sourceLabel": "Этаж G-3",
+        "source": {
+          "type": "floor",
+          "locId": 24,
+          "locTitle": "G-3",
+          "locName": "Парадная"
+        }
+      },
+      {
+        "id": 184,
+        "index": 5,
+        "title": "Элемент 30-5",
+        "image": "images/inventory/item_184.webp",
+        "sourceLabel": "Этаж G-3",
+        "source": {
+          "type": "floor",
+          "locId": 24,
+          "locTitle": "G-3",
+          "locName": "Парадная"
+        }
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "collectionId": 31,
+    "stashId": 31,
+    "title": "Гиперболойд",
+    "image": "images/inventory/item_31.webp",
+    "reward": "Безумие +10%, Агрессия +10%, Ярость +25%, Энергия боя +1 на 3 дня",
+    "floor": {
+      "locId": 34,
+      "title": "K-1",
+      "name": "Запечатанное хранилище"
+    },
+    "elements": [
+      {
+        "id": 185,
+        "index": 1,
+        "title": "Элемент 31-1",
+        "image": "images/inventory/item_185.webp",
+        "sourceLabel": "Этаж K-1",
+        "source": {
+          "type": "floor",
+          "locId": 34,
+          "locTitle": "K-1",
+          "locName": "Запечатанное хранилище"
+        }
+      },
+      {
+        "id": 186,
+        "index": 2,
+        "title": "Элемент 31-2",
+        "image": "images/inventory/item_186.webp",
+        "sourceLabel": "Этаж K-1",
+        "source": {
+          "type": "floor",
+          "locId": 34,
+          "locTitle": "K-1",
+          "locName": "Запечатанное хранилище"
+        }
+      },
+      {
+        "id": 187,
+        "index": 3,
+        "title": "Элемент 31-3",
+        "image": "images/inventory/item_187.webp",
+        "sourceLabel": "Этаж K-1",
+        "source": {
+          "type": "floor",
+          "locId": 34,
+          "locTitle": "K-1",
+          "locName": "Запечатанное хранилище"
+        }
+      },
+      {
+        "id": 188,
+        "index": 4,
+        "title": "Элемент 31-4",
+        "image": "images/inventory/item_188.webp",
+        "sourceLabel": "Этаж K-1",
+        "source": {
+          "type": "floor",
+          "locId": 34,
+          "locTitle": "K-1",
+          "locName": "Запечатанное хранилище"
+        }
+      },
+      {
+        "id": 189,
+        "index": 5,
+        "title": "Элемент 31-5",
+        "image": "images/inventory/item_189.webp",
+        "sourceLabel": "Этаж K-1",
+        "source": {
+          "type": "floor",
+          "locId": 34,
+          "locTitle": "K-1",
+          "locName": "Запечатанное хранилище"
+        }
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "collectionId": 32,
+    "stashId": 32,
+    "title": "ПНВ",
+    "image": "images/inventory/item_32.webp",
+    "reward": "Безумие +10%, Агрессия +10%, Ярость +50% на 3 дня",
+    "floor": {
+      "locId": 35,
+      "title": "K-2",
+      "name": "Потайная траншея"
+    },
+    "elements": [
+      {
+        "id": 190,
+        "index": 1,
+        "title": "Элемент 32-1",
+        "image": "images/inventory/item_190.webp",
+        "sourceLabel": "Этаж K-2",
+        "source": {
+          "type": "floor",
+          "locId": 35,
+          "locTitle": "K-2",
+          "locName": "Потайная траншея"
+        }
+      },
+      {
+        "id": 191,
+        "index": 2,
+        "title": "Элемент 32-2",
+        "image": "images/inventory/item_191.webp",
+        "sourceLabel": "Этаж K-2",
+        "source": {
+          "type": "floor",
+          "locId": 35,
+          "locTitle": "K-2",
+          "locName": "Потайная траншея"
+        }
+      },
+      {
+        "id": 192,
+        "index": 3,
+        "title": "Элемент 32-3",
+        "image": "images/inventory/item_192.webp",
+        "sourceLabel": "Этаж K-2",
+        "source": {
+          "type": "floor",
+          "locId": 35,
+          "locTitle": "K-2",
+          "locName": "Потайная траншея"
+        }
+      },
+      {
+        "id": 193,
+        "index": 4,
+        "title": "Элемент 32-4",
+        "image": "images/inventory/item_193.webp",
+        "sourceLabel": "Этаж K-2",
+        "source": {
+          "type": "floor",
+          "locId": 35,
+          "locTitle": "K-2",
+          "locName": "Потайная траншея"
+        }
+      },
+      {
+        "id": 194,
+        "index": 5,
+        "title": "Элемент 32-5",
+        "image": "images/inventory/item_194.webp",
+        "sourceLabel": "Этаж K-2",
+        "source": {
+          "type": "floor",
+          "locId": 35,
+          "locTitle": "K-2",
+          "locName": "Потайная траншея"
+        }
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "collectionId": 33,
+    "stashId": 33,
+    "title": "ЭВМ",
+    "image": "images/inventory/item_33.webp",
+    "reward": "Безумие +20%, Агрессия +20% на 3 дня",
+    "floor": {
+      "locId": 36,
+      "title": "K-3",
+      "name": "Камера доктора"
+    },
+    "elements": [
+      {
+        "id": 195,
+        "index": 1,
+        "title": "Элемент 33-1",
+        "image": "images/inventory/item_195.webp",
+        "sourceLabel": "Этаж K-3",
+        "source": {
+          "type": "floor",
+          "locId": 36,
+          "locTitle": "K-3",
+          "locName": "Камера доктора"
+        }
+      },
+      {
+        "id": 196,
+        "index": 2,
+        "title": "Элемент 33-2",
+        "image": "images/inventory/item_196.webp",
+        "sourceLabel": "Этаж K-3",
+        "source": {
+          "type": "floor",
+          "locId": 36,
+          "locTitle": "K-3",
+          "locName": "Камера доктора"
+        }
+      },
+      {
+        "id": 197,
+        "index": 3,
+        "title": "Элемент 33-3",
+        "image": "images/inventory/item_197.webp",
+        "sourceLabel": "Этаж K-3",
+        "source": {
+          "type": "floor",
+          "locId": 36,
+          "locTitle": "K-3",
+          "locName": "Камера доктора"
+        }
+      },
+      {
+        "id": 198,
+        "index": 4,
+        "title": "Элемент 33-4",
+        "image": "images/inventory/item_198.webp",
+        "sourceLabel": "Этаж K-3",
+        "source": {
+          "type": "floor",
+          "locId": 36,
+          "locTitle": "K-3",
+          "locName": "Камера доктора"
+        }
+      },
+      {
+        "id": 199,
+        "index": 5,
+        "title": "Элемент 33-5",
+        "image": "images/inventory/item_199.webp",
+        "sourceLabel": "Этаж K-3",
+        "source": {
+          "type": "floor",
+          "locId": 36,
+          "locTitle": "K-3",
+          "locName": "Камера доктора"
+        }
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "collectionId": 34,
+    "stashId": 34,
+    "title": "Медведь",
+    "image": "images/inventory/item_34.webp",
+    "reward": "Комплект одежды «Медведь»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 200,
+        "index": 1,
+        "title": "Элемент 34-1",
+        "image": "images/inventory/item_200.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 201,
+        "index": 2,
+        "title": "Элемент 34-2",
+        "image": "images/inventory/item_201.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 202,
+        "index": 3,
+        "title": "Элемент 34-3",
+        "image": "images/inventory/item_202.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 203,
+        "index": 4,
+        "title": "Элемент 34-4",
+        "image": "images/inventory/item_203.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 204,
+        "index": 5,
+        "title": "Элемент 34-5",
+        "image": "images/inventory/item_204.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "collectionId": 290,
+    "stashId": 290,
+    "title": "Квазимодо",
+    "image": "images/inventory/item_290.webp",
+    "reward": "Комплект одежды «Квазимодо»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 292,
+        "index": 1,
+        "title": "Элемент 35-1",
+        "image": "images/inventory/item_292.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 293,
+        "index": 2,
+        "title": "Элемент 35-2",
+        "image": "images/inventory/item_293.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 294,
+        "index": 3,
+        "title": "Элемент 35-3",
+        "image": "images/inventory/item_294.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 295,
+        "index": 4,
+        "title": "Элемент 35-4",
+        "image": "images/inventory/item_295.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 296,
+        "index": 5,
+        "title": "Элемент 35-5",
+        "image": "images/inventory/item_296.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "collectionId": 291,
+    "stashId": 291,
+    "title": "Волк",
+    "image": "images/inventory/item_291.webp",
+    "reward": "Комплект одежды «Волк»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 297,
+        "index": 1,
+        "title": "Элемент 36-1",
+        "image": "images/inventory/item_297.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 298,
+        "index": 2,
+        "title": "Элемент 36-2",
+        "image": "images/inventory/item_298.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 299,
+        "index": 3,
+        "title": "Элемент 36-3",
+        "image": "images/inventory/item_299.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 300,
+        "index": 4,
+        "title": "Элемент 36-4",
+        "image": "images/inventory/item_300.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 301,
+        "index": 5,
+        "title": "Элемент 36-5",
+        "image": "images/inventory/item_301.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "collectionId": 318,
+    "stashId": 318,
+    "title": "Гербарий",
+    "image": "images/inventory/item_318.webp",
+    "reward": "Безумие +25% на 3 дня",
+    "floor": {
+      "locId": 28,
+      "title": "I-1",
+      "name": "Переходы"
+    },
+    "elements": [
+      {
+        "id": 306,
+        "index": 1,
+        "title": "Элемент 37-1",
+        "image": "images/inventory/item_306.webp",
+        "sourceLabel": "Этаж I-1",
+        "source": {
+          "type": "floor",
+          "locId": 28,
+          "locTitle": "I-1",
+          "locName": "Переходы"
+        }
+      },
+      {
+        "id": 305,
+        "index": 2,
+        "title": "Элемент 37-2",
+        "image": "images/inventory/item_305.webp",
+        "sourceLabel": "Этаж I-1",
+        "source": {
+          "type": "floor",
+          "locId": 28,
+          "locTitle": "I-1",
+          "locName": "Переходы"
+        }
+      },
+      {
+        "id": 304,
+        "index": 3,
+        "title": "Элемент 37-3",
+        "image": "images/inventory/item_304.webp",
+        "sourceLabel": "Этаж I-1",
+        "source": {
+          "type": "floor",
+          "locId": 28,
+          "locTitle": "I-1",
+          "locName": "Переходы"
+        }
+      },
+      {
+        "id": 303,
+        "index": 4,
+        "title": "Элемент 37-4",
+        "image": "images/inventory/item_303.webp",
+        "sourceLabel": "Этаж I-1",
+        "source": {
+          "type": "floor",
+          "locId": 28,
+          "locTitle": "I-1",
+          "locName": "Переходы"
+        }
+      },
+      {
+        "id": 317,
+        "index": 5,
+        "title": "Элемент 37-5",
+        "image": "images/inventory/item_317.webp",
+        "sourceLabel": "Этаж I-1",
+        "source": {
+          "type": "floor",
+          "locId": 28,
+          "locTitle": "I-1",
+          "locName": "Переходы"
+        }
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "collectionId": 319,
+    "stashId": 319,
+    "title": "Коктейль ведьмы",
+    "image": "images/inventory/item_319.webp",
+    "reward": "Агрессия +15% на 3 дня",
+    "floor": {
+      "locId": 30,
+      "title": "I-2",
+      "name": "Лифты"
+    },
+    "elements": [
+      {
+        "id": 307,
+        "index": 1,
+        "title": "Элемент 38-1",
+        "image": "images/inventory/item_307.webp",
+        "sourceLabel": "Этаж I-2",
+        "source": {
+          "type": "floor",
+          "locId": 30,
+          "locTitle": "I-2",
+          "locName": "Лифты"
+        }
+      },
+      {
+        "id": 308,
+        "index": 2,
+        "title": "Элемент 38-2",
+        "image": "images/inventory/item_308.webp",
+        "sourceLabel": "Этаж I-2",
+        "source": {
+          "type": "floor",
+          "locId": 30,
+          "locTitle": "I-2",
+          "locName": "Лифты"
+        }
+      },
+      {
+        "id": 309,
+        "index": 3,
+        "title": "Элемент 38-3",
+        "image": "images/inventory/item_309.webp",
+        "sourceLabel": "Этаж I-2",
+        "source": {
+          "type": "floor",
+          "locId": 30,
+          "locTitle": "I-2",
+          "locName": "Лифты"
+        }
+      },
+      {
+        "id": 310,
+        "index": 4,
+        "title": "Элемент 38-4",
+        "image": "images/inventory/item_310.webp",
+        "sourceLabel": "Этаж I-2",
+        "source": {
+          "type": "floor",
+          "locId": 30,
+          "locTitle": "I-2",
+          "locName": "Лифты"
+        }
+      },
+      {
+        "id": 311,
+        "index": 5,
+        "title": "Элемент 38-5",
+        "image": "images/inventory/item_311.webp",
+        "sourceLabel": "Этаж I-2",
+        "source": {
+          "type": "floor",
+          "locId": 30,
+          "locTitle": "I-2",
+          "locName": "Лифты"
+        }
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "collectionId": 320,
+    "stashId": 320,
+    "title": "Существа в клетке",
+    "image": "images/inventory/item_320.webp",
+    "reward": "Энергия работ +90 на 3 дня",
+    "floor": {
+      "locId": 29,
+      "title": "I-3",
+      "name": "Катакомбы"
+    },
+    "elements": [
+      {
+        "id": 312,
+        "index": 1,
+        "title": "Элемент 39-1",
+        "image": "images/inventory/item_312.webp",
+        "sourceLabel": "Этаж I-3",
+        "source": {
+          "type": "floor",
+          "locId": 29,
+          "locTitle": "I-3",
+          "locName": "Катакомбы"
+        }
+      },
+      {
+        "id": 313,
+        "index": 2,
+        "title": "Элемент 39-2",
+        "image": "images/inventory/item_313.webp",
+        "sourceLabel": "Этаж I-3",
+        "source": {
+          "type": "floor",
+          "locId": 29,
+          "locTitle": "I-3",
+          "locName": "Катакомбы"
+        }
+      },
+      {
+        "id": 314,
+        "index": 3,
+        "title": "Элемент 39-3",
+        "image": "images/inventory/item_314.webp",
+        "sourceLabel": "Этаж I-3",
+        "source": {
+          "type": "floor",
+          "locId": 29,
+          "locTitle": "I-3",
+          "locName": "Катакомбы"
+        }
+      },
+      {
+        "id": 315,
+        "index": 4,
+        "title": "Элемент 39-4",
+        "image": "images/inventory/item_315.webp",
+        "sourceLabel": "Этаж I-3",
+        "source": {
+          "type": "floor",
+          "locId": 29,
+          "locTitle": "I-3",
+          "locName": "Катакомбы"
+        }
+      },
+      {
+        "id": 316,
+        "index": 5,
+        "title": "Элемент 39-5",
+        "image": "images/inventory/item_316.webp",
+        "sourceLabel": "Этаж I-3",
+        "source": {
+          "type": "floor",
+          "locId": 29,
+          "locTitle": "I-3",
+          "locName": "Катакомбы"
+        }
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "collectionId": 332,
+    "stashId": 332,
+    "title": "Лемур",
+    "image": "images/inventory/item_332.webp",
+    "reward": "Комплект одежды «Лемур»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 327,
+        "index": 1,
+        "title": "Элемент 40-1",
+        "image": "images/inventory/item_327.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 328,
+        "index": 2,
+        "title": "Элемент 40-2",
+        "image": "images/inventory/item_328.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 329,
+        "index": 3,
+        "title": "Элемент 40-3",
+        "image": "images/inventory/item_329.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 330,
+        "index": 4,
+        "title": "Элемент 40-4",
+        "image": "images/inventory/item_330.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 331,
+        "index": 5,
+        "title": "Элемент 40-5",
+        "image": "images/inventory/item_331.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "collectionId": 333,
+    "stashId": 333,
+    "title": "Примус",
+    "image": "images/inventory/item_333.webp",
+    "reward": "Безумие +10%, Агрессия +10%, Ярость +25%, Энергия боя +1 на 3 дня",
+    "floor": {
+      "locId": 31,
+      "title": "J-1",
+      "name": "Проклятая роща"
+    },
+    "elements": [
+      {
+        "id": 374,
+        "index": 1,
+        "title": "Элемент 41-1",
+        "image": "images/inventory/item_374.webp",
+        "sourceLabel": "Этаж J-1",
+        "source": {
+          "type": "floor",
+          "locId": 31,
+          "locTitle": "J-1",
+          "locName": "Проклятая роща"
+        }
+      },
+      {
+        "id": 408,
+        "index": 2,
+        "title": "Элемент 41-2",
+        "image": "images/inventory/item_408.webp",
+        "sourceLabel": "Этаж J-1",
+        "source": {
+          "type": "floor",
+          "locId": 31,
+          "locTitle": "J-1",
+          "locName": "Проклятая роща"
+        }
+      },
+      {
+        "id": 409,
+        "index": 3,
+        "title": "Элемент 41-3",
+        "image": "images/inventory/item_409.webp",
+        "sourceLabel": "Этаж J-1",
+        "source": {
+          "type": "floor",
+          "locId": 31,
+          "locTitle": "J-1",
+          "locName": "Проклятая роща"
+        }
+      },
+      {
+        "id": 410,
+        "index": 4,
+        "title": "Элемент 41-4",
+        "image": "images/inventory/item_410.webp",
+        "sourceLabel": "Этаж J-1",
+        "source": {
+          "type": "floor",
+          "locId": 31,
+          "locTitle": "J-1",
+          "locName": "Проклятая роща"
+        }
+      },
+      {
+        "id": 411,
+        "index": 5,
+        "title": "Элемент 41-5",
+        "image": "images/inventory/item_411.webp",
+        "sourceLabel": "Этаж J-1",
+        "source": {
+          "type": "floor",
+          "locId": 31,
+          "locTitle": "J-1",
+          "locName": "Проклятая роща"
+        }
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "collectionId": 417,
+    "stashId": 417,
+    "title": "Кристальный эликсир",
+    "image": "images/inventory/item_417.webp",
+    "reward": "Безумие +10%, Агрессия +10%, Ярость +55%, Энергия работ +10 на 3 дня",
+    "floor": {
+      "locId": 32,
+      "title": "J-2",
+      "name": "Тайная обитель"
+    },
+    "elements": [
+      {
+        "id": 412,
+        "index": 1,
+        "title": "Элемент 42-1",
+        "image": "images/inventory/item_412.webp",
+        "sourceLabel": "Этаж J-2",
+        "source": {
+          "type": "floor",
+          "locId": 32,
+          "locTitle": "J-2",
+          "locName": "Тайная обитель"
+        }
+      },
+      {
+        "id": 413,
+        "index": 2,
+        "title": "Элемент 42-2",
+        "image": "images/inventory/item_413.webp",
+        "sourceLabel": "Этаж J-2",
+        "source": {
+          "type": "floor",
+          "locId": 32,
+          "locTitle": "J-2",
+          "locName": "Тайная обитель"
+        }
+      },
+      {
+        "id": 414,
+        "index": 3,
+        "title": "Элемент 42-3",
+        "image": "images/inventory/item_414.webp",
+        "sourceLabel": "Этаж J-2",
+        "source": {
+          "type": "floor",
+          "locId": 32,
+          "locTitle": "J-2",
+          "locName": "Тайная обитель"
+        }
+      },
+      {
+        "id": 415,
+        "index": 4,
+        "title": "Элемент 42-4",
+        "image": "images/inventory/item_415.webp",
+        "sourceLabel": "Этаж J-2",
+        "source": {
+          "type": "floor",
+          "locId": 32,
+          "locTitle": "J-2",
+          "locName": "Тайная обитель"
+        }
+      },
+      {
+        "id": 416,
+        "index": 5,
+        "title": "Элемент 42-5",
+        "image": "images/inventory/item_416.webp",
+        "sourceLabel": "Этаж J-2",
+        "source": {
+          "type": "floor",
+          "locId": 32,
+          "locTitle": "J-2",
+          "locName": "Тайная обитель"
+        }
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "collectionId": 423,
+    "stashId": 423,
+    "title": "Набор черепов",
+    "image": "images/inventory/item_423.webp",
+    "reward": "Безумие +20%, Агрессия +20% на 3 дня",
+    "floor": {
+      "locId": 33,
+      "title": "J-3",
+      "name": "Мертвецкая долина"
+    },
+    "elements": [
+      {
+        "id": 418,
+        "index": 1,
+        "title": "Элемент 43-1",
+        "image": "images/inventory/item_418.webp",
+        "sourceLabel": "Этаж J-3",
+        "source": {
+          "type": "floor",
+          "locId": 33,
+          "locTitle": "J-3",
+          "locName": "Мертвецкая долина"
+        }
+      },
+      {
+        "id": 419,
+        "index": 2,
+        "title": "Элемент 43-2",
+        "image": "images/inventory/item_419.webp",
+        "sourceLabel": "Этаж J-3",
+        "source": {
+          "type": "floor",
+          "locId": 33,
+          "locTitle": "J-3",
+          "locName": "Мертвецкая долина"
+        }
+      },
+      {
+        "id": 420,
+        "index": 3,
+        "title": "Элемент 43-3",
+        "image": "images/inventory/item_420.webp",
+        "sourceLabel": "Этаж J-3",
+        "source": {
+          "type": "floor",
+          "locId": 33,
+          "locTitle": "J-3",
+          "locName": "Мертвецкая долина"
+        }
+      },
+      {
+        "id": 421,
+        "index": 4,
+        "title": "Элемент 43-4",
+        "image": "images/inventory/item_421.webp",
+        "sourceLabel": "Этаж J-3",
+        "source": {
+          "type": "floor",
+          "locId": 33,
+          "locTitle": "J-3",
+          "locName": "Мертвецкая долина"
+        }
+      },
+      {
+        "id": 422,
+        "index": 5,
+        "title": "Элемент 43-5",
+        "image": "images/inventory/item_422.webp",
+        "sourceLabel": "Этаж J-3",
+        "source": {
+          "type": "floor",
+          "locId": 33,
+          "locTitle": "J-3",
+          "locName": "Мертвецкая долина"
+        }
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "collectionId": 430,
+    "stashId": 430,
+    "title": "Деньги и опыт x2",
+    "image": "images/inventory/item_430.webp",
+    "reward": "Опыт x2, Деньги x2 на 1 ч.",
+    "floor": null,
+    "elements": [
+      {
+        "id": 431,
+        "index": 1,
+        "title": "Элемент 44-1",
+        "image": "images/inventory/item_431.webp",
+        "sourceLabel": "—",
+        "source": {}
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "collectionId": 432,
+    "stashId": 432,
+    "title": "Деньги и опыт x3",
+    "image": "images/inventory/item_432.webp",
+    "reward": "Опыт x3, Деньги x3 на 1 ч.",
+    "floor": null,
+    "elements": [
+      {
+        "id": 433,
+        "index": 1,
+        "title": "Элемент 45-1",
+        "image": "images/inventory/item_433.webp",
+        "sourceLabel": "—",
+        "source": {}
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "collectionId": 435,
+    "stashId": 435,
+    "title": "1500 опыта",
+    "image": "images/inventory/item_435.webp",
+    "reward": "+1500 опыта",
+    "floor": null,
+    "elements": [
+      {
+        "id": 434,
+        "index": 1,
+        "title": "Элемент 46-1",
+        "image": "images/inventory/item_434.webp",
+        "sourceLabel": "—",
+        "source": {}
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "collectionId": 484,
+    "stashId": 484,
+    "title": "Клинок",
+    "image": "images/inventory/item_484.webp",
+    "reward": "Крафт оружия «Клинок»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 454,
+        "index": 1,
+        "title": "Элемент 50-1",
+        "image": "images/inventory/item_454.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 455,
+        "index": 2,
+        "title": "Элемент 50-2",
+        "image": "images/inventory/item_455.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 456,
+        "index": 3,
+        "title": "Элемент 50-3",
+        "image": "images/inventory/item_456.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 457,
+        "index": 4,
+        "title": "Элемент 50-4",
+        "image": "images/inventory/item_457.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 458,
+        "index": 5,
+        "title": "Элемент 50-5",
+        "image": "images/inventory/item_458.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "collectionId": 485,
+    "stashId": 485,
+    "title": "Палица",
+    "image": "images/inventory/item_485.webp",
+    "reward": "Крафт оружия «Палица»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 459,
+        "index": 1,
+        "title": "Элемент 51-1",
+        "image": "images/inventory/item_459.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 460,
+        "index": 2,
+        "title": "Элемент 51-2",
+        "image": "images/inventory/item_460.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 461,
+        "index": 3,
+        "title": "Элемент 51-3",
+        "image": "images/inventory/item_461.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 462,
+        "index": 4,
+        "title": "Элемент 51-4",
+        "image": "images/inventory/item_462.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 463,
+        "index": 5,
+        "title": "Элемент 51-5",
+        "image": "images/inventory/item_463.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "collectionId": 486,
+    "stashId": 486,
+    "title": "Череподробитель",
+    "image": "images/inventory/item_486.webp",
+    "reward": "Крафт оружия «Череподробитель»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 464,
+        "index": 1,
+        "title": "Элемент 52-1",
+        "image": "images/inventory/item_464.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 465,
+        "index": 2,
+        "title": "Элемент 52-2",
+        "image": "images/inventory/item_465.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 466,
+        "index": 3,
+        "title": "Элемент 52-3",
+        "image": "images/inventory/item_466.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 467,
+        "index": 4,
+        "title": "Элемент 52-4",
+        "image": "images/inventory/item_467.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 468,
+        "index": 5,
+        "title": "Элемент 52-5",
+        "image": "images/inventory/item_468.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "collectionId": 487,
+    "stashId": 487,
+    "title": "Моргенштерн",
+    "image": "images/inventory/item_487.webp",
+    "reward": "Крафт оружия «Моргенштерн»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 469,
+        "index": 1,
+        "title": "Элемент 53-1",
+        "image": "images/inventory/item_469.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 470,
+        "index": 2,
+        "title": "Элемент 53-2",
+        "image": "images/inventory/item_470.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 471,
+        "index": 3,
+        "title": "Элемент 53-3",
+        "image": "images/inventory/item_471.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 472,
+        "index": 4,
+        "title": "Элемент 53-4",
+        "image": "images/inventory/item_472.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 473,
+        "index": 5,
+        "title": "Элемент 53-5",
+        "image": "images/inventory/item_473.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "collectionId": 488,
+    "stashId": 488,
+    "title": "Алебарда",
+    "image": "images/inventory/item_488.webp",
+    "reward": "Крафт оружия «Алебарда»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 474,
+        "index": 1,
+        "title": "Элемент 54-1",
+        "image": "images/inventory/item_474.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 475,
+        "index": 2,
+        "title": "Элемент 54-2",
+        "image": "images/inventory/item_475.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 476,
+        "index": 3,
+        "title": "Элемент 54-3",
+        "image": "images/inventory/item_476.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 477,
+        "index": 4,
+        "title": "Элемент 54-4",
+        "image": "images/inventory/item_477.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 478,
+        "index": 5,
+        "title": "Элемент 54-5",
+        "image": "images/inventory/item_478.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "collectionId": 489,
+    "stashId": 489,
+    "title": "Пиломеч",
+    "image": "images/inventory/item_489.webp",
+    "reward": "Крафт оружия «Пиломеч»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 479,
+        "index": 1,
+        "title": "Элемент 55-1",
+        "image": "images/inventory/item_479.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 480,
+        "index": 2,
+        "title": "Элемент 55-2",
+        "image": "images/inventory/item_480.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 481,
+        "index": 3,
+        "title": "Элемент 55-3",
+        "image": "images/inventory/item_481.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 482,
+        "index": 4,
+        "title": "Элемент 55-4",
+        "image": "images/inventory/item_482.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 483,
+        "index": 5,
+        "title": "Элемент 55-5",
+        "image": "images/inventory/item_483.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "collectionId": 505,
+    "stashId": 505,
+    "title": "Полурослик",
+    "image": "images/inventory/item_505.webp",
+    "reward": "Комплект одежды «Полурослик»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 490,
+        "index": 1,
+        "title": "Элемент 47-1",
+        "image": "images/inventory/item_490.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 491,
+        "index": 2,
+        "title": "Элемент 47-2",
+        "image": "images/inventory/item_491.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 492,
+        "index": 3,
+        "title": "Элемент 47-3",
+        "image": "images/inventory/item_492.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 493,
+        "index": 4,
+        "title": "Элемент 47-4",
+        "image": "images/inventory/item_493.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 494,
+        "index": 5,
+        "title": "Элемент 47-5",
+        "image": "images/inventory/item_494.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "collectionId": 506,
+    "stashId": 506,
+    "title": "Кобра",
+    "image": "images/inventory/item_506.webp",
+    "reward": "Комплект одежды «Кобра»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 495,
+        "index": 1,
+        "title": "Элемент 48-1",
+        "image": "images/inventory/item_495.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 496,
+        "index": 2,
+        "title": "Элемент 48-2",
+        "image": "images/inventory/item_496.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 497,
+        "index": 3,
+        "title": "Элемент 48-3",
+        "image": "images/inventory/item_497.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 498,
+        "index": 4,
+        "title": "Элемент 48-4",
+        "image": "images/inventory/item_498.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 499,
+        "index": 5,
+        "title": "Элемент 48-5",
+        "image": "images/inventory/item_499.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "collectionId": 511,
+    "stashId": 511,
+    "title": "Новогодний набор",
+    "image": "images/inventory/item_511.webp",
+    "reward": "Безумие +25%, Агрессия +25%, Ярость +25%, Энергия работ +120, Энергия боя +1, Опыт x2, Деньги x2 на 3 дня",
+    "floor": null,
+    "elements": [
+      {
+        "id": 500,
+        "index": 1,
+        "title": "Элемент 49-1",
+        "image": "images/inventory/item_500.webp",
+        "sourceLabel": "—",
+        "source": {}
+      },
+      {
+        "id": 501,
+        "index": 2,
+        "title": "Элемент 49-2",
+        "image": "images/inventory/item_501.webp",
+        "sourceLabel": "—",
+        "source": {}
+      },
+      {
+        "id": 502,
+        "index": 3,
+        "title": "Элемент 49-3",
+        "image": "images/inventory/item_502.webp",
+        "sourceLabel": "—",
+        "source": {}
+      },
+      {
+        "id": 503,
+        "index": 4,
+        "title": "Элемент 49-4",
+        "image": "images/inventory/item_503.webp",
+        "sourceLabel": "—",
+        "source": {}
+      },
+      {
+        "id": 504,
+        "index": 5,
+        "title": "Элемент 49-5",
+        "image": "images/inventory/item_504.webp",
+        "sourceLabel": "—",
+        "source": {}
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "collectionId": 599,
+    "stashId": 599,
+    "title": "Набор умельца",
+    "image": "images/inventory/item_599.webp",
+    "reward": "Предмет «Набор умельца»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 594,
+        "index": 1,
+        "title": "Элемент 56-1",
+        "image": "images/inventory/item_594.webp",
+        "sourceLabel": "Cнежище",
+        "source": {
+          "type": "boss",
+          "bossId": 29,
+          "bossTitle": "Cнежище",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 595,
+        "index": 2,
+        "title": "Элемент 56-2",
+        "image": "images/inventory/item_595.webp",
+        "sourceLabel": "Делириум",
+        "source": {
+          "type": "boss",
+          "bossId": 32,
+          "bossTitle": "Делириум",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 596,
+        "index": 3,
+        "title": "Элемент 56-3",
+        "image": "images/inventory/item_596.webp",
+        "sourceLabel": "Древний",
+        "source": {
+          "type": "boss",
+          "bossId": 41,
+          "bossTitle": "Древний",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 597,
+        "index": 4,
+        "title": "Элемент 56-4",
+        "image": "images/inventory/item_597.webp",
+        "sourceLabel": "Носферату",
+        "source": {
+          "type": "boss",
+          "bossId": 55,
+          "bossTitle": "Носферату",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 598,
+        "index": 5,
+        "title": "Элемент 56-5",
+        "image": "images/inventory/item_598.webp",
+        "sourceLabel": "Падший",
+        "source": {
+          "type": "boss",
+          "bossId": 66,
+          "bossTitle": "Падший",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "collectionId": 605,
+    "stashId": 605,
+    "title": "Каркас медальона",
+    "image": "images/inventory/item_605.webp",
+    "reward": "Предмет «Каркас медальона»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 600,
+        "index": 1,
+        "title": "Элемент 57-1",
+        "image": "images/inventory/item_600.webp",
+        "sourceLabel": "Беовульф",
+        "source": {
+          "type": "boss",
+          "bossId": 42,
+          "bossTitle": "Беовульф",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 601,
+        "index": 2,
+        "title": "Элемент 57-2",
+        "image": "images/inventory/item_601.webp",
+        "sourceLabel": "Леди Бенедикт",
+        "source": {
+          "type": "boss",
+          "bossId": 57,
+          "bossTitle": "Леди Бенедикт",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 602,
+        "index": 3,
+        "title": "Элемент 57-3",
+        "image": "images/inventory/item_602.webp",
+        "sourceLabel": "Серый программист",
+        "source": {
+          "type": "boss",
+          "bossId": 58,
+          "bossTitle": "Серый программист",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 603,
+        "index": 4,
+        "title": "Элемент 57-4",
+        "image": "images/inventory/item_603.webp",
+        "sourceLabel": "Санта Буркхардт",
+        "source": {
+          "type": "boss",
+          "bossId": 92,
+          "bossTitle": "Санта Буркхардт",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 604,
+        "index": 5,
+        "title": "Элемент 57-5",
+        "image": "images/inventory/item_604.webp",
+        "sourceLabel": "Озверевший Генри",
+        "source": {
+          "type": "boss",
+          "bossId": 39,
+          "bossTitle": "Озверевший Генри",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "collectionId": 611,
+    "stashId": 611,
+    "title": "Фрагменты осады",
+    "image": "images/inventory/item_611.webp",
+    "reward": "Предмет «Фрагменты осады»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 606,
+        "index": 1,
+        "title": "Элемент 58-1",
+        "image": "images/inventory/item_606.webp",
+        "sourceLabel": "Дикая Агнет",
+        "source": {
+          "type": "boss",
+          "bossId": 40,
+          "bossTitle": "Дикая Агнет",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 607,
+        "index": 2,
+        "title": "Элемент 58-2",
+        "image": "images/inventory/item_607.webp",
+        "sourceLabel": "Охранник-мутант",
+        "source": {
+          "type": "boss",
+          "bossId": 56,
+          "bossTitle": "Охранник-мутант",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 608,
+        "index": 3,
+        "title": "Элемент 58-3",
+        "image": "images/inventory/item_608.webp",
+        "sourceLabel": "Маньяк Бруно",
+        "source": {
+          "type": "boss",
+          "bossId": 59,
+          "bossTitle": "Маньяк Бруно",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 609,
+        "index": 4,
+        "title": "Элемент 58-4",
+        "image": "images/inventory/item_609.webp",
+        "sourceLabel": "Румпельштильцхен",
+        "source": {
+          "type": "boss",
+          "bossId": 85,
+          "bossTitle": "Румпельштильцхен",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 610,
+        "index": 5,
+        "title": "Элемент 58-5",
+        "image": "images/inventory/item_610.webp",
+        "sourceLabel": "Арнольд Мецгер",
+        "source": {
+          "type": "boss",
+          "bossId": 86,
+          "bossTitle": "Арнольд Мецгер",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "collectionId": 617,
+    "stashId": 617,
+    "title": "Мифические фрагменты",
+    "image": "images/inventory/item_617.webp",
+    "reward": "Предмет «Мифические фрагменты»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 612,
+        "index": 1,
+        "title": "Элемент 59-1",
+        "image": "images/inventory/item_612.webp",
+        "sourceLabel": "Вильгельм Гольц",
+        "source": {
+          "type": "boss",
+          "bossId": 87,
+          "bossTitle": "Вильгельм Гольц",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 613,
+        "index": 2,
+        "title": "Элемент 59-2",
+        "image": "images/inventory/item_613.webp",
+        "sourceLabel": "Госпожа Де Вит",
+        "source": {
+          "type": "boss",
+          "bossId": 88,
+          "bossTitle": "Госпожа Де Вит",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 614,
+        "index": 3,
+        "title": "Элемент 59-3",
+        "image": "images/inventory/item_614.webp",
+        "sourceLabel": "Маркус Рауш",
+        "source": {
+          "type": "boss",
+          "bossId": 89,
+          "bossTitle": "Маркус Рауш",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 615,
+        "index": 4,
+        "title": "Элемент 59-4",
+        "image": "images/inventory/item_615.webp",
+        "sourceLabel": "Вольфганг Мясник",
+        "source": {
+          "type": "boss",
+          "bossId": 90,
+          "bossTitle": "Вольфганг Мясник",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 616,
+        "index": 5,
+        "title": "Элемент 59-5",
+        "image": "images/inventory/item_616.webp",
+        "sourceLabel": "Страж",
+        "source": {
+          "type": "boss",
+          "bossId": 79,
+          "bossTitle": "Страж",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "collectionId": 623,
+    "stashId": 623,
+    "title": "Бесценный набор",
+    "image": "images/inventory/item_623.webp",
+    "reward": "Предмет «Бесценный набор»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 618,
+        "index": 1,
+        "title": "Элемент 60-1",
+        "image": "images/inventory/item_618.webp",
+        "sourceLabel": "Старец",
+        "source": {
+          "type": "boss",
+          "bossId": 80,
+          "bossTitle": "Старец",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 619,
+        "index": 2,
+        "title": "Элемент 60-2",
+        "image": "images/inventory/item_619.webp",
+        "sourceLabel": "Госпожа",
+        "source": {
+          "type": "boss",
+          "bossId": 81,
+          "bossTitle": "Госпожа",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 620,
+        "index": 3,
+        "title": "Элемент 60-3",
+        "image": "images/inventory/item_620.webp",
+        "sourceLabel": "Амбал",
+        "source": {
+          "type": "boss",
+          "bossId": 82,
+          "bossTitle": "Амбал",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 621,
+        "index": 4,
+        "title": "Элемент 60-4",
+        "image": "images/inventory/item_621.webp",
+        "sourceLabel": "Фурия",
+        "source": {
+          "type": "boss",
+          "bossId": 83,
+          "bossTitle": "Фурия",
+          "prob": 0.1
+        }
+      },
+      {
+        "id": 622,
+        "index": 5,
+        "title": "Элемент 60-5",
+        "image": "images/inventory/item_622.webp",
+        "sourceLabel": "Зверь",
+        "source": {
+          "type": "boss",
+          "bossId": 84,
+          "bossTitle": "Зверь",
+          "prob": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "collectionId": 629,
+    "stashId": 629,
+    "title": "Медальон падших",
+    "image": "images/inventory/item_629.webp",
+    "reward": "Предмет «Медальон падших»",
+    "floor": null,
+    "elements": [
+      {
+        "id": 624,
+        "index": 1,
+        "title": "Элемент 61-1",
+        "image": "images/inventory/item_624.webp",
+        "sourceLabel": "Кридокс - Разрушитель разума",
+        "source": {
+          "type": "boss",
+          "bossId": 102,
+          "bossTitle": "Кридокс - Разрушитель разума",
+          "prob": 0.01
+        }
+      },
+      {
+        "id": 625,
+        "index": 2,
+        "title": "Элемент 61-2",
+        "image": "images/inventory/item_625.webp",
+        "sourceLabel": "Кридокс - Разрушитель разума",
+        "source": {
+          "type": "boss",
+          "bossId": 102,
+          "bossTitle": "Кридокс - Разрушитель разума",
+          "prob": 0.01
+        }
+      },
+      {
+        "id": 626,
+        "index": 3,
+        "title": "Элемент 61-3",
+        "image": "images/inventory/item_626.webp",
+        "sourceLabel": "Кридокс - Разрушитель разума",
+        "source": {
+          "type": "boss",
+          "bossId": 102,
+          "bossTitle": "Кридокс - Разрушитель разума",
+          "prob": 0.01
+        }
+      },
+      {
+        "id": 627,
+        "index": 4,
+        "title": "Элемент 61-4",
+        "image": "images/inventory/item_627.webp",
+        "sourceLabel": "Кридокс - Разрушитель разума",
+        "source": {
+          "type": "boss",
+          "bossId": 102,
+          "bossTitle": "Кридокс - Разрушитель разума",
+          "prob": 0.01
+        }
+      },
+      {
+        "id": 628,
+        "index": 5,
+        "title": "Элемент 61-5",
+        "image": "images/inventory/item_628.webp",
+        "sourceLabel": "Кридокс - Разрушитель разума",
+        "source": {
+          "type": "boss",
+          "bossId": 102,
+          "bossTitle": "Кридокс - Разрушитель разума",
+          "prob": 0.01
+        }
+      }
+    ]
+  }
+]
