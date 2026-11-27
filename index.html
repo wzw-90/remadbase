@@ -2046,6 +2046,321 @@
       }
     }
 
+  
+    /* =========================================================================
+       MUTAGEN CALCULATOR & OPTIMIZER (Paimon.moe style)
+       ========================================================================= */
+    .calc-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .calc-hero {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.16) 0%, rgba(239, 68, 68, 0.12) 50%, rgba(14, 165, 233, 0.1) 100%), #0d121c;
+      border: 1px solid #36284a;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .calc-hero h2 {
+      font-family: var(--font-header);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 0.35rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .calc-hero p {
+      color: #94a3b8;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .calc-card {
+      background: #0f141f;
+      border: 1px solid #202b3d;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    .calc-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .calc-step-title {
+      font-family: var(--font-header);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .calc-step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(168, 85, 247, 0.4);
+    }
+
+    .calc-textarea {
+      width: 100%;
+      height: 105px;
+      background: #080b12;
+      border: 1px solid #243247;
+      border-radius: var(--radius-sm);
+      color: #e2e8f0;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.75rem;
+      resize: vertical;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .calc-textarea:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 1px #38bdf8;
+    }
+
+    .calc-btn-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
+    }
+
+    .calc-btn {
+      background: #141c2b;
+      border: 1px solid #27364d;
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.85rem;
+      color: #cbd5e1;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .calc-btn:hover {
+      background: #1e2a3f;
+      border-color: #38bdf8;
+      color: #fff;
+    }
+
+    .calc-btn-primary {
+      background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+      border: 1px solid #e53935;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(183, 38, 40, 0.4);
+    }
+    .calc-btn-primary:hover {
+      background: linear-gradient(180deg, #c92f31 0%, #9e2222 100%);
+      border-color: #ff5252;
+    }
+
+    .calc-btn-purple {
+      background: linear-gradient(180deg, #8b5cf6 0%, #6d28d9 100%);
+      border: 1px solid #a78bfa;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(139, 92, 246, 0.35);
+    }
+    .calc-btn-purple:hover {
+      background: linear-gradient(180deg, #9b6bf7 0%, #7c3aed 100%);
+      border-color: #c4b5fd;
+    }
+
+    .calc-mode-switch {
+      display: flex;
+      background: #090d15;
+      border: 1px solid #1f2a3a;
+      border-radius: var(--radius-sm);
+      padding: 3px;
+      gap: 3px;
+    }
+    .calc-mode-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      padding: 0.45rem 0.8rem;
+      border-radius: 4px;
+      color: #94a3b8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+    .calc-mode-btn.active {
+      background: #1e293b;
+      color: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      font-weight: 700;
+      border: 1px solid #334155;
+    }
+
+    .calc-slots-select {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .calc-slot-pill {
+      background: #101622;
+      border: 1px solid #222f42;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .calc-slot-pill.active {
+      background: #1e2a3f;
+      border-color: #38bdf8;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Comparison stat widgets */
+    .calc-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .calc-stat-box {
+      background: #0d121c;
+      border: 1px solid #233147;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .calc-stat-title {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .calc-stat-val-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .calc-stat-num {
+      font-family: var(--font-header);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .calc-stat-diff {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+    .calc-diff-pos {
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+    }
+    .calc-diff-zero {
+      background: rgba(148, 163, 184, 0.1);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      color: #94a3b8;
+    }
+
+    /* Action steps plan */
+    .calc-action-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .calc-action-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #0d121a;
+      border: 1px solid #1f293a;
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+    }
+    .calc-action-item.is-exchange {
+      border-color: rgba(168, 85, 247, 0.4);
+      background: rgba(168, 85, 247, 0.06);
+    }
+
+    .calc-action-idx {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: #172130;
+      color: #94a3b8;
+      font-weight: 700;
+      font-size: 0.74rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .calc-slots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .calc-slot-card {
+      background: #090d16;
+      border: 1px solid #1e2838;
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 0.65rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -2058,6 +2373,7 @@
       <button class="nav-tab active" data-tab="floors">🏥 Корпуса и этажи</button>
       <button class="nav-tab" data-tab="market">🏪 Магазин</button>
       <button class="nav-tab" data-tab="inventory">🗃️ Заначки</button>
+      <button class="nav-tab" data-tab="mutagens">🧬 Калькулятор мутагенов</button>
     </div>
   </nav>
 
@@ -2108,7 +2424,12 @@
       marketClothCategory: 'all',
       marketTattooSlot: 'all',
       marketCurrency: 'all',
-      marketSidebarOpen: false
+      marketSidebarOpen: false,
+      calcMode: 'slots',
+      calcSlots: 15,
+      calcRawInput: '',
+      calcUserInv: null,
+      calcResult: null
     };
 
     const UI = {
@@ -3561,28 +3882,622 @@
       UI.content.innerHTML = html;
     }
 
-    function renderMutagens(data, q) {
-      const enchants = data.mutagens.enchants || [];
-      let filtered = enchants.filter(e => !q || e.title.toLowerCase().includes(q) || e.id.toString() === q);
+    /* =========================================================================
+       MUTAGEN CALCULATOR & OPTIMIZER (Paimon.moe style)
+       ========================================================================= */
+    const EXPORT_DEVTOOLS_SCRIPT = `(async () => {
+  try {
+    const urls = [
+      '/play/api/enchant/status',
+      '/play/api/enchant',
+      '/play/api/enchant/progress',
+      '/play/api/pve/progress',
+      '/play/api/inventory'
+    ];
+    let payload = null;
+    for (const u of urls) {
+      try {
+        const r = await fetch(u);
+        if (r.ok) {
+          const j = await r.json();
+          if (j && (j.enchants || j.inventory || j.boxes || j.progress)) {
+            payload = j;
+            break;
+          }
+        }
+      } catch (e) {}
+    }
+    if (!payload && window.__GAME_DATA__) payload = window.__GAME_DATA__;
+    if (payload) {
+      copy(JSON.stringify(payload));
+      alert('✅ Мутагены успешно скопированы в буфер обмена!\\nПерейдите в калькулятор и нажмите «Вставить из буфера».');
+    } else {
+      alert('⚠️ Откройте вкладку Network в DevTools, обновите инвентарь мутагенов в игре и скопируйте ответ запроса.');
+    }
+  } catch (err) {
+    alert('Ошибка при экспорте: ' + err.message);
+  }
+})();`;
 
-      let html = `<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">Мутагены: ${filtered.length}</div><div class="grid">`;
-      filtered.forEach(e => {
-        const buff = (e.buffs && e.buffs[0] && e.buffs[0].stats && e.buffs[0].stats[0]) || {};
-        const statMap = { skill1: 'Ярость / Урон', skill2: 'Защита', skill3: 'Здоровье' };
-        html += `
-          <div class="card">
-            <div style="display:flex;gap:0.6rem;align-items:center;">
-              <img src="${e.image || ''}" width="38" height="38" style="background:#000;border-radius:4px;border:1px solid var(--border);"/>
-              <div>
-                <div style="font-weight:700;color:#fff;font-size:0.84rem;">${e.title}</div>
-                <div style="font-size:0.74rem;color:var(--accent-green);font-weight:600;">+${buff.count || 0} ${statMap[buff.name] || buff.name || ''}</div>
+    function copyExportScript(btn) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(EXPORT_DEVTOOLS_SCRIPT).then(() => {
+          const orig = btn.innerHTML;
+          btn.innerHTML = '✅ Скрипт скопирован в буфер!';
+          btn.style.borderColor = '#22c55e';
+          setTimeout(() => {
+            btn.innerHTML = orig;
+            btn.style.borderColor = '';
+          }, 3000);
+        });
+      } else {
+        prompt('Скопируйте скрипт вручную:', EXPORT_DEVTOOLS_SCRIPT);
+      }
+    }
+
+    function parseMutagenInput(text, enchants) {
+      const idMap = {};
+      const codeMap = {};
+      (enchants || []).forEach(e => {
+        idMap[e.id] = e;
+        const code = e.title.replace('Мутаген ', '').trim().toLowerCase();
+        codeMap[code] = e;
+        codeMap[e.title.toLowerCase()] = e;
+        codeMap[e.id.toString()] = e;
+      });
+
+      const inv = {};
+      const str = (text || '').trim();
+      if (!str) return inv;
+
+      // Try JSON parsing
+      if (str.startsWith('{') || str.startsWith('[')) {
+        try {
+          const parsed = JSON.parse(str);
+          function scan(obj) {
+            if (Array.isArray(obj)) {
+              obj.forEach(scan);
+            } else if (obj && typeof obj === 'object') {
+              if (obj.id != null && (obj.count != null || obj.amount != null)) {
+                const eid = Number(obj.id);
+                const cnt = Number(obj.count != null ? obj.count : obj.amount);
+                if (idMap[eid] && cnt > 0) inv[eid] = (inv[eid] || 0) + cnt;
+              } else if (obj.enchantId != null && obj.count != null) {
+                const eid = Number(obj.enchantId);
+                const cnt = Number(obj.count);
+                if (idMap[eid] && cnt > 0) inv[eid] = (inv[eid] || 0) + cnt;
+              } else {
+                for (let k in obj) {
+                  const kClean = k.replace('Мутаген ', '').trim().toLowerCase();
+                  if (codeMap[kClean] && typeof obj[k] === 'number' && obj[k] > 0) {
+                    const eid = codeMap[kClean].id;
+                    inv[eid] = (inv[eid] || 0) + obj[k];
+                  } else {
+                    scan(obj[k]);
+                  }
+                }
+              }
+            }
+          }
+          scan(parsed);
+          if (Object.keys(inv).length > 0) return inv;
+        } catch (e) {}
+      }
+
+      // Regex parsing (both multiline and comma/semicolon separated)
+      const pattern = /(?:мутаген\s+)?([a-zA-Z]+)[-\s]*([0-9]+|s)[\s:=x\-]+([0-9]+)/gi;
+      let m;
+      while ((m = pattern.exec(str)) !== null) {
+        const code = (m[1] + '-' + m[2]).toLowerCase();
+        const cnt = parseInt(m[3], 10);
+        if (codeMap[code] && cnt > 0) {
+          const eid = codeMap[code].id;
+          inv[eid] = (inv[eid] || 0) + cnt;
+        }
+      }
+
+      return inv;
+    }
+
+    function getEnchantStats(e) {
+      let madness = 0;   // skill2
+      let aggression = 0; // skill3
+      let stamina = 0;    // skill1
+      (e.buffs || []).forEach(b => {
+        (b.stats || []).forEach(s => {
+          if (s.name === 'skill2') madness += s.count;
+          if (s.name === 'skill3') aggression += s.count;
+          if (s.name === 'skill1') stamina += s.count;
+        });
+      });
+      return { madness, aggression, stamina, score: madness + aggression };
+    }
+
+    function evaluateMutagenInventory(inv, enchants, numSlots = 15) {
+      const items = [];
+      const encMap = {};
+      enchants.forEach(e => { encMap[e.id] = e; });
+
+      for (let eid in inv) {
+        const cnt = inv[eid];
+        const e = encMap[eid];
+        if (e && cnt > 0) {
+          const st = getEnchantStats(e);
+          for (let i = 0; i < cnt; i++) {
+            items.push({
+              id: e.id,
+              title: e.title,
+              score: st.score,
+              madness: st.madness,
+              aggression: st.aggression,
+              stamina: st.stamina
+            });
+          }
+        }
+      }
+
+      items.sort((a, b) => {
+        if (b.score !== a.score) return b.score - a.score;
+        if (b.madness !== a.madness) return b.madness - a.madness;
+        return b.aggression - a.aggression;
+      });
+
+      const equipped = (numSlots != null && numSlots > 0) ? items.slice(0, numSlots) : items;
+      return {
+        totalScore: equipped.reduce((sum, x) => sum + x.score, 0),
+        madness: equipped.reduce((sum, x) => sum + x.madness, 0),
+        aggression: equipped.reduce((sum, x) => sum + x.aggression, 0),
+        stamina: equipped.reduce((sum, x) => sum + x.stamina, 0),
+        equipped,
+        totalItemsCount: items.length
+      };
+    }
+
+    function runMutagenOptimization(initialInv, enchants, exchanges, numSlots = 15) {
+      let inv = Object.assign({}, initialInv);
+      const steps = [];
+      const encMap = {};
+      enchants.forEach(e => { encMap[e.id] = e; });
+
+      const seriesLevels = {};
+      enchants.forEach(e => {
+        const t = e.title.replace('Мутаген ', '').trim();
+        if (t.includes('-')) {
+          const parts = t.split('-');
+          const sName = parts[0];
+          const lvl = parseInt(parts[1], 10);
+          if (!isNaN(lvl)) {
+            if (!seriesLevels[sName]) seriesLevels[sName] = {};
+            seriesLevels[sName][lvl] = e;
+          }
+        }
+      });
+
+      let iteration = 0;
+      while (iteration < 200) {
+        iteration++;
+        const currEval = evaluateMutagenInventory(inv, enchants, numSlots);
+        const currScore = currEval.totalScore;
+
+        let bestAction = null;
+        let bestDelta = -999999;
+        let bestInv = null;
+
+        // 1. Candidate standard syntheses (5 -> 1)
+        const seriesList = ['A', 'F', 'Z', 'W', 'X', 'S', 'I'];
+        for (let s of seriesList) {
+          if (!seriesLevels[s]) continue;
+          for (let lvl = 1; lvl < 20; lvl++) {
+            const cEnc = seriesLevels[s][lvl];
+            const nEnc = seriesLevels[s][lvl + 1];
+            if (!cEnc || !nEnc) continue;
+
+            const cid = cEnc.id;
+            const nid = nEnc.id;
+            if ((inv[cid] || 0) >= 5) {
+              const testInv = Object.assign({}, inv);
+              testInv[cid] -= 5;
+              testInv[nid] = (testInv[nid] || 0) + 1;
+              const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
+              const delta = testEval.totalScore - currScore;
+
+              if (numSlots != null) {
+                if (delta > bestDelta) {
+                  bestDelta = delta;
+                  bestAction = {
+                    type: 'synthesis',
+                    desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
+                    delta
+                  };
+                  bestInv = testInv;
+                }
+              } else {
+                const unlimVal = lvl * 10;
+                if (unlimVal > bestDelta) {
+                  bestDelta = unlimVal;
+                  bestAction = {
+                    type: 'synthesis',
+                    desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
+                    delta
+                  };
+                  bestInv = testInv;
+                }
+              }
+            }
+          }
+        }
+
+        // 2. Candidate exchanges
+        (exchanges || []).forEach(ex => {
+          const rec = ex.recipe || [];
+          if (rec.length >= 2 && rec.every(r => (inv[r.id] || 0) >= r.count)) {
+            const testInv = Object.assign({}, inv);
+            rec.forEach(r => { testInv[r.id] -= r.count; });
+            (ex.drops || []).forEach(d => { testInv[d.id] = (testInv[d.id] || 0) + d.count; });
+
+            const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
+            const delta = testEval.totalScore - currScore;
+
+            if (numSlots != null) {
+              if (delta > 0 && delta > bestDelta) {
+                bestDelta = delta;
+                const inStr = rec.map(r => `${r.count}x ${encMap[r.id] ? encMap[r.id].title : r.id}`).join(' + ');
+                const outStr = (ex.drops || []).map(d => `${d.count}x ${encMap[d.id] ? encMap[d.id].title : d.id}`).join(' + ');
+                bestAction = {
+                  type: 'exchange',
+                  desc: `Обмен в Лаборатории: ${inStr} ➔ ${outStr}`,
+                  delta
+                };
+                bestInv = testInv;
+              }
+            } else {
+              if (delta >= 0 && delta > bestDelta) {
+                bestDelta = delta;
+                const inStr = rec.map(r => `${r.count}x ${encMap[r.id] ? encMap[r.id].title : r.id}`).join(' + ');
+                const outStr = (ex.drops || []).map(d => `${d.count}x ${encMap[d.id] ? encMap[d.id].title : d.id}`).join(' + ');
+                bestAction = {
+                  type: 'exchange',
+                  desc: `Обмен в Лаборатории: ${inStr} ➔ ${outStr}`,
+                  delta
+                };
+                bestInv = testInv;
+              }
+            }
+          }
+        });
+
+        if (bestAction && (bestDelta > 0 || (numSlots == null && bestDelta > -999))) {
+          inv = bestInv;
+          steps.push(bestAction);
+        } else {
+          // If no strictly positive action, in slots mode check if we can synthesize harmlessly
+          if (numSlots != null) {
+            let harmlessFound = false;
+            for (let s of seriesList) {
+              if (!seriesLevels[s]) continue;
+              for (let lvl = 1; lvl < 20; lvl++) {
+                const cEnc = seriesLevels[s][lvl];
+                const nEnc = seriesLevels[s][lvl + 1];
+                if (!cEnc || !nEnc) continue;
+                const cid = cEnc.id;
+                const nid = nEnc.id;
+                if ((inv[cid] || 0) >= 5) {
+                  const testInv = Object.assign({}, inv);
+                  testInv[cid] -= 5;
+                  testInv[nid] = (testInv[nid] || 0) + 1;
+                  const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
+                  if (testEval.totalScore >= currScore) {
+                    inv = testInv;
+                    steps.push({
+                      type: 'synthesis',
+                      desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
+                      delta: testEval.totalScore - currScore
+                    });
+                    harmlessFound = true;
+                    break;
+                  }
+                }
+              }
+              if (harmlessFound) break;
+            }
+            if (!harmlessFound) break;
+          } else {
+            break;
+          }
+        }
+      }
+
+      // Group consecutive identical steps for readable action plan
+      const groupedSteps = [];
+      steps.forEach(s => {
+        const last = groupedSteps[groupedSteps.length - 1];
+        if (last && last.desc === s.desc) {
+          last.repeatCount = (last.repeatCount || 1) + 1;
+          last.delta += s.delta;
+        } else {
+          groupedSteps.push(Object.assign({}, s, { repeatCount: 1 }));
+        }
+      });
+
+      return {
+        optimizedInv: inv,
+        steps: groupedSteps
+      };
+    }
+
+    function calculateMutagenOptimization() {
+      const data = window.GAME_DATA;
+      const enchants = (data.mutagens && data.mutagens.enchants) || [];
+      const exchanges = (data.mutagens && data.mutagens.exchanges) || [];
+
+      const raw = document.getElementById('calcInputText') ? document.getElementById('calcInputText').value : state.calcRawInput;
+      state.calcRawInput = raw;
+
+      let userInv = parseMutagenInput(raw, enchants);
+      if (Object.keys(userInv).length === 0 && state.calcUserInv) {
+        userInv = state.calcUserInv;
+      }
+      state.calcUserInv = userInv;
+
+      if (Object.keys(userInv).length === 0) {
+        alert('Пожалуйста, вставьте данные мутагенов из игры или нажмите «Загрузить пример».');
+        return;
+      }
+
+      const numSlots = (state.calcMode === 'slots') ? state.calcSlots : null;
+      const beforeEval = evaluateMutagenInventory(userInv, enchants, numSlots);
+      const opt = runMutagenOptimization(userInv, enchants, exchanges, numSlots);
+      const afterEval = evaluateMutagenInventory(opt.optimizedInv, enchants, numSlots);
+
+      state.calcResult = {
+        before: beforeEval,
+        after: afterEval,
+        steps: opt.steps,
+        optimizedInv: opt.optimizedInv
+      };
+
+      renderContent();
+    }
+
+    function loadDemoMutagens() {
+      const data = window.GAME_DATA;
+      const enchants = (data.mutagens && data.mutagens.enchants) || [];
+      const codeMap = {};
+      enchants.forEach(e => {
+        const code = e.title.replace('Мутаген ', '').trim().toLowerCase();
+        codeMap[code] = e.id;
+      });
+
+      const demoText = `A-1: 35\nA-2: 8\nA-9: 4\nF-1: 45\nF-2: 6\nF-9: 5\nI-1: 50\nZ-1: 2`;
+      state.calcRawInput = demoText;
+      const ta = document.getElementById('calcInputText');
+      if (ta) ta.value = demoText;
+      calculateMutagenOptimization();
+    }
+
+    function pasteClipboardToCalc() {
+      if (navigator.clipboard && navigator.clipboard.readText) {
+        navigator.clipboard.readText().then(text => {
+          if (text) {
+            state.calcRawInput = text;
+            const ta = document.getElementById('calcInputText');
+            if (ta) ta.value = text;
+            calculateMutagenOptimization();
+          }
+        }).catch(() => {
+          alert('Не удалось прочитать буфер обмена. Пожалуйста, вставьте текст с помощью Ctrl+V.');
+        });
+      } else {
+        alert('Пожалуйста, вставьте текст в поле ввода с помощью сочетания клавиш Ctrl+V.');
+      }
+    }
+
+    function clearCalc() {
+      state.calcRawInput = '';
+      state.calcUserInv = null;
+      state.calcResult = null;
+      renderContent();
+    }
+
+    function renderMutagens(data, q) {
+      const enchants = (data.mutagens && data.mutagens.enchants) || [];
+      const userInv = state.calcUserInv || {};
+      const res = state.calcResult;
+
+      const numSlots = state.calcSlots || 15;
+      const mode = state.calcMode || 'slots';
+
+      let resultsHtml = '';
+      if (res) {
+        const diffScore = res.after.totalScore - res.before.totalScore;
+        const diffMad = res.after.madness - res.before.madness;
+        const diffAgg = res.after.aggression - res.before.aggression;
+        const diffStam = res.after.stamina - res.before.stamina;
+
+        resultsHtml = `
+          <div class="calc-card" style="border-color:#38bdf8;background:linear-gradient(180deg, #111827 0%, #0c101a 100%);">
+            <div style="font-family:var(--font-header);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+              <span>📊 Результаты оптимизации ${mode === 'slots' ? `(Под ${numSlots} слотов)` : '(Без учета слотов)'}</span>
+              <span style="font-size:0.8rem;color:#38bdf8;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:2px 8px;border-radius:12px;">
+                ${res.steps.length} действий найдено
+              </span>
+            </div>
+
+            <div class="calc-stats-grid">
+              <div class="calc-stat-box" style="border-color:#e53935;">
+                <div class="calc-stat-title" style="color:#f87171;">🧠 Безумие</div>
+                <div class="calc-stat-val-row">
+                  <span class="calc-stat-num">${res.after.madness}</span>
+                  <span style="font-size:0.8rem;color:#94a3b8;">(было ${res.before.madness})</span>
+                  <span class="calc-stat-diff ${diffMad >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffMad >= 0 ? '+' + diffMad : diffMad}</span>
+                </div>
+              </div>
+
+              <div class="calc-stat-box" style="border-color:#f97316;">
+                <div class="calc-stat-title" style="color:#fb923c;">⚔️ Агрессия</div>
+                <div class="calc-stat-val-row">
+                  <span class="calc-stat-num">${res.after.aggression}</span>
+                  <span style="font-size:0.8rem;color:#94a3b8;">(было ${res.before.aggression})</span>
+                  <span class="calc-stat-diff ${diffAgg >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffAgg >= 0 ? '+' + diffAgg : diffAgg}</span>
+                </div>
+              </div>
+
+              <div class="calc-stat-box" style="border-color:#38bdf8;">
+                <div class="calc-stat-title" style="color:#38bdf8;">⚡ Сумма (Безумие + Агрессия)</div>
+                <div class="calc-stat-val-row">
+                  <span class="calc-stat-num" style="color:#38bdf8;">${res.after.totalScore}</span>
+                  <span style="font-size:0.8rem;color:#94a3b8;">(было ${res.before.totalScore})</span>
+                  <span class="calc-stat-diff ${diffScore >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffScore >= 0 ? '+' + diffScore : diffScore}</span>
+                </div>
+              </div>
+
+              <div class="calc-stat-box" style="border-color:#a855f7;">
+                <div class="calc-stat-title" style="color:#c084fc;">🛡️ Выносливость</div>
+                <div class="calc-stat-val-row">
+                  <span class="calc-stat-num">${res.after.stamina}</span>
+                  <span style="font-size:0.8rem;color:#94a3b8;">(было ${res.before.stamina})</span>
+                  <span class="calc-stat-diff ${diffStam >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffStam >= 0 ? '+' + diffStam : diffStam}</span>
+                </div>
               </div>
             </div>
+
+            <!-- Action Plan -->
+            <div style="margin-top:1rem;">
+              <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;display:flex;align-items:center;gap:0.4rem;">
+                <span>📋 Пошаговая инструкция синтеза и обменов:</span>
+              </div>
+              ${res.steps.length === 0 ? `
+                <div style="color:#94a3b8;font-size:0.84rem;padding:0.75rem;background:#090d16;border-radius:4px;">
+                  Все доступные мутагены уже максимально оптимизированы! Дополнительных слияний не требуется.
+                </div>
+              ` : `
+                <div class="calc-action-list">
+                  ${res.steps.map((s, idx) => `
+                    <div class="calc-action-item ${s.type === 'exchange' ? 'is-exchange' : ''}">
+                      <div class="calc-action-idx">${idx + 1}</div>
+                      <div style="flex:1;">
+                        <div>
+                          ${s.repeatCount > 1 ? `<strong>Повторите ${s.repeatCount} раз:</strong> ` : ''}
+                          ${s.desc}
+                        </div>
+                        ${s.delta > 0 ? `<div style="font-size:0.72rem;color:#4ade80;margin-top:2px;font-weight:600;">Прирост к экипировке: +${s.delta} очков</div>` : ''}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              `}
+            </div>
+
+            ${mode === 'slots' && res.after.equipped.length > 0 ? `
+              <div style="margin-top:1.25rem;">
+                <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;">
+                  🎽 Рекомендуемые мутагены для вставки в экипировку (Топ ${numSlots} слотов):
+                </div>
+                <div class="calc-slots-grid">
+                  ${res.after.equipped.map((it, idx) => `
+                    <div class="calc-slot-card">
+                      <div style="width:20px;font-weight:700;font-size:0.75rem;color:#94a3b8;text-align:center;">#${idx + 1}</div>
+                      <div style="flex:1;min-width:0;">
+                        <div style="font-size:0.82rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${it.title}">${it.title}</div>
+                        <div style="font-size:0.72rem;color:var(--accent-blue);font-weight:600;">
+                          ${it.madness > 0 ? `Б: +${it.madness} ` : ''}
+                          ${it.aggression > 0 ? `А: +${it.aggression} ` : ''}
+                          ${it.stamina > 0 ? `В: +${it.stamina}` : ''}
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
           </div>
         `;
-      });
-      html += `</div>`;
-      UI.content.innerHTML = html;
+      }
+
+      UI.content.innerHTML = `
+        <div class="calc-container">
+          <div class="calc-hero">
+            <h2>🧬 Калькулятор & Оптимизатор Мутагенов</h2>
+            <p>
+              Выгрузите мутагены из аккаунта в 1 клик или вставьте список вручную. Алгоритм рассчитает оптимальные слияния и лабораторные обмены для получения максимального <strong>Безумия</strong> и <strong>Агрессии</strong>.
+            </p>
+          </div>
+
+          <div class="calc-card">
+            <!-- Step 1 -->
+            <div class="calc-step-header">
+              <div class="calc-step-title">
+                <span class="calc-step-num">1</span>
+                <span>Выгрузка мутагенов из игры Remad.me</span>
+              </div>
+              <button class="calc-btn calc-btn-purple" onclick="copyExportScript(this)">
+                📋 Скопировать код скрипта
+              </button>
+            </div>
+            <p style="font-size:0.82rem;color:#94a3b8;margin:0 0 0.6rem 0;line-height:1.4;">
+              Откройте игру <a href="https://remad.me/play/" target="_blank" style="color:#38bdf8;text-decoration:underline;">remad.me/play/</a> в браузере, нажмите клавишу <strong>F12</strong> (вкладка <strong>Console</strong>), вставьте скопированный скрипт и нажмите <strong>Enter</strong>. Данные инвентаря мгновенно скопируются в буфер обмена.
+            </p>
+
+            <!-- Step 2 -->
+            <div class="calc-step-header" style="margin-top:1rem;">
+              <div class="calc-step-title">
+                <span class="calc-step-num">2</span>
+                <span>Вставка данных на сайт</span>
+              </div>
+              <div class="calc-btn-row" style="margin-top:0;">
+                <button class="calc-btn" onclick="pasteClipboardToCalc()">
+                  📥 Вставить из буфера
+                </button>
+                <button class="calc-btn" onclick="loadDemoMutagens()">
+                  🎲 Загрузить пример (демо)
+                </button>
+                <button class="calc-btn" onclick="clearCalc()">
+                  🗑️ Очистить
+                </button>
+              </div>
+            </div>
+            <textarea id="calcInputText" class="calc-textarea" placeholder="Вставьте скопированный JSON из игры или список мутагенов (например: A-1: 25, F-2: 6, Z-10: 1)...">${state.calcRawInput || ''}</textarea>
+
+            <!-- Step 3 -->
+            <div class="calc-step-header" style="margin-top:1.15rem;">
+              <div class="calc-step-title">
+                <span class="calc-step-num">3</span>
+                <span>Настройка режима оптимизации</span>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:0.85rem;">
+              <div class="calc-mode-switch" style="max-width:440px;flex:1;">
+                <button class="calc-mode-btn ${mode === 'slots' ? 'active' : ''}" onclick="state.calcMode='slots'; renderContent();">
+                  🎽 Под слоты экипировки (вещи)
+                </button>
+                <button class="calc-mode-btn ${mode === 'unlimited' ? 'active' : ''}" onclick="state.calcMode='unlimited'; renderContent();">
+                  📦 Общий синтез (без учета вещей)
+                </button>
+              </div>
+
+              ${mode === 'slots' ? `
+                <div class="calc-slots-select">
+                  <span style="font-size:0.8rem;color:#94a3b8;font-weight:600;">Кол-во слотов:</span>
+                  ${[10, 12, 15, 18, 20, 24].map(s => `
+                    <button class="calc-slot-pill ${numSlots === s ? 'active' : ''}" onclick="state.calcSlots=${s}; calculateMutagenOptimization();">
+                      ${s}
+                    </button>
+                  `).join('')}
+                </div>
+              ` : ''}
+            </div>
+
+            <div>
+              <button class="calc-btn calc-btn-primary" style="padding:0.65rem 1.4rem;font-size:0.88rem;width:100%;justify-content:center;" onclick="calculateMutagenOptimization()">
+                ⚡ Рассчитать максимальный прирост (Безумие & Агрессия)
+              </button>
+            </div>
+          </div>
+
+          ${resultsHtml}
+        </div>
+      `;
     }
 
     function renderInventory(data, q) {
