@@ -4108,10 +4108,12 @@
               if (numSlots != null) {
                 if (delta > bestDelta) {
                   bestDelta = delta;
+                  const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
                   bestAction = {
                     type: 'synthesis',
                     desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                    delta
+                    delta,
+                    cost: stepCost
                   };
                   bestInv = testInv;
                 }
@@ -4119,10 +4121,12 @@
                 const unlimVal = lvl * 10;
                 if (unlimVal > bestDelta) {
                   bestDelta = unlimVal;
+                  const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
                   bestAction = {
                     type: 'synthesis',
                     desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                    delta
+                    delta,
+                    cost: stepCost
                   };
                   bestInv = testInv;
                 }
@@ -4141,6 +4145,7 @@
 
             const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
             const delta = testEval.totalScore - currScore;
+            const stepCost = (ex.price && ex.price.currency3) != null ? ex.price.currency3 : 50;
 
             if (numSlots != null) {
               if (delta > 0 && delta > bestDelta) {
@@ -4150,7 +4155,8 @@
                 bestAction = {
                   type: 'exchange',
                   desc: `Обмен в Лаборатории: ${inStr} ➔ ${outStr}`,
-                  delta
+                  delta,
+                  cost: stepCost
                 };
                 bestInv = testInv;
               }
@@ -4162,7 +4168,8 @@
                 bestAction = {
                   type: 'exchange',
                   desc: `Обмен в Лаборатории: ${inStr} ➔ ${outStr}`,
-                  delta
+                  delta,
+                  cost: stepCost
                 };
                 bestInv = testInv;
               }
@@ -4191,11 +4198,13 @@
                   testInv[nid] = (testInv[nid] || 0) + 1;
                   const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
                   if (testEval.totalScore >= currScore) {
+                    const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
                     inv = testInv;
                     steps.push({
                       type: 'synthesis',
                       desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                      delta: testEval.totalScore - currScore
+                      delta: testEval.totalScore - currScore,
+                      cost: stepCost
                     });
                     harmlessFound = true;
                     break;
@@ -4218,8 +4227,9 @@
         if (last && last.desc === s.desc) {
           last.repeatCount = (last.repeatCount || 1) + 1;
           last.delta += s.delta;
+          last.totalCost = (last.totalCost || last.cost || 0) + (s.cost || 0);
         } else {
-          groupedSteps.push(Object.assign({}, s, { repeatCount: 1 }));
+          groupedSteps.push(Object.assign({}, s, { repeatCount: 1, totalCost: s.cost || 0 }));
         }
       });
 
@@ -4253,11 +4263,18 @@
       const opt = runMutagenOptimization(userInv, enchants, exchanges, numSlots);
       const afterEval = evaluateMutagenInventory(opt.optimizedInv, enchants, numSlots);
 
+      const totalSynthesisCost = opt.steps.reduce((acc, s) => acc + (s.totalCost || 0), 0);
+      const totalSocketCost = (numSlots != null) ? (afterEval.equipped.length * 1) : 0;
+      const grandTotalCost = totalSynthesisCost + totalSocketCost;
+
       state.calcResult = {
         before: beforeEval,
         after: afterEval,
         steps: opt.steps,
-        optimizedInv: opt.optimizedInv
+        optimizedInv: opt.optimizedInv,
+        totalSynthesisCost,
+        totalSocketCost,
+        grandTotalCost
       };
 
       renderContent();
@@ -4319,7 +4336,7 @@
         const diffStam = res.after.stamina - res.before.stamina;
 
         resultsHtml = `
-          <div class="calc-card" style="border-color:#38bdf8;background:linear-gradient(180deg, #111827 0%, #0c101a 100%);">
+          <div id="calc-results" class="calc-card" style="border-color:#38bdf8;background:linear-gradient(180deg, #111827 0%, #0c101a 100%);">
             <div style="font-family:var(--font-header);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
               <span>📊 Результаты оптимизации ${mode === 'slots' ? `(Под ${numSlots} слотов)` : '(Без учета слотов)'}</span>
               <span style="font-size:0.8rem;color:#38bdf8;background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:2px 8px;border-radius:12px;">
@@ -4363,12 +4380,27 @@
                   <span class="calc-stat-diff ${diffStam >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffStam >= 0 ? '+' + diffStam : diffStam}</span>
                 </div>
               </div>
+
+              <div class="calc-stat-box" style="border-color:#eab308;background:rgba(234,179,8,0.06);">
+                <div class="calc-stat-title" style="color:#fde047;">💊 Общая стоимость</div>
+                <div class="calc-stat-val-row">
+                  <span class="calc-stat-num" style="color:#facc15;">${(res.grandTotalCost || 0).toLocaleString()}</span>
+                  <span style="font-size:0.8rem;color:#cbd5e1;font-weight:600;">пилюль</span>
+                </div>
+                <div style="font-size:0.73rem;color:#94a3b8;margin-top:4px;line-height:1.3;">
+                  Синтез/обмен: <strong style="color:#fde047;">${(res.totalSynthesisCost || 0).toLocaleString()} 💊</strong>
+                  ${mode === 'slots' ? `<br>Вставка (${res.after.equipped.length} сл.): <strong style="color:#fde047;">${res.totalSocketCost} 💊</strong>` : ''}
+                </div>
+              </div>
             </div>
 
             <!-- Action Plan -->
             <div style="margin-top:1rem;">
-              <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;display:flex;align-items:center;gap:0.4rem;">
+              <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
                 <span>📋 Пошаговая инструкция синтеза и обменов:</span>
+                <span style="font-size:0.75rem;color:#facc15;font-weight:600;">
+                  Итого на крафт: ${(res.totalSynthesisCost || 0).toLocaleString()} 💊
+                </span>
               </div>
               ${res.steps.length === 0 ? `
                 <div style="color:#94a3b8;font-size:0.84rem;padding:0.75rem;background:#090d16;border-radius:4px;">
@@ -4384,7 +4416,12 @@
                           ${s.repeatCount > 1 ? `<strong>Повторите ${s.repeatCount} раз:</strong> ` : ''}
                           ${s.desc}
                         </div>
-                        ${s.delta > 0 ? `<div style="font-size:0.72rem;color:#4ade80;margin-top:2px;font-weight:600;">Прирост к экипировке: +${s.delta} очков</div>` : ''}
+                        <div style="display:flex;align-items:center;gap:0.75rem;margin-top:3px;flex-wrap:wrap;">
+                          ${s.delta > 0 ? `<div style="font-size:0.72rem;color:#4ade80;font-weight:600;">Прирост к экипировке: +${s.delta} очков</div>` : ''}
+                          <div style="font-size:0.72rem;color:#facc15;font-weight:600;display:inline-flex;align-items:center;gap:3px;">
+                            💊 Стоимость: ${(s.totalCost || 0).toLocaleString()} пилюль ${s.repeatCount > 1 ? `(${s.repeatCount} × ${s.cost} 💊)` : ''}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   `).join('')}
@@ -4394,8 +4431,13 @@
 
             ${mode === 'slots' && res.after.equipped.length > 0 ? `
               <div style="margin-top:1.25rem;">
-                <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;">
-                  🎽 Рекомендуемые мутагены для вставки в экипировку (Топ ${numSlots} слотов):
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:0.55rem;gap:0.5rem;">
+                  <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;">
+                    🎽 Рекомендуемые мутагены для вставки в экипировку (Топ ${numSlots} слотов):
+                  </div>
+                  <div style="font-size:0.76rem;color:#facc15;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:2px 8px;border-radius:12px;font-weight:600;">
+                    💊 Установка: ${res.totalSocketCost} пилюль (по 1 💊 за слот)
+                  </div>
                 </div>
                 <div class="calc-slots-grid">
                   ${res.after.equipped.map((it, idx) => `
