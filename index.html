@@ -1803,7 +1803,6 @@
     <div class="nav-inner" id="navTabs">
       <button class="nav-tab active" data-tab="floors">🏥 Корпуса и этажи</button>
       <button class="nav-tab" data-tab="market">🏪 Магазин</button>
-      <button class="nav-tab" data-tab="weapons">🔪 Арсенал оружия (100)</button>
       <button class="nav-tab" data-tab="inventory">🗃️ Заначки</button>
     </div>
   </nav>
@@ -1851,7 +1850,7 @@
       openedMutagens: {},
       weaponCurrency: 'all',
       inventoryCategory: 'stashes',
-      marketSection: 'clothes', // 'clothes', 'pets', 'tattoos'
+      marketSection: 'weapons', // 'weapons', 'clothes', 'pets', 'tattoos'
       marketClothCategory: 'all',
       marketTattooSlot: 'all',
       marketTattooSex: 'all',
@@ -2046,7 +2045,9 @@
       } else if (state.tab === 'bosses') {
         renderAllBosses(data, q);
       } else if (state.tab === 'weapons') {
-        renderWeapons(data, q);
+        state.tab = 'market';
+        state.marketSection = 'weapons';
+        renderMarket(data, q);
       } else if (state.tab === 'mutagens') {
         renderMutagens(data, q);
       } else if (state.tab === 'inventory') {
@@ -2781,24 +2782,28 @@
     }
 
     /* =========================================================================
-       MARKET VIEW (Clothes, Pets, Tattoos)
+       MARKET VIEW (Weapons, Clothes, Pets, Tattoos)
        ========================================================================= */
     function renderMarket(data, q) {
+      const allWeapons = data.weapons || [];
       const allClothes = (data.clothes || []).filter(c => c.category !== 'Оружие' && c.category !== 'Животное');
       const allPets = (data.clothes || []).filter(c => c.category === 'Животное');
       const allTattoos = data.tattoos || [];
 
-      // Top Section Ribbons: Clothes | Pets | Tattoos
+      // Top Section Ribbons: Weapons | Clothes | Pets | Tattoos
       let sectionBarHtml = `
         <div class="weapon-filter-ribbon" style="margin-bottom:0.4rem;">
+          <button class="weapon-filter-btn ${state.marketSection === 'weapons' ? 'active' : ''}" onclick="state.marketSection='weapons'; state.marketCurrency='all'; renderContent();">
+            🔪 Оружие
+          </button>
           <button class="weapon-filter-btn ${state.marketSection === 'clothes' ? 'active' : ''}" onclick="state.marketSection='clothes'; state.marketCurrency='all'; renderContent();">
-            👕 Одежда (${allClothes.length})
+            👕 Одежда
           </button>
           <button class="weapon-filter-btn ${state.marketSection === 'pets' ? 'active' : ''}" onclick="state.marketSection='pets'; state.marketCurrency='all'; renderContent();">
-            🐾 Питомцы (${allPets.length})
+            🐾 Питомцы
           </button>
           <button class="weapon-filter-btn ${state.marketSection === 'tattoos' ? 'active' : ''}" onclick="state.marketSection='tattoos'; state.marketCurrency='all'; renderContent();">
-            🐉 Татуировки (${allTattoos.length})
+            🐉 Татуировки
           </button>
         </div>
       `;
@@ -2828,7 +2833,69 @@
         return 'Бесплатно';
       }
 
-      if (state.marketSection === 'clothes') {
+      if (state.marketSection === 'weapons') {
+        let filtered = allWeapons.filter(w => {
+          if (!matchCurr(w, state.marketCurrency)) return false;
+          if (!q) return true;
+          const titleMatch = w.title && w.title.toLowerCase().includes(q);
+          return w.id.toString() === q || (w.damage && w.damage.toString() === q) || titleMatch;
+        });
+        filtered.sort((a, b) => b.damage - a.damage);
+
+        filterBarHtml = `
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            ${sectionBarHtml}
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'free' ? 'active' : ''}" onclick="state.marketCurrency='free'; renderContent();">🎁 Бесплатное</button>
+            </div>
+          </div>
+        `;
+
+        itemsHtml = `<div class="grid">`;
+        if (filtered.length === 0) {
+          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Оружие не найдено по выбранным фильтрам</div>`;
+        } else {
+          filtered.forEach(w => {
+            const priceStr = getItemPriceStr(w);
+            const bosses = (w.sources && w.sources.bosses) || [];
+            const inFortune = w.sources && w.sources.inFortune;
+            let badgeSource = '';
+            if (bosses.length > 0) {
+              badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с босса: ${bosses[0].bossTitle}">🏥 Босс</span>`;
+            } else if (inFortune) {
+              badgeSource = `<span style="font-size:0.68rem;color:var(--accent-gold);background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:1px 5px;border-radius:2px;" title="Падает в костях (Fortune)">🎲 Кости</span>`;
+            }
+
+            itemsHtml += `
+              <div class="card" style="cursor:pointer;" onclick="openWeaponDetails(${w.id})" title="Подробнее об оружии, улучшении и источниках">
+                <div style="display:flex;gap:0.65rem;align-items:center;">
+                  <img src="${w.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;" alt="${w.title}"/>
+                  <div style="min-width:0;flex:1;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                      <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${w.title}">${w.title}</span>
+                      ${badgeSource}
+                    </div>
+                    <div style="font-size:0.75rem;color:#f87171;font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                      <span>⚔️ +${w.damage.toLocaleString()}</span>
+                      <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${w.id}</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                  <span>${w.maxUseCount > 0 ? w.maxUseCount + ' уд.' : 'Бесконечно'}</span>
+                  <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+                </div>
+              </div>
+            `;
+          });
+        }
+        itemsHtml += `</div>`;
+      } else if (state.marketSection === 'clothes') {
         const categories = ['Майка', 'Штаны', 'Обувь', 'Перчатки', 'Головной убор', 'Маска', 'Аксессуары'];
         let filtered = allClothes.filter(c => {
           if (state.marketClothCategory !== 'all' && c.category !== state.marketClothCategory) return false;
@@ -2868,12 +2935,7 @@
         `;
 
         const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
-        itemsHtml = `
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
-            Одежды найдено: ${filtered.length} • Нажмите на предмет для характеристик и источников получения
-          </div>
-          <div class="grid">
-        `;
+        itemsHtml = `<div class="grid">`;
 
         if (filtered.length === 0) {
           itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Предметы одежды не найдены по выбранным фильтрам</div>`;
@@ -2945,12 +3007,7 @@
         `;
 
         const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
-        itemsHtml = `
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
-            Питомцев в питомнике: ${filtered.length} • Нажмите на питомца для характеристик и бонусов
-          </div>
-          <div class="grid">
-        `;
+        itemsHtml = `<div class="grid">`;
 
         if (filtered.length === 0) {
           itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Питомцы не найдены по выбранным фильтрам</div>`;
@@ -3042,12 +3099,7 @@
           </div>
         `;
 
-        itemsHtml = `
-          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
-            Татуировок в салоне: ${filtered.length} • Нажмите на тату для просмотра и условий нанесения
-          </div>
-          <div class="grid">
-        `;
+        itemsHtml = `<div class="grid">`;
 
         if (filtered.length === 0) {
           itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Татуировки не найдены по выбранным фильтрам</div>`;
