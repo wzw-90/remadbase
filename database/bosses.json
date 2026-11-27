@@ -6019,7 +6019,7 @@
       {
         "type": "access_ornament",
         "id": 344,
-        "title": "Доступ: Тату [Ключица лево]",
+        "title": "Доступ: «Ключица лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6027,7 +6027,7 @@
       {
         "type": "access_ornament",
         "id": 345,
-        "title": "Доступ: Тату [Плечо лево]",
+        "title": "Доступ: «Плечо лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6035,7 +6035,7 @@
       {
         "type": "access_ornament",
         "id": 346,
-        "title": "Доступ: Тату [Рука право]",
+        "title": "Доступ: «Рука право» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6043,7 +6043,7 @@
       {
         "type": "access_ornament",
         "id": 347,
-        "title": "Доступ: Тату [Грудь право]",
+        "title": "Доступ: «Грудь право» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6051,7 +6051,7 @@
       {
         "type": "access_ornament",
         "id": 349,
-        "title": "Доступ: Тату [Рука лево]",
+        "title": "Доступ: «Рука лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6059,7 +6059,7 @@
       {
         "type": "access_ornament",
         "id": 351,
-        "title": "Доступ: Тату [Живот]",
+        "title": "Доступ: «Живот» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6067,7 +6067,7 @@
       {
         "type": "access_ornament",
         "id": 352,
-        "title": "Доступ: Тату [Талия]",
+        "title": "Доступ: «Талия» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6075,7 +6075,7 @@
       {
         "type": "access_ornament",
         "id": 359,
-        "title": "Доступ: Тату [Ключица лево]",
+        "title": "Доступ: «Ключица лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6083,7 +6083,7 @@
       {
         "type": "access_ornament",
         "id": 360,
-        "title": "Доступ: Тату [Плечо лево]",
+        "title": "Доступ: «Плечо лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6091,7 +6091,7 @@
       {
         "type": "access_ornament",
         "id": 361,
-        "title": "Доступ: Тату [Рука право]",
+        "title": "Доступ: «Рука право» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6099,7 +6099,7 @@
       {
         "type": "access_ornament",
         "id": 362,
-        "title": "Доступ: Тату [Грудь право]",
+        "title": "Доступ: «Грудь право» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6107,7 +6107,7 @@
       {
         "type": "access_ornament",
         "id": 364,
-        "title": "Доступ: Тату [Рука лево]",
+        "title": "Доступ: «Рука лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6115,7 +6115,7 @@
       {
         "type": "access_ornament",
         "id": 366,
-        "title": "Доступ: Тату [Живот]",
+        "title": "Доступ: «Живот» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6123,7 +6123,7 @@
       {
         "type": "access_ornament",
         "id": 367,
-        "title": "Доступ: Тату [Талия]",
+        "title": "Доступ: «Талия» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6187,7 +6187,7 @@
       {
         "type": "access_ornament",
         "id": 353,
-        "title": "Доступ: Тату [Кисть лево]",
+        "title": "Доступ: «Кисть лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6195,7 +6195,7 @@
       {
         "type": "access_ornament",
         "id": 368,
-        "title": "Доступ: Тату [Кисть лево]",
+        "title": "Доступ: «Кисть лево» AUGUST",
         "once": true,
         "probability": 1,
         "count": 1
@@ -6824,7 +6824,7 @@
       {
         "type": "access_ornament",
         "id": 197,
-        "title": "Доступ: Тату [Голова право]",
+        "title": "Доступ: «Голова право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6832,7 +6832,7 @@
       {
         "type": "access_ornament",
         "id": 202,
-        "title": "Доступ: Тату [Голова лево]",
+        "title": "Доступ: «Голова лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6840,7 +6840,7 @@
       {
         "type": "access_ornament",
         "id": 272,
-        "title": "Доступ: Тату [Шея]",
+        "title": "Доступ: «Шея» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6848,7 +6848,7 @@
       {
         "type": "access_ornament",
         "id": 278,
-        "title": "Доступ: Тату [Ключица право]",
+        "title": "Доступ: «Ключица право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6856,7 +6856,7 @@
       {
         "type": "access_ornament",
         "id": 377,
-        "title": "Доступ: Тату [Плечо лево]",
+        "title": "Доступ: «Плечо лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6864,7 +6864,7 @@
       {
         "type": "access_ornament",
         "id": 376,
-        "title": "Доступ: Тату [Рука право]",
+        "title": "Доступ: «Рука право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6872,7 +6872,7 @@
       {
         "type": "access_ornament",
         "id": 375,
-        "title": "Доступ: Тату [Грудь право]",
+        "title": "Доступ: «Грудь право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6880,7 +6880,7 @@
       {
         "type": "access_ornament",
         "id": 374,
-        "title": "Доступ: Тату [Грудь лево]",
+        "title": "Доступ: «Грудь лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6888,7 +6888,7 @@
       {
         "type": "access_ornament",
         "id": 117,
-        "title": "Доступ: Тату [Голова право]",
+        "title": "Доступ: «Голова право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6896,7 +6896,7 @@
       {
         "type": "access_ornament",
         "id": 122,
-        "title": "Доступ: Тату [Голова лево]",
+        "title": "Доступ: «Голова лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6904,7 +6904,7 @@
       {
         "type": "access_ornament",
         "id": 127,
-        "title": "Доступ: Тату [Шея]",
+        "title": "Доступ: «Шея» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6912,7 +6912,7 @@
       {
         "type": "access_ornament",
         "id": 378,
-        "title": "Доступ: Тату [Ключица право]",
+        "title": "Доступ: «Ключица право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6920,7 +6920,7 @@
       {
         "type": "access_ornament",
         "id": 380,
-        "title": "Доступ: Тату [Плечо лево]",
+        "title": "Доступ: «Плечо лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6928,7 +6928,7 @@
       {
         "type": "access_ornament",
         "id": 381,
-        "title": "Доступ: Тату [Рука право]",
+        "title": "Доступ: «Рука право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6936,7 +6936,7 @@
       {
         "type": "access_ornament",
         "id": 382,
-        "title": "Доступ: Тату [Грудь право]",
+        "title": "Доступ: «Грудь право» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1
@@ -6944,7 +6944,7 @@
       {
         "type": "access_ornament",
         "id": 383,
-        "title": "Доступ: Тату [Грудь лево]",
+        "title": "Доступ: «Грудь лево» [Босс]",
         "once": true,
         "probability": 10,
         "count": 1

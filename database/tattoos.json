@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Тату «Голова право» №1 (Муж.)",
+    "title": "«Голова право» №1",
     "rawTitle": "male_head_right_01",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "title": "Тату «Голова право» №2 (Муж.)",
+    "title": "«Голова право» №2",
     "rawTitle": "male_head_right_02",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -49,7 +49,7 @@
   },
   {
     "id": 43,
-    "title": "Тату «Голова право» №1 (Жен.)",
+    "title": "«Голова право» №1",
     "rawTitle": "female_head_right_01",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -73,7 +73,7 @@
   },
   {
     "id": 44,
-    "title": "Тату «Голова право» №2 (Жен.)",
+    "title": "«Голова право» №2",
     "rawTitle": "female_head_right_02",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -97,7 +97,7 @@
   },
   {
     "id": 85,
-    "title": "Тату «Голова право» №0 (Муж.)",
+    "title": "«Голова право» №0",
     "rawTitle": "male_head_right_00",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -121,7 +121,7 @@
   },
   {
     "id": 100,
-    "title": "Тату «Голова право» №0 (Жен.)",
+    "title": "«Голова право» №0",
     "rawTitle": "female_head_right_00",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -145,7 +145,7 @@
   },
   {
     "id": 115,
-    "title": "Тату «Голова право» №4 (Муж.)",
+    "title": "«Голова право» №4",
     "rawTitle": "male_head_right_04",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -171,7 +171,7 @@
   },
   {
     "id": 116,
-    "title": "Тату «Голова право» №5 (Муж.)",
+    "title": "«Голова право» №5",
     "rawTitle": "male_head_right_05",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -197,7 +197,7 @@
   },
   {
     "id": 117,
-    "title": "Тату «Голова право» [Босс] (Жен.)",
+    "title": "«Голова право» [Босс]",
     "rawTitle": "female_head_right_boss",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -236,7 +236,7 @@
   },
   {
     "id": 118,
-    "title": "Тату «Голова право» №7 (Муж.)",
+    "title": "«Голова право» №7",
     "rawTitle": "male_head_right_07",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -262,7 +262,7 @@
   },
   {
     "id": 119,
-    "title": "Тату «Голова право» $1 (Муж.)",
+    "title": "«Голова право» $1",
     "rawTitle": "male_head_right_$1",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -288,7 +288,7 @@
   },
   {
     "id": 190,
-    "title": "Тату «Голова право» №4 (Жен.)",
+    "title": "«Голова право» №4",
     "rawTitle": "female_head_right_04",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -314,7 +314,7 @@
   },
   {
     "id": 191,
-    "title": "Тату «Голова право» №5 (Жен.)",
+    "title": "«Голова право» №5",
     "rawTitle": "female_head_right_05",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -340,7 +340,7 @@
   },
   {
     "id": 192,
-    "title": "Тату «Голова право» №6 (Жен.)",
+    "title": "«Голова право» №6",
     "rawTitle": "female_head_right_06",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -364,7 +364,7 @@
   },
   {
     "id": 193,
-    "title": "Тату «Голова право» №7 (Жен.)",
+    "title": "«Голова право» №7",
     "rawTitle": "female_head_right_07",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -390,7 +390,7 @@
   },
   {
     "id": 194,
-    "title": "Тату «Голова право» $1 (Жен.)",
+    "title": "«Голова право» $1",
     "rawTitle": "female_head_right_$1",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -416,7 +416,7 @@
   },
   {
     "id": 197,
-    "title": "Тату «Голова право» [Босс] (Муж.)",
+    "title": "«Голова право» [Босс]",
     "rawTitle": "male_head_right_boss",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -455,7 +455,7 @@
   },
   {
     "id": 294,
-    "title": "Тату «Голова право» $2 (Муж.)",
+    "title": "«Голова право» $2",
     "rawTitle": "male_head_right_$2",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -481,7 +481,7 @@
   },
   {
     "id": 295,
-    "title": "Тату «Голова право» $2 (Жен.)",
+    "title": "«Голова право» $2",
     "rawTitle": "female_head_right_$2",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -507,7 +507,7 @@
   },
   {
     "id": 339,
-    "title": "Тату «Голова право» AUGUST (Муж.)",
+    "title": "«Голова право» AUGUST",
     "rawTitle": "male_head_right_august",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -533,7 +533,7 @@
   },
   {
     "id": 354,
-    "title": "Тату «Голова право» AUGUST (Жен.)",
+    "title": "«Голова право» AUGUST",
     "rawTitle": "female_head_right_august",
     "slotId": 1,
     "slotTitle": "Голова право",
@@ -559,7 +559,7 @@
   },
   {
     "id": 3,
-    "title": "Тату «Голова лево» №1 (Муж.)",
+    "title": "«Голова лево» №1",
     "rawTitle": "male_head_left_01",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -589,7 +589,7 @@
   },
   {
     "id": 4,
-    "title": "Тату «Голова лево» №2 (Муж.)",
+    "title": "«Голова лево» №2",
     "rawTitle": "male_head_left_02",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -619,7 +619,7 @@
   },
   {
     "id": 45,
-    "title": "Тату «Голова лево» №1 (Жен.)",
+    "title": "«Голова лево» №1",
     "rawTitle": "female_head_left_01",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -649,7 +649,7 @@
   },
   {
     "id": 46,
-    "title": "Тату «Голова лево» №2 (Жен.)",
+    "title": "«Голова лево» №2",
     "rawTitle": "female_head_left_02",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -679,7 +679,7 @@
   },
   {
     "id": 86,
-    "title": "Тату «Голова лево» №0 (Муж.)",
+    "title": "«Голова лево» №0",
     "rawTitle": "male_head_left_00",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -709,7 +709,7 @@
   },
   {
     "id": 101,
-    "title": "Тату «Голова лево» №0 (Жен.)",
+    "title": "«Голова лево» №0",
     "rawTitle": "female_head_left_00",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -739,7 +739,7 @@
   },
   {
     "id": 120,
-    "title": "Тату «Голова лево» №4 (Муж.)",
+    "title": "«Голова лево» №4",
     "rawTitle": "male_head_left_04",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -771,7 +771,7 @@
   },
   {
     "id": 121,
-    "title": "Тату «Голова лево» №5 (Муж.)",
+    "title": "«Голова лево» №5",
     "rawTitle": "male_head_left_05",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -803,7 +803,7 @@
   },
   {
     "id": 122,
-    "title": "Тату «Голова лево» [Босс] (Жен.)",
+    "title": "«Голова лево» [Босс]",
     "rawTitle": "female_head_left_boss",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -848,7 +848,7 @@
   },
   {
     "id": 123,
-    "title": "Тату «Голова лево» №7 (Муж.)",
+    "title": "«Голова лево» №7",
     "rawTitle": "male_head_left_07",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -880,7 +880,7 @@
   },
   {
     "id": 124,
-    "title": "Тату «Голова лево» $1 (Муж.)",
+    "title": "«Голова лево» $1",
     "rawTitle": "male_head_left_$1",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -912,7 +912,7 @@
   },
   {
     "id": 195,
-    "title": "Тату «Голова лево» №4 (Жен.)",
+    "title": "«Голова лево» №4",
     "rawTitle": "female_head_left_04",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -944,7 +944,7 @@
   },
   {
     "id": 196,
-    "title": "Тату «Голова лево» №5 (Жен.)",
+    "title": "«Голова лево» №5",
     "rawTitle": "female_head_left_05",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -976,7 +976,7 @@
   },
   {
     "id": 198,
-    "title": "Тату «Голова лево» №7 (Жен.)",
+    "title": "«Голова лево» №7",
     "rawTitle": "female_head_left_07",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1008,7 +1008,7 @@
   },
   {
     "id": 199,
-    "title": "Тату «Голова лево» $1 (Жен.)",
+    "title": "«Голова лево» $1",
     "rawTitle": "female_head_left_$1",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1040,7 +1040,7 @@
   },
   {
     "id": 202,
-    "title": "Тату «Голова лево» [Босс] (Муж.)",
+    "title": "«Голова лево» [Босс]",
     "rawTitle": "male_head_left_boss",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1085,7 +1085,7 @@
   },
   {
     "id": 293,
-    "title": "Тату «Голова лево» $2 (Муж.)",
+    "title": "«Голова лево» $2",
     "rawTitle": "male_head_left_$2",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1117,7 +1117,7 @@
   },
   {
     "id": 296,
-    "title": "Тату «Голова лево» $2 (Жен.)",
+    "title": "«Голова лево» $2",
     "rawTitle": "female_head_left_$2",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1149,7 +1149,7 @@
   },
   {
     "id": 340,
-    "title": "Тату «Голова лево» AUGUST (Муж.)",
+    "title": "«Голова лево» AUGUST",
     "rawTitle": "male_head_left_august",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1181,7 +1181,7 @@
   },
   {
     "id": 355,
-    "title": "Тату «Голова лево» AUGUST (Жен.)",
+    "title": "«Голова лево» AUGUST",
     "rawTitle": "female_head_left_august",
     "slotId": 2,
     "slotTitle": "Голова лево",
@@ -1213,7 +1213,7 @@
   },
   {
     "id": 5,
-    "title": "Тату «Шея» №1 (Муж.)",
+    "title": "«Шея» №1",
     "rawTitle": "male_neck_01",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1244,7 +1244,7 @@
   },
   {
     "id": 6,
-    "title": "Тату «Шея» №2 (Муж.)",
+    "title": "«Шея» №2",
     "rawTitle": "male_neck_02",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1275,7 +1275,7 @@
   },
   {
     "id": 7,
-    "title": "Тату «Шея» №3 (Муж.)",
+    "title": "«Шея» №3",
     "rawTitle": "male_neck_03'",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1306,7 +1306,7 @@
   },
   {
     "id": 47,
-    "title": "Тату «Шея» №1 (Жен.)",
+    "title": "«Шея» №1",
     "rawTitle": "female_neck_01",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1337,7 +1337,7 @@
   },
   {
     "id": 48,
-    "title": "Тату «Шея» №2 (Жен.)",
+    "title": "«Шея» №2",
     "rawTitle": "female_neck_02",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1368,7 +1368,7 @@
   },
   {
     "id": 49,
-    "title": "Тату «Шея» №3 (Жен.)",
+    "title": "«Шея» №3",
     "rawTitle": "female_neck_03'",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1399,7 +1399,7 @@
   },
   {
     "id": 87,
-    "title": "Тату «Шея» №0 (Муж.)",
+    "title": "«Шея» №0",
     "rawTitle": "male_neck_00",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1430,7 +1430,7 @@
   },
   {
     "id": 102,
-    "title": "Тату «Шея» №0 (Жен.)",
+    "title": "«Шея» №0",
     "rawTitle": "female_neck_00",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1461,7 +1461,7 @@
   },
   {
     "id": 125,
-    "title": "Тату «Шея» №4 (Муж.)",
+    "title": "«Шея» №4",
     "rawTitle": "male_neck_04",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1494,7 +1494,7 @@
   },
   {
     "id": 126,
-    "title": "Тату «Шея» №5 (Муж.)",
+    "title": "«Шея» №5",
     "rawTitle": "male_neck_05",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1527,7 +1527,7 @@
   },
   {
     "id": 127,
-    "title": "Тату «Шея» [Босс] (Жен.)",
+    "title": "«Шея» [Босс]",
     "rawTitle": "female_neck_boss",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1573,7 +1573,7 @@
   },
   {
     "id": 128,
-    "title": "Тату «Шея» №7 (Муж.)",
+    "title": "«Шея» №7",
     "rawTitle": "male_neck_07",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1606,7 +1606,7 @@
   },
   {
     "id": 129,
-    "title": "Тату «Шея» $1 (Муж.)",
+    "title": "«Шея» $1",
     "rawTitle": "male_neck_$1",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1639,7 +1639,7 @@
   },
   {
     "id": 200,
-    "title": "Тату «Шея» №4 (Жен.)",
+    "title": "«Шея» №4",
     "rawTitle": "female_neck_04",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1672,7 +1672,7 @@
   },
   {
     "id": 201,
-    "title": "Тату «Шея» №5 (Жен.)",
+    "title": "«Шея» №5",
     "rawTitle": "female_neck_05",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1705,7 +1705,7 @@
   },
   {
     "id": 203,
-    "title": "Тату «Шея» №7 (Жен.)",
+    "title": "«Шея» №7",
     "rawTitle": "female_neck_07",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1738,7 +1738,7 @@
   },
   {
     "id": 204,
-    "title": "Тату «Шея» $1 (Жен.)",
+    "title": "«Шея» $1",
     "rawTitle": "female_neck_$1",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1771,7 +1771,7 @@
   },
   {
     "id": 268,
-    "title": "Тату «Шея» №3 (Муж.)",
+    "title": "«Шея» №3",
     "rawTitle": "male_neck_03",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1802,7 +1802,7 @@
   },
   {
     "id": 272,
-    "title": "Тату «Шея» [Босс] (Муж.)",
+    "title": "«Шея» [Босс]",
     "rawTitle": "male_neck_boss",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1848,7 +1848,7 @@
   },
   {
     "id": 274,
-    "title": "Тату «Шея» №3 (Жен.)",
+    "title": "«Шея» №3",
     "rawTitle": "female_neck_03",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1879,7 +1879,7 @@
   },
   {
     "id": 292,
-    "title": "Тату «Шея» $2 (Муж.)",
+    "title": "«Шея» $2",
     "rawTitle": "male_neck_$2",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1912,7 +1912,7 @@
   },
   {
     "id": 297,
-    "title": "Тату «Шея» $2 (Жен.)",
+    "title": "«Шея» $2",
     "rawTitle": "female_neck_$2",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1945,7 +1945,7 @@
   },
   {
     "id": 341,
-    "title": "Тату «Шея» AUGUST (Муж.)",
+    "title": "«Шея» AUGUST",
     "rawTitle": "male_neck_august",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -1978,7 +1978,7 @@
   },
   {
     "id": 356,
-    "title": "Тату «Шея» AUGUST (Жен.)",
+    "title": "«Шея» AUGUST",
     "rawTitle": "female_neck_august",
     "slotId": 3,
     "slotTitle": "Шея",
@@ -2011,7 +2011,7 @@
   },
   {
     "id": 8,
-    "title": "Тату «Плечо право» №1 (Муж.)",
+    "title": "«Плечо право» №1",
     "rawTitle": "male_shoulder_right_01",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2041,7 +2041,7 @@
   },
   {
     "id": 9,
-    "title": "Тату «Плечо право» №2 (Муж.)",
+    "title": "«Плечо право» №2",
     "rawTitle": "male_shoulder_right_02",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2071,7 +2071,7 @@
   },
   {
     "id": 10,
-    "title": "Тату «Плечо право» №3 (Муж.)",
+    "title": "«Плечо право» №3",
     "rawTitle": "male_shoulder_right_03''",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2101,7 +2101,7 @@
   },
   {
     "id": 50,
-    "title": "Тату «Плечо право» №1 (Жен.)",
+    "title": "«Плечо право» №1",
     "rawTitle": "female_shoulder_right_01",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2131,7 +2131,7 @@
   },
   {
     "id": 51,
-    "title": "Тату «Плечо право» №2 (Жен.)",
+    "title": "«Плечо право» №2",
     "rawTitle": "female_shoulder_right_02",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2161,7 +2161,7 @@
   },
   {
     "id": 52,
-    "title": "Тату «Плечо право» №3 (Жен.)",
+    "title": "«Плечо право» №3",
     "rawTitle": "female_shoulder_right_03''",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2191,7 +2191,7 @@
   },
   {
     "id": 88,
-    "title": "Тату «Плечо право» №0 (Муж.)",
+    "title": "«Плечо право» №0",
     "rawTitle": "male_shoulder_right_00",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2221,7 +2221,7 @@
   },
   {
     "id": 103,
-    "title": "Тату «Плечо право» №0 (Жен.)",
+    "title": "«Плечо право» №0",
     "rawTitle": "female_shoulder_right_00",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2251,7 +2251,7 @@
   },
   {
     "id": 130,
-    "title": "Тату «Плечо право» №4 (Муж.)",
+    "title": "«Плечо право» №4",
     "rawTitle": "male_shoulder_right_04",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2283,7 +2283,7 @@
   },
   {
     "id": 131,
-    "title": "Тату «Плечо право» №5 (Муж.)",
+    "title": "«Плечо право» №5",
     "rawTitle": "male_shoulder_right_05",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2315,7 +2315,7 @@
   },
   {
     "id": 132,
-    "title": "Тату «Плечо право» №6 (Муж.)",
+    "title": "«Плечо право» №6",
     "rawTitle": "male_shoulder_right_06",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2347,7 +2347,7 @@
   },
   {
     "id": 133,
-    "title": "Тату «Плечо право» №7 (Муж.)",
+    "title": "«Плечо право» №7",
     "rawTitle": "male_shoulder_right_07",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2379,7 +2379,7 @@
   },
   {
     "id": 134,
-    "title": "Тату «Плечо право» $1 (Муж.)",
+    "title": "«Плечо право» $1",
     "rawTitle": "male_shoulder_right_$1",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2411,7 +2411,7 @@
   },
   {
     "id": 205,
-    "title": "Тату «Плечо право» №4 (Жен.)",
+    "title": "«Плечо право» №4",
     "rawTitle": "female_shoulder_right_04",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2443,7 +2443,7 @@
   },
   {
     "id": 206,
-    "title": "Тату «Плечо право» №5 (Жен.)",
+    "title": "«Плечо право» №5",
     "rawTitle": "female_shoulder_right_05",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2475,7 +2475,7 @@
   },
   {
     "id": 207,
-    "title": "Тату «Плечо право» №6 (Жен.)",
+    "title": "«Плечо право» №6",
     "rawTitle": "female_shoulder_right_06",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2507,7 +2507,7 @@
   },
   {
     "id": 208,
-    "title": "Тату «Плечо право» №7 (Жен.)",
+    "title": "«Плечо право» №7",
     "rawTitle": "female_shoulder_right_07",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2539,7 +2539,7 @@
   },
   {
     "id": 209,
-    "title": "Тату «Плечо право» $1 (Жен.)",
+    "title": "«Плечо право» $1",
     "rawTitle": "female_shoulder_right_$1",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2571,7 +2571,7 @@
   },
   {
     "id": 265,
-    "title": "Тату «Плечо право» №8 (Муж.)",
+    "title": "«Плечо право» №8",
     "rawTitle": "male_shoulder_right_08",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2603,7 +2603,7 @@
   },
   {
     "id": 273,
-    "title": "Тату «Плечо право» [Босс] (Муж.)",
+    "title": "«Плечо право» [Босс]",
     "rawTitle": "male_shoulder_right_boss",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2635,7 +2635,7 @@
   },
   {
     "id": 279,
-    "title": "Тату «Плечо право» [Босс] (Жен.)",
+    "title": "«Плечо право» [Босс]",
     "rawTitle": "female_shoulder_right_boss",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2667,7 +2667,7 @@
   },
   {
     "id": 291,
-    "title": "Тату «Плечо право» $2 (Муж.)",
+    "title": "«Плечо право» $2",
     "rawTitle": "male_shoulder_right_$2",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2699,7 +2699,7 @@
   },
   {
     "id": 298,
-    "title": "Тату «Плечо право» $2 (Жен.)",
+    "title": "«Плечо право» $2",
     "rawTitle": "female_shoulder_right_$2",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2731,7 +2731,7 @@
   },
   {
     "id": 319,
-    "title": "Тату «Плечо право» №8 (Жен.)",
+    "title": "«Плечо право» №8",
     "rawTitle": "female_shoulder_right_08",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2763,7 +2763,7 @@
   },
   {
     "id": 342,
-    "title": "Тату «Плечо право» AUGUST (Муж.)",
+    "title": "«Плечо право» AUGUST",
     "rawTitle": "male_shoulder_right_august",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2795,7 +2795,7 @@
   },
   {
     "id": 357,
-    "title": "Тату «Плечо право» AUGUST (Жен.)",
+    "title": "«Плечо право» AUGUST",
     "rawTitle": "female_shoulder_right_august",
     "slotId": 4,
     "slotTitle": "Плечо право",
@@ -2827,7 +2827,7 @@
   },
   {
     "id": 11,
-    "title": "Тату «Ключица право» №1 (Муж.)",
+    "title": "«Ключица право» №1",
     "rawTitle": "male_clavicle_right_01",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -2857,7 +2857,7 @@
   },
   {
     "id": 12,
-    "title": "Тату «Ключица право» №2 (Муж.)",
+    "title": "«Ключица право» №2",
     "rawTitle": "male_clavicle_right_02",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -2887,7 +2887,7 @@
   },
   {
     "id": 13,
-    "title": "Тату «Ключица право» №3 (Муж.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "male_clavicle_right_03",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -2917,7 +2917,7 @@
   },
   {
     "id": 53,
-    "title": "Тату «Ключица право» №1 (Жен.)",
+    "title": "«Ключица право» №1",
     "rawTitle": "female_clavicle_right_01",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -2947,7 +2947,7 @@
   },
   {
     "id": 54,
-    "title": "Тату «Ключица право» №2 (Жен.)",
+    "title": "«Ключица право» №2",
     "rawTitle": "female_clavicle_right_02",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -2977,7 +2977,7 @@
   },
   {
     "id": 55,
-    "title": "Тату «Ключица право» №3 (Жен.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "female_clavicle_right_03",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3007,7 +3007,7 @@
   },
   {
     "id": 89,
-    "title": "Тату «Ключица право» №0 (Муж.)",
+    "title": "«Ключица право» №0",
     "rawTitle": "male_clavicle_right_00",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3037,7 +3037,7 @@
   },
   {
     "id": 104,
-    "title": "Тату «Ключица право» №0 (Жен.)",
+    "title": "«Ключица право» №0",
     "rawTitle": "female_clavicle_right_00",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3067,7 +3067,7 @@
   },
   {
     "id": 135,
-    "title": "Тату «Ключица право» №4 (Муж.)",
+    "title": "«Ключица право» №4",
     "rawTitle": "male_clavicle_right_04",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3099,7 +3099,7 @@
   },
   {
     "id": 136,
-    "title": "Тату «Ключица право» №5 (Муж.)",
+    "title": "«Ключица право» №5",
     "rawTitle": "male_clavicle_right_05",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3131,7 +3131,7 @@
   },
   {
     "id": 137,
-    "title": "Тату «Ключица право» №6 (Муж.)",
+    "title": "«Ключица право» №6",
     "rawTitle": "male_clavicle_right_06",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3163,7 +3163,7 @@
   },
   {
     "id": 138,
-    "title": "Тату «Ключица право» №7 (Муж.)",
+    "title": "«Ключица право» №7",
     "rawTitle": "male_clavicle_right_07",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3195,7 +3195,7 @@
   },
   {
     "id": 139,
-    "title": "Тату «Ключица право» $1 (Муж.)",
+    "title": "«Ключица право» $1",
     "rawTitle": "male_clavicle_right_$1",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3227,7 +3227,7 @@
   },
   {
     "id": 210,
-    "title": "Тату «Ключица право» №4 (Жен.)",
+    "title": "«Ключица право» №4",
     "rawTitle": "female_clavicle_right_04",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3259,7 +3259,7 @@
   },
   {
     "id": 211,
-    "title": "Тату «Ключица право» №5 (Жен.)",
+    "title": "«Ключица право» №5",
     "rawTitle": "female_clavicle_right_05",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3291,7 +3291,7 @@
   },
   {
     "id": 212,
-    "title": "Тату «Ключица право» №6 (Жен.)",
+    "title": "«Ключица право» №6",
     "rawTitle": "female_clavicle_right_06",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3323,7 +3323,7 @@
   },
   {
     "id": 213,
-    "title": "Тату «Ключица право» №7 (Жен.)",
+    "title": "«Ключица право» №7",
     "rawTitle": "female_clavicle_right_07",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3355,7 +3355,7 @@
   },
   {
     "id": 214,
-    "title": "Тату «Ключица право» $1 (Жен.)",
+    "title": "«Ключица право» $1",
     "rawTitle": "female_clavicle_right_$1",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3387,7 +3387,7 @@
   },
   {
     "id": 266,
-    "title": "Тату «Ключица право» №8 (Муж.)",
+    "title": "«Ключица право» №8",
     "rawTitle": "male_clavicle_right_08",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3419,7 +3419,7 @@
   },
   {
     "id": 269,
-    "title": "Тату «Ключица право» №3 (Муж.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "male_clavicle_right_03'",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3449,7 +3449,7 @@
   },
   {
     "id": 270,
-    "title": "Тату «Ключица право» №3 (Муж.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "male_clavicle_right_03''",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3479,7 +3479,7 @@
   },
   {
     "id": 275,
-    "title": "Тату «Ключица право» №3 (Жен.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "female_clavicle_right_03'",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3509,7 +3509,7 @@
   },
   {
     "id": 276,
-    "title": "Тату «Ключица право» №3 (Жен.)",
+    "title": "«Ключица право» №3",
     "rawTitle": "female_clavicle_right_03''",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3539,7 +3539,7 @@
   },
   {
     "id": 278,
-    "title": "Тату «Ключица право» [Босс] (Муж.)",
+    "title": "«Ключица право» [Босс]",
     "rawTitle": "male_clavicle_right_boss",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3584,7 +3584,7 @@
   },
   {
     "id": 290,
-    "title": "Тату «Ключица право» $2 (Муж.)",
+    "title": "«Ключица право» $2",
     "rawTitle": "male_clavicle_right_$2",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3616,7 +3616,7 @@
   },
   {
     "id": 299,
-    "title": "Тату «Ключица право» $2 (Жен.)",
+    "title": "«Ключица право» $2",
     "rawTitle": "female_clavicle_right_$2",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3648,7 +3648,7 @@
   },
   {
     "id": 320,
-    "title": "Тату «Ключица право» №8 (Жен.)",
+    "title": "«Ключица право» №8",
     "rawTitle": "female_clavicle_right_08",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3680,7 +3680,7 @@
   },
   {
     "id": 331,
-    "title": "Тату «Ключица право» №9 (Муж.)",
+    "title": "«Ключица право» №9",
     "rawTitle": "male_clavicle_right_09",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3712,7 +3712,7 @@
   },
   {
     "id": 335,
-    "title": "Тату «Ключица право» №9 (Жен.)",
+    "title": "«Ключица право» №9",
     "rawTitle": "female_clavicle_right_09",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3744,7 +3744,7 @@
   },
   {
     "id": 343,
-    "title": "Тату «Ключица право» AUGUST (Муж.)",
+    "title": "«Ключица право» AUGUST",
     "rawTitle": "male_clavicle_right_august",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3776,7 +3776,7 @@
   },
   {
     "id": 358,
-    "title": "Тату «Ключица право» AUGUST (Жен.)",
+    "title": "«Ключица право» AUGUST",
     "rawTitle": "female_clavicle_right_august",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3808,7 +3808,7 @@
   },
   {
     "id": 378,
-    "title": "Тату «Ключица право» [Босс] (Жен.)",
+    "title": "«Ключица право» [Босс]",
     "rawTitle": "female_clavicle_right_boss",
     "slotId": 5,
     "slotTitle": "Ключица право",
@@ -3853,7 +3853,7 @@
   },
   {
     "id": 14,
-    "title": "Тату «Ключица лево» №1 (Муж.)",
+    "title": "«Ключица лево» №1",
     "rawTitle": "male_clavicle_left_01",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3875,7 +3875,7 @@
   },
   {
     "id": 15,
-    "title": "Тату «Ключица лево» №3 (Муж.)",
+    "title": "«Ключица лево» №3",
     "rawTitle": "male_clavicle_left_03'",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3897,7 +3897,7 @@
   },
   {
     "id": 56,
-    "title": "Тату «Ключица лево» №1 (Жен.)",
+    "title": "«Ключица лево» №1",
     "rawTitle": "female_clavicle_left_01",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3919,7 +3919,7 @@
   },
   {
     "id": 57,
-    "title": "Тату «Ключица лево» №3 (Жен.)",
+    "title": "«Ключица лево» №3",
     "rawTitle": "female_clavicle_left_03'",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3941,7 +3941,7 @@
   },
   {
     "id": 90,
-    "title": "Тату «Ключица лево» №0 (Муж.)",
+    "title": "«Ключица лево» №0",
     "rawTitle": "male_clavicle_left_00",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3963,7 +3963,7 @@
   },
   {
     "id": 105,
-    "title": "Тату «Ключица лево» №0 (Жен.)",
+    "title": "«Ключица лево» №0",
     "rawTitle": "female_clavicle_left_00",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -3985,7 +3985,7 @@
   },
   {
     "id": 140,
-    "title": "Тату «Ключица лево» №4 (Муж.)",
+    "title": "«Ключица лево» №4",
     "rawTitle": "male_clavicle_left_04",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4009,7 +4009,7 @@
   },
   {
     "id": 141,
-    "title": "Тату «Ключица лево» №5 (Муж.)",
+    "title": "«Ключица лево» №5",
     "rawTitle": "male_clavicle_left_05",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4033,7 +4033,7 @@
   },
   {
     "id": 142,
-    "title": "Тату «Ключица лево» №6 (Муж.)",
+    "title": "«Ключица лево» №6",
     "rawTitle": "male_clavicle_left_06",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4057,7 +4057,7 @@
   },
   {
     "id": 143,
-    "title": "Тату «Ключица лево» №7 (Муж.)",
+    "title": "«Ключица лево» №7",
     "rawTitle": "male_clavicle_left_07",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4081,7 +4081,7 @@
   },
   {
     "id": 144,
-    "title": "Тату «Ключица лево» $1 (Муж.)",
+    "title": "«Ключица лево» $1",
     "rawTitle": "male_clavicle_left_$1",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4111,7 +4111,7 @@
   },
   {
     "id": 215,
-    "title": "Тату «Ключица лево» №4 (Жен.)",
+    "title": "«Ключица лево» №4",
     "rawTitle": "female_clavicle_left_04",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4135,7 +4135,7 @@
   },
   {
     "id": 216,
-    "title": "Тату «Ключица лево» №5 (Жен.)",
+    "title": "«Ключица лево» №5",
     "rawTitle": "female_clavicle_left_05",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4159,7 +4159,7 @@
   },
   {
     "id": 217,
-    "title": "Тату «Ключица лево» №6 (Жен.)",
+    "title": "«Ключица лево» №6",
     "rawTitle": "female_clavicle_left_06",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4183,7 +4183,7 @@
   },
   {
     "id": 218,
-    "title": "Тату «Ключица лево» №7 (Жен.)",
+    "title": "«Ключица лево» №7",
     "rawTitle": "female_clavicle_left_07",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4207,7 +4207,7 @@
   },
   {
     "id": 219,
-    "title": "Тату «Ключица лево» $1 (Жен.)",
+    "title": "«Ключица лево» $1",
     "rawTitle": "female_clavicle_left_$1",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4237,7 +4237,7 @@
   },
   {
     "id": 289,
-    "title": "Тату «Ключица лево» $2 (Муж.)",
+    "title": "«Ключица лево» $2",
     "rawTitle": "male_clavicle_left_$2",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4267,7 +4267,7 @@
   },
   {
     "id": 300,
-    "title": "Тату «Ключица лево» $2 (Жен.)",
+    "title": "«Ключица лево» $2",
     "rawTitle": "female_clavicle_left_$2",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4297,7 +4297,7 @@
   },
   {
     "id": 310,
-    "title": "Тату «Ключица лево» №8 (Муж.)",
+    "title": "«Ключица лево» №8",
     "rawTitle": "male_clavicle_left_08",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4321,7 +4321,7 @@
   },
   {
     "id": 321,
-    "title": "Тату «Ключица лево» №8 (Жен.)",
+    "title": "«Ключица лево» №8",
     "rawTitle": "female_clavicle_left_08",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4345,7 +4345,7 @@
   },
   {
     "id": 330,
-    "title": "Тату «Ключица лево» [Босс] (Муж.)",
+    "title": "«Ключица лево» [Босс]",
     "rawTitle": "male_clavicle_left_boss",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4369,7 +4369,7 @@
   },
   {
     "id": 344,
-    "title": "Тату «Ключица лево» AUGUST (Муж.)",
+    "title": "«Ключица лево» AUGUST",
     "rawTitle": "male_clavicle_left_august",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4406,7 +4406,7 @@
   },
   {
     "id": 359,
-    "title": "Тату «Ключица лево» AUGUST (Жен.)",
+    "title": "«Ключица лево» AUGUST",
     "rawTitle": "female_clavicle_left_august",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4443,7 +4443,7 @@
   },
   {
     "id": 379,
-    "title": "Тату «Ключица лево» [Босс] (Жен.)",
+    "title": "«Ключица лево» [Босс]",
     "rawTitle": "female_clavicle_left_boss",
     "slotId": 6,
     "slotTitle": "Ключица лево",
@@ -4467,7 +4467,7 @@
   },
   {
     "id": 16,
-    "title": "Тату «Плечо лево» №1 (Муж.)",
+    "title": "«Плечо лево» №1",
     "rawTitle": "male_shoulder_left_01",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4489,7 +4489,7 @@
   },
   {
     "id": 17,
-    "title": "Тату «Плечо лево» №2 (Муж.)",
+    "title": "«Плечо лево» №2",
     "rawTitle": "male_shoulder_left_02",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4511,7 +4511,7 @@
   },
   {
     "id": 18,
-    "title": "Тату «Плечо лево» №3 (Муж.)",
+    "title": "«Плечо лево» №3",
     "rawTitle": "male_shoulder_left_03'",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4533,7 +4533,7 @@
   },
   {
     "id": 58,
-    "title": "Тату «Плечо лево» №1 (Жен.)",
+    "title": "«Плечо лево» №1",
     "rawTitle": "female_shoulder_left_01",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4555,7 +4555,7 @@
   },
   {
     "id": 59,
-    "title": "Тату «Плечо лево» №2 (Жен.)",
+    "title": "«Плечо лево» №2",
     "rawTitle": "female_shoulder_left_02",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4577,7 +4577,7 @@
   },
   {
     "id": 60,
-    "title": "Тату «Плечо лево» №3 (Жен.)",
+    "title": "«Плечо лево» №3",
     "rawTitle": "female_shoulder_left_03'",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4599,7 +4599,7 @@
   },
   {
     "id": 91,
-    "title": "Тату «Плечо лево» №0 (Муж.)",
+    "title": "«Плечо лево» №0",
     "rawTitle": "male_shoulder_left_00",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4621,7 +4621,7 @@
   },
   {
     "id": 106,
-    "title": "Тату «Плечо лево» №0 (Жен.)",
+    "title": "«Плечо лево» №0",
     "rawTitle": "female_shoulder_left_00",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4643,7 +4643,7 @@
   },
   {
     "id": 145,
-    "title": "Тату «Плечо лево» №4 (Муж.)",
+    "title": "«Плечо лево» №4",
     "rawTitle": "male_shoulder_left_04",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4667,7 +4667,7 @@
   },
   {
     "id": 146,
-    "title": "Тату «Плечо лево» №5 (Муж.)",
+    "title": "«Плечо лево» №5",
     "rawTitle": "male_shoulder_left_05",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4691,7 +4691,7 @@
   },
   {
     "id": 147,
-    "title": "Тату «Плечо лево» №6 (Муж.)",
+    "title": "«Плечо лево» №6",
     "rawTitle": "male_shoulder_left_06",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4715,7 +4715,7 @@
   },
   {
     "id": 148,
-    "title": "Тату «Плечо лево» №7 (Муж.)",
+    "title": "«Плечо лево» №7",
     "rawTitle": "male_shoulder_left_07",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4739,7 +4739,7 @@
   },
   {
     "id": 149,
-    "title": "Тату «Плечо лево» $1 (Муж.)",
+    "title": "«Плечо лево» $1",
     "rawTitle": "male_shoulder_left_$1",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4769,7 +4769,7 @@
   },
   {
     "id": 220,
-    "title": "Тату «Плечо лево» №4 (Жен.)",
+    "title": "«Плечо лево» №4",
     "rawTitle": "female_shoulder_left_04",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4793,7 +4793,7 @@
   },
   {
     "id": 221,
-    "title": "Тату «Плечо лево» №5 (Жен.)",
+    "title": "«Плечо лево» №5",
     "rawTitle": "female_shoulder_left_05",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4817,7 +4817,7 @@
   },
   {
     "id": 222,
-    "title": "Тату «Плечо лево» №6 (Жен.)",
+    "title": "«Плечо лево» №6",
     "rawTitle": "female_shoulder_left_06",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4841,7 +4841,7 @@
   },
   {
     "id": 223,
-    "title": "Тату «Плечо лево» №7 (Жен.)",
+    "title": "«Плечо лево» №7",
     "rawTitle": "female_shoulder_left_07",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4865,7 +4865,7 @@
   },
   {
     "id": 224,
-    "title": "Тату «Плечо лево» $1 (Жен.)",
+    "title": "«Плечо лево» $1",
     "rawTitle": "female_shoulder_left_$1",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4895,7 +4895,7 @@
   },
   {
     "id": 271,
-    "title": "Тату «Плечо лево» №3 (Муж.)",
+    "title": "«Плечо лево» №3",
     "rawTitle": "male_shoulder_left_03",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4917,7 +4917,7 @@
   },
   {
     "id": 277,
-    "title": "Тату «Плечо лево» №3 (Жен.)",
+    "title": "«Плечо лево» №3",
     "rawTitle": "female_shoulder_left_03",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4939,7 +4939,7 @@
   },
   {
     "id": 288,
-    "title": "Тату «Плечо лево» $2 (Муж.)",
+    "title": "«Плечо лево» $2",
     "rawTitle": "male_shoulder_left_$2",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4969,7 +4969,7 @@
   },
   {
     "id": 301,
-    "title": "Тату «Плечо лево» $2 (Жен.)",
+    "title": "«Плечо лево» $2",
     "rawTitle": "female_shoulder_left_$2",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -4999,7 +4999,7 @@
   },
   {
     "id": 311,
-    "title": "Тату «Плечо лево» №8 (Муж.)",
+    "title": "«Плечо лево» №8",
     "rawTitle": "male_shoulder_left_08",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5023,7 +5023,7 @@
   },
   {
     "id": 322,
-    "title": "Тату «Плечо лево» №8 (Жен.)",
+    "title": "«Плечо лево» №8",
     "rawTitle": "female_shoulder_left_08",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5047,7 +5047,7 @@
   },
   {
     "id": 345,
-    "title": "Тату «Плечо лево» AUGUST (Муж.)",
+    "title": "«Плечо лево» AUGUST",
     "rawTitle": "male_shoulder_left_august",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5084,7 +5084,7 @@
   },
   {
     "id": 360,
-    "title": "Тату «Плечо лево» AUGUST (Жен.)",
+    "title": "«Плечо лево» AUGUST",
     "rawTitle": "female_shoulder_left_august",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5121,7 +5121,7 @@
   },
   {
     "id": 377,
-    "title": "Тату «Плечо лево» [Босс] (Муж.)",
+    "title": "«Плечо лево» [Босс]",
     "rawTitle": "male_shoulder_left_boss",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5158,7 +5158,7 @@
   },
   {
     "id": 380,
-    "title": "Тату «Плечо лево» [Босс] (Жен.)",
+    "title": "«Плечо лево» [Босс]",
     "rawTitle": "female_shoulder_left_boss",
     "slotId": 7,
     "slotTitle": "Плечо лево",
@@ -5195,7 +5195,7 @@
   },
   {
     "id": 19,
-    "title": "Тату «Рука право» №1 (Муж.)",
+    "title": "«Рука право» №1",
     "rawTitle": "male_arm_right_01",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5225,7 +5225,7 @@
   },
   {
     "id": 20,
-    "title": "Тату «Рука право» №2 (Муж.)",
+    "title": "«Рука право» №2",
     "rawTitle": "male_arm_right_02",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5255,7 +5255,7 @@
   },
   {
     "id": 21,
-    "title": "Тату «Рука право» №3 (Муж.)",
+    "title": "«Рука право» №3",
     "rawTitle": "male_arm_right_03''",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5285,7 +5285,7 @@
   },
   {
     "id": 61,
-    "title": "Тату «Рука право» №1 (Жен.)",
+    "title": "«Рука право» №1",
     "rawTitle": "female_arm_right_01",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5315,7 +5315,7 @@
   },
   {
     "id": 62,
-    "title": "Тату «Рука право» №2 (Жен.)",
+    "title": "«Рука право» №2",
     "rawTitle": "female_arm_right_02",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5345,7 +5345,7 @@
   },
   {
     "id": 63,
-    "title": "Тату «Рука право» №3 (Жен.)",
+    "title": "«Рука право» №3",
     "rawTitle": "female_arm_right_03''",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5375,7 +5375,7 @@
   },
   {
     "id": 92,
-    "title": "Тату «Рука право» №0 (Муж.)",
+    "title": "«Рука право» №0",
     "rawTitle": "male_arm_right_00",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5405,7 +5405,7 @@
   },
   {
     "id": 107,
-    "title": "Тату «Рука право» №0 (Жен.)",
+    "title": "«Рука право» №0",
     "rawTitle": "female_arm_right_00",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5435,7 +5435,7 @@
   },
   {
     "id": 150,
-    "title": "Тату «Рука право» №4 (Муж.)",
+    "title": "«Рука право» №4",
     "rawTitle": "male_arm_right_04",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5467,7 +5467,7 @@
   },
   {
     "id": 151,
-    "title": "Тату «Рука право» №5 (Муж.)",
+    "title": "«Рука право» №5",
     "rawTitle": "male_arm_right_05",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5499,7 +5499,7 @@
   },
   {
     "id": 152,
-    "title": "Тату «Рука право» №6 (Муж.)",
+    "title": "«Рука право» №6",
     "rawTitle": "male_arm_right_06",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5531,7 +5531,7 @@
   },
   {
     "id": 153,
-    "title": "Тату «Рука право» №7 (Муж.)",
+    "title": "«Рука право» №7",
     "rawTitle": "male_arm_right_07",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5563,7 +5563,7 @@
   },
   {
     "id": 154,
-    "title": "Тату «Рука право» $1 (Муж.)",
+    "title": "«Рука право» $1",
     "rawTitle": "male_arm_right_$1",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5601,7 +5601,7 @@
   },
   {
     "id": 225,
-    "title": "Тату «Рука право» №4 (Жен.)",
+    "title": "«Рука право» №4",
     "rawTitle": "female_arm_right_04",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5633,7 +5633,7 @@
   },
   {
     "id": 226,
-    "title": "Тату «Рука право» №5 (Жен.)",
+    "title": "«Рука право» №5",
     "rawTitle": "female_arm_right_05",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5665,7 +5665,7 @@
   },
   {
     "id": 227,
-    "title": "Тату «Рука право» №6 (Жен.)",
+    "title": "«Рука право» №6",
     "rawTitle": "female_arm_right_06",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5697,7 +5697,7 @@
   },
   {
     "id": 228,
-    "title": "Тату «Рука право» №7 (Жен.)",
+    "title": "«Рука право» №7",
     "rawTitle": "female_arm_right_07",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5729,7 +5729,7 @@
   },
   {
     "id": 229,
-    "title": "Тату «Рука право» $1 (Жен.)",
+    "title": "«Рука право» $1",
     "rawTitle": "female_arm_right_$1",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5767,7 +5767,7 @@
   },
   {
     "id": 287,
-    "title": "Тату «Рука право» $2 (Муж.)",
+    "title": "«Рука право» $2",
     "rawTitle": "male_arm_right_$2",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5805,7 +5805,7 @@
   },
   {
     "id": 302,
-    "title": "Тату «Рука право» $2 (Жен.)",
+    "title": "«Рука право» $2",
     "rawTitle": "female_arm_right_$2",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5843,7 +5843,7 @@
   },
   {
     "id": 312,
-    "title": "Тату «Рука право» №8 (Муж.)",
+    "title": "«Рука право» №8",
     "rawTitle": "male_arm_right_08",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5875,7 +5875,7 @@
   },
   {
     "id": 323,
-    "title": "Тату «Рука право» №8 (Жен.)",
+    "title": "«Рука право» №8",
     "rawTitle": "female_arm_right_08",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5907,7 +5907,7 @@
   },
   {
     "id": 346,
-    "title": "Тату «Рука право» AUGUST (Муж.)",
+    "title": "«Рука право» AUGUST",
     "rawTitle": "male_arm_right_august",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5952,7 +5952,7 @@
   },
   {
     "id": 361,
-    "title": "Тату «Рука право» AUGUST (Жен.)",
+    "title": "«Рука право» AUGUST",
     "rawTitle": "female_arm_right_august",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -5997,7 +5997,7 @@
   },
   {
     "id": 376,
-    "title": "Тату «Рука право» [Босс] (Муж.)",
+    "title": "«Рука право» [Босс]",
     "rawTitle": "male_arm_right_boss",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -6042,7 +6042,7 @@
   },
   {
     "id": 381,
-    "title": "Тату «Рука право» [Босс] (Жен.)",
+    "title": "«Рука право» [Босс]",
     "rawTitle": "female_arm_right_boss",
     "slotId": 8,
     "slotTitle": "Рука право",
@@ -6087,7 +6087,7 @@
   },
   {
     "id": 22,
-    "title": "Тату «Грудь право» №1 (Муж.)",
+    "title": "«Грудь право» №1",
     "rawTitle": "male_chest_right_01",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6119,7 +6119,7 @@
   },
   {
     "id": 23,
-    "title": "Тату «Грудь право» №2 (Муж.)",
+    "title": "«Грудь право» №2",
     "rawTitle": "male_chest_right_02",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6149,7 +6149,7 @@
   },
   {
     "id": 24,
-    "title": "Тату «Грудь право» №3 (Муж.)",
+    "title": "«Грудь право» №3",
     "rawTitle": "male_chest_right_03",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6179,7 +6179,7 @@
   },
   {
     "id": 64,
-    "title": "Тату «Грудь право» №1 (Жен.)",
+    "title": "«Грудь право» №1",
     "rawTitle": "female_chest_right_01",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6209,7 +6209,7 @@
   },
   {
     "id": 65,
-    "title": "Тату «Грудь право» №2 (Жен.)",
+    "title": "«Грудь право» №2",
     "rawTitle": "female_chest_right_02",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6239,7 +6239,7 @@
   },
   {
     "id": 66,
-    "title": "Тату «Грудь право» №3 (Жен.)",
+    "title": "«Грудь право» №3",
     "rawTitle": "female_chest_right_03",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6269,7 +6269,7 @@
   },
   {
     "id": 93,
-    "title": "Тату «Грудь право» №0 (Муж.)",
+    "title": "«Грудь право» №0",
     "rawTitle": "male_chest_right_00",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6299,7 +6299,7 @@
   },
   {
     "id": 108,
-    "title": "Тату «Грудь право» №0 (Жен.)",
+    "title": "«Грудь право» №0",
     "rawTitle": "female_chest_right_00",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6329,7 +6329,7 @@
   },
   {
     "id": 155,
-    "title": "Тату «Грудь право» №4 (Муж.)",
+    "title": "«Грудь право» №4",
     "rawTitle": "male_chest_right_04",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6361,7 +6361,7 @@
   },
   {
     "id": 156,
-    "title": "Тату «Грудь право» №5 (Муж.)",
+    "title": "«Грудь право» №5",
     "rawTitle": "male_chest_right_05",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6393,7 +6393,7 @@
   },
   {
     "id": 157,
-    "title": "Тату «Грудь право» №6 (Муж.)",
+    "title": "«Грудь право» №6",
     "rawTitle": "male_chest_right_06",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6425,7 +6425,7 @@
   },
   {
     "id": 158,
-    "title": "Тату «Грудь право» №7 (Муж.)",
+    "title": "«Грудь право» №7",
     "rawTitle": "male_chest_right_07",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6457,7 +6457,7 @@
   },
   {
     "id": 159,
-    "title": "Тату «Грудь право» $1 (Муж.)",
+    "title": "«Грудь право» $1",
     "rawTitle": "male_chest_right_$1",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6495,7 +6495,7 @@
   },
   {
     "id": 230,
-    "title": "Тату «Грудь право» №4 (Жен.)",
+    "title": "«Грудь право» №4",
     "rawTitle": "female_chest_right_04",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6527,7 +6527,7 @@
   },
   {
     "id": 231,
-    "title": "Тату «Грудь право» №5 (Жен.)",
+    "title": "«Грудь право» №5",
     "rawTitle": "female_chest_right_05",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6559,7 +6559,7 @@
   },
   {
     "id": 232,
-    "title": "Тату «Грудь право» №6 (Жен.)",
+    "title": "«Грудь право» №6",
     "rawTitle": "female_chest_right_06",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6591,7 +6591,7 @@
   },
   {
     "id": 233,
-    "title": "Тату «Грудь право» №7 (Жен.)",
+    "title": "«Грудь право» №7",
     "rawTitle": "female_chest_right_07",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6623,7 +6623,7 @@
   },
   {
     "id": 234,
-    "title": "Тату «Грудь право» $1 (Жен.)",
+    "title": "«Грудь право» $1",
     "rawTitle": "female_chest_right_$1",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6661,7 +6661,7 @@
   },
   {
     "id": 286,
-    "title": "Тату «Грудь право» $2 (Муж.)",
+    "title": "«Грудь право» $2",
     "rawTitle": "male_chest_right_$2",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6699,7 +6699,7 @@
   },
   {
     "id": 303,
-    "title": "Тату «Грудь право» $2 (Жен.)",
+    "title": "«Грудь право» $2",
     "rawTitle": "female_chest_right_$2",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6737,7 +6737,7 @@
   },
   {
     "id": 313,
-    "title": "Тату «Грудь право» №8 (Муж.)",
+    "title": "«Грудь право» №8",
     "rawTitle": "male_chest_right_08",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6769,7 +6769,7 @@
   },
   {
     "id": 324,
-    "title": "Тату «Грудь право» №8 (Жен.)",
+    "title": "«Грудь право» №8",
     "rawTitle": "female_chest_right_08",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6801,7 +6801,7 @@
   },
   {
     "id": 332,
-    "title": "Тату «Грудь право» №9 (Муж.)",
+    "title": "«Грудь право» №9",
     "rawTitle": "male_chest_right_09",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6833,7 +6833,7 @@
   },
   {
     "id": 336,
-    "title": "Тату «Грудь право» №9 (Жен.)",
+    "title": "«Грудь право» №9",
     "rawTitle": "female_chest_right_09",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6865,7 +6865,7 @@
   },
   {
     "id": 347,
-    "title": "Тату «Грудь право» AUGUST (Муж.)",
+    "title": "«Грудь право» AUGUST",
     "rawTitle": "male_chest_right_august",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6910,7 +6910,7 @@
   },
   {
     "id": 362,
-    "title": "Тату «Грудь право» AUGUST (Жен.)",
+    "title": "«Грудь право» AUGUST",
     "rawTitle": "female_chest_right_august",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -6955,7 +6955,7 @@
   },
   {
     "id": 375,
-    "title": "Тату «Грудь право» [Босс] (Муж.)",
+    "title": "«Грудь право» [Босс]",
     "rawTitle": "male_chest_right_boss",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -7000,7 +7000,7 @@
   },
   {
     "id": 382,
-    "title": "Тату «Грудь право» [Босс] (Жен.)",
+    "title": "«Грудь право» [Босс]",
     "rawTitle": "female_chest_right_boss",
     "slotId": 9,
     "slotTitle": "Грудь право",
@@ -7045,7 +7045,7 @@
   },
   {
     "id": 25,
-    "title": "Тату «Грудь лево» №1 (Муж.)",
+    "title": "«Грудь лево» №1",
     "rawTitle": "male_chest_left_01",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7075,7 +7075,7 @@
   },
   {
     "id": 26,
-    "title": "Тату «Грудь лево» №2 (Муж.)",
+    "title": "«Грудь лево» №2",
     "rawTitle": "male_chest_left_02",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7105,7 +7105,7 @@
   },
   {
     "id": 27,
-    "title": "Тату «Грудь лево» №3 (Муж.)",
+    "title": "«Грудь лево» №3",
     "rawTitle": "male_chest_left_03",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7135,7 +7135,7 @@
   },
   {
     "id": 67,
-    "title": "Тату «Грудь лево» №1 (Жен.)",
+    "title": "«Грудь лево» №1",
     "rawTitle": "female_chest_left_01",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7165,7 +7165,7 @@
   },
   {
     "id": 68,
-    "title": "Тату «Грудь лево» №2 (Жен.)",
+    "title": "«Грудь лево» №2",
     "rawTitle": "female_chest_left_02",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7195,7 +7195,7 @@
   },
   {
     "id": 69,
-    "title": "Тату «Грудь лево» №3 (Жен.)",
+    "title": "«Грудь лево» №3",
     "rawTitle": "female_chest_left_03",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7225,7 +7225,7 @@
   },
   {
     "id": 94,
-    "title": "Тату «Грудь лево» №0 (Муж.)",
+    "title": "«Грудь лево» №0",
     "rawTitle": "male_chest_left_00",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7255,7 +7255,7 @@
   },
   {
     "id": 109,
-    "title": "Тату «Грудь лево» №0 (Жен.)",
+    "title": "«Грудь лево» №0",
     "rawTitle": "female_chest_left_00",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7285,7 +7285,7 @@
   },
   {
     "id": 160,
-    "title": "Тату «Грудь лево» №4 (Муж.)",
+    "title": "«Грудь лево» №4",
     "rawTitle": "male_chest_left_04",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7317,7 +7317,7 @@
   },
   {
     "id": 161,
-    "title": "Тату «Грудь лево» №5 (Муж.)",
+    "title": "«Грудь лево» №5",
     "rawTitle": "male_chest_left_05",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7349,7 +7349,7 @@
   },
   {
     "id": 162,
-    "title": "Тату «Грудь лево» №6 (Муж.)",
+    "title": "«Грудь лево» №6",
     "rawTitle": "male_chest_left_06",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7381,7 +7381,7 @@
   },
   {
     "id": 163,
-    "title": "Тату «Грудь лево» №7 (Муж.)",
+    "title": "«Грудь лево» №7",
     "rawTitle": "male_chest_left_07",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7413,7 +7413,7 @@
   },
   {
     "id": 164,
-    "title": "Тату «Грудь лево» $1 (Муж.)",
+    "title": "«Грудь лево» $1",
     "rawTitle": "male_chest_left_$1",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7445,7 +7445,7 @@
   },
   {
     "id": 235,
-    "title": "Тату «Грудь лево» №4 (Жен.)",
+    "title": "«Грудь лево» №4",
     "rawTitle": "female_chest_left_04",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7477,7 +7477,7 @@
   },
   {
     "id": 236,
-    "title": "Тату «Грудь лево» №5 (Жен.)",
+    "title": "«Грудь лево» №5",
     "rawTitle": "female_chest_left_05",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7509,7 +7509,7 @@
   },
   {
     "id": 237,
-    "title": "Тату «Грудь лево» №6 (Жен.)",
+    "title": "«Грудь лево» №6",
     "rawTitle": "female_chest_left_06",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7541,7 +7541,7 @@
   },
   {
     "id": 238,
-    "title": "Тату «Грудь лево» №7 (Жен.)",
+    "title": "«Грудь лево» №7",
     "rawTitle": "female_chest_left_07",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7573,7 +7573,7 @@
   },
   {
     "id": 239,
-    "title": "Тату «Грудь лево» $1 (Жен.)",
+    "title": "«Грудь лево» $1",
     "rawTitle": "female_chest_left_$1",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7605,7 +7605,7 @@
   },
   {
     "id": 285,
-    "title": "Тату «Грудь лево» $2 (Муж.)",
+    "title": "«Грудь лево» $2",
     "rawTitle": "male_chest_left_$2",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7637,7 +7637,7 @@
   },
   {
     "id": 304,
-    "title": "Тату «Грудь лево» $2 (Жен.)",
+    "title": "«Грудь лево» $2",
     "rawTitle": "female_chest_left_$2",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7669,7 +7669,7 @@
   },
   {
     "id": 314,
-    "title": "Тату «Грудь лево» №8 (Муж.)",
+    "title": "«Грудь лево» №8",
     "rawTitle": "male_chest_left_08",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7701,7 +7701,7 @@
   },
   {
     "id": 325,
-    "title": "Тату «Грудь лево» №8 (Жен.)",
+    "title": "«Грудь лево» №8",
     "rawTitle": "female_chest_left_08",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7733,7 +7733,7 @@
   },
   {
     "id": 333,
-    "title": "Тату «Грудь лево» №9 (Муж.)",
+    "title": "«Грудь лево» №9",
     "rawTitle": "male_chest_left_09",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7765,7 +7765,7 @@
   },
   {
     "id": 337,
-    "title": "Тату «Грудь лево» №9 (Жен.)",
+    "title": "«Грудь лево» №9",
     "rawTitle": "female_chest_left_09",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7797,7 +7797,7 @@
   },
   {
     "id": 348,
-    "title": "Тату «Грудь лево» AUGUST (Муж.)",
+    "title": "«Грудь лево» AUGUST",
     "rawTitle": "male_chest_left_august",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7829,7 +7829,7 @@
   },
   {
     "id": 363,
-    "title": "Тату «Грудь лево» AUGUST (Жен.)",
+    "title": "«Грудь лево» AUGUST",
     "rawTitle": "female_chest_left_august",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7861,7 +7861,7 @@
   },
   {
     "id": 374,
-    "title": "Тату «Грудь лево» [Босс] (Муж.)",
+    "title": "«Грудь лево» [Босс]",
     "rawTitle": "male_chest_left_boss",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7906,7 +7906,7 @@
   },
   {
     "id": 383,
-    "title": "Тату «Грудь лево» [Босс] (Жен.)",
+    "title": "«Грудь лево» [Босс]",
     "rawTitle": "female_chest_left_boss",
     "slotId": 10,
     "slotTitle": "Грудь лево",
@@ -7951,7 +7951,7 @@
   },
   {
     "id": 28,
-    "title": "Тату «Рука лево» №1 (Муж.)",
+    "title": "«Рука лево» №1",
     "rawTitle": "male_arm_left_01",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -7973,7 +7973,7 @@
   },
   {
     "id": 29,
-    "title": "Тату «Рука лево» №2 (Муж.)",
+    "title": "«Рука лево» №2",
     "rawTitle": "male_arm_left_02",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -7995,7 +7995,7 @@
   },
   {
     "id": 30,
-    "title": "Тату «Рука лево» №3 (Муж.)",
+    "title": "«Рука лево» №3",
     "rawTitle": "male_arm_left_03",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8017,7 +8017,7 @@
   },
   {
     "id": 70,
-    "title": "Тату «Рука лево» №1 (Жен.)",
+    "title": "«Рука лево» №1",
     "rawTitle": "female_arm_left_01",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8039,7 +8039,7 @@
   },
   {
     "id": 71,
-    "title": "Тату «Рука лево» №2 (Жен.)",
+    "title": "«Рука лево» №2",
     "rawTitle": "female_arm_left_02",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8061,7 +8061,7 @@
   },
   {
     "id": 72,
-    "title": "Тату «Рука лево» №3 (Жен.)",
+    "title": "«Рука лево» №3",
     "rawTitle": "female_arm_left_03",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8083,7 +8083,7 @@
   },
   {
     "id": 95,
-    "title": "Тату «Рука лево» №0 (Муж.)",
+    "title": "«Рука лево» №0",
     "rawTitle": "male_arm_left_00",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8105,7 +8105,7 @@
   },
   {
     "id": 110,
-    "title": "Тату «Рука лево» №0 (Жен.)",
+    "title": "«Рука лево» №0",
     "rawTitle": "female_arm_left_00",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8127,7 +8127,7 @@
   },
   {
     "id": 165,
-    "title": "Тату «Рука лево» №4 (Муж.)",
+    "title": "«Рука лево» №4",
     "rawTitle": "male_arm_left_04",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8151,7 +8151,7 @@
   },
   {
     "id": 166,
-    "title": "Тату «Рука лево» №5 (Муж.)",
+    "title": "«Рука лево» №5",
     "rawTitle": "male_arm_left_05",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8175,7 +8175,7 @@
   },
   {
     "id": 167,
-    "title": "Тату «Рука лево» №6 (Муж.)",
+    "title": "«Рука лево» №6",
     "rawTitle": "male_arm_left_06",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8199,7 +8199,7 @@
   },
   {
     "id": 168,
-    "title": "Тату «Рука лево» №7 (Муж.)",
+    "title": "«Рука лево» №7",
     "rawTitle": "male_arm_left_07",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8223,7 +8223,7 @@
   },
   {
     "id": 169,
-    "title": "Тату «Рука лево» $1 (Муж.)",
+    "title": "«Рука лево» $1",
     "rawTitle": "male_arm_left_$1",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8247,7 +8247,7 @@
   },
   {
     "id": 240,
-    "title": "Тату «Рука лево» №4 (Жен.)",
+    "title": "«Рука лево» №4",
     "rawTitle": "female_arm_left_04",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8271,7 +8271,7 @@
   },
   {
     "id": 241,
-    "title": "Тату «Рука лево» №5 (Жен.)",
+    "title": "«Рука лево» №5",
     "rawTitle": "female_arm_left_05",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8295,7 +8295,7 @@
   },
   {
     "id": 242,
-    "title": "Тату «Рука лево» №6 (Жен.)",
+    "title": "«Рука лево» №6",
     "rawTitle": "female_arm_left_06",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8319,7 +8319,7 @@
   },
   {
     "id": 243,
-    "title": "Тату «Рука лево» №7 (Жен.)",
+    "title": "«Рука лево» №7",
     "rawTitle": "female_arm_left_07",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8343,7 +8343,7 @@
   },
   {
     "id": 244,
-    "title": "Тату «Рука лево» $1 (Жен.)",
+    "title": "«Рука лево» $1",
     "rawTitle": "female_arm_left_$1",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8367,7 +8367,7 @@
   },
   {
     "id": 284,
-    "title": "Тату «Рука лево» $2 (Муж.)",
+    "title": "«Рука лево» $2",
     "rawTitle": "male_arm_left_$2",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8391,7 +8391,7 @@
   },
   {
     "id": 305,
-    "title": "Тату «Рука лево» $2 (Жен.)",
+    "title": "«Рука лево» $2",
     "rawTitle": "female_arm_left_$2",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8415,7 +8415,7 @@
   },
   {
     "id": 315,
-    "title": "Тату «Рука лево» №8 (Муж.)",
+    "title": "«Рука лево» №8",
     "rawTitle": "male_arm_left_08",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8439,7 +8439,7 @@
   },
   {
     "id": 326,
-    "title": "Тату «Рука лево» №8 (Жен.)",
+    "title": "«Рука лево» №8",
     "rawTitle": "female_arm_left_08",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8463,7 +8463,7 @@
   },
   {
     "id": 349,
-    "title": "Тату «Рука лево» AUGUST (Муж.)",
+    "title": "«Рука лево» AUGUST",
     "rawTitle": "male_arm_left_august",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8500,7 +8500,7 @@
   },
   {
     "id": 364,
-    "title": "Тату «Рука лево» AUGUST (Жен.)",
+    "title": "«Рука лево» AUGUST",
     "rawTitle": "female_arm_left_august",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8537,7 +8537,7 @@
   },
   {
     "id": 373,
-    "title": "Тату «Рука лево» [Босс] (Муж.)",
+    "title": "«Рука лево» [Босс]",
     "rawTitle": "male_arm_left_boss",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8561,7 +8561,7 @@
   },
   {
     "id": 384,
-    "title": "Тату «Рука лево» [Босс] (Жен.)",
+    "title": "«Рука лево» [Босс]",
     "rawTitle": "female_arm_left_boss",
     "slotId": 11,
     "slotTitle": "Рука лево",
@@ -8585,7 +8585,7 @@
   },
   {
     "id": 31,
-    "title": "Тату «Кисть право» №1 (Муж.)",
+    "title": "«Кисть право» №1",
     "rawTitle": "male_wrist_right_01",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8609,7 +8609,7 @@
   },
   {
     "id": 32,
-    "title": "Тату «Кисть право» №2 (Муж.)",
+    "title": "«Кисть право» №2",
     "rawTitle": "male_wrist_right_02",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8633,7 +8633,7 @@
   },
   {
     "id": 33,
-    "title": "Тату «Кисть право» №3 (Муж.)",
+    "title": "«Кисть право» №3",
     "rawTitle": "male_wrist_right_03''",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8657,7 +8657,7 @@
   },
   {
     "id": 73,
-    "title": "Тату «Кисть право» №1 (Жен.)",
+    "title": "«Кисть право» №1",
     "rawTitle": "female_wrist_right_01",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8681,7 +8681,7 @@
   },
   {
     "id": 74,
-    "title": "Тату «Кисть право» №2 (Жен.)",
+    "title": "«Кисть право» №2",
     "rawTitle": "female_wrist_right_02",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8705,7 +8705,7 @@
   },
   {
     "id": 75,
-    "title": "Тату «Кисть право» №3 (Жен.)",
+    "title": "«Кисть право» №3",
     "rawTitle": "female_wrist_right_03''",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8729,7 +8729,7 @@
   },
   {
     "id": 96,
-    "title": "Тату «Кисть право» №0 (Муж.)",
+    "title": "«Кисть право» №0",
     "rawTitle": "male_wrist_right_00",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8753,7 +8753,7 @@
   },
   {
     "id": 111,
-    "title": "Тату «Кисть право» №0 (Жен.)",
+    "title": "«Кисть право» №0",
     "rawTitle": "female_wrist_right_00",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8777,7 +8777,7 @@
   },
   {
     "id": 170,
-    "title": "Тату «Кисть право» №4 (Муж.)",
+    "title": "«Кисть право» №4",
     "rawTitle": "male_wrist_right_04",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8803,7 +8803,7 @@
   },
   {
     "id": 171,
-    "title": "Тату «Кисть право» №5 (Муж.)",
+    "title": "«Кисть право» №5",
     "rawTitle": "male_wrist_right_05",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8829,7 +8829,7 @@
   },
   {
     "id": 172,
-    "title": "Тату «Кисть право» №6 (Муж.)",
+    "title": "«Кисть право» №6",
     "rawTitle": "male_wrist_right_06",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8855,7 +8855,7 @@
   },
   {
     "id": 173,
-    "title": "Тату «Кисть право» №7 (Муж.)",
+    "title": "«Кисть право» №7",
     "rawTitle": "male_wrist_right_07",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8881,7 +8881,7 @@
   },
   {
     "id": 174,
-    "title": "Тату «Кисть право» $1 (Муж.)",
+    "title": "«Кисть право» $1",
     "rawTitle": "male_wrist_right_$1",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8907,7 +8907,7 @@
   },
   {
     "id": 245,
-    "title": "Тату «Кисть право» №4 (Жен.)",
+    "title": "«Кисть право» №4",
     "rawTitle": "female_wrist_right_04",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8933,7 +8933,7 @@
   },
   {
     "id": 246,
-    "title": "Тату «Кисть право» №5 (Жен.)",
+    "title": "«Кисть право» №5",
     "rawTitle": "female_wrist_right_05",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8959,7 +8959,7 @@
   },
   {
     "id": 247,
-    "title": "Тату «Кисть право» №6 (Жен.)",
+    "title": "«Кисть право» №6",
     "rawTitle": "female_wrist_right_06",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -8985,7 +8985,7 @@
   },
   {
     "id": 248,
-    "title": "Тату «Кисть право» №7 (Жен.)",
+    "title": "«Кисть право» №7",
     "rawTitle": "female_wrist_right_07",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9011,7 +9011,7 @@
   },
   {
     "id": 249,
-    "title": "Тату «Кисть право» $1 (Жен.)",
+    "title": "«Кисть право» $1",
     "rawTitle": "female_wrist_right_$1",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9037,7 +9037,7 @@
   },
   {
     "id": 283,
-    "title": "Тату «Кисть право» $2 (Муж.)",
+    "title": "«Кисть право» $2",
     "rawTitle": "male_wrist_right_$2",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9063,7 +9063,7 @@
   },
   {
     "id": 306,
-    "title": "Тату «Кисть право» $2 (Жен.)",
+    "title": "«Кисть право» $2",
     "rawTitle": "female_wrist_right_$2",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9089,7 +9089,7 @@
   },
   {
     "id": 316,
-    "title": "Тату «Кисть право» №8 (Муж.)",
+    "title": "«Кисть право» №8",
     "rawTitle": "male_wrist_right_08",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9115,7 +9115,7 @@
   },
   {
     "id": 327,
-    "title": "Тату «Кисть право» №8 (Жен.)",
+    "title": "«Кисть право» №8",
     "rawTitle": "female_wrist_right_08",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9141,7 +9141,7 @@
   },
   {
     "id": 350,
-    "title": "Тату «Кисть право» AUGUST (Муж.)",
+    "title": "«Кисть право» AUGUST",
     "rawTitle": "male_wrist_right_august",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9167,7 +9167,7 @@
   },
   {
     "id": 365,
-    "title": "Тату «Кисть право» AUGUST (Жен.)",
+    "title": "«Кисть право» AUGUST",
     "rawTitle": "female_wrist_right_august",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9193,7 +9193,7 @@
   },
   {
     "id": 372,
-    "title": "Тату «Кисть право» [Босс] (Муж.)",
+    "title": "«Кисть право» [Босс]",
     "rawTitle": "male_wrist_right_boss",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9219,7 +9219,7 @@
   },
   {
     "id": 385,
-    "title": "Тату «Кисть право» [Босс] (Жен.)",
+    "title": "«Кисть право» [Босс]",
     "rawTitle": "female_wrist_right_boss",
     "slotId": 12,
     "slotTitle": "Кисть право",
@@ -9245,7 +9245,7 @@
   },
   {
     "id": 34,
-    "title": "Тату «Живот» №1 (Муж.)",
+    "title": "«Живот» №1",
     "rawTitle": "male_belly_01",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9275,7 +9275,7 @@
   },
   {
     "id": 35,
-    "title": "Тату «Живот» №2 (Муж.)",
+    "title": "«Живот» №2",
     "rawTitle": "male_belly_02",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9305,7 +9305,7 @@
   },
   {
     "id": 36,
-    "title": "Тату «Живот» №3 (Муж.)",
+    "title": "«Живот» №3",
     "rawTitle": "male_belly_03",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9335,7 +9335,7 @@
   },
   {
     "id": 76,
-    "title": "Тату «Живот» №1 (Жен.)",
+    "title": "«Живот» №1",
     "rawTitle": "female_belly_01",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9365,7 +9365,7 @@
   },
   {
     "id": 77,
-    "title": "Тату «Живот» №2 (Жен.)",
+    "title": "«Живот» №2",
     "rawTitle": "female_belly_02",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9395,7 +9395,7 @@
   },
   {
     "id": 78,
-    "title": "Тату «Живот» №3 (Жен.)",
+    "title": "«Живот» №3",
     "rawTitle": "female_belly_03",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9425,7 +9425,7 @@
   },
   {
     "id": 97,
-    "title": "Тату «Живот» №0 (Муж.)",
+    "title": "«Живот» №0",
     "rawTitle": "male_belly_00",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9455,7 +9455,7 @@
   },
   {
     "id": 112,
-    "title": "Тату «Живот» №0 (Жен.)",
+    "title": "«Живот» №0",
     "rawTitle": "female_belly_00",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9485,7 +9485,7 @@
   },
   {
     "id": 175,
-    "title": "Тату «Живот» №4 (Муж.)",
+    "title": "«Живот» №4",
     "rawTitle": "male_belly_04",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9517,7 +9517,7 @@
   },
   {
     "id": 176,
-    "title": "Тату «Живот» №5 (Муж.)",
+    "title": "«Живот» №5",
     "rawTitle": "male_belly_05",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9549,7 +9549,7 @@
   },
   {
     "id": 177,
-    "title": "Тату «Живот» №6 (Муж.)",
+    "title": "«Живот» №6",
     "rawTitle": "male_belly_06",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9581,7 +9581,7 @@
   },
   {
     "id": 178,
-    "title": "Тату «Живот» №7 (Муж.)",
+    "title": "«Живот» №7",
     "rawTitle": "male_belly_07",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9613,7 +9613,7 @@
   },
   {
     "id": 179,
-    "title": "Тату «Живот» $1 (Муж.)",
+    "title": "«Живот» $1",
     "rawTitle": "male_belly_$1",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9645,7 +9645,7 @@
   },
   {
     "id": 250,
-    "title": "Тату «Живот» №4 (Жен.)",
+    "title": "«Живот» №4",
     "rawTitle": "female_belly_04",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9677,7 +9677,7 @@
   },
   {
     "id": 251,
-    "title": "Тату «Живот» №5 (Жен.)",
+    "title": "«Живот» №5",
     "rawTitle": "female_belly_05",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9709,7 +9709,7 @@
   },
   {
     "id": 252,
-    "title": "Тату «Живот» №6 (Жен.)",
+    "title": "«Живот» №6",
     "rawTitle": "female_belly_06",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9741,7 +9741,7 @@
   },
   {
     "id": 253,
-    "title": "Тату «Живот» №7 (Жен.)",
+    "title": "«Живот» №7",
     "rawTitle": "female_belly_07",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9773,7 +9773,7 @@
   },
   {
     "id": 254,
-    "title": "Тату «Живот» $1 (Жен.)",
+    "title": "«Живот» $1",
     "rawTitle": "female_belly_$1",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9805,7 +9805,7 @@
   },
   {
     "id": 282,
-    "title": "Тату «Живот» $2 (Муж.)",
+    "title": "«Живот» $2",
     "rawTitle": "male_belly_$2",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9837,7 +9837,7 @@
   },
   {
     "id": 307,
-    "title": "Тату «Живот» $2 (Жен.)",
+    "title": "«Живот» $2",
     "rawTitle": "female_belly_$2",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9869,7 +9869,7 @@
   },
   {
     "id": 317,
-    "title": "Тату «Живот» №8 (Муж.)",
+    "title": "«Живот» №8",
     "rawTitle": "male_belly_08",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9901,7 +9901,7 @@
   },
   {
     "id": 328,
-    "title": "Тату «Живот» №8 (Жен.)",
+    "title": "«Живот» №8",
     "rawTitle": "female_belly_08",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9933,7 +9933,7 @@
   },
   {
     "id": 334,
-    "title": "Тату «Живот» №9 (Муж.)",
+    "title": "«Живот» №9",
     "rawTitle": "male_belly_09",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9965,7 +9965,7 @@
   },
   {
     "id": 338,
-    "title": "Тату «Живот» №9 (Жен.)",
+    "title": "«Живот» №9",
     "rawTitle": "female_belly_09",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -9997,7 +9997,7 @@
   },
   {
     "id": 351,
-    "title": "Тату «Живот» AUGUST (Муж.)",
+    "title": "«Живот» AUGUST",
     "rawTitle": "male_belly_august",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -10042,7 +10042,7 @@
   },
   {
     "id": 366,
-    "title": "Тату «Живот» AUGUST (Жен.)",
+    "title": "«Живот» AUGUST",
     "rawTitle": "female_belly_august",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -10087,7 +10087,7 @@
   },
   {
     "id": 371,
-    "title": "Тату «Живот» [Босс] (Муж.)",
+    "title": "«Живот» [Босс]",
     "rawTitle": "male_belly_boss",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -10119,7 +10119,7 @@
   },
   {
     "id": 386,
-    "title": "Тату «Живот» [Босс] (Жен.)",
+    "title": "«Живот» [Босс]",
     "rawTitle": "female_belly_boss",
     "slotId": 13,
     "slotTitle": "Живот",
@@ -10151,7 +10151,7 @@
   },
   {
     "id": 37,
-    "title": "Тату «Талия» №1 (Муж.)",
+    "title": "«Талия» №1",
     "rawTitle": "male_waist_01",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10181,7 +10181,7 @@
   },
   {
     "id": 38,
-    "title": "Тату «Талия» №2 (Муж.)",
+    "title": "«Талия» №2",
     "rawTitle": "male_waist_02",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10213,7 +10213,7 @@
   },
   {
     "id": 39,
-    "title": "Тату «Талия» №3 (Муж.)",
+    "title": "«Талия» №3",
     "rawTitle": "male_waist_03",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10243,7 +10243,7 @@
   },
   {
     "id": 79,
-    "title": "Тату «Талия» №1 (Жен.)",
+    "title": "«Талия» №1",
     "rawTitle": "female_waist_01",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10273,7 +10273,7 @@
   },
   {
     "id": 80,
-    "title": "Тату «Талия» №2 (Жен.)",
+    "title": "«Талия» №2",
     "rawTitle": "female_waist_02",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10303,7 +10303,7 @@
   },
   {
     "id": 81,
-    "title": "Тату «Талия» №3 (Жен.)",
+    "title": "«Талия» №3",
     "rawTitle": "female_waist_03",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10333,7 +10333,7 @@
   },
   {
     "id": 98,
-    "title": "Тату «Талия» №0 (Муж.)",
+    "title": "«Талия» №0",
     "rawTitle": "male_waist_00",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10363,7 +10363,7 @@
   },
   {
     "id": 113,
-    "title": "Тату «Талия» №0 (Жен.)",
+    "title": "«Талия» №0",
     "rawTitle": "female_waist_00",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10393,7 +10393,7 @@
   },
   {
     "id": 180,
-    "title": "Тату «Талия» №4 (Муж.)",
+    "title": "«Талия» №4",
     "rawTitle": "male_waist_04",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10425,7 +10425,7 @@
   },
   {
     "id": 181,
-    "title": "Тату «Талия» №5 (Муж.)",
+    "title": "«Талия» №5",
     "rawTitle": "male_waist_05",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10457,7 +10457,7 @@
   },
   {
     "id": 182,
-    "title": "Тату «Талия» №6 (Муж.)",
+    "title": "«Талия» №6",
     "rawTitle": "male_waist_06",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10489,7 +10489,7 @@
   },
   {
     "id": 183,
-    "title": "Тату «Талия» №7 (Муж.)",
+    "title": "«Талия» №7",
     "rawTitle": "male_waist_07",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10521,7 +10521,7 @@
   },
   {
     "id": 184,
-    "title": "Тату «Талия» $1 (Муж.)",
+    "title": "«Талия» $1",
     "rawTitle": "male_waist_$1",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10551,7 +10551,7 @@
   },
   {
     "id": 255,
-    "title": "Тату «Талия» №4 (Жен.)",
+    "title": "«Талия» №4",
     "rawTitle": "female_waist_04",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10583,7 +10583,7 @@
   },
   {
     "id": 256,
-    "title": "Тату «Талия» №5 (Жен.)",
+    "title": "«Талия» №5",
     "rawTitle": "female_waist_05",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10615,7 +10615,7 @@
   },
   {
     "id": 257,
-    "title": "Тату «Талия» №6 (Жен.)",
+    "title": "«Талия» №6",
     "rawTitle": "female_waist_06",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10647,7 +10647,7 @@
   },
   {
     "id": 258,
-    "title": "Тату «Талия» №7 (Жен.)",
+    "title": "«Талия» №7",
     "rawTitle": "female_waist_07",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10679,7 +10679,7 @@
   },
   {
     "id": 259,
-    "title": "Тату «Талия» $1 (Жен.)",
+    "title": "«Талия» $1",
     "rawTitle": "female_waist_$1",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10717,7 +10717,7 @@
   },
   {
     "id": 281,
-    "title": "Тату «Талия» $2 (Муж.)",
+    "title": "«Талия» $2",
     "rawTitle": "male_waist_$2",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10755,7 +10755,7 @@
   },
   {
     "id": 308,
-    "title": "Тату «Талия» $2 (Жен.)",
+    "title": "«Талия» $2",
     "rawTitle": "female_waist_$2",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10793,7 +10793,7 @@
   },
   {
     "id": 352,
-    "title": "Тату «Талия» AUGUST (Муж.)",
+    "title": "«Талия» AUGUST",
     "rawTitle": "male_waist_august",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10838,7 +10838,7 @@
   },
   {
     "id": 367,
-    "title": "Тату «Талия» AUGUST (Жен.)",
+    "title": "«Талия» AUGUST",
     "rawTitle": "female_waist_august",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10883,7 +10883,7 @@
   },
   {
     "id": 370,
-    "title": "Тату «Талия» [Босс] (Муж.)",
+    "title": "«Талия» [Босс]",
     "rawTitle": "male_waist_boss",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10915,7 +10915,7 @@
   },
   {
     "id": 388,
-    "title": "Тату «Талия» [Босс] (Жен.)",
+    "title": "«Талия» [Босс]",
     "rawTitle": "female_waist_boss",
     "slotId": 14,
     "slotTitle": "Талия",
@@ -10945,7 +10945,7 @@
   },
   {
     "id": 40,
-    "title": "Тату «Кисть лево» №1 (Муж.)",
+    "title": "«Кисть лево» №1",
     "rawTitle": "male_wrist_left_01",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -10969,7 +10969,7 @@
   },
   {
     "id": 41,
-    "title": "Тату «Кисть лево» №2 (Муж.)",
+    "title": "«Кисть лево» №2",
     "rawTitle": "male_wrist_left_02",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -10993,7 +10993,7 @@
   },
   {
     "id": 42,
-    "title": "Тату «Кисть лево» №3 (Муж.)",
+    "title": "«Кисть лево» №3",
     "rawTitle": "male_wrist_left_03",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11017,7 +11017,7 @@
   },
   {
     "id": 82,
-    "title": "Тату «Кисть лево» №1 (Жен.)",
+    "title": "«Кисть лево» №1",
     "rawTitle": "female_wrist_left_01",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11041,7 +11041,7 @@
   },
   {
     "id": 83,
-    "title": "Тату «Кисть лево» №2 (Жен.)",
+    "title": "«Кисть лево» №2",
     "rawTitle": "female_wrist_left_02",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11065,7 +11065,7 @@
   },
   {
     "id": 84,
-    "title": "Тату «Кисть лево» №3 (Жен.)",
+    "title": "«Кисть лево» №3",
     "rawTitle": "female_wrist_left_03",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11089,7 +11089,7 @@
   },
   {
     "id": 99,
-    "title": "Тату «Кисть лево» №0 (Муж.)",
+    "title": "«Кисть лево» №0",
     "rawTitle": "male_wrist_left_00",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11113,7 +11113,7 @@
   },
   {
     "id": 114,
-    "title": "Тату «Кисть лево» №0 (Жен.)",
+    "title": "«Кисть лево» №0",
     "rawTitle": "female_wrist_left_00",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11137,7 +11137,7 @@
   },
   {
     "id": 185,
-    "title": "Тату «Кисть лево» №4 (Муж.)",
+    "title": "«Кисть лево» №4",
     "rawTitle": "male_wrist_left_04",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11163,7 +11163,7 @@
   },
   {
     "id": 186,
-    "title": "Тату «Кисть лево» №5 (Муж.)",
+    "title": "«Кисть лево» №5",
     "rawTitle": "male_wrist_left_05",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11189,7 +11189,7 @@
   },
   {
     "id": 187,
-    "title": "Тату «Кисть лево» №6 (Муж.)",
+    "title": "«Кисть лево» №6",
     "rawTitle": "male_wrist_left_06",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11215,7 +11215,7 @@
   },
   {
     "id": 188,
-    "title": "Тату «Кисть лево» №7 (Муж.)",
+    "title": "«Кисть лево» №7",
     "rawTitle": "male_wrist_left_07",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11241,7 +11241,7 @@
   },
   {
     "id": 189,
-    "title": "Тату «Кисть лево» $1 (Муж.)",
+    "title": "«Кисть лево» $1",
     "rawTitle": "male_wrist_left_$1",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11273,7 +11273,7 @@
   },
   {
     "id": 260,
-    "title": "Тату «Кисть лево» №4 (Жен.)",
+    "title": "«Кисть лево» №4",
     "rawTitle": "female_wrist_left_04",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11299,7 +11299,7 @@
   },
   {
     "id": 261,
-    "title": "Тату «Кисть лево» №5 (Жен.)",
+    "title": "«Кисть лево» №5",
     "rawTitle": "female_wrist_left_05",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11325,7 +11325,7 @@
   },
   {
     "id": 262,
-    "title": "Тату «Кисть лево» №6 (Жен.)",
+    "title": "«Кисть лево» №6",
     "rawTitle": "female_wrist_left_06",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11351,7 +11351,7 @@
   },
   {
     "id": 263,
-    "title": "Тату «Кисть лево» №7 (Жен.)",
+    "title": "«Кисть лево» №7",
     "rawTitle": "female_wrist_left_07",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11377,7 +11377,7 @@
   },
   {
     "id": 264,
-    "title": "Тату «Кисть лево» $1 (Жен.)",
+    "title": "«Кисть лево» $1",
     "rawTitle": "female_wrist_left_$1",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11409,7 +11409,7 @@
   },
   {
     "id": 280,
-    "title": "Тату «Кисть лево» $2 (Муж.)",
+    "title": "«Кисть лево» $2",
     "rawTitle": "male_wrist_left_$2",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11441,7 +11441,7 @@
   },
   {
     "id": 309,
-    "title": "Тату «Кисть лево» $2 (Жен.)",
+    "title": "«Кисть лево» $2",
     "rawTitle": "female_wrist_left_$2",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11473,7 +11473,7 @@
   },
   {
     "id": 318,
-    "title": "Тату «Кисть лево» №8 (Муж.)",
+    "title": "«Кисть лево» №8",
     "rawTitle": "male_wrist_left_08",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11499,7 +11499,7 @@
   },
   {
     "id": 329,
-    "title": "Тату «Кисть лево» №8 (Жен.)",
+    "title": "«Кисть лево» №8",
     "rawTitle": "female_wrist_left_08",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11525,7 +11525,7 @@
   },
   {
     "id": 353,
-    "title": "Тату «Кисть лево» AUGUST (Муж.)",
+    "title": "«Кисть лево» AUGUST",
     "rawTitle": "male_wrist_left_august",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11564,7 +11564,7 @@
   },
   {
     "id": 368,
-    "title": "Тату «Кисть лево» AUGUST (Жен.)",
+    "title": "«Кисть лево» AUGUST",
     "rawTitle": "female_wrist_left_august",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11603,7 +11603,7 @@
   },
   {
     "id": 369,
-    "title": "Тату «Кисть лево» [Босс] (Муж.)",
+    "title": "«Кисть лево» [Босс]",
     "rawTitle": "male_wrist_left_boss",
     "slotId": 15,
     "slotTitle": "Кисть лево",
@@ -11629,7 +11629,7 @@
   },
   {
     "id": 387,
-    "title": "Тату «Кисть лево» [Босс] (Жен.)",
+    "title": "«Кисть лево» [Босс]",
     "rawTitle": "female_wrist_left_boss",
     "slotId": 15,
     "slotTitle": "Кисть лево",

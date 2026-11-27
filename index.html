@@ -1951,7 +1951,6 @@
       marketSection: 'weapons', // 'weapons', 'clothes', 'pets', 'tattoos'
       marketClothCategory: 'all',
       marketTattooSlot: 'all',
-      marketTattooSex: 'all',
       marketCurrency: 'all'
     };
 
@@ -2295,7 +2294,8 @@
                                       } else if (d.type === 'access_cloth') {
                                         innerHtml = `<span onclick="openClothDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть одежду/питомца: ${d.title}">${d.title}</span>`;
                                       } else if (d.type === 'access_ornament') {
-                                        innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${d.title}">${d.title}</span>`;
+                                        const cleanT = d.title.replace(/^Доступ:\s*/, '').replace(/^Тату\s*/, '');
+                                        innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${cleanT}">${cleanT}</span>`;
                                       }
                                       return `
                                         <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
@@ -2595,7 +2595,8 @@
                     } else if (d.type === 'access_cloth') {
                       innerHtml = `<span onclick="openClothDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть одежду/питомца: ${d.title}">${d.title}</span>`;
                     } else if (d.type === 'access_ornament') {
-                      innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${d.title}">${d.title}</span>`;
+                      const cleanT = d.title.replace(/^Доступ:\s*/, '').replace(/^Тату\s*/, '');
+                      innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${cleanT}">${cleanT}</span>`;
                     }
                     return `
                       <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
@@ -2788,7 +2789,7 @@
                     ${badgeSource}
                   </div>
                   <div style="font-size:0.75rem;color:var(--accent-blue);font-weight:600;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
-                    <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle} • ${t.sex === 'female' ? 'Жен.' : 'Муж.'}</span>
+                    <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle}</span>
                     <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${t.id}</span>
                   </div>
                 </div>
@@ -3150,7 +3151,6 @@
         ];
 
         let filtered = allTattoos.filter(t => {
-          if (state.marketTattooSex !== 'all' && t.sex !== state.marketTattooSex) return false;
           if (state.marketTattooSlot !== 'all') {
             const slotLower = (t.slotTitle || '').toLowerCase();
             if (!slotLower.includes(state.marketTattooSlot)) return false;
@@ -3166,19 +3166,6 @@
         filtered.sort((a, b) => a.id - b.id);
 
         sidebarHtml = `
-          <div class="market-side-group">
-            <div class="market-side-title">Пол персонажа</div>
-            <button class="market-side-btn ${state.marketTattooSex === 'all' ? 'active' : ''}" onclick="state.marketTattooSex='all'; renderContent();">
-              <span>Все полы</span>
-            </button>
-            <button class="market-side-btn ${state.marketTattooSex === 'male' ? 'active' : ''}" onclick="state.marketTattooSex='male'; renderContent();">
-              <span>👨 Мужские</span>
-            </button>
-            <button class="market-side-btn ${state.marketTattooSex === 'female' ? 'active' : ''}" onclick="state.marketTattooSex='female'; renderContent();">
-              <span>👩 Женские</span>
-            </button>
-          </div>
-
           <div class="market-side-group">
             <div class="market-side-title">Зона нанесения</div>
             ${slots.map(s => `
@@ -3212,7 +3199,7 @@
                       ${badgeSource}
                     </div>
                     <div style="font-size:0.75rem;color:var(--accent-blue);font-weight:600;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
-                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle} • ${t.sex === 'female' ? 'Жен.' : 'Муж.'}</span>
+                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle}</span>
                       <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${t.id}</span>
                     </div>
                   </div>
@@ -3623,7 +3610,7 @@
                   const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
                   itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openClothDetails(${d.id}, ${b.id})" title="Открыть информацию об одежде">${cleanTitle}</a>`;
                 } else if (d.type === 'access_ornament') {
-                  const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                  const cleanTitle = d.title.replace(/^Доступ:\s*/, '').replace(/^Тату\s*/, '');
                   itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openTattooDetails(${d.id}, ${b.id})" title="Открыть информацию о татуировке">${cleanTitle}</a>`;
                 } else if (d.type && d.type.startsWith('access_')) {
                   itemHtml = '🔑 ' + d.title;
@@ -4022,7 +4009,6 @@
 
         <table class="modal-table">
           <tr><th>Зона нанесения (слот)</th><td><strong>${t.slotTitle || 'Тело'}</strong></td></tr>
-          <tr><th>Пол персонажа</th><td>${t.sexTitle || (t.sex === 'female' ? 'Женский' : 'Мужской')}</td></tr>
           <tr><th>Требуемый уровень</th><td>${t.minLevel > 0 ? t.minLevel + ' ур.' : 'С 5 ур.'}</td></tr>
           <tr><th>Условия нанесения</th><td>${t.needsFormatted || 'Без дополнительных условий'}</td></tr>
           <tr><th>Цена в тату-салоне</th><td style="color:var(--accent-gold);font-weight:600;">${priceStr}</td></tr>
