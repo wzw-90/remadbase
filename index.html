@@ -387,20 +387,176 @@
       min-width: 0;
     }
 
+    /* Desktop default - mobile market elements are hidden */
+    .market-mobile-filter-bar {
+      display: none;
+    }
+    .market-sidebar-backdrop {
+      display: none;
+    }
+    .market-sidebar-header-mobile {
+      display: none;
+    }
+    .market-sidebar-footer-mobile {
+      display: none;
+    }
+
     @media (max-width: 900px) {
       .market-layout {
-        flex-direction: column;
+        display: block;
       }
-      .market-sidebar {
+      .market-mobile-filter-bar {
+        display: block;
+        margin-bottom: 0.75rem;
+      }
+      .market-mobile-filter-btn {
         width: 100%;
-        position: static;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #111724;
+        border: 1px solid #24334a;
+        border-radius: var(--radius-sm);
+        padding: 0.55rem 0.85rem;
+        color: #fff;
+        font-family: var(--font-header);
+        font-size: 0.82rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        transition: all 0.15s ease;
       }
-      .market-side-group {
-        flex: 1;
-        min-width: 140px;
+      .market-mobile-filter-btn:active {
+        background: #182336;
+        border-color: #38bdf8;
+      }
+      .market-active-filter-badge {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #38bdf8;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 2px 8px;
+        border-radius: 12px;
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .market-sidebar-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(3px);
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+      }
+      .market-sidebar-backdrop.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .market-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 290px;
+        max-width: 85vw;
+        height: 100%;
+        background: #0d121c;
+        border-right: 1px solid #233148;
+        border-radius: 0;
+        z-index: 1001;
+        transform: translateX(-100%);
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+        box-shadow: 8px 0 24px rgba(0, 0, 0, 0.85);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0.85rem 1.25rem 0.85rem;
+        gap: 1rem;
+        pointer-events: none;
+      }
+      .market-sidebar.open {
+        transform: translateX(0);
+        pointer-events: auto;
+      }
+
+      .market-sidebar-header-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--font-header);
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #fff;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #1c2738;
+      }
+      .market-sidebar-close-btn {
+        background: #172130;
+        border: 1px solid #2a3a52;
+        color: #94a3b8;
+        width: 28px;
+        height: 28px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+      }
+      .market-sidebar-close-btn:hover {
+        background: #22324a;
+        color: #fff;
+      }
+
+      .market-sidebar-footer-mobile {
+        display: block;
+        margin-top: auto;
+        padding-top: 0.75rem;
+        position: sticky;
+        bottom: 0;
+        background: #0d121c;
+      }
+      .market-apply-btn {
+        width: 100%;
+        background: linear-gradient(180deg, #b72628 0%, #8b1e1e 100%);
+        border: 1px solid #e53935;
+        color: #fff;
+        padding: 0.6rem 1rem;
+        font-family: var(--font-header);
+        font-size: 0.85rem;
+        font-weight: 700;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(183, 38, 40, 0.4);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .weapon-filter-ribbon {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .weapon-filter-ribbon::-webkit-scrollbar {
+        display: none;
+      }
+      .weapon-filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
       }
     }
 
@@ -1951,7 +2107,8 @@
       marketSection: 'weapons', // 'weapons', 'clothes', 'pets', 'tattoos'
       marketClothCategory: 'all',
       marketTattooSlot: 'all',
-      marketCurrency: 'all'
+      marketCurrency: 'all',
+      marketSidebarOpen: false
     };
 
     const UI = {
@@ -1986,8 +2143,16 @@
         const btn = e.target.closest('.nav-tab');
         if (!btn) return;
         state.tab = btn.dataset.tab;
+        closeMarketSidebar();
         document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b === btn));
         renderContent();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          closeMarketSidebar();
+        }
       });
 
       let timeout;
@@ -2892,20 +3057,29 @@
       // Clean top ribbon with only the 4 main categories
       UI.controls.innerHTML = `
         <div class="weapon-filter-ribbon">
-          <button class="weapon-filter-btn ${state.marketSection === 'weapons' ? 'active' : ''}" onclick="state.marketSection='weapons'; state.marketCurrency='all'; renderContent();">
+          <button class="weapon-filter-btn ${state.marketSection === 'weapons' ? 'active' : ''}" onclick="state.marketSection='weapons'; state.marketCurrency='all'; state.marketSidebarOpen=false; renderContent();">
             🔪 Оружие
           </button>
-          <button class="weapon-filter-btn ${state.marketSection === 'clothes' ? 'active' : ''}" onclick="state.marketSection='clothes'; state.marketCurrency='all'; renderContent();">
+          <button class="weapon-filter-btn ${state.marketSection === 'clothes' ? 'active' : ''}" onclick="state.marketSection='clothes'; state.marketCurrency='all'; state.marketSidebarOpen=false; renderContent();">
             👕 Одежда
           </button>
-          <button class="weapon-filter-btn ${state.marketSection === 'pets' ? 'active' : ''}" onclick="state.marketSection='pets'; state.marketCurrency='all'; renderContent();">
+          <button class="weapon-filter-btn ${state.marketSection === 'pets' ? 'active' : ''}" onclick="state.marketSection='pets'; state.marketCurrency='all'; state.marketSidebarOpen=false; renderContent();">
             🐾 Питомцы
           </button>
-          <button class="weapon-filter-btn ${state.marketSection === 'tattoos' ? 'active' : ''}" onclick="state.marketSection='tattoos'; state.marketCurrency='all'; renderContent();">
+          <button class="weapon-filter-btn ${state.marketSection === 'tattoos' ? 'active' : ''}" onclick="state.marketSection='tattoos'; state.marketCurrency='all'; state.marketSidebarOpen=false; renderContent();">
             🐉 Татуировки
           </button>
         </div>
       `;
+
+      function getCurrTitle(curr) {
+        if (curr === 'currency1') return 'Монеты';
+        if (curr === 'currency2') return 'Купюры';
+        if (curr === 'currency3') return 'Таблетки';
+        if (curr === 'boss') return 'Дроп с боссов';
+        if (curr === 'free') return 'Бесплатное';
+        return 'Все';
+      }
 
       function matchCurr(item, curr) {
         if (curr === 'all') return true;
@@ -2959,6 +3133,8 @@
 
       let sidebarHtml = '';
       let cardsHtml = '';
+      let activeFilteredCount = 0;
+      let activeFiltersSummary = '';
 
       if (state.marketSection === 'weapons') {
         let filtered = allWeapons.filter(w => {
@@ -2968,6 +3144,10 @@
           return w.id.toString() === q || (w.damage && w.damage.toString() === q) || titleMatch;
         });
         filtered.sort((a, b) => b.damage - a.damage);
+
+        activeFilteredCount = filtered.length;
+        const currT = getCurrTitle(state.marketCurrency);
+        activeFiltersSummary = currT === 'Все' ? 'Все валюты' : currT;
 
         sidebarHtml = renderCurrencySideGroup(true);
 
@@ -3026,6 +3206,11 @@
           if (statsB !== statsA) return statsB - statsA;
           return (a.minLevel || 0) - (b.minLevel || 0);
         });
+
+        activeFilteredCount = filtered.length;
+        const catT = state.marketClothCategory === 'all' ? 'Все вещи' : state.marketClothCategory;
+        const currT = getCurrTitle(state.marketCurrency);
+        activeFiltersSummary = `${catT}${currT !== 'Все' ? ' • ' + currT : ''}`;
 
         sidebarHtml = `
           <div class="market-side-group">
@@ -3097,6 +3282,10 @@
           return (a.minLevel || 0) - (b.minLevel || 0);
         });
 
+        activeFilteredCount = filtered.length;
+        const currT = getCurrTitle(state.marketCurrency);
+        activeFiltersSummary = currT === 'Все' ? 'Все питомцы' : currT;
+
         sidebarHtml = renderCurrencySideGroup(false);
 
         const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
@@ -3165,6 +3354,12 @@
 
         filtered.sort((a, b) => a.id - b.id);
 
+        activeFilteredCount = filtered.length;
+        const slotObj = slots.find(s => s.key === state.marketTattooSlot);
+        const slotT = slotObj ? slotObj.title : 'Все зоны';
+        const currT = getCurrTitle(state.marketCurrency);
+        activeFiltersSummary = `${slotT}${currT !== 'Все' ? ' • ' + currT : ''}`;
+
         sidebarHtml = `
           <div class="market-side-group">
             <div class="market-side-title">Зона нанесения</div>
@@ -3214,18 +3409,59 @@
         }
       }
 
+      const prevSb = document.querySelector('.market-sidebar');
+      const prevScroll = prevSb ? prevSb.scrollTop : 0;
+      const hasActiveFilters = (state.marketCurrency !== 'all' || state.marketClothCategory !== 'all' || state.marketTattooSlot !== 'all');
+
       UI.content.innerHTML = `
         <div class="market-layout">
-          <aside class="market-sidebar">
+          <div class="market-sidebar-backdrop ${state.marketSidebarOpen ? 'open' : ''}" onclick="closeMarketSidebar()"></div>
+          <aside class="market-sidebar ${state.marketSidebarOpen ? 'open' : ''}">
+            <div class="market-sidebar-header-mobile">
+              <span style="display:flex;align-items:center;gap:0.4rem;">
+                <span style="font-size:1rem;">🎛️</span>
+                <span>Фильтры</span>
+              </span>
+              <div style="display:flex;align-items:center;gap:0.5rem;">
+                ${hasActiveFilters ? `
+                  <button onclick="resetMarketFilters()" style="background:none;border:none;color:#f87171;font-size:0.75rem;cursor:pointer;padding:0;text-decoration:underline;" title="Сбросить все фильтры">
+                    Сбросить
+                  </button>
+                ` : ''}
+                <button class="market-sidebar-close-btn" onclick="closeMarketSidebar()" title="Закрыть фильтры">✕</button>
+              </div>
+            </div>
             ${sidebarHtml}
+            <div class="market-sidebar-footer-mobile">
+              <button class="market-apply-btn" onclick="closeMarketSidebar()">
+                Показать товары (${activeFilteredCount})
+              </button>
+            </div>
           </aside>
           <div class="market-main">
+            <div class="market-mobile-filter-bar">
+              <button class="market-mobile-filter-btn" onclick="openMarketSidebar()">
+                <span style="display:flex;align-items:center;gap:0.45rem;">
+                  <span style="color:var(--accent-blue);font-size:1.05rem;">🎛️</span>
+                  <span>Фильтры каталога</span>
+                </span>
+                <span class="market-active-filter-badge">${activeFiltersSummary}</span>
+              </button>
+            </div>
             <div class="grid">
               ${cardsHtml}
             </div>
           </div>
         </div>
       `;
+
+      if (state.marketSidebarOpen) {
+        const newSb = document.querySelector('.market-sidebar');
+        if (newSb) newSb.scrollTop = prevScroll;
+        if (window.innerWidth <= 900) {
+          document.body.style.overflow = 'hidden';
+        }
+      }
     }
 
     /* =========================================================================
@@ -4187,6 +4423,31 @@
     function closeModal() {
       UI.modal.classList.remove('open');
       document.body.style.overflow = '';
+    }
+
+    function openMarketSidebar() {
+      state.marketSidebarOpen = true;
+      const sb = document.querySelector('.market-sidebar');
+      const bd = document.querySelector('.market-sidebar-backdrop');
+      if (sb) sb.classList.add('open');
+      if (bd) bd.classList.add('open');
+      if (window.innerWidth <= 900) document.body.style.overflow = 'hidden';
+    }
+
+    function closeMarketSidebar() {
+      state.marketSidebarOpen = false;
+      const sb = document.querySelector('.market-sidebar');
+      const bd = document.querySelector('.market-sidebar-backdrop');
+      if (sb) sb.classList.remove('open');
+      if (bd) bd.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function resetMarketFilters() {
+      state.marketClothCategory = 'all';
+      state.marketTattooSlot = 'all';
+      state.marketCurrency = 'all';
+      renderContent();
     }
 
     window.onload = init;
