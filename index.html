@@ -3886,37 +3886,95 @@
        MUTAGEN CALCULATOR & OPTIMIZER (Paimon.moe style)
        ========================================================================= */
     const EXPORT_DEVTOOLS_SCRIPT = `(async () => {
+  console.log('%c🧬 [Калькулятор Мутагенов] Поиск данных инвентаря...', 'color:#38bdf8;font-weight:bold;font-size:14px;');
+  
+  const copyData = (data, sourceName) => {
+    try {
+      const str = typeof data === 'string' ? data : JSON.stringify(data);
+      if (typeof copy === 'function') {
+        copy(str);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = str;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      console.log('%c✅ Данные скопированы в буфер обмена! Источник: ' + sourceName, 'color:#22c55e;font-weight:bold;font-size:13px;');
+      alert('✅ Мутагены успешно скопированы в буфер обмена!\\nИсточник: ' + sourceName + '\\nПерейдите в калькулятор и нажмите «Вставить из буфера».');
+      return true;
+    } catch (e) {
+      console.error('Ошибка копирования:', e);
+      return false;
+    }
+  };
+
+  // 1. Проверяем localStorage / sessionStorage
   try {
-    const urls = [
-      '/play/api/enchant/status',
-      '/play/api/enchant',
-      '/play/api/enchant/progress',
-      '/play/api/pve/progress',
-      '/play/api/inventory'
-    ];
-    let payload = null;
-    for (const u of urls) {
-      try {
-        const r = await fetch(u);
-        if (r.ok) {
-          const j = await r.json();
-          if (j && (j.enchants || j.inventory || j.boxes || j.progress)) {
-            payload = j;
-            break;
+    for (const storage of [localStorage, sessionStorage]) {
+      for (let i = 0; i < storage.length; i++) {
+        const k = storage.key(i);
+        if (k && /enchant|mutagen|inventory|pve_progress/i.test(k)) {
+          const val = storage.getItem(k);
+          if (val && val.length > 20) {
+            console.log('Найдено в хранилище:', k);
+            if (copyData(val, 'хранилище (' + k + ')')) return;
           }
         }
-      } catch (e) {}
+      }
     }
-    if (!payload && window.__GAME_DATA__) payload = window.__GAME_DATA__;
-    if (payload) {
-      copy(JSON.stringify(payload));
-      alert('✅ Мутагены успешно скопированы в буфер обмена!\\nПерейдите в калькулятор и нажмите «Вставить из буфера».');
-    } else {
-      alert('⚠️ Откройте вкладку Network в DevTools, обновите инвентарь мутагенов в игре и скопируйте ответ запроса.');
-    }
-  } catch (err) {
-    alert('Ошибка при экспорте: ' + err.message);
+  } catch (e) {}
+
+  // 2. Проверяем известные API эндпоинты с credentials: 'include'
+  const endpoints = [
+    '/play/api/enchant/progress',
+    '/play/api/enchant/status',
+    '/play/api/enchant',
+    '/play/api/pve/progress',
+    '/play/api/inventory',
+    '/play/api/character/status'
+  ];
+
+  for (const url of endpoints) {
+    try {
+      const r = await fetch(url, { credentials: 'include', headers: { 'Accept': 'application/json' } });
+      if (r.ok) {
+        const json = await r.json();
+        if (json && (json.enchants || json.progress || json.inventory || json.boxes)) {
+          if (copyData(json, 'API запрос (' + url + ')')) return;
+        }
+      }
+    } catch (e) {}
   }
+
+  // 3. Проверяем глобальные переменные window
+  for (const key of ['__GAME_DATA__', '__INITIAL_STATE__', 'user', 'game', 'player', 'app']) {
+    if (window[key] && (window[key].enchants || window[key].inventory || window[key].progress)) {
+      if (copyData(window[key], 'window.' + key)) return;
+    }
+  }
+
+  // 4. Если данные еще не загружены — включаем перехватчик сетевых ответов при клике в игре
+  console.log('%c📡 Включаем автоматический перехватчик сети... Кликните в игре на вкладку «Лаборатория / Мутагены»!', 'color:#fbbf24;font-weight:bold;');
+  alert('ℹ️ Включен режим перехвата!\\n\\nПожалуйста, кликните в игре на вкладку «Лаборатория» или откройте окно мутагенов.\\nКак только игра запросит данные с сервера, они автоматически скопируются в буфер обмена!');
+
+  const origFetch = window.fetch;
+  window.fetch = async function(...args) {
+    const res = await origFetch.apply(this, args);
+    try {
+      const url = typeof args[0] === 'string' ? args[0] : (args[0]?.url || '');
+      if (/enchant|progress|inventory/i.test(url)) {
+        const clone = res.clone();
+        clone.json().then(data => {
+          if (data && (data.enchants || data.inventory || data.progress)) {
+            copyData(data, 'перехваченный сетевой запрос (' + url + ')');
+          }
+        }).catch(() => {});
+      }
+    } catch (e) {}
+    return res;
+  };
 })();`;
 
     function copyExportScript(btn) {
