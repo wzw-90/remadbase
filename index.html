@@ -3968,19 +3968,17 @@
     
     const inventory = data.state?.inventory || [];
     
-    // Сбор мутагенов, уже вставленных в экипированные вещи и оружие
+    // Сбор ВСЕХ слотов экипировки персонажа (одежда, оружие, украшения) — как занятых, так и пустых
     const equipped = [];
     const scanItems = (items, catName) => {
       (items || []).forEach(it => {
-        (it.enchant || []).forEach(enc => {
-          if (enc && enc.id) {
-            equipped.push({
-              enchantId: Number(enc.id),
-              itemId: it.id,
-              category: catName,
-              stamp: enc.stamp
-            });
-          }
+        const hasEnchant = it.enchant && it.enchant.length > 0 && it.enchant[0].id;
+        equipped.push({
+          itemId: it.id,
+          category: catName,
+          enchantId: hasEnchant ? Number(it.enchant[0].id) : null,
+          isEmpty: !hasEnchant,
+          stamp: hasEnchant ? it.enchant[0].stamp : null
         });
       });
     };
@@ -4015,9 +4013,11 @@
     }
     
     window.__REMAD_MUTAGENS__ = payloadObj;
+    const occupiedCnt = equipped.filter(s => !s.isEmpty).length;
+    const emptyCnt = equipped.filter(s => s.isEmpty).length;
     console.log('%c✅ ДАННЫЕ МУТАГЕНОВ УСПЕШНО СКОПИРОВАНЫ!', 'color:#22c55e;font-size:16px;font-weight:bold;');
-    console.log('Игрок:', data.state?.name, '| В инвентаре:', inventory.length, '| Вставлено в вещи:', equipped.length);
-    alert('✅ Данные игрока ' + (data.state?.name || '') + ' скопированы!\\n\\n• В инвентаре: ' + inventory.length + ' позиций\\n• Вставлено в вещи: ' + equipped.length + ' мутагенов\\n\\nПерейдите в калькулятор и нажмите «Вставить из буфера».');
+    console.log('Игрок:', data.state?.name, '| Инвентарь:', inventory.length, '| Слотов экипировки:', equipped.length, '(занято:', occupiedCnt, ', свободно:', emptyCnt + ')');
+    alert('✅ Данные игрока ' + (data.state?.name || '') + ' скопированы!\\n\\n• В инвентаре: ' + inventory.length + ' позиций\\n• Слотов экипировки: ' + equipped.length + ' (занято: ' + occupiedCnt + ', свободно: ' + emptyCnt + ')\\n\\nПерейдите в калькулятор и нажмите «Вставить из буфера».');
   } catch(err) {
     console.error('Ошибка экспорта:', err);
     alert('❌ Ошибка: ' + err.message + '\\nУбедитесь, что вы авторизованы в игре на remad.me/play/');
@@ -4074,28 +4074,26 @@
 
             const scanEquipped = (items, cat) => {
               (items || []).forEach(it => {
-                (it.enchant || []).forEach(enc => {
-                  if (enc && enc.id && idMap[Number(enc.id)]) {
-                    equippedList.push({
-                      enchantId: Number(enc.id),
-                      itemId: it.id,
-                      category: cat
-                    });
-                  }
+                const hasEnchant = it.enchant && it.enchant.length > 0 && it.enchant[0].id && idMap[Number(it.enchant[0].id)];
+                equippedList.push({
+                  itemId: it.id,
+                  category: cat,
+                  enchantId: hasEnchant ? Number(it.enchant[0].id) : null,
+                  isEmpty: !hasEnchant
                 });
               });
             };
 
             if (parsed.equipped && Array.isArray(parsed.equipped)) {
               parsed.equipped.forEach(eq => {
-                const eid = Number(eq.enchantId || eq.id);
-                if (idMap[eid]) {
-                  equippedList.push({
-                    enchantId: eid,
-                    itemId: eq.itemId,
-                    category: eq.category || 'cloth'
-                  });
-                }
+                const eid = eq.enchantId ? Number(eq.enchantId) : (eq.id ? Number(eq.id) : null);
+                const hasEnc = Boolean(eid && idMap[eid]);
+                equippedList.push({
+                  itemId: eq.itemId,
+                  category: eq.category || 'cloth',
+                  enchantId: hasEnc ? eid : null,
+                  isEmpty: !hasEnc
+                });
               });
             } else {
               scanEquipped(parsed.state?.cloth || parsed.cloth, 'cloth');
@@ -4408,27 +4406,52 @@
 
       const userInv = state.calcUserInv || {};
       const equippedItems = state.calcEquippedItems || [];
+      const occupiedSlots = equippedItems.filter(s => !s.isEmpty && s.enchantId);
+      const emptySlots = equippedItems.filter(s => s.isEmpty || !s.enchantId);
 
       if (Object.keys(userInv).length === 0 && equippedItems.length === 0) {
         alert('Пожалуйста, вставьте данные мутагенов из игры или нажмите «Загрузить пример».');
         return;
       }
 
-      if (equippedItems.length > 0 && !state.calcSlotsUserOverridden) {
-        state.calcSlots = Math.max(10, Math.min(24, equippedItems.length));
-      }
+      // Количество слотов определяется ИСКЛЮЧИТЕЛЬНО из загруженных вещей игрока (занятые + пустые)
+      const numSlots = (state.calcMode === 'slots') ? (equippedItems.length > 0 ? equippedItems.length : 15) : null;
+      state.calcSlots = numSlots || 15;
 
-      const numSlots = (state.calcMode === 'slots') ? state.calcSlots : null;
       const encMap = {};
       enchants.forEach(e => { encMap[e.id] = e; });
+
+      // Оценка текущего состояния экипировки игрока (базовые статы от уже установленных мутагенов)
+      const currentEquippedItems = occupiedSlots.map(s => {
+        const e = encMap[s.enchantId];
+        const st = getEnchantStats(e);
+        return {
+          id: e.id,
+          title: e.title,
+          score: st.score,
+          madness: st.madness,
+          aggression: st.aggression,
+          stamina: st.stamina
+        };
+      });
+
+      const currentEquippedEval = {
+        totalScore: currentEquippedItems.reduce((sum, x) => sum + x.score, 0),
+        madness: currentEquippedItems.reduce((sum, x) => sum + x.madness, 0),
+        aggression: currentEquippedItems.reduce((sum, x) => sum + x.aggression, 0),
+        stamina: currentEquippedItems.reduce((sum, x) => sum + x.stamina, 0),
+        equipped: currentEquippedItems,
+        totalItemsCount: currentEquippedItems.length
+      };
 
       function evaluateMode(modeType) {
         let pool = Object.assign({}, userInv);
         let extractionCost = 0;
         const extractedCounts = {};
 
-        if (modeType === 'extract' && equippedItems.length > 0) {
-          equippedItems.forEach(eq => {
+        // В режиме извлечения достаем мутагены ТОЛЬКО из занятых слотов
+        if (modeType === 'extract' && occupiedSlots.length > 0) {
+          occupiedSlots.forEach(eq => {
             const eid = eq.enchantId;
             pool[eid] = (pool[eid] || 0) + 1;
             extractedCounts[eid] = (extractedCounts[eid] || 0) + 1;
@@ -4438,11 +4461,13 @@
           });
         }
 
-        const beforeEval = evaluateMutagenInventory(pool, enchants, numSlots);
+        // Если в экипировке есть мутагены, "было" - это текущие вставленные в вещи мутагены
+        const beforeEval = (occupiedSlots.length > 0) ? currentEquippedEval : evaluateMutagenInventory(pool, enchants, numSlots);
         const opt = runMutagenOptimization(pool, enchants, exchanges, numSlots);
         const afterEval = evaluateMutagenInventory(opt.optimizedInv, enchants, numSlots);
 
         const totalSynthesisCost = opt.steps.reduce((acc, s) => acc + (s.totalCost || 0), 0);
+        // Стоимость установки каждого нового рекомендованного мутагена по его цене
         const totalSocketCost = (numSlots != null) ? afterEval.equipped.reduce((sum, it) => {
           const e = encMap[it.id];
           const cost = (e && e.price && e.price.currency3 != null) ? e.price.currency3 : 1;
@@ -4473,7 +4498,9 @@
         active: activePlan,
         extractPlan,
         replacePlan,
-        equippedCount: equippedItems.length
+        totalSlots: numSlots,
+        occupiedSlotsCount: occupiedSlots.length,
+        emptySlotsCount: emptySlots.length
       };
 
       renderContent();
@@ -4496,6 +4523,7 @@
         codeMap[code] = e.id;
       });
 
+      // 15 слотов экипировки: 11 занятых слотов с W-10 и 4 свободных пустых слота
       const demoData = {
         version: 2,
         player: 'Демо-Игрок (wzw)',
@@ -4514,7 +4542,10 @@
           { id: codeMap['i-1'] || 259, count: 50 },
           { id: codeMap['z-1'] || 299, count: 2 }
         ],
-        equipped: Array(15).fill({ enchantId: 373, category: 'cloth' })
+        equipped: [
+          ...Array(11).fill({ itemId: 101, category: 'cloth', enchantId: 373, isEmpty: false }),
+          ...Array(4).fill({ itemId: 202, category: 'cloth', enchantId: null, isEmpty: true })
+        ]
       };
 
       const demoText = JSON.stringify(demoData, null, 2);
@@ -4548,7 +4579,7 @@
       state.calcPlayerStats = null;
       state.calcPlayerName = '';
       state.calcResult = null;
-      state.calcSlotsUserOverridden = false;
+      state.calcSlots = 15;
       renderContent();
     }
 
@@ -4559,9 +4590,11 @@
 
       const userInv = state.calcUserInv || {};
       const equippedItems = state.calcEquippedItems || [];
+      const occupiedSlots = equippedItems.filter(s => !s.isEmpty && s.enchantId);
+      const emptySlots = equippedItems.filter(s => s.isEmpty || !s.enchantId);
       const res = state.calcResult;
 
-      const numSlots = state.calcSlots || 15;
+      const numSlots = (equippedItems.length > 0 ? equippedItems.length : (state.calcSlots || 15));
       const mode = state.calcMode || 'slots';
       const eqMode = state.calcEquippedMode || 'extract';
 
@@ -4580,7 +4613,7 @@
         resultsHtml = `
           <div id="calc-results" class="calc-card" style="border-color:#38bdf8;background:linear-gradient(180deg, #111827 0%, #0c101a 100%);">
             <div style="font-family:var(--font-header);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
-              <span>📊 Результаты оптимизации ${mode === 'slots' ? `(Под ${numSlots} слотов)` : '(Без учета слотов)'}</span>
+              <span>📊 Результаты оптимизации ${mode === 'slots' ? `(Под ${numSlots} слотов: ${occupiedSlots.length} занято, ${emptySlots.length} свободно)` : '(Без учета слотов)'}</span>
               <div style="display:flex;gap:0.4rem;align-items:center;">
                 <span style="font-size:0.75rem;color:${isExtract ? '#a855f7' : '#f97316'};background:${isExtract ? 'rgba(168,85,247,0.15)' : 'rgba(249,115,22,0.15)'};border:1px solid ${isExtract ? 'rgba(168,85,247,0.35)' : 'rgba(249,115,22,0.35)'};padding:2px 8px;border-radius:12px;font-weight:700;">
                   ${isExtract ? '📦 Режим извлечения' : '🔥 Режим замены (сгорание)'}
@@ -4594,7 +4627,9 @@
             ${equippedItems.length > 0 ? `
               <div style="background:#0a0e17;border:1px solid #1e2838;border-radius:var(--radius-sm);padding:0.6rem 0.8rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.6rem;">
                 <div style="font-size:0.8rem;color:#cbd5e1;">
-                  В вещах обнаружено: <strong style="color:#c084fc;">${equippedItems.length} вставленных мутагенов</strong>
+                  В экипировке: <strong>${numSlots} слотов</strong> 
+                  (<span style="color:#c084fc;font-weight:600;">${occupiedSlots.length} занято</span>, 
+                   <span style="color:#4ade80;font-weight:600;">${emptySlots.length} свободно</span>)
                 </div>
                 <div class="calc-mode-switch" style="max-width:440px;flex:1;">
                   <button class="calc-mode-btn ${isExtract ? 'active' : ''}" onclick="setCalcEquippedMode('extract')">
@@ -4691,13 +4726,13 @@
                 </span>
               </div>
 
-              ${isExtract && equippedItems.length > 0 ? `
+              ${isExtract && occupiedSlots.length > 0 ? `
                 <div style="background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.3);border-radius:4px;padding:0.6rem 0.8rem;margin-bottom:0.6rem;font-size:0.8rem;color:#e9d5ff;">
-                  <strong>Шаг 0 (Извлечение):</strong> Перейдите во вкладку «Извлечение» в Лаборатории и извлеките <strong>${equippedItems.length} шт.</strong> мутагенов из ваших вещей. Стоимость извлечения составит <strong>${cur.extractionCost} 💊</strong>. После этого мутагены попадут в инвентарь и будут использованы для синтеза более сильных мутагенов:
+                  <strong>Шаг 0 (Извлечение):</strong> Перейдите во вкладку «Извлечение» в Лаборатории и извлеките <strong>${occupiedSlots.length} шт.</strong> мутагенов из ваших вещей. Стоимость извлечения составит <strong>${cur.extractionCost} 💊</strong>. После этого мутагены попадут в инвентарь и будут использованы для синтеза более сильных мутагенов:
                 </div>
               ` : ''}
 
-              ${!isExtract && equippedItems.length > 0 ? `
+              ${!isExtract && occupiedSlots.length > 0 ? `
                 <div style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:4px;padding:0.6rem 0.8rem;margin-bottom:0.6rem;font-size:0.8rem;color:#fed7aa;">
                   <strong>Примечание о замене:</strong> Старые мутагены в вещах не извлекаются (экономия ${extPlan.extractionCost} 💊). Они автоматически сгорят при установке новых мутагенов поверх них в разделе «Химичить».
                 </div>
@@ -4734,7 +4769,7 @@
               <div style="margin-top:1.25rem;">
                 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:0.55rem;gap:0.5rem;">
                   <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;">
-                    🎽 Рекомендуемые мутагены для вставки в экипировку (Топ ${numSlots} слотов):
+                    🎽 Рекомендуемые мутагены для вставки в экипировку (Всего ${numSlots} слотов: ${occupiedSlots.length} занято, ${emptySlots.length} свободно):
                   </div>
                   <div style="font-size:0.76rem;color:#facc15;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:2px 8px;border-radius:12px;font-weight:600;">
                     💊 Суммарная установка: ${(cur.totalSocketCost || 0).toLocaleString()} пилюль (зависит от уровня мутагенов)
@@ -4769,7 +4804,7 @@
           <div class="calc-hero">
             <h2>🧬 Калькулятор & Оптимизатор Мутагенов</h2>
             <p>
-              Выгрузите мутагены из аккаунта в 1 клик или вставьте список вручную. Алгоритм рассчитывает максимальный прирост <strong>Безумия</strong>, <strong>Агрессии</strong> и учитывает текущие вставленные мутагены в вещах с точным расчетом затрат в <strong>пилюлях 💊</strong>.
+              Выгрузите мутагены из аккаунта в 1 клик или вставьте список вручную. Алгоритм считывает реальные слоты экипировки (занятые и пустые), рассчитывает максимальный прирост <strong>Безумия</strong>, <strong>Агрессии</strong> и точные затраты в <strong>пилюлях 💊</strong>.
             </p>
           </div>
 
@@ -4785,7 +4820,7 @@
               </button>
             </div>
             <p style="font-size:0.82rem;color:#94a3b8;margin:0 0 0.6rem 0;line-height:1.4;">
-              Откройте игру <a href="https://remad.me/play/" target="_blank" style="color:#38bdf8;text-decoration:underline;">remad.me/play/</a> в браузере, нажмите клавишу <strong>F12</strong> (вкладка <strong>Console</strong>), вставьте скопированный скрипт и нажмите <strong>Enter</strong>. Скрипт скопирует в буфер как инвентарь, так и уже вставленные в вещи мутагены.
+              Откройте игру <a href="https://remad.me/play/" target="_blank" style="color:#38bdf8;text-decoration:underline;">remad.me/play/</a> в браузере, нажмите клавишу <strong>F12</strong> (вкладка <strong>Console</strong>), вставьте скопированный скрипт и нажмите <strong>Enter</strong>. Скрипт считает слоты вашей экипировки (занятые и свободные) и весь инвентарь.
             </p>
 
             <!-- Step 2 -->
@@ -4828,13 +4863,19 @@
               </div>
 
               ${mode === 'slots' ? `
-                <div class="calc-slots-select">
-                  <span style="font-size:0.8rem;color:#94a3b8;font-weight:600;">Кол-во слотов:</span>
-                  ${[10, 12, 15, 18, 20, 24].map(s => `
-                    <button class="calc-slot-pill ${numSlots === s ? 'active' : ''}" onclick="state.calcSlots=${s}; state.calcSlotsUserOverridden=true; calculateMutagenOptimization();">
-                      ${s}
-                    </button>
-                  `).join('')}
+                <div style="display:flex;align-items:center;gap:0.5rem;background:#0d121c;border:1px solid #233147;padding:0.45rem 0.85rem;border-radius:4px;font-size:0.8rem;flex-wrap:wrap;">
+                  <span style="color:#94a3b8;font-weight:600;">Слоты экипировки:</span>
+                  <strong style="color:#fff;">${numSlots} слотов</strong>
+                  ${equippedItems.length > 0 ? `
+                    <span style="color:#c084fc;background:rgba(168,85,247,0.15);padding:1px 6px;border-radius:10px;font-size:0.72rem;font-weight:700;">
+                      Занято: ${occupiedSlots.length}
+                    </span>
+                    <span style="color:#4ade80;background:rgba(34,197,94,0.15);padding:1px 6px;border-radius:10px;font-size:0.72rem;font-weight:700;">
+                      Свободно: ${emptySlots.length}
+                    </span>
+                  ` : `
+                    <span style="color:#64748b;font-size:0.75rem;">(считывается из данных аккаунта)</span>
+                  `}
                 </div>
               ` : ''}
             </div>
@@ -4843,11 +4884,15 @@
             <div style="margin-top:0.9rem;margin-bottom:1rem;">
               <div style="font-size:0.82rem;font-weight:700;color:#fff;margin-bottom:0.45rem;display:flex;align-items:center;gap:0.4rem;">
                 <span>👕 Обработка уже вставленных в вещи мутагенов:</span>
-                ${equippedItems.length > 0 ? `
-                  <span style="font-size:0.72rem;color:#c084fc;background:rgba(168,85,247,0.15);padding:1px 6px;border-radius:10px;">
-                    Найдено в вещах: ${equippedItems.length} шт.
+                ${occupiedSlots.length > 0 ? `
+                  <span style="font-size:0.72rem;color:#c084fc;background:rgba(168,85,247,0.15);padding:1px 6px;border-radius:10px;font-weight:700;">
+                    Занято мутагенами: ${occupiedSlots.length} из ${numSlots} слотов
                   </span>
-                ` : ''}
+                ` : `
+                  <span style="font-size:0.72rem;color:#4ade80;background:rgba(34,197,94,0.15);padding:1px 6px;border-radius:10px;font-weight:700;">
+                    Все слоты свободны
+                  </span>
+                `}
               </div>
               <div class="calc-equipped-opts">
                 <div class="calc-opt-card ${eqMode === 'extract' ? 'active' : ''}" onclick="setCalcEquippedMode('extract')">
@@ -4885,7 +4930,7 @@
     }
 
 
-        function renderInventory(data, q) {
+            function renderInventory(data, q) {
       UI.controls.innerHTML = '';
       const collections = data.collections || [];
       renderStashesView(collections, q);
