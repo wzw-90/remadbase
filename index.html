@@ -306,6 +306,104 @@
       box-shadow: 0 0 10px rgba(192, 41, 43, 0.45), inset 0 1px 0 rgba(255,255,255,0.2);
     }
 
+    /* Market Sidebar Layout (Authentic In-Game Store style) */
+    .market-layout {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      margin-top: 0.5rem;
+    }
+
+    .market-sidebar {
+      width: 220px;
+      flex-shrink: 0;
+      background: #11151f;
+      border: 1px solid #232d3f;
+      border-radius: var(--radius);
+      padding: 0.75rem;
+      position: sticky;
+      top: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .market-side-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .market-side-title {
+      font-family: var(--font-header);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #8c9cb3;
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.25rem;
+      border-bottom: 1px solid #1c2535;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .market-side-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      padding: 0.4rem 0.65rem;
+      color: #94a3b8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .market-side-btn:hover {
+      background: #171f2e;
+      color: #fff;
+    }
+
+    .market-side-btn.active {
+      background: #1a2436;
+      color: #fff;
+      border-color: #38bdf8;
+      box-shadow: inset 3px 0 0 #38bdf8, 0 2px 6px rgba(0,0,0,0.4);
+      font-weight: 700;
+    }
+
+    .market-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 900px) {
+      .market-layout {
+        flex-direction: column;
+      }
+      .market-sidebar {
+        width: 100%;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .market-side-group {
+        flex: 1;
+        min-width: 140px;
+      }
+    }
+
     /* Interactive Drop Links in Boss Modal */
     .drop-link {
       color: #38bdf8;
@@ -2782,7 +2880,7 @@
     }
 
     /* =========================================================================
-       MARKET VIEW (Weapons, Clothes, Pets, Tattoos)
+       MARKET VIEW (Weapons, Clothes, Pets, Tattoos with Sidebar Filters)
        ========================================================================= */
     function renderMarket(data, q) {
       const allWeapons = data.weapons || [];
@@ -2790,9 +2888,9 @@
       const allPets = (data.clothes || []).filter(c => c.category === 'Животное');
       const allTattoos = data.tattoos || [];
 
-      // Top Section Ribbons: Weapons | Clothes | Pets | Tattoos
-      let sectionBarHtml = `
-        <div class="weapon-filter-ribbon" style="margin-bottom:0.4rem;">
+      // Clean top ribbon with only the 4 main categories
+      UI.controls.innerHTML = `
+        <div class="weapon-filter-ribbon">
           <button class="weapon-filter-btn ${state.marketSection === 'weapons' ? 'active' : ''}" onclick="state.marketSection='weapons'; state.marketCurrency='all'; renderContent();">
             🔪 Оружие
           </button>
@@ -2807,9 +2905,6 @@
           </button>
         </div>
       `;
-
-      let filterBarHtml = '';
-      let itemsHtml = '';
 
       function matchCurr(item, curr) {
         if (curr === 'all') return true;
@@ -2833,6 +2928,37 @@
         return 'Бесплатно';
       }
 
+      function renderCurrencySideGroup(showFree = false) {
+        return `
+          <div class="market-side-group">
+            <div class="market-side-title">Валюта / Дроп</div>
+            <button class="market-side-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">
+              <span>Все валюты</span>
+            </button>
+            <button class="market-side-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">
+              <span>🪙 Монеты</span>
+            </button>
+            <button class="market-side-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">
+              <span>💊 Таблетки</span>
+            </button>
+            <button class="market-side-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">
+              <span>💵 Купюры</span>
+            </button>
+            <button class="market-side-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">
+              <span>🏥 Дроп с боссов</span>
+            </button>
+            ${showFree ? `
+              <button class="market-side-btn ${state.marketCurrency === 'free' ? 'active' : ''}" onclick="state.marketCurrency='free'; renderContent();">
+                <span>🎁 Бесплатное</span>
+              </button>
+            ` : ''}
+          </div>
+        `;
+      }
+
+      let sidebarHtml = '';
+      let cardsHtml = '';
+
       if (state.marketSection === 'weapons') {
         let filtered = allWeapons.filter(w => {
           if (!matchCurr(w, state.marketCurrency)) return false;
@@ -2842,23 +2968,10 @@
         });
         filtered.sort((a, b) => b.damage - a.damage);
 
-        filterBarHtml = `
-          <div style="display:flex;flex-direction:column;gap:0.4rem;">
-            ${sectionBarHtml}
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'free' ? 'active' : ''}" onclick="state.marketCurrency='free'; renderContent();">🎁 Бесплатное</button>
-            </div>
-          </div>
-        `;
+        sidebarHtml = renderCurrencySideGroup(true);
 
-        itemsHtml = `<div class="grid">`;
         if (filtered.length === 0) {
-          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Оружие не найдено по выбранным фильтрам</div>`;
+          cardsHtml = `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Оружие не найдено по выбранным фильтрам</div>`;
         } else {
           filtered.forEach(w => {
             const priceStr = getItemPriceStr(w);
@@ -2871,7 +2984,7 @@
               badgeSource = `<span style="font-size:0.68rem;color:var(--accent-gold);background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:1px 5px;border-radius:2px;" title="Падает в костях (Fortune)">🎲 Кости</span>`;
             }
 
-            itemsHtml += `
+            cardsHtml += `
               <div class="card" style="cursor:pointer;" onclick="openWeaponDetails(${w.id})" title="Подробнее об оружии, улучшении и источниках">
                 <div style="display:flex;gap:0.65rem;align-items:center;">
                   <img src="${w.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;" alt="${w.title}"/>
@@ -2894,7 +3007,6 @@
             `;
           });
         }
-        itemsHtml += `</div>`;
       } else if (state.marketSection === 'clothes') {
         const categories = ['Майка', 'Штаны', 'Обувь', 'Перчатки', 'Головной убор', 'Маска', 'Аксессуары'];
         let filtered = allClothes.filter(c => {
@@ -2907,7 +3019,6 @@
           return matchTitle || matchCat || matchId;
         });
 
-        // Sort by total stats desc, then minLevel asc
         filtered.sort((a, b) => {
           const statsA = (a.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
           const statsB = (b.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
@@ -2915,30 +3026,24 @@
           return (a.minLevel || 0) - (b.minLevel || 0);
         });
 
-        filterBarHtml = `
-          <div style="display:flex;flex-direction:column;gap:0.4rem;">
-            ${sectionBarHtml}
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketClothCategory === 'all' ? 'active' : ''}" onclick="state.marketClothCategory='all'; renderContent();">Все вещи</button>
-              ${categories.map(cat => `
-                <button class="weapon-filter-btn ${state.marketClothCategory === cat ? 'active' : ''}" onclick="state.marketClothCategory='${cat}'; renderContent();">${cat}</button>
-              `).join('')}
-            </div>
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
-            </div>
+        sidebarHtml = `
+          <div class="market-side-group">
+            <div class="market-side-title">Слот гардероба</div>
+            <button class="market-side-btn ${state.marketClothCategory === 'all' ? 'active' : ''}" onclick="state.marketClothCategory='all'; renderContent();">
+              <span>Все вещи</span>
+            </button>
+            ${categories.map(cat => `
+              <button class="market-side-btn ${state.marketClothCategory === cat ? 'active' : ''}" onclick="state.marketClothCategory='${cat}'; renderContent();">
+                <span>${cat}</span>
+              </button>
+            `).join('')}
           </div>
+          ${renderCurrencySideGroup(false)}
         `;
 
         const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
-        itemsHtml = `<div class="grid">`;
-
         if (filtered.length === 0) {
-          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Предметы одежды не найдены по выбранным фильтрам</div>`;
+          cardsHtml = `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Предметы одежды не найдены по выбранным фильтрам</div>`;
         } else {
           filtered.forEach(c => {
             const priceStr = getItemPriceStr(c);
@@ -2952,7 +3057,7 @@
               ? c.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
               : (c.category || 'Гардероб');
 
-            itemsHtml += `
+            cardsHtml += `
               <div class="card" style="cursor:pointer;" onclick="openClothDetails(${c.id})" title="Подробнее о ${c.title}">
                 <div style="display:flex;gap:0.65rem;align-items:center;">
                   <img src="${c.image || c.remoteImage || ''}" onerror="if(this.src!=='${c.remoteImage||''}')this.src='${c.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${c.title}"/>
@@ -2975,7 +3080,6 @@
             `;
           });
         }
-        itemsHtml += `</div>`;
       } else if (state.marketSection === 'pets') {
         let filtered = allPets.filter(p => {
           if (!matchCurr(p, state.marketCurrency)) return false;
@@ -2985,7 +3089,6 @@
           return matchTitle || matchId;
         });
 
-        // Sort by stats desc
         filtered.sort((a, b) => {
           const statsA = (a.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
           const statsB = (b.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
@@ -2993,24 +3096,11 @@
           return (a.minLevel || 0) - (b.minLevel || 0);
         });
 
-        filterBarHtml = `
-          <div style="display:flex;flex-direction:column;gap:0.4rem;">
-            ${sectionBarHtml}
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
-            </div>
-          </div>
-        `;
+        sidebarHtml = renderCurrencySideGroup(false);
 
         const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
-        itemsHtml = `<div class="grid">`;
-
         if (filtered.length === 0) {
-          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Питомцы не найдены по выбранным фильтрам</div>`;
+          cardsHtml = `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Питомцы не найдены по выбранным фильтрам</div>`;
         } else {
           filtered.forEach(p => {
             const priceStr = getItemPriceStr(p);
@@ -3023,7 +3113,7 @@
               ? p.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
               : 'Верный спутник';
 
-            itemsHtml += `
+            cardsHtml += `
               <div class="card" style="cursor:pointer;" onclick="openClothDetails(${p.id})" title="Подробнее о питомце ${p.title}">
                 <div style="display:flex;gap:0.65rem;align-items:center;">
                   <img src="${p.image || p.remoteImage || ''}" onerror="if(this.src!=='${p.remoteImage||''}')this.src='${p.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${p.title}"/>
@@ -3046,7 +3136,6 @@
             `;
           });
         }
-        itemsHtml += `</div>`;
       } else if (state.marketSection === 'tattoos') {
         const slots = [
           { key: 'all', title: 'Все зоны' },
@@ -3076,33 +3165,34 @@
 
         filtered.sort((a, b) => a.id - b.id);
 
-        filterBarHtml = `
-          <div style="display:flex;flex-direction:column;gap:0.4rem;">
-            ${sectionBarHtml}
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketTattooSex === 'all' ? 'active' : ''}" onclick="state.marketTattooSex='all'; renderContent();">Все полы</button>
-              <button class="weapon-filter-btn ${state.marketTattooSex === 'male' ? 'active' : ''}" onclick="state.marketTattooSex='male'; renderContent();">👨 Мужские</button>
-              <button class="weapon-filter-btn ${state.marketTattooSex === 'female' ? 'active' : ''}" onclick="state.marketTattooSex='female'; renderContent();">👩 Женские</button>
-            </div>
-            <div class="weapon-filter-ribbon">
-              ${slots.map(s => `
-                <button class="weapon-filter-btn ${state.marketTattooSlot === s.key ? 'active' : ''}" onclick="state.marketTattooSlot='${s.key}'; renderContent();">${s.title}</button>
-              `).join('')}
-            </div>
-            <div class="weapon-filter-ribbon">
-              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
-              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
-            </div>
+        sidebarHtml = `
+          <div class="market-side-group">
+            <div class="market-side-title">Пол персонажа</div>
+            <button class="market-side-btn ${state.marketTattooSex === 'all' ? 'active' : ''}" onclick="state.marketTattooSex='all'; renderContent();">
+              <span>Все полы</span>
+            </button>
+            <button class="market-side-btn ${state.marketTattooSex === 'male' ? 'active' : ''}" onclick="state.marketTattooSex='male'; renderContent();">
+              <span>👨 Мужские</span>
+            </button>
+            <button class="market-side-btn ${state.marketTattooSex === 'female' ? 'active' : ''}" onclick="state.marketTattooSex='female'; renderContent();">
+              <span>👩 Женские</span>
+            </button>
           </div>
+
+          <div class="market-side-group">
+            <div class="market-side-title">Зона нанесения</div>
+            ${slots.map(s => `
+              <button class="market-side-btn ${state.marketTattooSlot === s.key ? 'active' : ''}" onclick="state.marketTattooSlot='${s.key}'; renderContent();">
+                <span>${s.title}</span>
+              </button>
+            `).join('')}
+          </div>
+
+          ${renderCurrencySideGroup(false)}
         `;
 
-        itemsHtml = `<div class="grid">`;
-
         if (filtered.length === 0) {
-          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Татуировки не найдены по выбранным фильтрам</div>`;
+          cardsHtml = `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Татуировки не найдены по выбранным фильтрам</div>`;
         } else {
           filtered.forEach(t => {
             const priceStr = getItemPriceStr(t);
@@ -3112,7 +3202,7 @@
               badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов (сертификат)">🏥 Босс</span>`;
             }
 
-            itemsHtml += `
+            cardsHtml += `
               <div class="card" style="cursor:pointer;" onclick="openTattooDetails(${t.id})" title="Подробнее о ${t.title}">
                 <div style="display:flex;gap:0.65rem;align-items:center;">
                   <img src="${t.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${t.title}"/>
@@ -3135,11 +3225,20 @@
             `;
           });
         }
-        itemsHtml += `</div>`;
       }
 
-      UI.controls.innerHTML = filterBarHtml;
-      UI.content.innerHTML = itemsHtml;
+      UI.content.innerHTML = `
+        <div class="market-layout">
+          <aside class="market-sidebar">
+            ${sidebarHtml}
+          </aside>
+          <div class="market-main">
+            <div class="grid">
+              ${cardsHtml}
+            </div>
+          </div>
+        </div>
+      `;
     }
 
     /* =========================================================================
