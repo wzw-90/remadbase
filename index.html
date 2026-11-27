@@ -4443,7 +4443,11 @@
         const afterEval = evaluateMutagenInventory(opt.optimizedInv, enchants, numSlots);
 
         const totalSynthesisCost = opt.steps.reduce((acc, s) => acc + (s.totalCost || 0), 0);
-        const totalSocketCost = (numSlots != null) ? (afterEval.equipped.length * 1) : 0;
+        const totalSocketCost = (numSlots != null) ? afterEval.equipped.reduce((sum, it) => {
+          const e = encMap[it.id];
+          const cost = (e && e.price && e.price.currency3 != null) ? e.price.currency3 : 1;
+          return sum + cost;
+        }, 0) : 0;
         const grandTotalCost = totalSynthesisCost + totalSocketCost + extractionCost;
 
         return {
@@ -4673,7 +4677,7 @@
                 <div style="font-size:0.73rem;color:#94a3b8;margin-top:4px;line-height:1.35;">
                   • Синтез и обмен: <strong style="color:#fde047;">${(cur.totalSynthesisCost || 0).toLocaleString()} 💊</strong><br>
                   • Извлечение старых: <strong style="${cur.extractionCost > 0 ? 'color:#c084fc;' : 'color:#4ade80;'}">${cur.extractionCost > 0 ? (cur.extractionCost.toLocaleString() + ' 💊') : '0 💊 (со сгоранием)'}</strong><br>
-                  ${mode === 'slots' ? `• Установка в слоты (${cur.after.equipped.length} шт.): <strong style="color:#fde047;">${cur.totalSocketCost} 💊</strong>` : ''}
+                  ${mode === 'slots' ? `• Установка в слоты (${cur.after.equipped.length} шт.): <strong style="color:#fde047;">${(cur.totalSocketCost || 0).toLocaleString()} 💊</strong> (по цене уровня каждого)<br>` : ''}
                 </div>
               </div>
             </div>
@@ -4683,7 +4687,7 @@
               <div style="font-family:var(--font-header);font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:0.55rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
                 <span>📋 Пошаговая инструкция действий:</span>
                 <span style="font-size:0.75rem;color:#facc15;font-weight:600;">
-                  Итого крафт: ${(cur.totalSynthesisCost || 0).toLocaleString()} 💊 | Извлечение: ${cur.extractionCost} 💊 | Вставка: ${cur.totalSocketCost} 💊
+                  Итого крафт: ${(cur.totalSynthesisCost || 0).toLocaleString()} 💊 | Извлечение: ${cur.extractionCost} 💊 | Вставка: ${(cur.totalSocketCost || 0).toLocaleString()} 💊
                 </span>
               </div>
 
@@ -4733,7 +4737,7 @@
                     🎽 Рекомендуемые мутагены для вставки в экипировку (Топ ${numSlots} слотов):
                   </div>
                   <div style="font-size:0.76rem;color:#facc15;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.3);padding:2px 8px;border-radius:12px;font-weight:600;">
-                    💊 Установка: ${cur.totalSocketCost} пилюль (по 1 💊 за слот)
+                    💊 Суммарная установка: ${(cur.totalSocketCost || 0).toLocaleString()} пилюль (зависит от уровня мутагенов)
                   </div>
                 </div>
                 <div class="calc-slots-grid">
@@ -4746,6 +4750,9 @@
                           ${it.madness > 0 ? `Б: +${it.madness} ` : ''}
                           ${it.aggression > 0 ? `А: +${it.aggression} ` : ''}
                           ${it.stamina > 0 ? `В: +${it.stamina}` : ''}
+                        </div>
+                        <div style="font-size:0.70rem;color:#facc15;font-weight:600;margin-top:2px;">
+                          Вставка: ${(encMap[it.id] && encMap[it.id].price && encMap[it.id].price.currency3 != null) ? encMap[it.id].price.currency3 : 1} 💊
                         </div>
                       </div>
                     </div>
