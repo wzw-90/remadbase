@@ -1802,6 +1802,7 @@
   <nav>
     <div class="nav-inner" id="navTabs">
       <button class="nav-tab active" data-tab="floors">🏥 Корпуса и этажи</button>
+      <button class="nav-tab" data-tab="market">🏪 Магазин</button>
       <button class="nav-tab" data-tab="weapons">🔪 Арсенал оружия (100)</button>
       <button class="nav-tab" data-tab="inventory">🗃️ Заначки</button>
     </div>
@@ -1849,7 +1850,12 @@
       openedCorps: {},
       openedMutagens: {},
       weaponCurrency: 'all',
-      inventoryCategory: 'stashes'
+      inventoryCategory: 'stashes',
+      marketSection: 'clothes', // 'clothes', 'pets', 'tattoos'
+      marketClothCategory: 'all',
+      marketTattooSlot: 'all',
+      marketTattooSex: 'all',
+      marketCurrency: 'all'
     };
 
     const UI = {
@@ -2035,6 +2041,8 @@
 
       if (state.tab === 'floors') {
         renderFloorsCompact(data, q);
+      } else if (state.tab === 'market') {
+        renderMarket(data, q);
       } else if (state.tab === 'bosses') {
         renderAllBosses(data, q);
       } else if (state.tab === 'weapons') {
@@ -2183,6 +2191,12 @@
                                       let innerHtml = `<span>${d.title}</span>`;
                                       if (d.type === 'inventory') {
                                         innerHtml = `<span onclick="openEventItemDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть предмет: ${d.title}">${d.title}</span>`;
+                                      } else if (d.type === 'access_weapon') {
+                                        innerHtml = `<span onclick="openWeaponDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть оружие: ${d.title}">${d.title}</span>`;
+                                      } else if (d.type === 'access_cloth') {
+                                        innerHtml = `<span onclick="openClothDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть одежду/питомца: ${d.title}">${d.title}</span>`;
+                                      } else if (d.type === 'access_ornament') {
+                                        innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${d.title}">${d.title}</span>`;
                                       }
                                       return `
                                         <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
@@ -2378,6 +2392,24 @@
         (w.title && w.title.toLowerCase().includes(q)) ||
         w.id.toString() === q
       );
+      const matchedClothes = (data.clothes || []).filter(c => 
+        c.category !== 'Оружие' && c.category !== 'Животное' && (
+          (c.title && c.title.toLowerCase().includes(q)) ||
+          (c.category && c.category.toLowerCase().includes(q)) ||
+          c.id.toString() === q
+        )
+      );
+      const matchedPets = (data.clothes || []).filter(p => 
+        p.category === 'Животное' && (
+          (p.title && p.title.toLowerCase().includes(q)) ||
+          p.id.toString() === q
+        )
+      );
+      const matchedTattoos = (data.tattoos || []).filter(t => 
+        (t.title && t.title.toLowerCase().includes(q)) ||
+        (t.slotTitle && t.slotTitle.toLowerCase().includes(q)) ||
+        t.id.toString() === q
+      );
       const matchedMutagens = ((data.mutagens && data.mutagens.enchants) || []).filter(e => 
         (e.title && e.title.toLowerCase().includes(q)) ||
         e.id.toString() === q
@@ -2389,7 +2421,7 @@
         i.id.toString() === q
       );
 
-      if (matchedBosses.length === 0 && matchedBiz.length === 0 && matchedLocs.length === 0 && matchedWeapons.length === 0 && matchedMutagens.length === 0 && matchedItems.length === 0) {
+      if (matchedBosses.length === 0 && matchedBiz.length === 0 && matchedLocs.length === 0 && matchedWeapons.length === 0 && matchedClothes.length === 0 && matchedPets.length === 0 && matchedTattoos.length === 0 && matchedMutagens.length === 0 && matchedItems.length === 0) {
         UI.content.innerHTML = `<div style="padding:2rem;text-align:center;color:var(--text-dim);">Ничего не найдено по запросу «${q}».</div>`;
         return;
       }
@@ -2455,12 +2487,24 @@
 
               ${(mainDrops.length > 0 || mutagenDrops.length > 0) ? `
                 <div class="boss-drops-wrap">
-                  ${mainDrops.map(d => `
-                    <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
-                      <span>${d.title}</span>
-                      <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
-                    </span>
-                  `).join('')}
+                  ${mainDrops.map(d => {
+                    let innerHtml = `<span>${d.title}</span>`;
+                    if (d.type === 'inventory') {
+                      innerHtml = `<span onclick="openEventItemDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть предмет: ${d.title}">${d.title}</span>`;
+                    } else if (d.type === 'access_weapon') {
+                      innerHtml = `<span onclick="openWeaponDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть оружие: ${d.title}">${d.title}</span>`;
+                    } else if (d.type === 'access_cloth') {
+                      innerHtml = `<span onclick="openClothDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть одежду/питомца: ${d.title}">${d.title}</span>`;
+                    } else if (d.type === 'access_ornament') {
+                      innerHtml = `<span onclick="openTattooDetails(${d.id})" style="cursor:pointer;text-decoration:underline;" title="Посмотреть татуировку: ${d.title}">${d.title}</span>`;
+                    }
+                    return `
+                      <span class="drop-tag ${d.type && d.type.startsWith('access_') ? 'is-access' : ''}" title="${d.hint || d.title}">
+                        ${innerHtml}
+                        <span class="drop-prob ${d.probability === 100 ? 'guaranteed' : ''}">${d.probability}%</span>
+                      </span>
+                    `;
+                  }).join('')}
 
                   ${mutagenDrops.length > 0 ? `
                     <button class="boss-mutagens-toggle-btn ${isMutOpen ? 'open' : ''}" id="mut_btn_s_${b.id}" data-count="${mutagenDrops.length}" onclick="toggleBossMutagens('s_' + ${b.id}, this)">
@@ -2523,6 +2567,135 @@
               </div>
               <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
                 <span>${w.maxUseCount > 0 ? w.maxUseCount + ' уд.' : 'Бесконечно'}</span>
+                <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedClothes.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-green);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;"><span>👕 Гардероб и одежда (${matchedClothes.length})</span></div>`;
+        html += `<div class="grid" style="margin-bottom:1.2rem;">`;
+        const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
+        matchedClothes.slice(0, 40).forEach(c => {
+          const p = c.price || {};
+          const priceParts = [];
+          if (p.currency1) priceParts.push(`${p.currency1.toLocaleString()} мон.`);
+          if (p.currency2) priceParts.push(`${p.currency2.toLocaleString()} куп.`);
+          if (p.currency3) priceParts.push(`${p.currency3.toLocaleString()} табл.`);
+          const priceStr = priceParts.join(', ') || ((c.sources && c.sources.bosses && c.sources.bosses.length > 0) ? 'Выбивается с боссов' : 'Бесплатно');
+          const bosses = (c.sources && c.sources.bosses) || [];
+          const badgeSource = bosses.length > 0
+            ? `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов">🏥 Босс</span>`
+            : '';
+          const statsSummary = (c.baseStats && c.baseStats.length > 0)
+            ? c.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
+            : (c.category || 'Гардероб');
+
+          html += `
+            <div class="card" style="cursor:pointer;" onclick="openClothDetails(${c.id})" title="Подробнее о ${c.title}">
+              <div style="display:flex;gap:0.65rem;align-items:center;">
+                <img src="${c.image || c.remoteImage || ''}" onerror="if(this.src!=='${c.remoteImage||''}')this.src='${c.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${c.title}"/>
+                <div style="min-width:0;flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                    <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${c.title}">${c.title}</span>
+                    ${badgeSource}
+                  </div>
+                  <div style="font-size:0.75rem;color:var(--accent-green);font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                    <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${statsSummary}</span>
+                    <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${c.id}</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                <span>${c.minLevel > 0 ? 'С ' + c.minLevel + ' ур.' : 'С 0 ур.'}</span>
+                <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedPets.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-purple);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;"><span>🐾 Питомцы (${matchedPets.length})</span></div>`;
+        html += `<div class="grid" style="margin-bottom:1.2rem;">`;
+        const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
+        matchedPets.forEach(p => {
+          const pr = p.price || {};
+          const priceParts = [];
+          if (pr.currency1) priceParts.push(`${pr.currency1.toLocaleString()} мон.`);
+          if (pr.currency2) priceParts.push(`${pr.currency2.toLocaleString()} куп.`);
+          if (pr.currency3) priceParts.push(`${pr.currency3.toLocaleString()} табл.`);
+          const priceStr = priceParts.join(', ') || ((p.sources && p.sources.bosses && p.sources.bosses.length > 0) ? 'Выбивается с боссов' : 'Бесплатно');
+          const bosses = (p.sources && p.sources.bosses) || [];
+          const badgeSource = bosses.length > 0
+            ? `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов">🏥 Босс</span>`
+            : `<span style="font-size:0.68rem;color:var(--accent-purple);background:rgba(192,132,252,0.12);border:1px solid rgba(192,132,252,0.3);padding:1px 5px;border-radius:2px;">🐾 Питомец</span>`;
+
+          const statsSummary = (p.baseStats && p.baseStats.length > 0)
+            ? p.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
+            : 'Верный спутник';
+
+          html += `
+            <div class="card" style="cursor:pointer;" onclick="openClothDetails(${p.id})" title="Подробнее о ${p.title}">
+              <div style="display:flex;gap:0.65rem;align-items:center;">
+                <img src="${p.image || p.remoteImage || ''}" onerror="if(this.src!=='${p.remoteImage||''}')this.src='${p.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${p.title}"/>
+                <div style="min-width:0;flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                    <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${p.title}">${p.title}</span>
+                    ${badgeSource}
+                  </div>
+                  <div style="font-size:0.75rem;color:var(--accent-purple);font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                    <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${statsSummary}</span>
+                    <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${p.id}</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                <span>${p.minLevel > 0 ? 'С ' + p.minLevel + ' ур.' : 'С 0 ур.'}</span>
+                <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+              </div>
+            </div>
+          `;
+        });
+        html += `</div>`;
+      }
+
+      if (matchedTattoos.length > 0) {
+        html += `<div style="font-size:0.8rem;font-weight:700;color:var(--accent-blue);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.4rem;"><span>🐉 Татуировки (${matchedTattoos.length})</span></div>`;
+        html += `<div class="grid" style="margin-bottom:1.2rem;">`;
+        matchedTattoos.slice(0, 40).forEach(t => {
+          const pr = t.price || {};
+          const priceParts = [];
+          if (pr.currency1) priceParts.push(`${pr.currency1.toLocaleString()} мон.`);
+          if (pr.currency2) priceParts.push(`${pr.currency2.toLocaleString()} куп.`);
+          if (pr.currency3) priceParts.push(`${pr.currency3.toLocaleString()} табл.`);
+          const priceStr = priceParts.join(', ') || 'Бесплатно';
+          const bosses = (t.sources && t.sources.bosses) || [];
+          const badgeSource = bosses.length > 0
+            ? `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов">🏥 Босс</span>`
+            : '';
+
+          html += `
+            <div class="card" style="cursor:pointer;" onclick="openTattooDetails(${t.id})" title="Подробнее о ${t.title}">
+              <div style="display:flex;gap:0.65rem;align-items:center;">
+                <img src="${t.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${t.title}"/>
+                <div style="min-width:0;flex:1;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                    <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${t.title}">${t.title}</span>
+                    ${badgeSource}
+                  </div>
+                  <div style="font-size:0.75rem;color:var(--accent-blue);font-weight:600;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                    <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle} • ${t.sex === 'female' ? 'Жен.' : 'Муж.'}</span>
+                    <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${t.id}</span>
+                  </div>
+                </div>
+              </div>
+              <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                <span>${t.minLevel > 0 ? 'С ' + t.minLevel + ' ур.' : 'С 5 ур.'}</span>
                 <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
               </div>
             </div>
@@ -2605,6 +2778,316 @@
       }
 
       UI.content.innerHTML = html;
+    }
+
+    /* =========================================================================
+       MARKET VIEW (Clothes, Pets, Tattoos)
+       ========================================================================= */
+    function renderMarket(data, q) {
+      const allClothes = (data.clothes || []).filter(c => c.category !== 'Оружие' && c.category !== 'Животное');
+      const allPets = (data.clothes || []).filter(c => c.category === 'Животное');
+      const allTattoos = data.tattoos || [];
+
+      // Top Section Ribbons: Clothes | Pets | Tattoos
+      let sectionBarHtml = `
+        <div class="weapon-filter-ribbon" style="margin-bottom:0.4rem;">
+          <button class="weapon-filter-btn ${state.marketSection === 'clothes' ? 'active' : ''}" onclick="state.marketSection='clothes'; state.marketCurrency='all'; renderContent();">
+            👕 Одежда (${allClothes.length})
+          </button>
+          <button class="weapon-filter-btn ${state.marketSection === 'pets' ? 'active' : ''}" onclick="state.marketSection='pets'; state.marketCurrency='all'; renderContent();">
+            🐾 Питомцы (${allPets.length})
+          </button>
+          <button class="weapon-filter-btn ${state.marketSection === 'tattoos' ? 'active' : ''}" onclick="state.marketSection='tattoos'; state.marketCurrency='all'; renderContent();">
+            🐉 Татуировки (${allTattoos.length})
+          </button>
+        </div>
+      `;
+
+      let filterBarHtml = '';
+      let itemsHtml = '';
+
+      function matchCurr(item, curr) {
+        if (curr === 'all') return true;
+        const p = item.price || {};
+        if (curr === 'currency1') return (p.currency1 > 0);
+        if (curr === 'currency2') return (p.currency2 > 0);
+        if (curr === 'currency3') return (p.currency3 > 0);
+        if (curr === 'boss') return (item.sources && item.sources.bosses && item.sources.bosses.length > 0);
+        if (curr === 'free') return (!p.currency1 && !p.currency2 && !p.currency3);
+        return true;
+      }
+
+      function getItemPriceStr(item) {
+        const p = item.price || {};
+        const parts = [];
+        if (p.currency1) parts.push(`${p.currency1.toLocaleString()} мон.`);
+        if (p.currency2) parts.push(`${p.currency2.toLocaleString()} куп.`);
+        if (p.currency3) parts.push(`${p.currency3.toLocaleString()} табл.`);
+        if (parts.length > 0) return parts.join(', ');
+        if (item.sources && item.sources.bosses && item.sources.bosses.length > 0) return 'Выбивается с боссов';
+        return 'Бесплатно';
+      }
+
+      if (state.marketSection === 'clothes') {
+        const categories = ['Майка', 'Штаны', 'Обувь', 'Перчатки', 'Головной убор', 'Маска', 'Аксессуары'];
+        let filtered = allClothes.filter(c => {
+          if (state.marketClothCategory !== 'all' && c.category !== state.marketClothCategory) return false;
+          if (!matchCurr(c, state.marketCurrency)) return false;
+          if (!q) return true;
+          const matchTitle = c.title && c.title.toLowerCase().includes(q);
+          const matchCat = c.category && c.category.toLowerCase().includes(q);
+          const matchId = c.id.toString() === q;
+          return matchTitle || matchCat || matchId;
+        });
+
+        // Sort by total stats desc, then minLevel asc
+        filtered.sort((a, b) => {
+          const statsA = (a.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
+          const statsB = (b.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
+          if (statsB !== statsA) return statsB - statsA;
+          return (a.minLevel || 0) - (b.minLevel || 0);
+        });
+
+        filterBarHtml = `
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            ${sectionBarHtml}
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketClothCategory === 'all' ? 'active' : ''}" onclick="state.marketClothCategory='all'; renderContent();">Все вещи</button>
+              ${categories.map(cat => `
+                <button class="weapon-filter-btn ${state.marketClothCategory === cat ? 'active' : ''}" onclick="state.marketClothCategory='${cat}'; renderContent();">${cat}</button>
+              `).join('')}
+            </div>
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
+            </div>
+          </div>
+        `;
+
+        const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
+        itemsHtml = `
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
+            Одежды найдено: ${filtered.length} • Нажмите на предмет для характеристик и источников получения
+          </div>
+          <div class="grid">
+        `;
+
+        if (filtered.length === 0) {
+          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Предметы одежды не найдены по выбранным фильтрам</div>`;
+        } else {
+          filtered.forEach(c => {
+            const priceStr = getItemPriceStr(c);
+            const bosses = (c.sources && c.sources.bosses) || [];
+            let badgeSource = '';
+            if (bosses.length > 0) {
+              badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов">🏥 Босс</span>`;
+            }
+
+            const statsSummary = (c.baseStats && c.baseStats.length > 0)
+              ? c.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
+              : (c.category || 'Гардероб');
+
+            itemsHtml += `
+              <div class="card" style="cursor:pointer;" onclick="openClothDetails(${c.id})" title="Подробнее о ${c.title}">
+                <div style="display:flex;gap:0.65rem;align-items:center;">
+                  <img src="${c.image || c.remoteImage || ''}" onerror="if(this.src!=='${c.remoteImage||''}')this.src='${c.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${c.title}"/>
+                  <div style="min-width:0;flex:1;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                      <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${c.title}">${c.title}</span>
+                      ${badgeSource}
+                    </div>
+                    <div style="font-size:0.75rem;color:var(--accent-green);font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${statsSummary}</span>
+                      <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${c.id}</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                  <span>${c.minLevel > 0 ? 'С ' + c.minLevel + ' ур.' : 'С 0 ур.'}</span>
+                  <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+                </div>
+              </div>
+            `;
+          });
+        }
+        itemsHtml += `</div>`;
+      } else if (state.marketSection === 'pets') {
+        let filtered = allPets.filter(p => {
+          if (!matchCurr(p, state.marketCurrency)) return false;
+          if (!q) return true;
+          const matchTitle = p.title && p.title.toLowerCase().includes(q);
+          const matchId = p.id.toString() === q;
+          return matchTitle || matchId;
+        });
+
+        // Sort by stats desc
+        filtered.sort((a, b) => {
+          const statsA = (a.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
+          const statsB = (b.baseStats || []).reduce((acc, s) => acc + (s.count || 0), 0);
+          if (statsB !== statsA) return statsB - statsA;
+          return (a.minLevel || 0) - (b.minLevel || 0);
+        });
+
+        filterBarHtml = `
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            ${sectionBarHtml}
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
+            </div>
+          </div>
+        `;
+
+        const statMap = { skill1: 'Ярость', skill2: 'Защита', skill3: 'Здоровье' };
+        itemsHtml = `
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
+            Питомцев в питомнике: ${filtered.length} • Нажмите на питомца для характеристик и бонусов
+          </div>
+          <div class="grid">
+        `;
+
+        if (filtered.length === 0) {
+          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Питомцы не найдены по выбранным фильтрам</div>`;
+        } else {
+          filtered.forEach(p => {
+            const priceStr = getItemPriceStr(p);
+            const bosses = (p.sources && p.sources.bosses) || [];
+            let badgeSource = bosses.length > 0
+              ? `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов">🏥 Босс</span>`
+              : `<span style="font-size:0.68rem;color:var(--accent-purple);background:rgba(192,132,252,0.12);border:1px solid rgba(192,132,252,0.3);padding:1px 5px;border-radius:2px;">🐾 Питомец</span>`;
+
+            const statsSummary = (p.baseStats && p.baseStats.length > 0)
+              ? p.baseStats.map(s => `+${s.count} ${statMap[s.name] || s.name}`).join(', ')
+              : 'Верный спутник';
+
+            itemsHtml += `
+              <div class="card" style="cursor:pointer;" onclick="openClothDetails(${p.id})" title="Подробнее о питомце ${p.title}">
+                <div style="display:flex;gap:0.65rem;align-items:center;">
+                  <img src="${p.image || p.remoteImage || ''}" onerror="if(this.src!=='${p.remoteImage||''}')this.src='${p.remoteImage||''}';" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${p.title}"/>
+                  <div style="min-width:0;flex:1;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                      <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${p.title}">${p.title}</span>
+                      ${badgeSource}
+                    </div>
+                    <div style="font-size:0.75rem;color:var(--accent-purple);font-weight:700;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${statsSummary}</span>
+                      <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${p.id}</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                  <span>${p.minLevel > 0 ? 'С ' + p.minLevel + ' ур.' : 'С 0 ур.'}</span>
+                  <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+                </div>
+              </div>
+            `;
+          });
+        }
+        itemsHtml += `</div>`;
+      } else if (state.marketSection === 'tattoos') {
+        const slots = [
+          { key: 'all', title: 'Все зоны' },
+          { key: 'голова', title: 'Голова' },
+          { key: 'грудь', title: 'Грудь' },
+          { key: 'рука', title: 'Руки' },
+          { key: 'кисть', title: 'Кисти' },
+          { key: 'плечо', title: 'Плечи' },
+          { key: 'ключица', title: 'Ключицы' },
+          { key: 'живот', title: 'Живот' },
+          { key: 'шея', title: 'Шея' }
+        ];
+
+        let filtered = allTattoos.filter(t => {
+          if (state.marketTattooSex !== 'all' && t.sex !== state.marketTattooSex) return false;
+          if (state.marketTattooSlot !== 'all') {
+            const slotLower = (t.slotTitle || '').toLowerCase();
+            if (!slotLower.includes(state.marketTattooSlot)) return false;
+          }
+          if (!matchCurr(t, state.marketCurrency)) return false;
+          if (!q) return true;
+          const matchTitle = t.title && t.title.toLowerCase().includes(q);
+          const matchSlot = t.slotTitle && t.slotTitle.toLowerCase().includes(q);
+          const matchId = t.id.toString() === q;
+          return matchTitle || matchSlot || matchId;
+        });
+
+        filtered.sort((a, b) => a.id - b.id);
+
+        filterBarHtml = `
+          <div style="display:flex;flex-direction:column;gap:0.4rem;">
+            ${sectionBarHtml}
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketTattooSex === 'all' ? 'active' : ''}" onclick="state.marketTattooSex='all'; renderContent();">Все полы</button>
+              <button class="weapon-filter-btn ${state.marketTattooSex === 'male' ? 'active' : ''}" onclick="state.marketTattooSex='male'; renderContent();">👨 Мужские</button>
+              <button class="weapon-filter-btn ${state.marketTattooSex === 'female' ? 'active' : ''}" onclick="state.marketTattooSex='female'; renderContent();">👩 Женские</button>
+            </div>
+            <div class="weapon-filter-ribbon">
+              ${slots.map(s => `
+                <button class="weapon-filter-btn ${state.marketTattooSlot === s.key ? 'active' : ''}" onclick="state.marketTattooSlot='${s.key}'; renderContent();">${s.title}</button>
+              `).join('')}
+            </div>
+            <div class="weapon-filter-ribbon">
+              <button class="weapon-filter-btn ${state.marketCurrency === 'all' ? 'active' : ''}" onclick="state.marketCurrency='all'; renderContent();">Все валюты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency1' ? 'active' : ''}" onclick="state.marketCurrency='currency1'; renderContent();">🪙 Монеты</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency3' ? 'active' : ''}" onclick="state.marketCurrency='currency3'; renderContent();">💊 Таблетки</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'currency2' ? 'active' : ''}" onclick="state.marketCurrency='currency2'; renderContent();">💵 Купюры</button>
+              <button class="weapon-filter-btn ${state.marketCurrency === 'boss' ? 'active' : ''}" onclick="state.marketCurrency='boss'; renderContent();">🏥 Дроп с боссов</button>
+            </div>
+          </div>
+        `;
+
+        itemsHtml = `
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;">
+            Татуировок в салоне: ${filtered.length} • Нажмите на тату для просмотра и условий нанесения
+          </div>
+          <div class="grid">
+        `;
+
+        if (filtered.length === 0) {
+          itemsHtml += `<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-dim);">Татуировки не найдены по выбранным фильтрам</div>`;
+        } else {
+          filtered.forEach(t => {
+            const priceStr = getItemPriceStr(t);
+            const bosses = (t.sources && t.sources.bosses) || [];
+            let badgeSource = '';
+            if (bosses.length > 0) {
+              badgeSource = `<span style="font-size:0.68rem;color:var(--accent-blue);background:rgba(56,189,248,0.12);border:1px solid rgba(56,189,248,0.3);padding:1px 5px;border-radius:2px;" title="Выбивается с боссов (сертификат)">🏥 Босс</span>`;
+            }
+
+            itemsHtml += `
+              <div class="card" style="cursor:pointer;" onclick="openTattooDetails(${t.id})" title="Подробнее о ${t.title}">
+                <div style="display:flex;gap:0.65rem;align-items:center;">
+                  <img src="${t.image || ''}" width="42" height="42" style="background:#000;border-radius:4px;border:1px solid var(--border);object-fit:contain;flex-shrink:0;padding:2px;" alt="${t.title}"/>
+                  <div style="min-width:0;flex:1;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:0.3rem;">
+                      <span style="font-weight:700;color:#fff;font-size:0.86rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${t.title}">${t.title}</span>
+                      ${badgeSource}
+                    </div>
+                    <div style="font-size:0.75rem;color:var(--accent-blue);font-weight:600;display:flex;align-items:center;gap:0.35rem;margin-top:2px;">
+                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">📍 ${t.slotTitle} • ${t.sex === 'female' ? 'Жен.' : 'Муж.'}</span>
+                      <span style="font-size:0.68rem;color:var(--text-muted);font-weight:400;margin-left:auto;">#${t.id}</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size:0.74rem;display:flex;justify-content:space-between;color:var(--text-muted);margin-top:0.3rem;">
+                  <span>${t.minLevel > 0 ? 'С ' + t.minLevel + ' ур.' : 'С 5 ур.'}</span>
+                  <span style="color:var(--accent-gold);font-weight:600;">${priceStr}</span>
+                </div>
+              </div>
+            `;
+          });
+        }
+        itemsHtml += `</div>`;
+      }
+
+      UI.controls.innerHTML = filterBarHtml;
+      UI.content.innerHTML = itemsHtml;
     }
 
     /* =========================================================================
@@ -2988,6 +3471,9 @@
                 } else if (d.type === 'access_cloth') {
                   const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
                   itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openClothDetails(${d.id}, ${b.id})" title="Открыть информацию об одежде">${cleanTitle}</a>`;
+                } else if (d.type === 'access_ornament') {
+                  const cleanTitle = d.title.replace(/^Доступ:\s*/, '');
+                  itemHtml = `🔑 <a href="javascript:void(0)" class="drop-link" onclick="openTattooDetails(${d.id}, ${b.id})" title="Открыть информацию о татуировке">${cleanTitle}</a>`;
                 } else if (d.type && d.type.startsWith('access_')) {
                   itemHtml = '🔑 ' + d.title;
                 } else if (d.collectionTitle || (d.title && d.title.startsWith('Заначка '))) {
@@ -3260,7 +3746,11 @@
         </div>
       ` : '';
 
-      const bosses = (c.sources && c.sources.bosses) || [];
+      const bossesMap = {};
+      (c.sources && c.sources.bosses || []).forEach(b => {
+        if (!bossesMap[b.bossId]) bossesMap[b.bossId] = b;
+      });
+      const bosses = Object.values(bossesMap);
       let sourcesHtml = '';
       if (bosses.length > 0) {
         sourcesHtml = `
@@ -3298,6 +3788,93 @@
           <tr><th>Бонусы предмета</th><td>${stats}</td></tr>
           <tr><th>Требуемый уровень</th><td>${c.minLevel > 0 ? c.minLevel + ' ур.' : 'С 0 уровня (без ограничений)'}</td></tr>
           <tr><th>Цена в магазине</th><td style="color:var(--accent-gold);font-weight:600;">${priceStr}</td></tr>
+        </table>
+
+        ${sourcesHtml}
+      `;
+
+      UI.modalBody.innerHTML = bodyHtml;
+      UI.modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openTattooDetails(tattooId, fromBossId = null) {
+      const data = window.GAME_DATA;
+      const t = (data.tattoos || []).find(x => x.id === tattooId);
+      if (!t) return;
+
+      UI.modalTitle.textContent = `${t.title} (#${t.id})`;
+
+      function plural(n, one, few, many) {
+        if (!n) return '';
+        const mod10 = n % 10;
+        const mod100 = n % 100;
+        if (mod100 >= 11 && mod100 <= 14) return `${n.toLocaleString()} ${many}`;
+        if (mod10 === 1) return `${n.toLocaleString()} ${one}`;
+        if (mod10 >= 2 && mod10 <= 4) return `${n.toLocaleString()} ${few}`;
+        return `${n.toLocaleString()} ${many}`;
+      }
+
+      const p = t.price || {};
+      const priceStr = [
+        p.currency1 ? plural(p.currency1, 'монета', 'монеты', 'монет') : '',
+        p.currency2 ? plural(p.currency2, 'купюра', 'купюры', 'купюр') : '',
+        p.currency3 ? plural(p.currency3, 'таблетка', 'таблетки', 'таблеток') : ''
+      ].filter(Boolean).join(', ') || 'Бесплатно / Не продается';
+
+      const boss = fromBossId ? data.bosses.find(x => x.id === fromBossId) : null;
+      const backBtnHtml = boss ? `
+        <div style="margin-bottom:0.75rem;">
+          <button class="weapon-filter-btn" style="padding:0.32rem 0.75rem;font-size:0.76rem;" onclick="openBossDetails(${boss.id})">
+            &larr; Назад к боссу #${boss.id} (${boss.title})
+          </button>
+        </div>
+      ` : '';
+
+      const bossesMap = {};
+      (t.sources && t.sources.bosses || []).forEach(b => {
+        if (!bossesMap[b.bossId]) bossesMap[b.bossId] = b;
+      });
+      const bosses = Object.values(bossesMap);
+
+      let sourcesHtml = '';
+      if (bosses.length > 0) {
+        sourcesHtml = `
+          <div style="margin-top:0.85rem;background:rgba(255,255,255,0.03);border:1px solid #1e293b;border-radius:4px;padding:0.75rem;">
+            <div style="font-size:0.84rem;font-weight:700;color:#f87171;margin-bottom:0.45rem;">
+              🏥 Выбивается с буйных пациентов (боссов) в виде сертификата:
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.35rem;">
+              ${bosses.map(b => `
+                <div style="display:flex;justify-content:space-between;align-items:center;background:#090d16;border:1px solid #252f42;border-radius:3px;padding:0.4rem 0.6rem;font-size:0.78rem;">
+                  <button style="background:none;border:none;color:#fff;font-weight:700;cursor:pointer;padding:0;text-decoration:underline;text-align:left;" onclick="closeModal(); openBossDetails(${b.bossId});" title="Открыть досье босса">
+                    #${b.bossId} ${b.bossTitle} &rarr;
+                  </button>
+                  <span style="color:var(--accent-gold);font-weight:700;font-family:var(--font-mono);">${b.probability}%</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      let bodyHtml = `
+        ${backBtnHtml}
+        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:0.8rem;">
+          <img src="${t.image || ''}" width="80" height="80" style="background:#000;border:1px solid #4a5870;border-radius:4px;object-fit:contain;padding:4px;box-shadow:0 3px 10px rgba(0,0,0,0.7);" alt="${t.title}"/>
+          <div>
+            <div style="font-size:1.15rem;font-weight:700;color:#fff;font-family:var(--font-header);">${t.title}</div>
+            <div style="font-size:0.85rem;color:var(--accent-blue);font-weight:700;margin-top:3px;">Татуировка • ${t.slotTitle || 'Тело'}</div>
+            <div style="font-size:0.74rem;color:var(--text-muted);margin-top:2px;">Идентификатор в базе: #${t.id}</div>
+          </div>
+        </div>
+
+        <table class="modal-table">
+          <tr><th>Зона нанесения (слот)</th><td><strong>${t.slotTitle || 'Тело'}</strong></td></tr>
+          <tr><th>Пол персонажа</th><td>${t.sexTitle || (t.sex === 'female' ? 'Женский' : 'Мужской')}</td></tr>
+          <tr><th>Требуемый уровень</th><td>${t.minLevel > 0 ? t.minLevel + ' ур.' : 'С 5 ур.'}</td></tr>
+          <tr><th>Условия нанесения</th><td>${t.needsFormatted || 'Без дополнительных условий'}</td></tr>
+          <tr><th>Цена в тату-салоне</th><td style="color:var(--accent-gold);font-weight:600;">${priceStr}</td></tr>
         </table>
 
         ${sourcesHtml}
