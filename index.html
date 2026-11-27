@@ -3961,10 +3961,21 @@
        ========================================================================= */
     const EXPORT_DEVTOOLS_SCRIPT = `(async () => {
   try {
+    if (!location.hostname.includes('remad.me')) {
+      alert('⚠️ Скрипт нужно запускать на вкладке с игрой remad.me/play/!\n\nВы запустили скрипт на странице калькулятора (' + location.hostname + ').\nПерейдите на вкладку с игрой, нажмите там F12 -> Console и вставьте скрипт.');
+      throw new Error('Скрипт запущен на ' + location.hostname + ', а должен быть запущен на remad.me/play/');
+    }
+
     console.log('%c🧬 [Калькулятор Мутагенов] Запрос данных персонажа...', 'color:#38bdf8;font-weight:bold;font-size:14px;');
-    const res = await fetch('/play/api/player', { credentials: 'include' });
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    let data;
+    if (location.pathname.includes('/play/api/player') && document.body) {
+      try { data = JSON.parse(document.body.innerText); } catch(e) {}
+    }
+    if (!data) {
+      const res = await fetch('/play/api/player', { credentials: 'include' });
+      if (!res.ok) throw new Error('HTTP ' + res.status + ' (сессия истекла или нет авторизации)');
+      data = await res.json();
+    }
     
     const inventory = data.state?.inventory || [];
     
@@ -4819,9 +4830,18 @@
                 📋 Скопировать код скрипта
               </button>
             </div>
-            <p style="font-size:0.82rem;color:#94a3b8;margin:0 0 0.6rem 0;line-height:1.4;">
-              Откройте игру <a href="https://remad.me/play/" target="_blank" style="color:#38bdf8;text-decoration:underline;">remad.me/play/</a> в браузере, нажмите клавишу <strong>F12</strong> (вкладка <strong>Console</strong>), вставьте скопированный скрипт и нажмите <strong>Enter</strong>. Скрипт считает слоты вашей экипировки (занятые и свободные) и весь инвентарь.
-            </p>
+            <div style="font-size:0.82rem;color:#94a3b8;margin:0 0 0.85rem 0;line-height:1.45;background:#0d121c;border:1px solid #233147;padding:0.75rem 0.95rem;border-radius:6px;">
+              <div style="margin-bottom:0.45rem;">
+                <strong style="color:#38bdf8;">Способ 1 (Скрипт в консоль игры):</strong><br>
+                1. Откройте вкладку с игрой <a href="https://remad.me/play/" target="_blank" style="color:#38bdf8;text-decoration:underline;font-weight:600;">remad.me/play/</a>.<br>
+                2. Нажмите <strong>F12</strong> (перейдите на вкладку <strong>Console</strong>), вставьте скрипт и нажмите <strong>Enter</strong>.<br>
+                3. Вернитесь сюда и нажмите <strong>«Вставить из буфера»</strong>.
+              </div>
+              <div style="border-top:1px dashed #233147;padding-top:0.45rem;">
+                <strong style="color:#a855f7;">Способ 2 (Ещё проще, без консоли):</strong><br>
+                Перейдите по ссылке <a href="https://remad.me/play/api/player" target="_blank" style="color:#c084fc;text-decoration:underline;font-weight:600;">remad.me/play/api/player</a>, выделите всё (<kbd>Ctrl+A</kbd>), скопируйте (<kbd>Ctrl+C</kbd>), вернитесь сюда и нажмите <strong>«Вставить из буфера»</strong>!
+              </div>
+            </div>
 
             <!-- Step 2 -->
             <div class="calc-step-header" style="margin-top:1rem;">
