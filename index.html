@@ -1183,6 +1183,78 @@
       color: #fff;
     }
 
+    /* Jobs Shared Stash & Compact Table */
+    .jobs-shared-stash {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.55rem;
+      background: rgba(12, 16, 26, 0.85);
+      border: 1px solid #222e42;
+      border-left: 3px solid var(--accent-blue);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.7rem;
+      font-size: 0.76rem;
+    }
+
+    .jobs-stash-title {
+      color: var(--accent-blue);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .jobs-table-wrap {
+      border: 1px solid #232d40;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      background: #0d111a;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.45);
+    }
+
+    .jobs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .jobs-table th {
+      background: #141a27;
+      color: #8c97aa;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #232d40;
+      white-space: nowrap;
+    }
+
+    .jobs-table td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      vertical-align: middle;
+    }
+
+    .jobs-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .jobs-table tbody tr:hover {
+      background: rgba(56, 189, 248, 0.05);
+    }
+
+    .job-name-cell {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.84rem;
+      color: #f1f5f9;
+    }
+
     /* Common Card Grids for Weapons/Mutagens/Inventory */
     .grid {
       display: grid;
@@ -2559,6 +2631,21 @@
       .boss-quest-item {
         flex-wrap: wrap;
       }
+
+      .jobs-shared-stash {
+        padding: 0.4rem 0.55rem;
+        font-size: 0.73rem;
+      }
+
+      .jobs-table th,
+      .jobs-table td {
+        padding: 0.42rem 0.45rem;
+        font-size: 0.72rem;
+      }
+
+      .job-name-cell {
+        font-size: 0.78rem;
+      }
     }
 
     @media (max-width: 600px) {
@@ -3111,58 +3198,68 @@
                     <!-- 3. Jobs of this Corps -->
                     ${jobsList.length > 0 ? (() => {
                       const jobZoneName = (jobsList[0] && jobsList[0].jobZoneTitle) ? jobsList[0].jobZoneTitle.trim() : 'Работа';
+                      const cMap = data.collectionsMap || {};
+                      const sig = j => JSON.stringify(((j.drops || {}).objects || []).map(o => [o.id, o.probability]));
+                      const firstSig = sig(jobsList[0]);
+                      const allSameDrops = jobsList.every(j => sig(j) === firstSig);
+                      const renderDropsTags = (objects) => {
+                        if (!objects || !objects.length) return '';
+                        const firstInfo = cMap[objects[0].id];
+                        const collName = firstInfo ? firstInfo.collection_name : null;
+                        const tagsHtml = objects.map(o => {
+                          const info = cMap[o.id];
+                          const label = collName
+                            ? `Эл. #${info ? info.element_index : o.id}`
+                            : (invMap[o.id] || ('#' + o.id));
+                          const isGuaranteed = o.probability === 100;
+                          return `<span class="drop-tag"><span>${label}</span><span class="drop-prob ${isGuaranteed ? 'guaranteed' : ''}">${o.probability}%</span></span>`;
+                        }).join('');
+                        return { collName, tagsHtml };
+                      };
+                      const sharedDrops = allSameDrops ? renderDropsTags(((jobsList[0].drops || {}).objects || [])) : null;
+
                       return `
                         <div class="ward-sub-section">
                           <div class="ward-sub-title">
                             <span>💼 РАБОТА: ${jobZoneName.toUpperCase()} (${jobsList.length})</span>
                           </div>
-                          <div class="corps-grid-2col">
-                            ${jobsList.map(j => {
-                              const p = j.price || {};
-                              const d = j.drops || {};
-                              const energy = p.work_energy || p.workEnergy || 0;
-                              const objects = d.objects || [];
-                              return `
-                                <div class="job-card-compact">
-                                  <div class="job-title-sm">${j.title}</div>
-                                  <div style="display:flex;justify-content:space-between;color:var(--text-muted);font-size:0.75rem;margin-top:0.25rem;">
-                                    <span style="color:#ff6b6b;"><img src="images/ui/icon_energy.png?v=2" class="inline-icon" alt="Энергия"/> Энергия: <strong>${energy}</strong></span>
-                                    <span style="color:var(--accent-gold);"><img src="images/ui/icon_coin.png?v=2" class="inline-icon" alt="Монеты"/> +${d.currency1 ? d.currency1.value : 0} монет</span>
-                                    <span style="color:var(--accent-purple);"><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> +${d.xp ? d.xp.value : 0} XP</span>
-                                  </div>
-                                  ${objects.length > 0 ? (() => {
-                                    const cMap = data.collectionsMap || {};
-                                    const firstInfo = cMap[objects[0].id];
-                                    const collName = firstInfo ? firstInfo.collection_name : null;
-                                    
-                                    if (collName) {
-                                      const itemsStr = objects.map(o => {
-                                        const info = cMap[o.id];
-                                        const idx = info ? info.element_index : o.id;
-                                        const isGuaranteed = o.probability === 100;
-                                        return `<span style="color:#cbd5e1;">Эл. #${idx}</span> <strong style="color:${isGuaranteed ? '#4ade80' : 'var(--accent-gold)'};">(${o.probability}%)</strong>`;
-                                      }).join(' • ');
-                                      return `
-                                        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.35rem;border-top:1px solid rgba(255,255,255,0.06);padding-top:0.25rem;">
-                                          <span style="color:var(--accent-blue);">📦 Заначка «${collName}»:</span> ${itemsStr}
-                                        </div>
-                                      `;
-                                    } else {
-                                      const itemsStr = objects.map(o => {
-                                        const name = invMap[o.id] || ('#' + o.id);
-                                        const isGuaranteed = o.probability === 100;
-                                        return `<span style="color:#cbd5e1;">${name}</span> <strong style="color:${isGuaranteed ? '#4ade80' : 'var(--accent-gold)'};">(${o.probability}%)</strong>`;
-                                      }).join(' • ');
-                                      return `
-                                        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:0.35rem;border-top:1px solid rgba(255,255,255,0.06);padding-top:0.25rem;">
-                                          <span style="color:var(--accent-blue);">📦 Заначка:</span> ${itemsStr}
-                                        </div>
-                                      `;
-                                    }
-                                  })() : ''}
-                                </div>
-                              `;
-                            }).join('')}
+                          ${sharedDrops ? `
+                            <div class="jobs-shared-stash">
+                              <span class="jobs-stash-title">📦 ${sharedDrops.collName ? `Заначка «${sharedDrops.collName}»:` : 'Дроп:'}</span>
+                              ${sharedDrops.tagsHtml}
+                            </div>
+                          ` : ''}
+                          <div class="jobs-table-wrap">
+                            <table class="jobs-table">
+                              <thead>
+                                <tr>
+                                  <th>Работа</th>
+                                  <th><img src="images/ui/icon_energy.png?v=2" class="inline-icon" alt="Энергия"/> Энергия</th>
+                                  <th><img src="images/ui/icon_coin.png?v=2" class="inline-icon" alt="Монеты"/> Монеты</th>
+                                  <th><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> Опыт</th>
+                                  ${!allSameDrops ? '<th>📦 Дроп</th>' : ''}
+                                </tr>
+                              </thead>
+                              <tbody>
+                                ${jobsList.map(j => {
+                                  const p = j.price || {};
+                                  const d = j.drops || {};
+                                  const energy = p.work_energy || p.workEnergy || 0;
+                                  const coins = d.currency1 ? d.currency1.value : 0;
+                                  const xp = d.xp ? d.xp.value : 0;
+                                  const rowDrops = !allSameDrops ? renderDropsTags(d.objects || []) : null;
+                                  return `
+                                    <tr>
+                                      <td class="job-name-cell">${j.title}</td>
+                                      <td style="color:#ff6b6b;font-weight:700;">${energy}</td>
+                                      <td style="color:var(--accent-gold);font-weight:700;">+${coins}</td>
+                                      <td style="color:var(--accent-purple);font-weight:700;">+${xp} XP</td>
+                                      ${!allSameDrops ? `<td>${rowDrops ? `<div style="display:flex;flex-wrap:wrap;gap:0.25rem;align-items:center;">${rowDrops.collName ? `<span style="color:var(--accent-blue);font-size:0.72rem;">«${rowDrops.collName}»</span>` : ''}${rowDrops.tagsHtml}</div>` : '<span style="color:var(--text-dim);">—</span>'}</td>` : ''}
+                                    </tr>
+                                  `;
+                                }).join('')}
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       `;
