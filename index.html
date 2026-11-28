@@ -3199,34 +3199,58 @@
                     ${jobsList.length > 0 ? (() => {
                       const jobZoneName = (jobsList[0] && jobsList[0].jobZoneTitle) ? jobsList[0].jobZoneTitle.trim() : 'Работа';
                       const cMap = data.collectionsMap || {};
+
+                      /* Determine collection name from first job's drops */
+                      const firstObjects = ((jobsList[0].drops || {}).objects || []);
+                      const firstInfo2 = firstObjects.length ? cMap[firstObjects[0].id] : null;
+                      const collName = firstInfo2 ? firstInfo2.collection_name : null;
+
+                      /* Check if ALL jobs share identical drops (ids + probabilities) */
                       const sig = j => JSON.stringify(((j.drops || {}).objects || []).map(o => [o.id, o.probability]));
                       const firstSig = sig(jobsList[0]);
                       const allSameDrops = jobsList.every(j => sig(j) === firstSig);
-                      const renderDropsTags = (objects) => {
-                        if (!objects || !objects.length) return '';
-                        const firstInfo = cMap[objects[0].id];
-                        const collName = firstInfo ? firstInfo.collection_name : null;
-                        const tagsHtml = objects.map(o => {
+
+                      /* Build the shared stash banner — always show if there's a collection */
+                      const bannerElements = firstObjects.map(o => {
+                        const info = cMap[o.id];
+                        const label = collName
+                          ? `Эл. #${info ? info.element_index : o.id}`
+                          : (invMap[o.id] || ('#' + o.id));
+                        const isGuaranteed = o.probability === 100;
+                        return `<span class="drop-tag"><span>${label}</span><span class="drop-prob ${isGuaranteed ? 'guaranteed' : ''}">${o.probability}%</span></span>`;
+                      }).join('');
+
+                      /* For rows with different drops, build a compact diff note */
+                      const renderRowNote = (j) => {
+                        if (allSameDrops) return '';
+                        const jSig = sig(j);
+                        if (jSig === firstSig) return '';
+                        const objects = ((j.drops || {}).objects || []);
+                        const diffs = objects.filter((o, i) => {
+                          return !firstObjects[i] || o.id !== firstObjects[i].id || o.probability !== firstObjects[i].probability;
+                        });
+                        if (!diffs.length) return '';
+                        const diffHtml = diffs.map(o => {
                           const info = cMap[o.id];
                           const label = collName
                             ? `Эл. #${info ? info.element_index : o.id}`
                             : (invMap[o.id] || ('#' + o.id));
                           const isGuaranteed = o.probability === 100;
-                          return `<span class="drop-tag"><span>${label}</span><span class="drop-prob ${isGuaranteed ? 'guaranteed' : ''}">${o.probability}%</span></span>`;
+                          return `<span class="drop-tag" style="border-color:rgba(245,158,11,0.4);"><span>${label}</span><span class="drop-prob ${isGuaranteed ? 'guaranteed' : ''}">${o.probability}%</span></span>`;
                         }).join('');
-                        return { collName, tagsHtml };
+                        return `<div style="display:flex;flex-wrap:wrap;gap:0.25rem;align-items:center;margin-top:0.2rem;"><span style="color:var(--accent-gold);font-size:0.68rem;font-family:var(--font-mono);">⚠️</span>${diffHtml}</div>`;
                       };
-                      const sharedDrops = allSameDrops ? renderDropsTags(((jobsList[0].drops || {}).objects || [])) : null;
 
                       return `
                         <div class="ward-sub-section">
                           <div class="ward-sub-title">
                             <span>💼 РАБОТА: ${jobZoneName.toUpperCase()} (${jobsList.length})</span>
                           </div>
-                          ${sharedDrops ? `
+                          ${firstObjects.length > 0 ? `
                             <div class="jobs-shared-stash">
-                              <span class="jobs-stash-title">📦 ${sharedDrops.collName ? `Заначка «${sharedDrops.collName}»:` : 'Дроп:'}</span>
-                              ${sharedDrops.tagsHtml}
+                              <span class="jobs-stash-title">📦 ${collName ? `Заначка «${collName}»:` : 'Дроп:'}</span>
+                              ${bannerElements}
+                              ${!allSameDrops ? '<span style="color:var(--text-muted);font-size:0.68rem;font-style:italic;margin-left:0.3rem;">шансы могут отличаться ⚠️</span>' : ''}
                             </div>
                           ` : ''}
                           <div class="jobs-table-wrap">
@@ -3237,7 +3261,6 @@
                                   <th><img src="images/ui/icon_energy.png?v=2" class="inline-icon" alt="Энергия"/> Энергия</th>
                                   <th><img src="images/ui/icon_coin.png?v=2" class="inline-icon" alt="Монеты"/> Монеты</th>
                                   <th><img src="images/ui/icon_xp.png?v=2" class="inline-icon" alt="XP"/> Опыт</th>
-                                  ${!allSameDrops ? '<th>📦 Дроп</th>' : ''}
                                 </tr>
                               </thead>
                               <tbody>
@@ -3247,14 +3270,13 @@
                                   const energy = p.work_energy || p.workEnergy || 0;
                                   const coins = d.currency1 ? d.currency1.value : 0;
                                   const xp = d.xp ? d.xp.value : 0;
-                                  const rowDrops = !allSameDrops ? renderDropsTags(d.objects || []) : null;
+                                  const note = renderRowNote(j);
                                   return `
                                     <tr>
-                                      <td class="job-name-cell">${j.title}</td>
+                                      <td class="job-name-cell">${j.title}${note}</td>
                                       <td style="color:#ff6b6b;font-weight:700;">${energy}</td>
                                       <td style="color:var(--accent-gold);font-weight:700;">+${coins}</td>
                                       <td style="color:var(--accent-purple);font-weight:700;">+${xp} XP</td>
-                                      ${!allSameDrops ? `<td>${rowDrops ? `<div style="display:flex;flex-wrap:wrap;gap:0.25rem;align-items:center;">${rowDrops.collName ? `<span style="color:var(--accent-blue);font-size:0.72rem;">«${rowDrops.collName}»</span>` : ''}${rowDrops.tagsHtml}</div>` : '<span style="color:var(--text-dim);">—</span>'}</td>` : ''}
                                     </tr>
                                   `;
                                 }).join('')}
