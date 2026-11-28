@@ -3201,12 +3201,41 @@
                       const cMap = data.collectionsMap || {};
 
                       /* Determine collection name from first job's drops */
-                      const firstObjects = ((jobsList[0].drops || {}).objects || []);
-                      const firstInfo2 = firstObjects.length ? cMap[firstObjects[0].id] : null;
+                      const rawFirstObjects = ((jobsList[0].drops || {}).objects || []);
+                      const firstInfo2 = rawFirstObjects.length ? cMap[rawFirstObjects[0].id] : null;
                       const collName = firstInfo2 ? firstInfo2.collection_name : null;
 
+                      /* Patch: fill in missing collection elements from collectionsMap */
+                      const patchObjects = (objects) => {
+                        if (!objects.length || !collName) return objects;
+                        const objIds = new Set(objects.map(o => o.id));
+                        const allCollEls = [];
+                        for (const [k, v] of Object.entries(cMap)) {
+                          if (v.collection_name === collName) {
+                            allCollEls.push({ id: Number(k), index: v.element_index });
+                          }
+                        }
+                        if (allCollEls.length <= objects.length) return objects;
+                        /* Default probability = most common non-100 prob among existing */
+                        const probs = objects.map(o => o.probability).filter(p => p !== 100);
+                        const defaultProb = probs.length ? probs.sort((a,b) => probs.filter(v=>v===b).length - probs.filter(v=>v===a).length)[0] : 0.01;
+                        const patched = [...objects];
+                        for (const el of allCollEls) {
+                          if (!objIds.has(el.id)) {
+                            patched.push({ id: el.id, probability: defaultProb });
+                          }
+                        }
+                        patched.sort((a, b) => {
+                          const ai = cMap[a.id] ? cMap[a.id].element_index : 999;
+                          const bi = cMap[b.id] ? cMap[b.id].element_index : 999;
+                          return ai - bi;
+                        });
+                        return patched;
+                      };
+                      const firstObjects = patchObjects(rawFirstObjects);
+
                       /* Check if ALL jobs share identical drops (ids + probabilities) */
-                      const sig = j => JSON.stringify(((j.drops || {}).objects || []).map(o => [o.id, o.probability]));
+                      const sig = j => JSON.stringify(patchObjects((j.drops || {}).objects || []).map(o => [o.id, o.probability]));
                       const firstSig = sig(jobsList[0]);
                       const allSameDrops = jobsList.every(j => sig(j) === firstSig);
 
@@ -3225,7 +3254,7 @@
                         if (allSameDrops) return '';
                         const jSig = sig(j);
                         if (jSig === firstSig) return '';
-                        const objects = ((j.drops || {}).objects || []);
+                        const objects = patchObjects((j.drops || {}).objects || []);
                         const diffs = objects.filter((o, i) => {
                           return !firstObjects[i] || o.id !== firstObjects[i].id || o.probability !== firstObjects[i].probability;
                         });
