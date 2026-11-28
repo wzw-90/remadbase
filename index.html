@@ -4131,17 +4131,23 @@
     }
 
     function getEnchantStats(e) {
-      let madness = 0;   // skill2 (Безумие)
-      let aggression = 0; // skill3 (Агрессия)
-      let stamina = 0;    // skill1 (Выносливость)
+      let madness = 0;    // skill1 (Безумие)
+      let aggression = 0; // skill2 (Агрессия)
+      let fury = 0;       // skill3 (Ярость)
       (e.buffs || []).forEach(b => {
         (b.stats || []).forEach(s => {
-          if (s.name === 'skill2') madness += s.count;
-          if (s.name === 'skill3') aggression += s.count;
-          if (s.name === 'skill1') stamina += s.count;
+          if (s.name === 'skill1') madness += s.count;
+          if (s.name === 'skill2') aggression += s.count;
+          if (s.name === 'skill3') fury += s.count;
         });
       });
-      return { madness, aggression, stamina, score: madness + aggression };
+      return {
+        madness,
+        aggression,
+        fury,
+        score: madness + aggression + fury,
+        rankScore: (madness + aggression) * 1000 + fury
+      };
     }
 
     function evaluateMutagenInventory(inv, enchants, numSlots = 15) {
@@ -4159,18 +4165,20 @@
               id: e.id,
               title: e.title,
               score: st.score,
+              rankScore: st.rankScore,
               madness: st.madness,
               aggression: st.aggression,
-              stamina: st.stamina
+              fury: st.fury
             });
           }
         }
       }
 
       items.sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
+        if (b.rankScore !== a.rankScore) return b.rankScore - a.rankScore;
         if (b.madness !== a.madness) return b.madness - a.madness;
-        return b.aggression - a.aggression;
+        if (b.aggression !== a.aggression) return b.aggression - a.aggression;
+        return b.fury - a.fury;
       });
 
       const equipped = (numSlots != null && numSlots > 0) ? items.slice(0, numSlots) : items;
@@ -4178,20 +4186,22 @@
         totalScore: equipped.reduce((sum, x) => sum + x.score, 0),
         madness: equipped.reduce((sum, x) => sum + x.madness, 0),
         aggression: equipped.reduce((sum, x) => sum + x.aggression, 0),
-        stamina: equipped.reduce((sum, x) => sum + x.stamina, 0),
+        fury: equipped.reduce((sum, x) => sum + x.fury, 0),
         equipped,
         totalItemsCount: items.length
       };
     }
 
-    function runMutagenOptimization(initialInv, enchants, exchanges, numSlots = 15) {
+    function runMutagenOptimization(initialInv, enchants, exchanges, numSlots = 15, minStats = null) {
       let inv = Object.assign({}, initialInv);
       const steps = [];
       const encMap = {};
-      enchants.forEach(e => { encMap[e.id] = e; });
-
+      const statsMap = {};
       const seriesLevels = {};
+
       enchants.forEach(e => {
+        encMap[e.id] = e;
+        statsMap[e.id] = getEnchantStats(e);
         const t = e.title.replace('Мутаген ', '').trim();
         if (t.includes('-')) {
           const parts = t.split('-');
@@ -4204,175 +4214,196 @@
         }
       });
 
+      // Pre-sort all enchant IDs once by (rankScore, madness, aggression, fury) desc
+      const sortedIds = enchants
+        .map(e => e.id)
+        .sort((idA, idB) => {
+          const a = statsMap[idA], b = statsMap[idB];
+          if (b.rankScore !== a.rankScore) return b.rankScore - a.rankScore;
+          if (b.madness !== a.madness) return b.madness - a.madness;
+          if (b.aggression !== a.aggression) return b.aggression - a.aggression;
+          return b.fury - a.fury;
+        });
+
+      const fastEvalStats = (curInv) => {
+        let rem = (numSlots != null && numSlots > 0) ? numSlots : null;
+        let madness = 0, aggression = 0, fury = 0, totalScore = 0;
+        for (let i = 0; i < sortedIds.length; i++) {
+          const id = sortedIds[i];
+          const c = curInv[id] || 0;
+          if (c <= 0) continue;
+          const take = (rem == null || c < rem) ? c : rem;
+          const st = statsMap[id];
+          madness += take * st.madness;
+          aggression += take * st.aggression;
+          fury += take * st.fury;
+          totalScore += take * st.rankScore;
+          if (rem != null) {
+            rem -= take;
+            if (rem <= 0) break;
+          }
+        }
+        return { madness, aggression, fury, totalScore };
+      };
+
+      const meetsMinStats = (ev) => {
+        if (!minStats) return true;
+        return ev.madness >= minStats.madness && ev.aggression >= minStats.aggression && ev.fury >= minStats.fury;
+      };
+
+      const seriesList = ['A', 'F', 'Z', 'W', 'X', 'S', 'I'];
+      const synthCandidates = [];
+      for (let s of seriesList) {
+        if (!seriesLevels[s]) continue;
+        for (let lvl = 1; lvl < 20; lvl++) {
+          const cEnc = seriesLevels[s][lvl];
+          const nEnc = seriesLevels[s][lvl + 1];
+          if (!cEnc || !nEnc) continue;
+          synthCandidates.push({
+            cid: cEnc.id,
+            nid: nEnc.id,
+            lvl,
+            desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
+            cost: (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0
+          });
+        }
+      }
+
+      const exCandidates = [];
+      (exchanges || []).forEach(ex => {
+        const rec = ex.recipe || [];
+        if (rec.length < 2) return;
+        const drops = ex.drops || [];
+        const inStr = rec.map(r => `${r.count}x ${encMap[r.id] ? encMap[r.id].title : r.id}`).join(' + ');
+        const outStr = drops.map(d => `${d.count}x ${encMap[d.id] ? encMap[d.id].title : d.id}`).join(' + ');
+        const createsHybrid = drops.some(d => {
+          const title = encMap[d.id] ? encMap[d.id].title : '';
+          return title.includes('Z-') || title.includes('W-');
+        });
+        exCandidates.push({
+          rec,
+          drops,
+          createsHybrid,
+          desc: `Обмен в Лаборатории (вкладка «Обмен»): ${inStr} ➔ ${outStr}`,
+          cost: (ex.price && ex.price.currency3) != null ? ex.price.currency3 : 50
+        });
+      });
+
       let iteration = 0;
       while (iteration < 200) {
         iteration++;
-        const currEval = evaluateMutagenInventory(inv, enchants, numSlots);
-        const currScore = currEval.totalScore;
+        const currScore = fastEvalStats(inv).totalScore;
 
         let bestAction = null;
         let bestDelta = -999999;
-        let bestInv = null;
 
         // 1. Candidate standard syntheses (5 -> 1)
-        const seriesList = ['A', 'F', 'Z', 'W', 'X', 'S', 'I'];
-        for (let s of seriesList) {
-          if (!seriesLevels[s]) continue;
-          for (let lvl = 1; lvl < 20; lvl++) {
-            const cEnc = seriesLevels[s][lvl];
-            const nEnc = seriesLevels[s][lvl + 1];
-            if (!cEnc || !nEnc) continue;
+        for (let i = 0; i < synthCandidates.length; i++) {
+          const sc = synthCandidates[i];
+          if ((inv[sc.cid] || 0) >= 5) {
+            inv[sc.cid] -= 5;
+            inv[sc.nid] = (inv[sc.nid] || 0) + 1;
+            const testEv = fastEvalStats(inv);
+            const delta = testEv.totalScore - currScore;
+            const okMin = meetsMinStats(testEv);
+            inv[sc.cid] += 5;
+            inv[sc.nid] -= 1;
 
-            const cid = cEnc.id;
-            const nid = nEnc.id;
-            if ((inv[cid] || 0) >= 5) {
-              const testInv = Object.assign({}, inv);
-              testInv[cid] -= 5;
-              testInv[nid] = (testInv[nid] || 0) + 1;
-              const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
-              const delta = testEval.totalScore - currScore;
-
-              if (numSlots != null) {
-                if (delta > bestDelta) {
-                  bestDelta = delta;
-                  const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
-                  bestAction = {
-                    type: 'synthesis',
-                    desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                    delta,
-                    cost: stepCost
-                  };
-                  bestInv = testInv;
-                }
-              } else {
-                const unlimVal = lvl * 10;
-                if (unlimVal > bestDelta) {
-                  bestDelta = unlimVal;
-                  const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
-                  bestAction = {
-                    type: 'synthesis',
-                    desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                    delta,
-                    cost: stepCost
-                  };
-                  bestInv = testInv;
-                }
+            if (!okMin) continue;
+            if (numSlots != null) {
+              if (delta > bestDelta) {
+                bestDelta = delta;
+                bestAction = { kind: 'synth', ref: sc, delta };
+              }
+            } else {
+              const unlimVal = sc.lvl * 10;
+              if (unlimVal > bestDelta) {
+                bestDelta = unlimVal;
+                bestAction = { kind: 'synth', ref: sc, delta };
               }
             }
           }
         }
 
         // 2. Candidate exchanges (Обмен мутагенов в Лаборатории начиная с 10 ур.)
-        (exchanges || []).forEach(ex => {
-          const rec = ex.recipe || [];
-          if (rec.length >= 2 && rec.every(r => (inv[r.id] || 0) >= r.count)) {
-            const testInv = Object.assign({}, inv);
-            rec.forEach(r => { testInv[r.id] -= r.count; });
-            (ex.drops || []).forEach(d => { testInv[d.id] = (testInv[d.id] || 0) + d.count; });
+        for (let i = 0; i < exCandidates.length; i++) {
+          const ex = exCandidates[i];
+          if (ex.rec.every(r => (inv[r.id] || 0) >= r.count)) {
+            for (let j = 0; j < ex.rec.length; j++) inv[ex.rec[j].id] -= ex.rec[j].count;
+            for (let j = 0; j < ex.drops.length; j++) inv[ex.drops[j].id] = (inv[ex.drops[j].id] || 0) + ex.drops[j].count;
+            const testEv = fastEvalStats(inv);
+            const delta = testEv.totalScore - currScore;
+            const okMin = meetsMinStats(testEv);
+            for (let j = 0; j < ex.rec.length; j++) inv[ex.rec[j].id] += ex.rec[j].count;
+            for (let j = 0; j < ex.drops.length; j++) inv[ex.drops[j].id] -= ex.drops[j].count;
 
-            const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
-            const delta = testEval.totalScore - currScore;
-            const stepCost = (ex.price && ex.price.currency3) != null ? ex.price.currency3 : 50;
-
-            const inStr = rec.map(r => `${r.count}x ${encMap[r.id] ? encMap[r.id].title : r.id}`).join(' + ');
-            const outStr = (ex.drops || []).map(d => `${d.count}x ${encMap[d.id] ? encMap[d.id].title : d.id}`).join(' + ');
-            const createsHybrid = (ex.drops || []).some(d => {
-              const title = encMap[d.id] ? encMap[d.id].title : '';
-              return title.includes('Z-') || title.includes('W-');
-            });
-
+            if (!okMin) continue;
             if (numSlots != null) {
-              const effectiveDelta = delta + (createsHybrid && delta >= 0 ? 0.01 : 0);
+              const effectiveDelta = delta + (ex.createsHybrid && delta >= 0 ? 0.01 : 0);
               if (effectiveDelta > 0 && effectiveDelta > bestDelta) {
                 bestDelta = effectiveDelta;
-                bestAction = {
-                  type: 'exchange',
-                  desc: `Обмен в Лаборатории (вкладка «Обмен»): ${inStr} ➔ ${outStr}`,
-                  delta,
-                  cost: stepCost
-                };
-                bestInv = testInv;
+                bestAction = { kind: 'ex', ref: ex, delta };
               }
             } else {
               if (delta >= 0 && delta > bestDelta) {
                 bestDelta = delta;
-                bestAction = {
-                  type: 'exchange',
-                  desc: `Обмен в Лаборатории (вкладка «Обмен»): ${inStr} ➔ ${outStr}`,
-                  delta,
-                  cost: stepCost
-                };
-                bestInv = testInv;
+                bestAction = { kind: 'ex', ref: ex, delta };
               }
             }
           }
-        });
+        }
 
         if (bestAction && (bestDelta > 0 || (numSlots == null && bestDelta > -999))) {
-          inv = bestInv;
-          steps.push(bestAction);
-        } else {
-          if (numSlots != null) {
-            let harmlessFound = false;
-            for (let s of seriesList) {
-              if (!seriesLevels[s]) continue;
-              for (let lvl = 1; lvl < 20; lvl++) {
-                const cEnc = seriesLevels[s][lvl];
-                const nEnc = seriesLevels[s][lvl + 1];
-                if (!cEnc || !nEnc) continue;
-                const cid = cEnc.id;
-                const nid = nEnc.id;
-                if ((inv[cid] || 0) >= 5) {
-                  const testInv = Object.assign({}, inv);
-                  testInv[cid] -= 5;
-                  testInv[nid] = (testInv[nid] || 0) + 1;
-                  const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
-                  if (testEval.totalScore >= currScore) {
-                    const stepCost = (nEnc.price && nEnc.price.currency3) != null ? nEnc.price.currency3 : 0;
-                    inv = testInv;
-                    steps.push({
-                      type: 'synthesis',
-                      desc: `Синтез: 5 шт. «${cEnc.title}» ➔ 1 шт. «${nEnc.title}»`,
-                      delta: testEval.totalScore - currScore,
-                      cost: stepCost
-                    });
-                    harmlessFound = true;
-                    break;
-                  }
-                }
-              }
-              if (harmlessFound) break;
-            }
-            if (!harmlessFound) {
-              // Также проверяем обмены во вкладке «Обмен», если они не снижают суммарный счет
-              for (let ex of (exchanges || [])) {
-                const rec = ex.recipe || [];
-                if (rec.length >= 2 && rec.every(r => (inv[r.id] || 0) >= r.count)) {
-                  const testInv = Object.assign({}, inv);
-                  rec.forEach(r => { testInv[r.id] -= r.count; });
-                  (ex.drops || []).forEach(d => { testInv[d.id] = (testInv[d.id] || 0) + d.count; });
-                  const testEval = evaluateMutagenInventory(testInv, enchants, numSlots);
-                  if (testEval.totalScore >= currScore) {
-                    const stepCost = (ex.price && ex.price.currency3) != null ? ex.price.currency3 : 50;
-                    inv = testInv;
-                    const inStr = rec.map(r => `${r.count}x ${encMap[r.id] ? encMap[r.id].title : r.id}`).join(' + ');
-                    const outStr = (ex.drops || []).map(d => `${d.count}x ${encMap[d.id] ? encMap[d.id].title : d.id}`).join(' + ');
-                    steps.push({
-                      type: 'exchange',
-                      desc: `Обмен в Лаборатории (вкладка «Обмен»): ${inStr} ➔ ${outStr}`,
-                      delta: testEval.totalScore - currScore,
-                      cost: stepCost
-                    });
-                    harmlessFound = true;
-                    break;
-                  }
-                }
-              }
-            }
-            if (!harmlessFound) break;
+          if (bestAction.kind === 'synth') {
+            const sc = bestAction.ref;
+            inv[sc.cid] -= 5;
+            inv[sc.nid] = (inv[sc.nid] || 0) + 1;
+            steps.push({ type: 'synthesis', desc: sc.desc, delta: bestAction.delta, cost: sc.cost });
           } else {
-            break;
+            const ex = bestAction.ref;
+            for (let j = 0; j < ex.rec.length; j++) inv[ex.rec[j].id] -= ex.rec[j].count;
+            for (let j = 0; j < ex.drops.length; j++) inv[ex.drops[j].id] = (inv[ex.drops[j].id] || 0) + ex.drops[j].count;
+            steps.push({ type: 'exchange', desc: ex.desc, delta: bestAction.delta, cost: ex.cost });
           }
+        } else if (numSlots != null) {
+          let harmlessFound = false;
+          for (let i = 0; i < synthCandidates.length; i++) {
+            const sc = synthCandidates[i];
+            if ((inv[sc.cid] || 0) >= 5) {
+              inv[sc.cid] -= 5;
+              inv[sc.nid] = (inv[sc.nid] || 0) + 1;
+              const testEv = fastEvalStats(inv);
+              const delta = testEv.totalScore - currScore;
+              if (delta >= 0 && meetsMinStats(testEv)) {
+                steps.push({ type: 'synthesis', desc: sc.desc, delta, cost: sc.cost });
+                harmlessFound = true;
+                break;
+              }
+              inv[sc.cid] += 5;
+              inv[sc.nid] -= 1;
+            }
+          }
+          if (!harmlessFound) {
+            for (let i = 0; i < exCandidates.length; i++) {
+              const ex = exCandidates[i];
+              if (ex.rec.every(r => (inv[r.id] || 0) >= r.count)) {
+                for (let j = 0; j < ex.rec.length; j++) inv[ex.rec[j].id] -= ex.rec[j].count;
+                for (let j = 0; j < ex.drops.length; j++) inv[ex.drops[j].id] = (inv[ex.drops[j].id] || 0) + ex.drops[j].count;
+                const testEv = fastEvalStats(inv);
+                const delta = testEv.totalScore - currScore;
+                if (delta >= 0 && meetsMinStats(testEv)) {
+                  steps.push({ type: 'exchange', desc: ex.desc, delta, cost: ex.cost });
+                  harmlessFound = true;
+                  break;
+                }
+                for (let j = 0; j < ex.rec.length; j++) inv[ex.rec[j].id] += ex.rec[j].count;
+                for (let j = 0; j < ex.drops.length; j++) inv[ex.drops[j].id] -= ex.drops[j].count;
+              }
+            }
+          }
+          if (!harmlessFound) break;
+        } else {
+          break;
         }
       }
 
@@ -4437,7 +4468,7 @@
           score: st.score,
           madness: st.madness,
           aggression: st.aggression,
-          stamina: st.stamina
+          fury: st.fury
         };
       });
 
@@ -4445,7 +4476,7 @@
         totalScore: currentEquippedItems.reduce((sum, x) => sum + x.score, 0),
         madness: currentEquippedItems.reduce((sum, x) => sum + x.madness, 0),
         aggression: currentEquippedItems.reduce((sum, x) => sum + x.aggression, 0),
-        stamina: currentEquippedItems.reduce((sum, x) => sum + x.stamina, 0),
+        fury: currentEquippedItems.reduce((sum, x) => sum + x.fury, 0),
         equipped: currentEquippedItems,
         totalItemsCount: currentEquippedItems.length
       };
@@ -4469,7 +4500,10 @@
 
         // Если в экипировке есть мутагены, "было" - это текущие вставленные в вещи мутагены
         const beforeEval = (occupiedSlots.length > 0) ? currentEquippedEval : evaluateMutagenInventory(pool, enchants, numSlots);
-        const opt = runMutagenOptimization(pool, enchants, exchanges, numSlots);
+        const minStats = (modeType === 'extract' && occupiedSlots.length > 0)
+          ? { madness: beforeEval.madness, aggression: beforeEval.aggression, fury: beforeEval.fury }
+          : null;
+        const opt = runMutagenOptimization(pool, enchants, exchanges, numSlots, minStats);
         const afterEval = evaluateMutagenInventory(opt.optimizedInv, enchants, numSlots);
 
         const totalSynthesisCost = opt.steps.reduce((acc, s) => acc + (s.totalCost || 0), 0);
@@ -4610,7 +4644,24 @@
         const diffScore = cur.after.totalScore - cur.before.totalScore;
         const diffMad = cur.after.madness - cur.before.madness;
         const diffAgg = cur.after.aggression - cur.before.aggression;
-        const diffStam = cur.after.stamina - cur.before.stamina;
+        const diffFury = cur.after.fury - cur.before.fury;
+        const pStats = state.calcPlayerStats;
+        const findSkill = (key) => {
+          if (!pStats) return null;
+          return Array.isArray(pStats) ? pStats.find(s => s && s.name === key) : pStats[key];
+        };
+        const getBonus = (key) => {
+          const sk = findSkill(key);
+          if (!sk) return null;
+          if (sk.bonus != null) return Number(sk.bonus);
+          if (sk.store_male != null || sk.store_female != null || sk.temp != null) {
+            return Number(sk.store_male || 0) + Number(sk.store_female || 0) + Number(sk.temp || 0);
+          }
+          return null;
+        };
+        const gameMadBonus = getBonus('skill1');
+        const gameAggBonus = getBonus('skill2');
+        const gameFuryBonus = getBonus('skill3');
 
         const isExtract = (cur.modeType === 'extract');
         const extPlan = res.extractPlan;
@@ -4630,59 +4681,46 @@
               </div>
             </div>
 
-            ${equippedItems.length > 0 ? `
-              <div style="background:#0a0e17;border:1px solid #1e2838;border-radius:var(--radius-sm);padding:0.6rem 0.8rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.6rem;">
-                <div style="font-size:0.8rem;color:#cbd5e1;">
-                  В экипировке: <strong>${numSlots} слотов</strong> 
-                  (<span style="color:#c084fc;font-weight:600;">${occupiedSlots.length} занято</span>, 
-                   <span style="color:#4ade80;font-weight:600;">${emptySlots.length} свободно</span>)
-                </div>
-                <div class="calc-mode-switch" style="max-width:440px;flex:1;">
-                  <button class="calc-mode-btn ${isExtract ? 'active' : ''}" onclick="setCalcEquippedMode('extract')">
-                    📦 Извлечь (+${extPlan.after.totalScore - repPlan.after.totalScore} стат, +${extPlan.extractionCost} 💊)
-                  </button>
-                  <button class="calc-mode-btn ${!isExtract ? 'active' : ''}" onclick="setCalcEquippedMode('replace')">
-                    🔥 Заменить (эконом ${extPlan.extractionCost} 💊)
-                  </button>
-                </div>
-              </div>
-            ` : ''}
-
             <div class="calc-stats-grid">
               <!-- Безумие -->
               <div class="calc-stat-box" style="border-color:#e53935;background:rgba(229,57,53,0.05);">
-                <div class="calc-stat-title" style="color:#f87171;">🧠 Безумие (Основная стата)</div>
+                <div class="calc-stat-title" style="color:#f87171;">🧠 Безумие (от мутагенов)</div>
                 <div class="calc-stat-val-row">
                   <span class="calc-stat-num">${cur.after.madness}</span>
                   <span style="font-size:0.8rem;color:#94a3b8;">(было ${cur.before.madness})</span>
                   <span class="calc-stat-diff ${diffMad >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffMad >= 0 ? '+' + diffMad : diffMad}</span>
                 </div>
-                <div style="font-size:0.72rem;color:#94a3b8;">Мутагены серий A, Z, W, X</div>
+                <div style="font-size:0.72rem;color:#94a3b8;line-height:1.3;">
+                  Мутагены серий I, X, S, W
+                  ${gameMadBonus != null ? `<br><span style="color:#cbd5e1;">Бонус в игре: +${(gameMadBonus + diffMad).toLocaleString()} (было +${gameMadBonus.toLocaleString()})</span>` : ''}
+                </div>
               </div>
 
               <!-- Агрессия -->
               <div class="calc-stat-box" style="border-color:#f97316;background:rgba(249,115,22,0.05);">
-                <div class="calc-stat-title" style="color:#fb923c;">⚔️ Агрессия (Основная стата)</div>
+                <div class="calc-stat-title" style="color:#fb923c;">⚔️ Агрессия (от мутагенов)</div>
                 <div class="calc-stat-val-row">
                   <span class="calc-stat-num">${cur.after.aggression}</span>
                   <span style="font-size:0.8rem;color:#94a3b8;">(было ${cur.before.aggression})</span>
                   <span class="calc-stat-diff ${diffAgg >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffAgg >= 0 ? '+' + diffAgg : diffAgg}</span>
                 </div>
-                <div style="font-size:0.72rem;color:#94a3b8;">Мутагены серий F, Z, W, S</div>
+                <div style="font-size:0.72rem;color:#94a3b8;line-height:1.3;">
+                  Мутагены серий A, Z, X, W
+                  ${gameAggBonus != null ? `<br><span style="color:#cbd5e1;">Бонус в игре: +${(gameAggBonus + diffAgg).toLocaleString()} (было +${gameAggBonus.toLocaleString()})</span>` : ''}
+                </div>
               </div>
 
               <!-- Ярость -->
               <div class="calc-stat-box" style="border-color:#a855f7;background:rgba(168,85,247,0.05);">
-                <div class="calc-stat-title" style="color:#c084fc;">💀 Ярость (Основная стата)</div>
+                <div class="calc-stat-title" style="color:#c084fc;">💀 Ярость (от мутагенов)</div>
                 <div class="calc-stat-val-row">
-                  <span class="calc-stat-num" style="color:#c084fc;">
-                    ${state.calcPlayerStats ? 
-                      ((state.calcPlayerStats.skill4 && state.calcPlayerStats.skill4.base) ? `${state.calcPlayerStats.skill4.base} +${state.calcPlayerStats.skill4.bonus || 0}` : `${(state.calcPlayerStats.skill3 && state.calcPlayerStats.skill3.base) || 965} +${(state.calcPlayerStats.skill3 && (state.calcPlayerStats.skill3.temp || state.calcPlayerStats.skill3.bonus)) || 11476}`) : 
-                      '965 +11476'}
-                  </span>
+                  <span class="calc-stat-num" style="color:#c084fc;">${cur.after.fury}</span>
+                  <span style="font-size:0.8rem;color:#94a3b8;">(было ${cur.before.fury})</span>
+                  <span class="calc-stat-diff ${diffFury >= 0 ? 'calc-diff-pos' : 'calc-diff-zero'}">${diffFury >= 0 ? '+' + diffFury : diffFury}</span>
                 </div>
-                <div style="font-size:0.72rem;color:#cbd5e1;line-height:1.25;">
-                  ${state.calcPlayerName ? `Игрок: <strong>${state.calcPlayerName}</strong>. ` : ''}Мутагены дают Безумие и Агрессию; Ярость прокачивается оружием, тату и сетами.
+                <div style="font-size:0.72rem;color:#94a3b8;line-height:1.3;">
+                  Мутагены серий F, Z, S, W
+                  ${gameFuryBonus != null ? `<br><span style="color:#cbd5e1;">Бонус в игре: +${(gameFuryBonus + diffFury).toLocaleString()} (было +${gameFuryBonus.toLocaleString()})</span>` : ''}
                 </div>
               </div>
 
@@ -4772,7 +4810,7 @@
                           count: 0,
                           madness: it.madness || 0,
                           aggression: it.aggression || 0,
-                          stamina: it.stamina || 0,
+                          fury: it.fury || 0,
                           socketCost: socketCost
                         };
                       }
@@ -4780,7 +4818,7 @@
                     });
                     const list = Object.values(grouped).sort((a, b) => {
                       if (b.count !== a.count) return b.count - a.count;
-                      return (b.madness + b.aggression) - (a.madness + a.aggression);
+                      return (b.madness + b.aggression + b.fury) - (a.madness + a.aggression + a.fury);
                     });
                     return list.map(g => {
                       const totalSocket = g.count * g.socketCost;
@@ -4794,7 +4832,7 @@
                             <div style="font-size:0.75rem;color:#94a3b8;display:flex;gap:0.5rem;align-items:center;">
                               ${g.madness > 0 ? `<span style="color:#f87171;font-weight:600;">Б: +${g.madness}</span>` : ''}
                               ${g.aggression > 0 ? `<span style="color:#fb923c;font-weight:600;">А: +${g.aggression}</span>` : ''}
-                              ${g.stamina > 0 ? `<span style="color:#22d3ee;font-weight:600;">В: +${g.stamina}</span>` : ''}
+                              ${g.fury > 0 ? `<span style="color:#c084fc;font-weight:600;">Я: +${g.fury}</span>` : ''}
                             </div>
                           </div>
                           <div style="font-size:0.78rem;color:#facc15;font-weight:600;display:flex;align-items:center;gap:0.5rem;white-space:nowrap;">
