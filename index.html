@@ -2430,6 +2430,147 @@
       border: 1px solid rgba(234, 179, 8, 0.3);
       color: #facc15;
     }
+
+    /* Mobile Responsive Fixes (Header, Main Nav, Corps & Floors) */
+    @media (max-width: 900px) {
+      header {
+        height: 80px;
+      }
+      .header-banner-img {
+        width: 150%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+
+      .nav-inner {
+        padding: 0.35rem 0.6rem;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        gap: 0.3rem;
+      }
+
+      .nav-tab {
+        flex: 1 1 calc(50% - 0.3rem);
+        justify-content: center;
+        padding: 0.42rem 0.5rem;
+        font-size: 0.78rem;
+        text-align: center;
+      }
+
+      main {
+        padding: 0.65rem 0.6rem;
+      }
+
+      .search-wrap {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        flex: 1 1 100%;
+      }
+
+      .ward-header-plaque {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.55rem 0.65rem;
+      }
+
+      .ward-title-group {
+        flex: 1 1 0%;
+        min-width: 0;
+        gap: 0.45rem;
+      }
+
+      .ward-badge {
+        font-size: 0.78rem;
+        padding: 0.18rem 0.45rem;
+      }
+
+      .ward-name {
+        font-size: 0.92rem;
+      }
+
+      .ward-toggle-wrapper {
+        flex: 0 0 auto;
+      }
+
+      .ward-toggle-btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.72rem;
+      }
+
+      .ward-needs-wrapper {
+        flex: 1 1 100%;
+        order: 3;
+        justify-content: flex-start;
+      }
+
+      .ward-needs-stamp {
+        width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.45rem;
+        padding: 0.25rem 0.55rem;
+        font-size: 0.74rem;
+      }
+
+      .needs-stamp-label {
+        white-space: normal;
+      }
+
+      .ward-content-body {
+        padding: 0.65rem;
+        gap: 0.75rem;
+      }
+
+      .corps-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+      }
+
+      .boss-card-compact,
+      .biz-card-compact,
+      .job-card-compact {
+        min-width: 0;
+        max-width: 100%;
+        padding: 0.65rem;
+      }
+
+      .boss-badges-sm {
+        flex-wrap: wrap;
+      }
+
+      .boss-stats-strip {
+        flex-wrap: wrap;
+        gap: 0.35rem 0.6rem;
+      }
+
+      .boss-quest-item {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        height: 58px;
+      }
+      .header-banner-img {
+        width: 185%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   </style>
 </head>
 <body>
